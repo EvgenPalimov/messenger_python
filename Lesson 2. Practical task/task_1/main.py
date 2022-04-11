@@ -66,9 +66,8 @@ def get_data(lst):
             elif re.match('Тип системы', row):
                 os_type_list.append(re.search(r'(Тип системы).\s*(.*)..', row).group(2))
 
-    i = 0
+    i = 1
     for k in range(len(lst)):
-        i += 1
         main_data.append([
             i,
             os_prod_list[k],
@@ -76,6 +75,7 @@ def get_data(lst):
             os_code_list[k],
             os_type_list[k]
          ])
+        i += 1
     return main_data
 
 
