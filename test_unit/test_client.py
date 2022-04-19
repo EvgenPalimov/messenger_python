@@ -3,9 +3,11 @@
 import sys
 import os
 import unittest
+
 sys.path.append(os.path.join(os.getcwd(), '..'))
 from common.variables import RESPONSE, ERROR, USER, ACCOUNT_NAME, TIME, ACTION, PRESENCE
 from client import create_presence, process_ans
+
 
 class TestClient(unittest.TestCase):
 
@@ -13,19 +15,19 @@ class TestClient(unittest.TestCase):
         self.module_1 = create_presence('Ivan')
         self.module_1[TIME] = 1.1
 
-    # Тестирования функции - create_presence.
+    # Тестирования функции - process_client_message.
 
     def test_get_data(self):
         '''Тест на получение всех данных'''
-        self.assertEqual(self.module_1, {ACTION: PRESENCE, TIME:1.1, USER:{ACCOUNT_NAME: 'Ivan'}},
+        self.assertEqual(self.module_1, {ACTION: PRESENCE, TIME: 1.1, USER: {ACCOUNT_NAME: 'Ivan'}},
                          'Не коректные данные')
 
     def test_incorrect_data(self):
         """Тест на передачу ошибочных данных"""
-        self.assertNotEqual(self.module_1, {ACTION: 'not_methode', TIME:1.1, USER:{ACCOUNT_NAME: 'Guest'}},
+        self.assertNotEqual(self.module_1, {ACTION: 'not_methode', TIME: 1.1, USER: {ACCOUNT_NAME: 'Guest'}},
                             'Проверка на ошибку в передачи данных, а данные переданы верно.')
 
-    def test_ACTION_in_data(self):
+    def test_action_in_data(self):
         """Тест на присутсвии параметра ACTION"""
         self.assertIn('action', self.module_1, 'Параметр ACTION - отсутсвует в данных.')
 
@@ -54,7 +56,8 @@ class TestClient(unittest.TestCase):
 
     def test_no_response(self):
         """Тест исключения без поля RESPONSE"""
-        self.assertRaises(ValueError, process_ans, {ERROR: 'error'}, 'Поле RESPONSE должно быть пустым.')
+        self.assertRaises(ValueError, process_ans, {ERROR: 'error'})
+
 
 if __name__ == '__main__':
     unittest.main()
