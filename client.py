@@ -35,7 +35,7 @@ def process_ans(message):
 
     if RESPONSE in message:
         if message[RESPONSE] == 200:
-            return '200 : OK'
+            return '200: OK'
         return f'400: {message[ERROR]}'
     raise ValueError
 
