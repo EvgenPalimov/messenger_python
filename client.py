@@ -6,13 +6,17 @@ import socket
 import sys
 import time
 import logs.client_log_config
+from common.decos import Log
 from common.variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, RESPONSE, ERROR, DEFAULT_IP_ADDRESS, \
     DEFAULT_PORT, USER_NAME
 from common.utils import get_message, send_message
 from errors import ReqFieldMissingError
 
+
 CLIENT_LOGGER = logging.getLogger('client')
 
+
+@Log()
 def create_presence(account_name):
     '''
     Функция генерирует запрос о присутствии клиента
@@ -31,6 +35,7 @@ def create_presence(account_name):
     return out
 
 
+@Log()
 def process_ans(message):
     '''
     Функция разбирает ответ сервера
@@ -44,6 +49,8 @@ def process_ans(message):
         return f'400: {message[ERROR]}'
     raise ValueError
 
+
+@Log()
 def create_arg_parser():
     """
     Создаём парсер аргументов коммандной строки
@@ -101,13 +108,14 @@ def main():
             f'Ответ - {answer}, успешно получен '
         )
     except json.JSONDecodeError:
-            CLIENT_LOGGER.error('Не удалось декодировать сообщение сервера.')
+        CLIENT_LOGGER.error('Не удалось декодировать сообщение сервера.')
     except ReqFieldMissingError as missing_error:
         CLIENT_LOGGER.error(f'В ответе сервера отсутствует необходимое поле '
                             f'{missing_error.missing_field}')
     except ConnectionRefusedError:
         CLIENT_LOGGER.critical(f'Не удалось подключиться к серверу {server_address}:{server_port}, '
                                f'конечный компьютер отверг запрос на подключение.')
+
 
 if __name__ == '__main__':
     main()
