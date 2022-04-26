@@ -19,7 +19,7 @@ class Log:
             call_func = func(*args, **kwargs)
             LOGGER.debug(f'Была вызвана функция {func.__name__} с параметрами {args}, {kwargs}.'
                          f'Вызов функции осуществлялся из модуля {func.__module__}.'
-                         f'Вызов функции из файла {inspect.stack()[1][3]}.', stacklevel=2)
+                         f'Вызов функции из {inspect.stack()[1][3]}.', stacklevel=2)
             return call_func
 
         return save_logs
