@@ -5,7 +5,7 @@ import logging
 import socket
 import sys
 import logs.server_log_config
-from common.decos import Log
+from common.decos import log
 from common.variables import ACTION, PRESENCE, TIME, ACCOUNT_NAME, USER, RESPONSE, ERROR, DEFAULT_PORT, MAX_CONNECTIONS, \
     USER_NAME, DEFAULT_IP_ADDRESS
 from common.utils import get_message, send_message
@@ -14,7 +14,7 @@ from errors import IncorrectDataRecivedError
 SERVER_LOGGER = logging.getLogger('server')
 
 
-@Log()
+@log
 def process_client_message(message):
     '''
     Обработчик сообщений от клиентов, принимает словарь -
@@ -36,7 +36,7 @@ def process_client_message(message):
     }
 
 
-@Log()
+@log
 def create_arg_parser():
     """
     Создаём парсер аргументов коммандной строки

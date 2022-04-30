@@ -6,7 +6,7 @@ import socket
 import sys
 import time
 import logs.client_log_config
-from common.decos import Log
+from common.decos import log
 from common.variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, RESPONSE, ERROR, DEFAULT_IP_ADDRESS, \
     DEFAULT_PORT, USER_NAME
 from common.utils import get_message, send_message
@@ -16,7 +16,7 @@ from errors import ReqFieldMissingError
 CLIENT_LOGGER = logging.getLogger('client')
 
 
-@Log()
+@log
 def create_presence(account_name):
     '''
     Функция генерирует запрос о присутствии клиента
@@ -35,7 +35,7 @@ def create_presence(account_name):
     return out
 
 
-@Log()
+@log
 def process_ans(message):
     '''
     Функция разбирает ответ сервера
@@ -50,7 +50,7 @@ def process_ans(message):
     raise ValueError
 
 
-@Log()
+@log
 def create_arg_parser():
     """
     Создаём парсер аргументов коммандной строки
