@@ -19,9 +19,12 @@ ACTION = 'action'
 TIME = 'time'
 USER = 'user'
 ACCOUNT_NAME = 'account_name'
-USER_NAME = 'Ivan'
+SENDER = 'sender'
+CLIENT_NAME = 'Guest'
 
 # Прочик ключи, используемые в протоколе
 PRESENCE = 'presence'
 RESPONSE = 'response'
 ERROR = 'error'
+MESSAGE = 'message'
+MESSAGE_TEXT = 'mess_text'

@@ -1,5 +1,4 @@
 '''Конфигурация клиентского логерра'''
-
 import os
 import sys
 import logging
