@@ -1,15 +1,21 @@
 '''Утилиты'''
 import json
+import sys
+
+from common.decos import log
 from common.variables import MAX_PACKAGE_LENGTH, ENCODING
 from errors import IncorrectDataRecivedError, NonDictInputError
 
+sys.path.append('../')
 
+
+@log
 def get_message(client):
     '''
-    Утилита приёма и декодирования сообщения принимает байты выдает словарьб
-    если принято, что-то другое отдаёт ошибку значения
-    :param client:
-    :return:
+    Утилита приёма и декодирования сообщения принимает байты выдает словарь
+    если принято, что-то другое отдаёт ошибку значения.
+    :param client: Сокет
+    :return: Возвращает сообщения от сервера
     '''
 
     encoded_response = client.recv(MAX_PACKAGE_LENGTH)
@@ -18,16 +24,19 @@ def get_message(client):
         response = json.loads(json_response)
         if isinstance(response, dict):
             return response
+        else:
+            raise IncorrectDataRecivedError
+    else:
         raise IncorrectDataRecivedError
-    raise IncorrectDataRecivedError
 
 
+@log
 def send_message(sock, message):
     '''
     Утилита кодирования и отправки сообщения
-    принимает словарь и отправляет его
-    :param sock:
-    :param message:
+    принимает словарь и отправляет его.
+    :param sock: Сокет
+    :param message: Словарь, с сообщением от клиента
     '''
     if not isinstance(message, dict):
         raise NonDictInputError

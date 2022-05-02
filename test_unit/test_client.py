@@ -6,7 +6,7 @@ import unittest
 
 sys.path.append(os.path.join(os.getcwd(), '..'))
 from common.variables import RESPONSE, ERROR, USER, ACCOUNT_NAME, TIME, ACTION, PRESENCE
-from client_listen import create_presence, process_ans
+from client import create_presence, process_response_answer
 
 
 class TestClient(unittest.TestCase):
@@ -43,20 +43,20 @@ class TestClient(unittest.TestCase):
 
     def test_success_answer_to_server(self):
         '''Тест на проверку ответа сервера = 200'''
-        self.assertEqual(process_ans({RESPONSE: 200}), '200: OK', 'Должен быть статус-код = 200')
+        self.assertEqual(process_response_answer({RESPONSE: 200}), '200: OK', 'Должен быть статус-код = 200')
 
     def test_not_success_answer_to_server(self):
         '''Тест, проверка срабатывания ошибки, при не коректном статус-коде'''
-        self.assertEqual(process_ans({RESPONSE: 404, ERROR: 'error'}), '400: error',
+        self.assertEqual(process_response_answer({RESPONSE: 404, ERROR: 'error'}), '400: error',
                          'Проверка на ошибку статус-кода, а был передан верный код.')
 
     def test_not_answer_to_server(self):
         '''Тест на проверку ответа сервера = 400'''
-        self.assertEqual(process_ans({RESPONSE: 400, ERROR: 'error'}), '400: error', 'Должен быть статус-код = 400')
+        self.assertEqual(process_response_answer({RESPONSE: 400, ERROR: 'error'}), '400: error', 'Должен быть статус-код = 400')
 
     def test_no_response(self):
         """Тест исключения без поля RESPONSE"""
-        self.assertRaises(ValueError, process_ans, {ERROR: 'error'})
+        self.assertRaises(ValueError, process_response_answer, {ERROR: 'error'})
 
 
 if __name__ == '__main__':
