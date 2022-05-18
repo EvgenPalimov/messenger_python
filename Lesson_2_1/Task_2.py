@@ -3,6 +3,7 @@
 Меняться должен только последний октет каждого адреса.
 По результатам проверки должно выводиться соответствующее сообщение.
 """
+import socket
 from ipaddress import ip_address
 
 from Lesson_2_1.Task_1 import host_ping
@@ -16,7 +17,14 @@ def host_range_ping():
     проверить, производится проверка на коректность введеных данных.
     :return: dict: Возвращается данные доступных или не доступных адресов.
     """
-    start_ip = input('Введите первоначальный адрес: ')
+    while True:
+        try:
+            start_ip = input('Введите первоначальный адрес: ')
+            if socket.inet_aton(start_ip):
+                break
+        except socket.error:
+            print('Не верно указан IP-адрес, должен быть в формате - ***.***.***.***')
+
     while True:
         try:
             end_ip = int(input('Сколько адресов нужно проверить: '))
