@@ -26,7 +26,6 @@ class ServerMaker(type):
                 # Раз функция разбираем код, получая используемые методы и атрибуты.
                 for i in ret:
 
-
                     if i.opname == 'LOAD_GLOBAL':
                         if i.argval not in methods:
                             # Заполняем список методами, использующиеся в функция класса.
@@ -35,7 +34,6 @@ class ServerMaker(type):
                         if i.argval not in attrs:
                             # Заполняем список методами, использующиеся в функция класса.
                             attrs.append(i.argval)
-
 
         # Если обнаружено использование недопустимого метода connect, бросаем исключение:
         if 'connect' in methods:

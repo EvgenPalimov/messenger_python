@@ -5,8 +5,10 @@ import time
 
 PROCESS = []
 
+
 def get_name(i):
     return f'{random.getrandbits(128)}/{i}'
+
 
 while True:
     ACTION = input('Выберите действие:\n'
