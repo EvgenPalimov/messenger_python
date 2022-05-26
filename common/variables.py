@@ -13,6 +13,8 @@ MAX_PACKAGE_LENGTH = 1024
 ENCODING = 'utf-8'
 # Уровень логирования
 LOGGING_LEVEL = logging.DEBUG
+# База данных для хранения данных сервера:
+SERVER_DATABASE = 'sqlite:///server_base.db3'
 
 # Протокол JIM основные ключи
 ACTION = 'action'

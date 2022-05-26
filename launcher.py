@@ -22,7 +22,7 @@ while True:
         PROCESS.append(subprocess.Popen('python server.py',
                                         creationflags=subprocess.CREATE_NEW_CONSOLE))
 
-        time.sleep(0.5)
+        time.sleep(2)
         for i in range(2):
             PROCESS.append(subprocess.Popen(f'python client.py -n Test{i}',
                                             creationflags=subprocess.CREATE_NEW_CONSOLE))

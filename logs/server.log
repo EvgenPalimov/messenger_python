@@ -1,137 +1,181 @@
-2022-05-23 23:38:51,806 DEBUG server Была вызвана функция create_arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции main
-2022-05-23 23:39:04,750 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-23 23:39:56,093 DEBUG server Была вызвана функция create_arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции main
-2022-05-23 23:39:56,093 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-23 23:40:41,155 DEBUG server Была вызвана функция create_arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции main
-2022-05-23 23:40:41,155 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-23 23:41:17,420 DEBUG server Была вызвана функция create_arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции main
-2022-05-23 23:41:17,420 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-23 23:47:55,062 DEBUG server Была вызвана функция create_arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции main
-2022-05-23 23:47:57,978 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-23 23:49:10,431 DEBUG server Была вызвана функция create_arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции main
-2022-05-23 23:49:10,432 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-23 23:50:26,431 DEBUG server Была вызвана функция create_arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции main
-2022-05-23 23:50:26,432 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-23 23:51:14,028 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62746).
-2022-05-23 23:51:23,219 INFO server Клиент - ('127.0.0.1', 62746), отключился от сервера. 
-2022-05-23 23:51:44,496 DEBUG server Была вызвана функция create_arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции main
-2022-05-23 23:51:44,497 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-23 23:51:44,884 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62749).
-2022-05-23 23:51:44,911 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62750).
-2022-05-23 23:53:17,724 DEBUG server Была вызвана функция create_arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции main
-2022-05-23 23:53:17,726 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-23 23:53:26,848 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62829).
-2022-05-23 23:53:36,559 INFO server Клиент - ('127.0.0.1', 62829), отключился от сервера. 
-2022-05-23 23:55:23,858 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-23 23:55:24,334 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62845).
-2022-05-23 23:55:24,335 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62846).
-2022-05-23 23:55:26,023 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=760, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62845)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-23 23:55:26,023 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653332124.3330722, 'user': {'account_name': 'Test0'}}
-2022-05-23 23:55:26,035 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=760, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62845)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-23 23:55:26,036 DEBUG server Поступило приветственное сообщение от клинета - Test0, отправлен ответ - 200.
-2022-05-23 23:55:26,046 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=812, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62846)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-23 23:55:26,047 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653332124.3330722, 'user': {'account_name': 'Test1'}}
-2022-05-23 23:55:26,057 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=812, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62846)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-23 23:55:26,058 DEBUG server Поступило приветственное сообщение от клинета - Test1, отправлен ответ - 200.
-2022-05-23 23:55:48,866 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-23 23:55:49,242 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62847).
-2022-05-23 23:55:49,477 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=720, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62847)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-23 23:55:49,478 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653332149.2415347, 'user': {'account_name': 'Test0'}}
-2022-05-23 23:55:49,482 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=720, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62847)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-23 23:55:49,482 DEBUG server Поступило приветственное сообщение от клинета - Test0, отправлен ответ - 200.
-2022-05-23 23:55:49,483 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62848).
-2022-05-23 23:55:49,486 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=748, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62848)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-23 23:55:49,486 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653332149.2865763, 'user': {'account_name': 'Test1'}}
-2022-05-23 23:55:49,490 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=748, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62848)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-23 23:55:49,490 DEBUG server Поступило приветственное сообщение от клинета - Test1, отправлен ответ - 200.
-2022-05-23 23:56:21,195 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=748, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62848)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-23 23:56:21,196 DEBUG server Разбор сообщения от клиента : {'action': 'message', 'from': 'Test1', 'to': 'Test0', 'time': 1653332180.8209927, 'mess_text': 'privet'}
-2022-05-23 23:56:21,196 DEBUG server Поступило сообщение от клиента - Test1, передано на обработку.
-2022-05-23 23:56:21,199 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=720, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62847)>, {'action': 'message', 'from': 'Test1', 'to': 'Test0', 'time': 1653332180.8209927, 'mess_text': 'privet'}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_message
-2022-05-23 23:56:21,199 INFO server Отправлено сообщение пользователю Test0 от пользователя Test1.
-2022-05-23 23:56:40,631 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=720, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62847)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-23 23:56:40,631 DEBUG server Разбор сообщения от клиента : {'action': 'message', 'from': 'Test0', 'to': 'Test1', 'time': 1653332200.213103, 'mess_text': 'privet'}
-2022-05-23 23:56:40,632 DEBUG server Поступило сообщение от клиента - Test0, передано на обработку.
-2022-05-23 23:56:40,634 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=748, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62848)>, {'action': 'message', 'from': 'Test0', 'to': 'Test1', 'time': 1653332200.213103, 'mess_text': 'privet'}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_message
-2022-05-23 23:56:40,635 INFO server Отправлено сообщение пользователю Test1 от пользователя Test0.
-2022-05-23 23:56:48,811 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=720, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62847)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-23 23:56:48,811 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653332208.629137, 'account_name': 'Test0'}
-2022-05-23 23:57:31,824 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-23 23:57:32,261 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62851).
-2022-05-23 23:57:32,516 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62851)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-23 23:57:32,516 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653332252.261784, 'user': {'account_name': 'Test1'}}
-2022-05-23 23:57:32,520 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62851)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-23 23:57:32,520 DEBUG server Поступило приветственное сообщение от клинета - Test1, отправлен ответ - 200.
-2022-05-23 23:57:32,521 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62852).
-2022-05-23 23:57:32,523 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=444, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62852)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-23 23:57:32,524 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653332252.282781, 'user': {'account_name': 'Test0'}}
-2022-05-23 23:57:32,527 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=444, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62852)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-23 23:57:32,527 DEBUG server Поступило приветственное сообщение от клинета - Test0, отправлен ответ - 200.
-2022-05-23 23:57:37,635 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=444, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62852)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-23 23:57:37,636 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653332257.364459, 'account_name': 'Test0'}
-2022-05-24 00:02:59,560 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-24 00:03:00,929 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62859).
-2022-05-24 00:03:00,950 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62860).
-2022-05-24 00:03:01,315 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62859)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:03:01,315 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653332580.929612, 'user': {'account_name': 'Test0'}}
-2022-05-24 00:03:01,317 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62859)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-24 00:03:01,318 DEBUG server Поступило приветственное сообщение от клинета - Test0, отправлен ответ - 200.
-2022-05-24 00:03:01,323 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=768, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62860)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:03:01,323 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653332580.9508324, 'user': {'account_name': 'Test1'}}
-2022-05-24 00:03:01,335 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=768, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62860)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-24 00:03:01,335 DEBUG server Поступило приветственное сообщение от клинета - Test1, отправлен ответ - 200.
-2022-05-24 00:04:26,025 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-24 00:04:26,246 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62875).
-2022-05-24 00:04:26,262 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62876).
-2022-05-24 00:04:27,281 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=948, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62875)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:04:27,287 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653332666.246638, 'user': {'account_name': 'Test1'}}
-2022-05-24 00:04:27,296 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=948, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62875)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-24 00:04:27,297 DEBUG server Поступило приветственное сообщение от клинета - Test1, отправлен ответ - 200.
-2022-05-24 00:04:27,818 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1004, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62876)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:04:27,819 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653332666.2616384, 'user': {'account_name': 'Test0'}}
-2022-05-24 00:04:27,830 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=1004, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62876)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-24 00:04:27,831 DEBUG server Поступило приветственное сообщение от клинета - Test0, отправлен ответ - 200.
-2022-05-24 00:09:41,462 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=948, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62875)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:09:41,462 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653332978.0255752, 'account_name': 'Test1'}
-2022-05-24 00:10:56,958 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-24 00:10:57,308 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62895).
-2022-05-24 00:10:57,338 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62896).
-2022-05-24 00:10:58,287 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=948, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62895)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:10:58,291 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653333057.3063104, 'user': {'account_name': 'Test0'}}
-2022-05-24 00:10:58,303 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=948, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62895)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-24 00:10:58,304 DEBUG server Поступило приветственное сообщение от клинета - Test0, отправлен ответ - 200.
-2022-05-24 00:10:58,817 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1000, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62896)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:10:58,818 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653333057.3382835, 'user': {'account_name': 'Test1'}}
-2022-05-24 00:10:58,825 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=1000, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62896)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-24 00:10:58,826 DEBUG server Поступило приветственное сообщение от клинета - Test1, отправлен ответ - 200.
-2022-05-24 00:11:18,170 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1000, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62896)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:11:18,170 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653333073.1682904, 'account_name': 'Test1'}
-2022-05-24 00:14:19,428 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-24 00:14:19,774 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62927).
-2022-05-24 00:14:20,788 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=764, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62927)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:14:20,794 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653333259.7717986, 'user': {'account_name': 'Test1'}}
-2022-05-24 00:14:20,810 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=764, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62927)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-24 00:14:20,811 DEBUG server Поступило приветственное сообщение от клинета - Test1, отправлен ответ - 200.
-2022-05-24 00:14:20,813 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62928).
-2022-05-24 00:14:20,827 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1008, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62928)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:14:20,827 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653333259.8380177, 'user': {'account_name': 'Test0'}}
-2022-05-24 00:14:20,844 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=1008, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62928)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-24 00:14:20,845 DEBUG server Поступило приветственное сообщение от клинета - Test0, отправлен ответ - 200.
-2022-05-24 00:14:37,675 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=764, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62927)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:14:37,675 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653333272.9634666, 'account_name': 'Test1'}
-2022-05-24 00:18:18,453 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1008, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62928)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:18:18,454 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653333498.2972765, 'account_name': 'Test0'}
-2022-05-24 00:26:01,242 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
-2022-05-24 00:26:01,598 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 63133).
-2022-05-24 00:26:01,629 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 63134).
-2022-05-24 00:27:22,061 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=892, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 63134)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:27:28,174 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653333961.6292973, 'user': {'account_name': 'Test0'}}
-2022-05-24 00:27:39,611 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=892, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 63134)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-24 00:27:39,612 DEBUG server Поступило приветственное сообщение от клинета - Test0, отправлен ответ - 200.
-2022-05-24 00:27:40,609 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=992, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 63133)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:27:40,610 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653333961.5953052, 'user': {'account_name': 'Test1'}}
-2022-05-24 00:27:41,308 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=992, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 63133)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
-2022-05-24 00:27:41,309 DEBUG server Поступило приветственное сообщение от клинета - Test1, отправлен ответ - 200.
-2022-05-24 00:27:42,074 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=892, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 63134)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции main_loop
-2022-05-24 00:27:42,074 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653333961.6292973, 'user': {'account_name': 'Test0'}}
-2022-05-24 00:27:42,991 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=892, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 63134)>, {'response': 400, 'error': 'Имя пользователя уже занято.'}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 21:57:29,155 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 21:58:54,907 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 60474).
+2022-05-26 21:58:55,849 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1152, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60474)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 21:58:55,850 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653584334.906362, 'user': {'account_name': None}}
+2022-05-26 22:05:28,324 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 22:05:52,649 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 60578).
+2022-05-26 22:05:53,154 INFO server Клиент - ('127.0.0.1', 60578), отключился от сервера. 
+2022-05-26 22:08:28,588 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 60599).
+2022-05-26 22:08:29,843 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1192, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60599)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 22:08:29,845 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653584909.0710583, 'user': {'account_name': 'Test{i}'}}
+2022-05-26 22:21:53,466 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 22:24:48,380 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 60874).
+2022-05-26 22:24:49,261 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1312, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60874)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 22:24:49,262 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653585888.380609, 'user': {'account_name': 'Test1'}}
+2022-05-26 22:28:39,564 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=1312, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60874)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 22:32:13,425 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 22:36:12,191 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 22:36:48,542 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 61053).
+2022-05-26 22:36:49,436 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=836, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61053)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 22:36:49,437 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653586608.542717, 'user': {'account_name': 'Test1'}}
+2022-05-26 22:47:34,748 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 22:47:48,863 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 61146).
+2022-05-26 22:47:49,737 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=652, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61146)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 22:47:49,738 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653587268.862291, 'user': {'account_name': 'Test1'}}
+2022-05-26 22:48:18,813 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=652, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61146)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 22:49:01,414 DEBUG server Поступило приветственное сообщение от клинета - Test1, отправлен ответ - 200.
+2022-05-26 22:49:01,416 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 61154).
+2022-05-26 22:49:01,417 INFO server Клиент - ('127.0.0.1', 61146), отключился от сервера. 
+2022-05-26 22:49:01,423 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1048, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61154)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 22:49:01,424 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653587331.8631291, 'user': {'account_name': 'Test2'}}
+2022-05-26 22:51:23,158 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 22:51:29,445 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 61185).
+2022-05-26 22:51:30,328 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=852, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61185)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 22:51:30,330 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653587489.4458327, 'user': {'account_name': 'Test2'}}
+2022-05-26 22:52:02,775 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=852, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61185)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 22:52:33,482 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 22:53:02,985 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 61211).
+2022-05-26 22:53:03,859 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=856, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61211)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 22:53:03,860 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653587582.9847238, 'user': {'account_name': 'Test2'}}
+2022-05-26 22:53:36,613 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=856, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61211)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 22:53:39,198 DEBUG server Поступило приветственное сообщение от клинета - Test2, отправлен ответ - 200.
+2022-05-26 22:54:44,400 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 61228).
+2022-05-26 22:54:44,916 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1816, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61228)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 22:54:44,916 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653587684.3999846, 'user': {'account_name': 'Test3'}}
+2022-05-26 22:54:57,967 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=1816, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61228)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 22:54:57,967 DEBUG server Поступило приветственное сообщение от клинета - Test3, отправлен ответ - 200.
+2022-05-26 22:55:14,822 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1816, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61228)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 22:55:14,823 DEBUG server Разбор сообщения от клиента : {'action': 'message', 'from': 'Test3', 'to': 'Test2', 'time': 1653587714.4677408, 'mess_text': 'privet'}
+2022-05-26 22:55:14,823 DEBUG server Поступило сообщение от клиента - Test3, передано на обработку.
+2022-05-26 22:55:14,829 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=856, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61211)>, {'action': 'message', 'from': 'Test3', 'to': 'Test2', 'time': 1653587714.4677408, 'mess_text': 'privet'}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_message
+2022-05-26 22:55:14,829 INFO server Отправлено сообщение пользователю Test2 от пользователя Test3.
+2022-05-26 23:03:53,869 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 23:14:37,312 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 23:15:10,106 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 61552).
+2022-05-26 23:15:10,327 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61552)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:15:10,327 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653588910.1057742, 'user': {'account_name': 'Test0'}}
+2022-05-26 23:15:10,381 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61552)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:15:10,381 DEBUG server Поступило приветственное сообщение от клинета - Test0, отправлен ответ - 200.
+2022-05-26 23:15:10,382 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 61551).
+2022-05-26 23:15:10,384 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61551)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:15:10,384 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653588910.1057742, 'user': {'account_name': 'Test1'}}
+2022-05-26 23:15:10,408 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61551)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:15:10,408 DEBUG server Поступило приветственное сообщение от клинета - Test1, отправлен ответ - 200.
+2022-05-26 23:15:31,323 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61551)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:15:31,323 DEBUG server Разбор сообщения от клиента : {'action': 'message', 'from': 'Test1', 'to': 'Test0', 'time': 1653588931.3095577, 'mess_text': 'privet'}
+2022-05-26 23:15:31,323 DEBUG server Поступило сообщение от клиента - Test1, передано на обработку.
+2022-05-26 23:15:31,326 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61552)>, {'action': 'message', 'from': 'Test1', 'to': 'Test0', 'time': 1653588931.3095577, 'mess_text': 'privet'}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_message
+2022-05-26 23:15:31,327 INFO server Отправлено сообщение пользователю Test0 от пользователя Test1.
+2022-05-26 23:16:10,601 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61552)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:16:10,601 DEBUG server Разбор сообщения от клиента : {'action': 'message', 'from': 'Test0', 'to': 'Tets1', 'time': 1653588970.124944, 'mess_text': 'privet'}
+2022-05-26 23:16:10,601 DEBUG server Поступило сообщение от клиента - Test0, передано на обработку.
+2022-05-26 23:16:10,602 ERROR server Пользователь Tets1 не зарегистрирован на сервере, отправка сообщения невозможна.
+2022-05-26 23:16:32,026 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61551)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:16:32,026 DEBUG server Разбор сообщения от клиента : {'action': 'message', 'from': 'Test1', 'to': 'Test0', 'time': 1653588991.7089875, 'mess_text': 'sa'}
+2022-05-26 23:16:32,027 DEBUG server Поступило сообщение от клиента - Test1, передано на обработку.
+2022-05-26 23:16:32,029 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61552)>, {'action': 'message', 'from': 'Test1', 'to': 'Test0', 'time': 1653588991.7089875, 'mess_text': 'sa'}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_message
+2022-05-26 23:16:32,029 INFO server Отправлено сообщение пользователю Test0 от пользователя Test1.
+2022-05-26 23:16:45,300 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61552)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:16:45,301 DEBUG server Разбор сообщения от клиента : {'action': 'message', 'from': 'Test0', 'to': 'Test1', 'time': 1653589005.188859, 'mess_text': 'snadsnda'}
+2022-05-26 23:16:45,301 DEBUG server Поступило сообщение от клиента - Test0, передано на обработку.
+2022-05-26 23:16:45,304 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61551)>, {'action': 'message', 'from': 'Test0', 'to': 'Test1', 'time': 1653589005.188859, 'mess_text': 'snadsnda'}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_message
+2022-05-26 23:16:45,304 INFO server Отправлено сообщение пользователю Test1 от пользователя Test0.
+2022-05-26 23:18:10,452 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61551)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:18:10,453 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653589090.172027, 'account_name': 'Test1'}
+2022-05-26 23:18:15,063 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=560, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 61552)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:18:15,064 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653589094.7235386, 'account_name': 'Test0'}
+2022-05-26 23:35:44,771 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 23:36:09,088 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 23:36:10,075 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62062).
+2022-05-26 23:36:10,425 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=316, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62062)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:36:10,426 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653590170.0748737, 'user': {'account_name': 'Test0'}}
+2022-05-26 23:36:10,471 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=316, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62062)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:36:10,471 DEBUG server Поступило приветственное сообщение от клинета - Test0, отправлен ответ - 200.
+2022-05-26 23:36:10,472 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62063).
+2022-05-26 23:36:10,475 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=832, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62063)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:36:10,475 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653590170.0888646, 'user': {'account_name': 'Test1'}}
+2022-05-26 23:36:10,497 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=832, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62063)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:36:10,497 DEBUG server Поступило приветственное сообщение от клинета - Test1, отправлен ответ - 200.
+2022-05-26 23:46:28,235 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=316, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62062)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:46:28,235 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653590788.1317692, 'account_name': 'Test0'}
+2022-05-26 23:46:32,328 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=832, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62063)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:46:32,329 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653590792.091463, 'account_name': 'Test1'}
+2022-05-26 23:49:32,838 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 23:49:39,722 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62142).
+2022-05-26 23:49:40,614 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=852, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62142)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:49:40,614 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653590979.722445, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:49:45,901 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=852, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62142)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:49:45,902 DEBUG server Поступило приветственное сообщение от клинета - Test2, отправлен ответ - 200.
+2022-05-26 23:49:53,564 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=852, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62142)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:49:53,565 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653590993.2079115, 'account_name': 'Test2'}
+2022-05-26 23:50:27,725 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62166).
+2022-05-26 23:50:28,243 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=960, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62166)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:50:28,244 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653591027.7253776, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:50:28,276 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=960, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62166)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:50:28,276 DEBUG server Поступило приветственное сообщение от клинета - Test2, отправлен ответ - 200.
+2022-05-26 23:51:02,533 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=960, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62166)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:51:02,534 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653591058.5104184, 'account_name': 'Test2'}
+2022-05-26 23:52:07,924 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62176).
+2022-05-26 23:52:08,431 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=784, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62176)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:52:08,432 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653591127.924593, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:52:08,471 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=784, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62176)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:52:08,471 DEBUG server Поступило приветственное сообщение от клинета - Test2, отправлен ответ - 200.
+2022-05-26 23:52:14,631 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=784, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62176)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:52:14,632 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653591134.3160768, 'account_name': 'Test2'}
+2022-05-26 23:54:29,405 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62208).
+2022-05-26 23:54:29,911 INFO server Клиент - ('127.0.0.1', 62208), отключился от сервера. 
+2022-05-26 23:54:39,958 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62222).
+2022-05-26 23:54:40,474 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62222)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:54:40,475 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653591279.9572747, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:54:40,507 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62222)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:54:40,507 DEBUG server Поступило приветственное сообщение от клинета - Test2, отправлен ответ - 200.
+2022-05-26 23:54:48,182 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62222)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:54:48,183 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653591287.8005419, 'account_name': 'Test2'}
+2022-05-26 23:55:04,724 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62237).
+2022-05-26 23:55:05,238 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1108, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62237)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:55:05,239 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653591304.7244234, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:55:05,269 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=1108, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62237)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:55:05,270 DEBUG server Поступило приветственное сообщение от клинета - Test2, отправлен ответ - 200.
+2022-05-26 23:55:11,939 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1108, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62237)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:55:11,940 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653591311.6366262, 'account_name': 'Test2'}
+2022-05-26 23:56:45,204 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62250).
+2022-05-26 23:56:45,723 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1056, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62250)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:56:45,727 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653591405.2045228, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:56:45,760 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=1056, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62250)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:56:45,761 DEBUG server Поступило приветственное сообщение от клинета - Test2, отправлен ответ - 200.
+2022-05-26 23:57:09,268 INFO server Клиент - ('127.0.0.1', 62250), отключился от сервера. 
+2022-05-26 23:57:12,020 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62256).
+2022-05-26 23:57:12,566 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1116, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62256)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:57:12,573 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653591432.020396, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:57:12,582 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=1116, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62256)>, {'response': 400, 'error': 'Имя пользователя уже занято.'}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:57:30,873 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62274).
+2022-05-26 23:57:31,391 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=836, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62274)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:57:31,391 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653591450.8721783, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:57:31,397 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=836, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62274)>, {'response': 400, 'error': 'Имя пользователя уже занято.'}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:57:52,202 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62288).
+2022-05-26 23:57:52,210 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=1156, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62288)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:57:52,211 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653591472.2020025, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:57:52,219 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=1156, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62288)>, {'response': 400, 'error': 'Имя пользователя уже занято.'}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:58:11,078 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 23:58:18,364 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62303).
+2022-05-26 23:58:19,063 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=496, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62303)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:58:19,063 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653591498.3640053, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:58:19,111 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=496, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62303)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:58:19,111 DEBUG server Поступило приветственное сообщение от клинета - Test2, отправлен ответ - 200.
+2022-05-26 23:58:19,626 INFO server Клиент - ('127.0.0.1', 62303), отключился от сервера. 
+2022-05-26 23:58:26,963 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62313).
+2022-05-26 23:58:27,467 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=568, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62313)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:58:27,468 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653591506.963264, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:58:27,470 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=568, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62313)>, {'response': 400, 'error': 'Имя пользователя уже занято.'}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:58:48,716 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62318).
+2022-05-26 23:58:48,718 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=568, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62318)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:58:48,718 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653591528.715418, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:58:48,721 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=568, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62318)>, {'response': 400, 'error': 'Имя пользователя уже занято.'}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:59:19,320 INFO server Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2022-05-26 23:59:37,238 INFO server Установлено соедение, IP-адрес подключения ('127.0.0.1', 62351).
+2022-05-26 23:59:38,144 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=812, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62351)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-26 23:59:38,152 DEBUG server Разбор сообщения от клиента : {'action': 'presence', 'time': 1653591577.2388418, 'user': {'account_name': 'Test2'}}
+2022-05-26 23:59:51,179 DEBUG server Была вызвана функция send_message с параметрами (<socket.socket fd=812, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62351)>, {'response': 200}), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции process_clients_message
+2022-05-26 23:59:52,988 DEBUG server Поступило приветственное сообщение от клинета - Test2, отправлен ответ - 200.
+2022-05-27 00:00:27,847 DEBUG server Была вызвана функция get_message с параметрами (<socket.socket fd=812, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62351)>,), {}.Вызов функции осуществлялся из модуля common.utils.Вызов из функции run
+2022-05-27 00:00:27,852 DEBUG server Разбор сообщения от клиента : {'action': 'exit', 'time': 1653591627.4829743, 'account_name': 'Test2'}

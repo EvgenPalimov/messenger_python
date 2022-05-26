@@ -1,0 +1,7 @@
+chardet==4.0.0
+coverage==6.3.2
+greenlet==1.1.2
+PyYAML==6.0
+SQLAlchemy==1.4.36
+tabulate==0.8.9
+variables==0.0.1
