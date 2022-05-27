@@ -15,6 +15,9 @@ class ServerStorage:
             self.name = username
             self.last_login = datetime.now()
 
+        def __repr__(self):
+            return f'Пользователь {self.name} c ID - {self.id} - был в сети последний раз {self.last_login}'
+
     # Класс - отображение таблицы активных пользователей:
     # Экземпляр этого класса = запись в таблице ActiveUsers.
     class ActiveUsers:
@@ -24,6 +27,11 @@ class ServerStorage:
             self.ip_address = ip_address
             self.port = port
             self.login_time = datetime.now()
+
+        def __repr__(self):
+            return f'Пользователь {self.user} c ID {self.id} - Активен. ' \
+                   f'Произвел подключение с IP-адреса - {self.ip_address}, порт подключения - {self.port}, ' \
+                   f'в такое время - {self.login_time}.'
 
     # Класс - отображение таблицы истории входов:
     # Экземпляр этого класса = запись в таблице LoginHistory.
