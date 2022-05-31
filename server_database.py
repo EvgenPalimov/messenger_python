@@ -7,7 +7,7 @@ from sqlalchemy.orm import mapper, sessionmaker
 from datetime import datetime
 
 
-# Класс - серверная базза данных:
+# Класс - серверная база данных:
 
 class ServerStorage:
     # Класс - отображение таблицы всех пользователей:
@@ -134,13 +134,13 @@ class ServerStorage:
         self.session.commit()
 
     def user_login(self, username: str, ip_address: str, port: int):
-        '''
+        """
         Функция выполняющяяся при входе пользователя, записывает в базу факт подключения пользователя.
 
         :param username: Имя пользователя,
         :param ip_address: IP-адрес подключения - пользователя,
         :param port: Порт подключения - пользователя.
-        '''
+        """
         result = self.session.query(self.AllUsers).filter_by(name=username)
         # Если имя пользователя уже присутствует в таблице, обновляем время последнего подключения.
         if result.count():
@@ -161,23 +161,23 @@ class ServerStorage:
         self.session.commit()
 
     def user_logout(self, username: str):
-        '''
+        """
         Функция - фиксирует отключения пользователя от сервера и удаляет его из таблицы активных пользователей.
 
         :param username: Имя пользователя.
-        '''
+        """
         user = self.session.query(self.AllUsers).filter_by(name=username).first()
         self.session.query(self.ActiveUsers).filter_by(user=user.id).delete()
         self.session.commit()
 
     def add_contact(self, user: str, contact: str):
-        '''
+        """
         Функция добавляет контакт в список контактов пользователя.
 
         :param user: Имя пользователя,
         :param contact: Имя контакта,
         :return: Если не проходит проверку, то возвращает None
-        '''
+        """
 
         user = self.session.query(self.AllUsers).filter_by(name=user).first()
         contact = self.session.query(self.AllUsers).filter_by(name=contact).first()
@@ -191,13 +191,13 @@ class ServerStorage:
         self.session.commit()
 
     def remove_contact(self, user: str, contact: str):
-        '''
+        """
         Функция удалает контакт из списка контактов пользователя.
 
         :param user: Имя пользователя,
         :param contact: Имя контакта,
         :return: Если не проходит проверку, то возвращает None
-        '''
+        """
 
         user = self.session.query(self.AllUsers).filter_by(name=user).first()
         contact = self.session.query(self.AllUsers).filter_by(name=contact).first()
@@ -211,12 +211,12 @@ class ServerStorage:
         self.session.commit()
 
     def get_contacts(self, username: str):
-        '''
+        """
         Функция возвращает список контактов пользователя.
 
         :param username: Имя пользователя,
         :return: list: Возвращает список контактов пользователя.
-        '''
+        """
         user = self.session.query(self.AllUsers).filter_by(name=username).first()
         query = self.session.query(self.UsersContacts, self.AllUsers.name).filter_by(user=user.id).join(
             self.AllUsers, self.UsersContacts.contact == self.AllUsers.id
@@ -225,12 +225,12 @@ class ServerStorage:
         return [contact[1] for contact in query.all()]
 
     def process_message(self, sender: str, recipient: str):
-        '''
+        """
         Функция фиксирует передачу сообщения и делает соответствующие заметки в БД.
 
         :param sender: Имя отправителя,
         :param recipient: Имя получателя.
-        '''
+        """
 
         sender = self.session.query(self.AllUsers).filter_by(name=sender).first().id
         recipient = self.session.query(self.AllUsers).filter_by(name=recipient).first().id
@@ -242,11 +242,11 @@ class ServerStorage:
         self.session.commit()
 
     def users_list(self):
-        '''
+        """
         Функция возвращаюящая список зарегистрированых пользователей.
 
         :return: list[tuple]: Возвращает список зарегистрированых пользователей.
-        '''
+        """
         query = self.session.query(
             self.AllUsers.name,
             self.AllUsers.last_login
@@ -254,11 +254,11 @@ class ServerStorage:
         return query.all()
 
     def active_users_list(self):
-        '''
+        """
         Функция возвращаюящая список активных пользователей на данный момент.
 
         :return: list[tuple]: Возвращает список активных пользователей.
-        '''
+        """
         query = self.session.query(self.AllUsers.name,
                                    self.ActiveUsers.ip_address,
                                    self.ActiveUsers.port,
@@ -267,12 +267,12 @@ class ServerStorage:
         return query.all()
 
     def login_history(self, username: str = None):
-        '''
+        """
         Функция возвращает историю входов по пользователю или всех пользователей.
 
         :param username: Имя пользователя,
         :return: list[tuple]: Возвращает историю входа пользователей или одно пользователя.
-        '''
+        """
         query = self.session.query(self.AllUsers.name,
                                    self.UsersLoginHistory.ip_address,
                                    self.UsersLoginHistory.port,
@@ -283,11 +283,11 @@ class ServerStorage:
         return query.all()
 
     def message_history(self):
-        '''
+        """
         Функция возвращает количество переданных и полученных сообщений.
 
         :return: list[tuple]: Функция возвращает список кортежей с данными.
-        '''
+        """
         query = self.session.query(
             self.AllUsers.name,
             self.AllUsers.last_login,

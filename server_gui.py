@@ -1,22 +1,20 @@
 import sys
 from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QApplication, QLabel, QTableView, QDialog, QPushButton, \
-    QLineEdit, QFileDialog, QMessageBox
+    QLineEdit, QFileDialog
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtCore import Qt
-import os
-
 
 # GUI - Создание таблицы QModel, для отображения в окне программы.
 import server_database
 
 
 def gui_create_model(databse: server_database.ServerStorage):
-    '''
+    """
     Функция запрашивает данные из базы данных об активных пользователя и выводит их в окно.
 
     :param databse: База данных,
     :return: list: Возвращает список с данными об пользователях.
-    '''
+    """
     list_users = databse.active_users_list()
     list_ = QStandardItemModel()
     list_.setHorizontalHeaderLabels(['Имя Клиента', 'IP-Адресс', 'Порт', 'Время подключения'])
@@ -33,14 +31,15 @@ def gui_create_model(databse: server_database.ServerStorage):
         list_.appendRow([user, ip_address, port, time])
     return list_
 
+
 def create_stat_model(database: server_database.ServerStorage):
-    '''
+    """
     Функция запрашивает данные из базы данных об истории отправленных и полученных
     сообщений пользователей и выводит их в окно.
 
     :param database: База данных,
     :return: list: Возвращает список с данными об пользователях.
-    '''
+    """
 
     # Список записей из базы
     hist_list = database.message_history()
@@ -61,6 +60,7 @@ def create_stat_model(database: server_database.ServerStorage):
         recvd.setEditable(False)
         list_.appendRow([user, last_seen, sent, recvd])
     return list_
+
 
 # Класс основного окна
 class MainWindow(QMainWindow):
@@ -100,6 +100,7 @@ class MainWindow(QMainWindow):
 
         self.show()
 
+
 # Класс окна с историей пользователей.
 class HistoryWindow(QDialog):
     def __init__(self):
@@ -120,6 +121,7 @@ class HistoryWindow(QDialog):
         self.history_table.setFixedSize(580, 620)
 
         self.show()
+
 
 # Класс окна настроек.
 class ConfigWindow(QDialog):
@@ -194,8 +196,8 @@ class ConfigWindow(QDialog):
 
         self.show()
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = MainWindow()
     ex.statusBar().showMessage('Test Statusbar Message')

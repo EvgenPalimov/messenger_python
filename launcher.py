@@ -1,4 +1,4 @@
-'''Программа-лаунчер'''
+"""Программа-лаунчер"""
 import random
 import subprocess
 import time
@@ -6,8 +6,8 @@ import time
 PROCESS = []
 
 
-def get_name(i):
-    return f'{random.getrandbits(128)}/{i}'
+def get_name(number):
+    return f'{random.getrandbits(128)}/{number}'
 
 
 while True:

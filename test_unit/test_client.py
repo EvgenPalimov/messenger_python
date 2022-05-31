@@ -1,13 +1,12 @@
-'''Тест клиентский функций'''
+"""Тест клиентский функций"""
 
 import sys
 import os
 import unittest
-
+from common.variables import *
 from client import ClientSender, ClientReader
 
 sys.path.append(os.path.join(os.getcwd(), '..'))
-from common.variables import RESPONSE, ERROR, USER, ACCOUNT_NAME, TIME, ACTION, PRESENCE
 
 
 class TestClient(unittest.TestCase):
@@ -19,7 +18,7 @@ class TestClient(unittest.TestCase):
     # Тестирования функции - process_client_message.
 
     def test_get_data(self):
-        '''Тест на получение всех данных'''
+        """Тест на получение всех данных"""
         self.assertEqual(self.module_1, {ACTION: PRESENCE, TIME: 1.1, USER: {ACCOUNT_NAME: 'Ivan'}},
                          'Не коректные данные')
 
@@ -43,17 +42,17 @@ class TestClient(unittest.TestCase):
     # Тестирования функции - process_ans.
 
     def test_success_answer_to_server(self):
-        '''Тест на проверку ответа сервера = 200'''
+        """Тест на проверку ответа сервера = 200"""
         self.assertEqual(ClientReader.process_response_answer({RESPONSE: 200}), '200: OK',
                          'Должен быть статус-код = 200')
 
     def test_not_success_answer_to_server(self):
-        '''Тест, проверка срабатывания ошибки, при не коректном статус-коде'''
+        """Тест, проверка срабатывания ошибки, при не коректном статус-коде"""
         self.assertEqual(ClientReader.process_response_answer({RESPONSE: 404, ERROR: 'error'}), '400: error',
                          'Проверка на ошибку статус-кода, а был передан верный код.')
 
     def test_not_answer_to_server(self):
-        '''Тест на проверку ответа сервера = 400'''
+        """Тест на проверку ответа сервера = 400"""
         self.assertEqual(ClientReader.process_response_answer({RESPONSE: 400, ERROR: 'error'}), '400: error',
                          'Должен быть статус-код = 400')
 

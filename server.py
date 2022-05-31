@@ -1,7 +1,6 @@
-'''Программа-сервер'''
+"""Программа-сервер"""
 import argparse
 import configparser
-import logging
 import os
 import socket
 import select
@@ -17,7 +16,7 @@ from server_database import ServerStorage
 from PyQt5.QtWidgets import QApplication, QMessageBox
 from PyQt5.QtCore import QTimer
 from server_gui import MainWindow, gui_create_model, HistoryWindow, create_stat_model, ConfigWindow
-from PyQt5.QtGui import QStandardItemModel, QStandardItem
+
 
 LOGGER = logging.getLogger('server')
 
@@ -27,12 +26,14 @@ new_connection = False
 conflag_lock = threading.Lock()
 
 
-def create_arg_parser(default_port, default_address):
-    '''
+def create_arg_parser(default_port: int, default_address: str):
+    """
     Создаём парсер аргументов коммандной строки.
 
+    :param default_port: Передается порт сервера по умолчанию,
+    :param default_address: Передается IP-адрес сервера по умолчанию,
     :return: Возвращается порт и IP-адрес сервера.
-    '''
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument('-a', default=default_address, nargs='?')
     parser.add_argument('-p', default=default_port, type=int, nargs='?')
@@ -47,7 +48,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
     port = Port()
     addr = Address()
 
-    def __init__(self, listen_address: str, listen_port: int, database):
+    def __init__(self, listen_address: str, listen_port: int, database: ServerStorage):
         # Параметры Подключения.
         self.addr = listen_address
         self.port = listen_port
@@ -86,7 +87,6 @@ class Server(threading.Thread, metaclass=ServerMaker):
     def run(self):
         # Инициализация сокета
         self.init_socket()
-        self.print_help()
 
         # Основной цикл программы сервера
         while True:
@@ -136,12 +136,12 @@ class Server(threading.Thread, metaclass=ServerMaker):
             self.messages.clear()
 
     def process_message(self, message: dict, listen_socks: list):
-        '''
+        """
         Функция адресной отправки сообщения определеному пользователю.
 
         :param message: Сообщение пользователя
         :param listen_socks: Слушающие сокеты
-        '''
+        """
         # message[DESTINATION] - имя
         # names[message[DESTINATION]] получатель
         if message[DESTINATION] in self.names and self.names[message[DESTINATION]] in listen_socks:
@@ -154,20 +154,21 @@ class Server(threading.Thread, metaclass=ServerMaker):
                 f'Пользователь {message[DESTINATION]} не зарегистрирован на сервере, отправка сообщения невозможна.')
 
     def process_clients_message(self, message: dict, client: socket.socket):
-        '''
+        """
         Обработчик сообщений от клиентов, принимает словарь - сообщение от клиента,
         проверяет коррестность, возвращает словарь-ответ для клиента.
 
         :param message: Сообщение клиента
         :param client: Объект пользователя
         :return: dict: Если есть неообходимость в ответе
-        '''
+        """
 
         global new_connection
         LOGGER.debug(f'Разбор сообщения от клиента : {message}')
         # Если это сообщение о присутствии, принимаем и отвечаем
         if ACTION in message and message[ACTION] == PRESENCE and TIME in message and USER in message:
-            # Если такой пользователь ещё не зарегистрирован, регистрируем, иначе отправляем ответ и завершаем соединение.
+            # Если такой пользователь ещё не зарегистрирован, регистрируем,
+            # иначе отправляем ответ и завершаем соединение.
             if message[USER][ACCOUNT_NAME] not in self.names.keys():
                 self.names[message[USER][ACCOUNT_NAME]] = client
                 client_ip, client_port = client.getpeername()
@@ -241,18 +242,9 @@ class Server(threading.Thread, metaclass=ServerMaker):
             send_message(client, response)
             return
 
-    def print_help(self):
-        '''Функция - выводящяя справку по параметрам сервера.'''
-        print('Поддерживаемые команды:\n'
-              'users - список зарегистрированных пользователей,\n'
-              'active - список подключенных пользователей,\n'
-              'users_log - история входов пользоватлей,\n'
-              'help - вывести подсказки по командам,\n'
-              'exit - выход из приложения.')
-
 
 def main():
-    '''Функция инициализации - запуска сервера.'''
+    """Функция инициализации - запуска сервера."""
     config = configparser.ConfigParser()
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -286,10 +278,10 @@ def main():
     main_window.active_clients_table.resizeRowsToContents()
 
     def list_update():
-        '''
+        """
         Функция обновляющая список подключённых клиентов, проверяет флаг подключения
         и если надо обновляет список.
-        '''
+        """
         global new_connection
         if new_connection:
             main_window.active_clients_table.setModel(
@@ -301,9 +293,9 @@ def main():
                 new_connection = False
 
     def show_statistics():
-        '''
+        """
         Функция создающая окно со статистикой клиентов.
-        '''
+        """
         global stat_window
         stat_window = HistoryWindow()
         stat_window.history_table.setModel(create_stat_model(database))
@@ -311,9 +303,9 @@ def main():
         stat_window.history_table.resizeRowsToContents()
 
     def server_config():
-        '''
+        """
         Функция создающая окно с настройками.
-        '''
+        """
         global config_window
         config_window = ConfigWindow()
         config_window.db_path.insert(config['SETTINGS']['database_path'])
@@ -323,28 +315,29 @@ def main():
         config_window.save_button.clicked.connect(save_server_config)
 
     def save_server_config():
-        '''
+        """
 
-        '''
+        """
         global config_window
         message = QMessageBox()
         config['SETTINGS']['database_path'] = config_window.db_path.text()
         config['SETTINGS']['database_file'] = config_window.db_file.text()
+        port = config_window.port.text()
+        ip_address = config_window.ip_address.text()
         try:
-            port = int(config_window.port.text())
+            int(port)
+            socket.inet_aton(ip_address)
         except ValueError:
             message.warning(config_window, 'Ошибка', 'Порт долже быть числом.')
-        try:
-            ip_address = socket.inet_aton(config_window.ip_address.text())
         except socket.error:
             message.warning(config_window, 'Ошибка',
                             f'Не верно указан IP-адресом. Проверьте правильность введенного адреса,'
                             f'должен быть в формате ***.***.***.***'
                             )
         else:
-            config['SETTINGS']['default_address'] = config_window.ip_address.text()
-            if 1023 < port < 65536:
-                config['SETTINGS']['default_port'] = str(port)
+            config['SETTINGS']['default_address'] = ip_address
+            if 1023 < int(port) < 65536:
+                config['SETTINGS']['default_port'] = port
                 with open('server.ini', 'w') as conf:
                     config.write(conf)
                     message.information(config_window, 'OK', 'Настройки успешно сохранены!')
@@ -363,28 +356,6 @@ def main():
 
     # Запускам GUI
     server_app.exec_()
-
-    # # Основной цикл сервера.
-    # while True:
-    #     command = input('Введите команду: ')
-    #     if command == 'users':
-    #         for user in sorted(database.users_list()):
-    #             print(f'Пользователь - {user[0]}, последний вход - {user[1]}.')
-    #     elif command == 'active':
-    #         for user in sorted(database.active_users_list()):
-    #             print(f'Пользователь - {user[0]}, подключен: {user[1]}:{user[2]}, время установки '
-    #                   f'соединения: {user[3]}')
-    #     elif command == 'users_log':
-    #         name = input('Введите имя пользователя для просмотра его истории или нажмите Enter для вывода'
-    #                      'всей истории пользователей.')
-    #         for user in sorted(database.login_history(name)):
-    #             print(f'Пользователь: {user[0]} время выхода: {user[1]}. Вход с: {user[2]}:{user[3]}.')
-    #     elif command == 'help':
-    #         server.print_help()
-    #     elif command == 'exit':
-    #         break
-    #     else:
-    #         print('Комманда не распознана, повторите ввод!')
 
 
 if __name__ == '__main__':

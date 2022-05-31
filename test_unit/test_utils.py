@@ -5,16 +5,17 @@ import os
 import unittest
 import json
 
-sys.path.append(os.path.join(os.getcwd(), '..'))
-from common.variables import USER, ACCOUNT_NAME, TIME, ACTION, PRESENCE, ENCODING
+from common.variables import *
 from common.utils import get_message, send_message
+
+sys.path.append(os.path.join(os.getcwd(), '..'))
 
 
 class TestServer:
-    '''
+    """
     Тестовый класс - эмулирует прием и передачу тестового сообщения.
     На вход принимает словарь с данными.
-    '''
+    """
 
     def __init__(self, test_data):
         self.test_data = test_data
@@ -32,7 +33,7 @@ class TestServer:
 
 
 class Tests(unittest.TestCase):
-    '''Тестирукм фукции отвпраки и получения сообщения'''
+    """Тестирукм фукции отвпраки и получения сообщения"""
 
     def setUp(self) -> None:
         self.test_data_send = {
