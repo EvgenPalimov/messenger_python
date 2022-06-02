@@ -4,10 +4,10 @@ from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QApplication, QLabel, QT
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtCore import Qt
 
-# GUI - Создание таблицы QModel, для отображения в окне программы.
 import server_database
 
 
+# GUI - Создание таблицы QModel, для отображения в окне программы.
 def gui_create_model(databse: server_database.ServerStorage):
     """
     Функция запрашивает данные из базы данных об активных пользователя и выводит их в окно.
@@ -153,6 +153,7 @@ class ConfigWindow(QDialog):
             dialog = QFileDialog(self)
             path = dialog.getExistingDirectory()
             path = path.replace('/', '\\')
+            self.db_path.clear()
             self.db_path.insert(path)
 
         self.db_path_select.clicked.connect(open_file_dialog)

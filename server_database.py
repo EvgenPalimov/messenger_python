@@ -1,14 +1,11 @@
 import configparser
 import os
-
 from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData, ForeignKey, DateTime
 from sqlalchemy.orm import mapper, sessionmaker
-
 from datetime import datetime
 
 
 # Класс - серверная база данных:
-
 class ServerStorage:
     # Класс - отображение таблицы всех пользователей:
     # Экземпляр этого класса = запись в таблице AllUsers.

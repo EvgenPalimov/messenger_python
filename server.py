@@ -10,13 +10,12 @@ import threading
 import logs.server_log_config
 from common.variables import *
 from common.utils import get_message, send_message
-from descriptrs import Port, Address
+from descryptors import Port, Address
 from metaslasses import ServerMaker
 from server_database import ServerStorage
 from PyQt5.QtWidgets import QApplication, QMessageBox
 from PyQt5.QtCore import QTimer
 from server_gui import MainWindow, gui_create_model, HistoryWindow, create_stat_model, ConfigWindow
-
 
 LOGGER = logging.getLogger('server')
 
@@ -24,23 +23,6 @@ LOGGER = logging.getLogger('server')
 # постоянными запросами на обновление
 new_connection = False
 conflag_lock = threading.Lock()
-
-
-def create_arg_parser(default_port: int, default_address: str):
-    """
-    Создаём парсер аргументов коммандной строки.
-
-    :param default_port: Передается порт сервера по умолчанию,
-    :param default_address: Передается IP-адрес сервера по умолчанию,
-    :return: Возвращается порт и IP-адрес сервера.
-    """
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-a', default=default_address, nargs='?')
-    parser.add_argument('-p', default=default_port, type=int, nargs='?')
-    namespace = parser.parse_args(sys.argv[1:])
-    listen_address = namespace.a
-    listen_port = namespace.p
-    return listen_address, listen_port
 
 
 # Класс запуска сервера.
@@ -86,6 +68,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
 
     def run(self):
         # Инициализация сокета
+        global new_connection
         self.init_socket()
 
         # Основной цикл программы сервера
@@ -123,6 +106,8 @@ class Server(threading.Thread, metaclass=ServerMaker):
                                 del self.names[name]
                                 break
                         self.clients.remove(client_message)
+                        with conflag_lock:
+                            new_connection = True
 
             # Если есть сообщения, обрабатываем каждое.
             for message in self.messages:
@@ -133,6 +118,8 @@ class Server(threading.Thread, metaclass=ServerMaker):
                     self.clients.remove(self.names[message[DESTINATION]])
                     self.database.user_logout(message[DESTINATION])
                     del self.names[message[DESTINATION]]
+                    with conflag_lock:
+                        new_connection = True
             self.messages.clear()
 
     def process_message(self, message: dict, listen_socks: list):
@@ -186,23 +173,25 @@ class Server(threading.Thread, metaclass=ServerMaker):
                 client.close()
             return
 
-        # Если это сообщение, то добавляем его в очередь сообщений. Ответ не требуется.
+        # Если это сообщение, то добавляем его в очередь сообщений. Проверяем наличие в сети контакта и отвечаем.
         elif ACTION in message and message[ACTION] == MESSAGE and DESTINATION in message \
                 and TIME in message and SENDER in message and MESSAGE_TEXT in message and \
                 self.names[message[SENDER]] == client:
-            self.messages.append(message)
-            self.database.process_message(
-                message[SENDER], message[DESTINATION]
-            )
-            LOGGER.debug(f'Поступило сообщение от клиента - {message[SENDER]}, передано на обработку.')
+            if message[DESTINATION] in self.names:
+                self.messages.append(message)
+                self.database.process_message(message[SENDER], message[DESTINATION])
+                send_message(client, RESPONSE_200)
+            else:
+                response = RESPONSE_400
+                response[ERROR] = 'Пользователь не зарегистрирован на сервере.'
+                send_message(client, response)
             return
 
         # Если клиент выходит.
         elif ACTION in message and message[ACTION] == EXIT and ACCOUNT_NAME in message \
                 and self.names[message[ACCOUNT_NAME]] == client:
             self.database.user_logout(message[ACCOUNT_NAME])
-            LOGGER.info(
-                f'Клиент {message[ACCOUNT_NAME]} корректно отключился от сервера.')
+            LOGGER.info(f'Клиент {message[ACCOUNT_NAME]} корректно отключился от сервера.')
             self.clients.remove(self.names[message[ACCOUNT_NAME]])
             self.names[message[ACCOUNT_NAME]].close()
             del self.names[message[ACCOUNT_NAME]]
@@ -225,7 +214,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
 
         # Если это удаление контакта из списка контаков пользователя.
         elif ACTION in message and message[ACTION] == REMOVE_CONTACT and ACCOUNT_NAME in message and USER \
-                in message and self.names[message[USER], message[ACCOUNT_NAME]]:
+                in message and self.names[message[USER]] == client:
             self.database.remove_contact(message[USER], message[ACCOUNT_NAME])
             send_message(client, RESPONSE_200)
 
@@ -234,6 +223,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
                 and self.names[message[ACCOUNT_NAME]] == client:
             response = RESPONSE_202
             response[LIST_INFO] = [user[0] for user in self.database.users_list()]
+            send_message(client, response)
 
         # Иначе отдаём Bad request.
         else:
@@ -243,24 +233,49 @@ class Server(threading.Thread, metaclass=ServerMaker):
             return
 
 
-def main():
-    """Функция инициализации - запуска сервера."""
-    config = configparser.ConfigParser()
+def create_arg_parser(default_port: int, default_address: str):
+    """
+    Создаём парсер аргументов коммандной строки.
 
+    :param default_port: Передается порт сервера по умолчанию,
+    :param default_address: Передается IP-адрес сервера по умолчанию,
+    :return: Возвращается порт и IP-адрес сервера.
+    """
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-a', default=default_address, nargs='?')
+    parser.add_argument('-p', default=default_port, type=int, nargs='?')
+    namespace = parser.parse_args(sys.argv[1:])
+    listen_address = namespace.a
+    listen_port = namespace.p
+    return listen_address, listen_port
+
+
+def config_load():
+    config = configparser.ConfigParser()
     dir_path = os.path.dirname(os.path.realpath(__file__))
     config.read(f'{dir_path}/server.ini')
+    # Если конфиг файл загружен правильно, запускаемся, иначе конфиг по умолчанию.
+    if 'SETTINGS' in config:
+        return config
+    else:
+        config.add_section('SETTINGS')
+        config.set('SETTINGS', 'Default_port', str(DEFAULT_PORT))
+        config.set('SETTINGS', 'Listen_Address', '')
+        config.set('SETTINGS', 'Database_path', '')
+        config.set('SETTINGS', 'Database_file', 'server_database.db3')
+        return config
+
+
+def main():
+    """Функция инициализации - запуска сервера."""
+    config = config_load()
     # Загрузка параметров командной строки, если нет параметров, то задаём значения по умолчанию.
     listen_address, listen_port = create_arg_parser(
         int(config['SETTINGS']['default_port']), config['SETTINGS']['default_address']
     )
 
     # Инициализация базы данных.
-    database = ServerStorage(
-        os.path.join(
-            config['SETTINGS']['database_path'],
-            config['SETTINGS']['database_file']
-        )
-    )
+    database = ServerStorage(os.path.join(config['SETTINGS']['database_path'], config['SETTINGS']['database_file']))
 
     # Создание экземпляра класса - сервера.
     server = Server(listen_address, listen_port, database)
@@ -284,9 +299,7 @@ def main():
         """
         global new_connection
         if new_connection:
-            main_window.active_clients_table.setModel(
-                gui_create_model(database)
-            )
+            main_window.active_clients_table.setModel(gui_create_model(database))
             main_window.active_clients_table.resizeColumnsToContents()
             main_window.active_clients_table.resizeRowsToContents()
             with conflag_lock:
@@ -301,6 +314,7 @@ def main():
         stat_window.history_table.setModel(create_stat_model(database))
         stat_window.history_table.resizeColumnsToContents()
         stat_window.history_table.resizeRowsToContents()
+        stat_window.show()
 
     def server_config():
         """

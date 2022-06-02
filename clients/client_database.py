@@ -1,6 +1,10 @@
+import os
+import sys
 from sqlalchemy import create_engine, Table, Column, Integer, String, Text, MetaData, DateTime
 from sqlalchemy.orm import mapper, sessionmaker
 from datetime import datetime
+
+sys.path.append('../')
 
 
 # Класс - серверная база данных:
@@ -20,6 +24,10 @@ class ClientDatabase:
             self.message = message
             self.date = datetime.now()
 
+        def __repr__(self):
+            return f'Пользователь - {self.from_user} отправил сообщение, контакту - {self.to_user}, ' \
+                   f'текст сообщения - {self.message}'
+
     # Класс - отображение таблицы списка контактов.
     class Contacts:
         def __init__(self, contact):
@@ -27,7 +35,9 @@ class ClientDatabase:
             self.name = contact
 
     def __init__(self, name: str):
-        self.database_engine = create_engine(f'sqlite:///client_{name}.db3', echo=False, pool_recycle=7200,
+        path = os.path.dirname(os.path.realpath(__file__))
+        filename = f'client_{name}.db3'
+        self.database_engine = create_engine(f'sqlite:///{os.path.join(path, filename)}', echo=False, pool_recycle=7200,
                                              connect_args={'check_same_thread': False})
         self.metadata = MetaData()
 

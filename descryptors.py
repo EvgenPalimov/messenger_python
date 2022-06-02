@@ -7,7 +7,7 @@ file = sys.argv[0]
 if re.search(r'(server)', file):
     LOGGER = logging.getLogger('server')
 else:
-    LOGGER = logging.getLogger('client')
+    LOGGER = logging.getLogger('clients')
 
 
 # Дескриптор для описания порта:

@@ -21,7 +21,7 @@ LOG_FILE = logging.FileHandler(PATH, encoding='utf8')
 LOG_FILE.setFormatter(CLIENT_FORMATTER)
 
 # Создаём регистратор и настраиваем его
-LOGGER = logging.getLogger('client')
+LOGGER = logging.getLogger('clients')
 LOGGER.addHandler(STREAM_HANDLER)
 LOGGER.addHandler(LOG_FILE)
 LOGGER.setLevel(LOGGING_LEVEL)

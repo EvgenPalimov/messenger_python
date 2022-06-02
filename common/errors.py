@@ -1,13 +1,6 @@
 """Ошибки"""
 
 
-class IncorrectDataReceivedError(Exception):
-    """Исключение  - некорректные данные получены от сокета"""
-
-    def __str__(self):
-        return 'Принято некорректное сообщение от удалённого компьютера.'
-
-
 class ServerError(Exception):
     """Исключение - ошибка сервера"""
 
@@ -16,13 +9,6 @@ class ServerError(Exception):
 
     def __str__(self):
         return self.text
-
-
-class NonDictInputError(Exception):
-    """Исключение - аргумент функции не словарь"""
-
-    def __str__(self):
-        return 'Аргумент функции должен быть словарём.'
 
 
 class ReqFieldMissingError(Exception):

@@ -5,15 +5,14 @@ import socket
 import sys
 import threading
 import time
-import logs.client_log_config
-from client_database import ClientDatabase
+from clients.client_database import ClientDatabase
 from common.variables import *
 from common.utils import get_message, send_message
-from descriptrs import Port, Address, ClientName
-from errors import ReqFieldMissingError, ServerError, IncorrectDataReceivedError
+from descryptors import Port, Address, ClientName
+from common.errors import ReqFieldMissingError, ServerError, IncorrectDataReceivedError
 from metaslasses import ClientMaker
 
-LOGGER = logging.getLogger('client')
+LOGGER = logging.getLogger('clients')
 
 # Объект блокировки сокета и работы с базой данных
 socket_lock = threading.Lock()
