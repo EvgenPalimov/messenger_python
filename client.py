@@ -28,23 +28,6 @@ class ClientSender(threading.Thread):
         self.database = database
         super().__init__()
 
-    @staticmethod
-    def create_presence(account_name: str):
-        """
-        Функция генерирует сообщение-запрос о присутствии клиента.
-
-        :param account_name: Имя аккаунта
-        :return: Возвращает словарь, с данными для запроса
-        """
-        out = {
-            ACTION: PRESENCE,
-            TIME: time.time(),
-            USER: {
-                ACCOUNT_NAME: account_name
-            }
-        }
-        LOGGER.debug(f'Сгенерирован запрос о присутствии клинета - {account_name}.')
-        return out
 
     def create_exit_message(self):
         """
@@ -206,22 +189,6 @@ class ClientReader(threading.Thread):
         self.database = database
         super().__init__()
 
-    @staticmethod
-    def process_response_answer(message: dict):
-        """
-        Функция разбирает ответ сервера на сообщение о присутствии.
-
-        :param message: с данными для запроса
-        :return: dict, возвращает ответ "200" - если успешно или исключени при ошибке
-        """
-        LOGGER.debug(f'Разбор приветсвенного сообщения от сервера: {message}')
-        if RESPONSE in message:
-            if message[RESPONSE] == 200:
-                return '200: OK'
-            elif message[RESPONSE] == 400:
-                raise ServerError(f'400: {message[ERROR]}')
-        raise ReqFieldMissingError(RESPONSE)
-
     def run(self):
         """
         Функция - обработчик сообщений других пользователей, поступающих от сервера.
@@ -273,8 +240,9 @@ def contacts_list_request(sock: socket, name: str):
         USER: name
     }
     LOGGER.debug(f'Сформирован запрос: {req}.')
-    send_message(sock, req)
-    answer = get_message(sock)
+    with socket_lock:
+        send_message(sock, req)
+        answer = get_message(sock)
     LOGGER.debug(f'Получен ответ: {answer}.')
     if RESPONSE in answer and answer[RESPONSE] == 202:
         return answer[LIST_INFO]
@@ -298,13 +266,16 @@ def add_contact(sock: socket, username: str, contact: str):
         USER: username,
         ACCOUNT_NAME: contact
     }
-    send_message(sock, req)
-    answer = get_message(sock)
+    LOGGER.debug(f'Сформирован запрос: {req}.')
+
+    with socket_lock:
+        send_message(sock, req)
+        answer = get_message(sock)
+    LOGGER.debug(f'Получен ответ: {answer}.')
     if RESPONSE in answer and answer[RESPONSE] == 200:
-        pass
+        print('Удачное создание контакта.')
     else:
         raise ServerError('Ошибка создания контакта.')
-    print('Удачное создание контакта.')
 
 
 def remove_contact(sock: socket, username: str, contact: str):
@@ -323,13 +294,15 @@ def remove_contact(sock: socket, username: str, contact: str):
         USER: username,
         ACCOUNT_NAME: contact
     }
-    send_message(sock, req)
-    answer = get_message(sock)
+    LOGGER.debug(f'Сформирован запрос: {req}.')
+    with socket_lock:
+        send_message(sock, req)
+        answer = get_message(sock)
+    LOGGER.debug(f'Получен ответ: {answer}.')
     if RESPONSE in answer and answer[RESPONSE] == 200:
-        pass
+        print('Удачное удаление')
     else:
-        raise ServerError('Ошибка удаления клиента')
-    print('Удачное удаление')
+        raise ServerError('Ошибка удаления клиента.')
 
 
 def database_load(sock: socket, database: ClientDatabase, username: str):
@@ -363,12 +336,48 @@ def user_list_request(sock: socket, username: str):
         TIME: time.time(),
         ACCOUNT_NAME: username
     }
-    send_message(sock, req)
-    answer = get_message(sock)
+    LOGGER.debug(f'Сформирован запрос: {req}.')
+    with socket_lock:
+        send_message(sock, req)
+        answer = get_message(sock)
+    LOGGER.debug(f'Получен ответ: {answer}.')
     if RESPONSE in answer and answer[RESPONSE] == 202:
         return answer[LIST_INFO]
     else:
         raise ServerError
+
+
+def process_response_answer(message: dict):
+    """
+    Функция разбирает ответ сервера на сообщение о присутствии.
+
+    :param message: с данными для запроса
+    :return: dict, возвращает ответ "200" - если успешно или исключени при ошибке
+    """
+    LOGGER.debug(f'Разбор приветсвенного сообщения от сервера: {message}')
+    if RESPONSE in message:
+        if message[RESPONSE] == 200:
+            return '200: OK'
+        elif message[RESPONSE] == 400:
+            raise ServerError(f'400: {message[ERROR]}')
+    raise ReqFieldMissingError(RESPONSE)
+
+def create_presence(account_name: str):
+    """
+    Функция генерирует сообщение-запрос о присутствии клиента.
+
+    :param account_name: Имя аккаунта
+    :return: Возвращает словарь, с данными для запроса
+    """
+    out = {
+        ACTION: PRESENCE,
+        TIME: time.time(),
+        USER: {
+            ACCOUNT_NAME: account_name
+        }
+    }
+    LOGGER.debug(f'Сгенерирован запрос о присутствии клинета - {account_name}.')
+    return out
 
 
 def create_arg_parser():
@@ -413,8 +422,10 @@ class RunApp(metaclass=ClientMaker):
             transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             transport.settimeout(1)
             transport.connect((self.addr, self.port))
-            send_message(transport, ClientSender.create_presence(self.client_name))
-            answer = ClientReader.process_response_answer(get_message(transport))
+            with socket_lock:
+                send_message(transport, create_presence(self.client_name))
+                answer = process_response_answer(get_message(transport))
+            LOGGER.info('Соеденение с сервером успешно установлено.')
             LOGGER.info(f'Установлено соединение с сервером. Ответ сервера: {answer}')
             print(f'Установлено соединение с сервером {self.client_name}.')
         except json.JSONDecodeError:

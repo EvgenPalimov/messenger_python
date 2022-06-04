@@ -118,7 +118,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
                     except OSError:
                         LOGGER.info(f'Клиент - {client_message.getpeername()}, отключился от сервера. ')
                         for name in self.names:
-                            if self.name[name] == client_message:
+                            if self.names[name] == client_message:
                                 self.database.user_logout(name)
                                 del self.names[name]
                                 break
