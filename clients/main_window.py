@@ -1,20 +1,21 @@
 import logging
-from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox
-from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
+
+from PyQt5 import QtWidgets, QtCore
+from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox, QWidget, QShortcut
+from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor, QKeySequence
 from PyQt5.QtCore import pyqtSlot, Qt
 import sys
-
-import logs.client_log_config
 from clients.database.client_database import ClientDatabase
 from clients.forms_gui.add_contact import AddContactDialog
 from clients.forms_gui.del_contact import DelContactDialog
-from clients.main_window_conv import Ui_MainClientWindow
+from clients.forms_gui.main_window_conv import Ui_MainClientWindow
 from clients.transport import ClientTransport
 from common.errors import ServerError, UserNotAvailabel
 
 sys.path.append('../')
 
 LOGGER = logging.getLogger('clients')
+
 
 # Класс основого окна.
 class ClientMainWindow(QMainWindow):
@@ -29,7 +30,6 @@ class ClientMainWindow(QMainWindow):
         # Иницилиализация кнопок.
         self.ui.menu_exit.triggered.connect(qApp.exit)
         self.ui.btn_send.clicked.connect(self.send_message)
-        self.ui.btn_send.setAutoDefault(True)
         self.ui.btn_add_contact.clicked.connect(self.add_contact_window)
         self.ui.menu_add_contact.triggered.connect(self.add_contact_window)
         self.ui.btn_remove_contact.clicked.connect(self.delete_contact_window)
@@ -99,7 +99,6 @@ class ClientMainWindow(QMainWindow):
 
         self.current_chat = self.ui.list_contacts.currentIndex().data()
         self.set_active_user()
-
 
     def set_active_user(self):
         """
@@ -174,6 +173,7 @@ class ClientMainWindow(QMainWindow):
             self.contacts_model.appendRow(new_contact)
             LOGGER.info(f'Успешно добавлен контакт - {new_contact}.')
             self.messages.information(self, 'Успех.', 'Контакт успешно добавлен!')
+            self.clients_list_update()
 
     def delete_contact_window(self):
         """Функция удаления контакта."""
@@ -206,6 +206,7 @@ class ClientMainWindow(QMainWindow):
             self.clients_list_update()
             LOGGER.info(f'Успешно удалён контакт - {selected}.')
             self.messages.information(self, 'Успех.', 'Контакт упешно удалён!')
+            self.clients_list_update()
             item.close()
             # Если удалён активный пользователь, то деактивируем поля ввода.
             if selected == self.current_chat:

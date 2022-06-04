@@ -39,4 +39,5 @@ class DelContactDialog(QDialog):
         self.btn_cancel.move(230, 60)
         self.btn_cancel.clicked.connect(self.close)
 
-        self.selector.addItems(sorted(self.database.get_contacts()))
+        contacts = self.database.get_contacts()
+        self.selector.addItems(sorted([contact[0] for contact in contacts]))

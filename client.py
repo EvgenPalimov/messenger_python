@@ -80,7 +80,6 @@ if __name__ == '__main__':
         sys.exit(1)
     transport.setDaemon(True)
     transport.start()
-    print(type(transport))
 
     # Создаём GUI.
     main_window = ClientMainWindow(transport, database)

@@ -110,6 +110,7 @@ class ClientTransport(threading.Thread, QObject):
         if RESPONSE in message:
             if message[RESPONSE] == 200:
                 return
+            # Перехват отправки сообщение пользователю, который в не сети.
             elif message[RESPONSE] == 444:
                 self.user_not_available.emit()
                 raise UserNotAvailabel(f'{message[ERROR]}')
