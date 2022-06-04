@@ -2,7 +2,6 @@
 import os
 import sys
 import logging
-import logging.handlers
 from common.variables import LOGGING_LEVEL
 
 sys.path.append('../')

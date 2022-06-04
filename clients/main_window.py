@@ -1,20 +1,20 @@
+import logging
 from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
 from PyQt5.QtCore import pyqtSlot, Qt
 import sys
-import logging
 
-from clients.client_database import ClientDatabase
+import logs.client_log_config
+from clients.database.client_database import ClientDatabase
 from clients.forms_gui.add_contact import AddContactDialog
 from clients.forms_gui.del_contact import DelContactDialog
 from clients.main_window_conv import Ui_MainClientWindow
 from clients.transport import ClientTransport
-from common.errors import ServerError
+from common.errors import ServerError, UserNotAvailabel
 
 sys.path.append('../')
 
 LOGGER = logging.getLogger('clients')
-
 
 # Класс основого окна.
 class ClientMainWindow(QMainWindow):
@@ -29,6 +29,7 @@ class ClientMainWindow(QMainWindow):
         # Иницилиализация кнопок.
         self.ui.menu_exit.triggered.connect(qApp.exit)
         self.ui.btn_send.clicked.connect(self.send_message)
+        self.ui.btn_send.setAutoDefault(True)
         self.ui.btn_add_contact.clicked.connect(self.add_contact_window)
         self.ui.menu_add_contact.triggered.connect(self.add_contact_window)
         self.ui.btn_remove_contact.clicked.connect(self.delete_contact_window)
@@ -99,6 +100,7 @@ class ClientMainWindow(QMainWindow):
         self.current_chat = self.ui.list_contacts.currentIndex().data()
         self.set_active_user()
 
+
     def set_active_user(self):
         """
         Функция устанавливающая активного собеседника, а так же ставит надпись
@@ -109,16 +111,24 @@ class ClientMainWindow(QMainWindow):
         self.ui.btn_clear.setDisabled(False)
         self.ui.btn_send.setDisabled(False)
         self.ui.text_message.setDisabled(False)
+        self.ui.text_message.setFocus()
         self.history_list_update()
 
     def clients_list_update(self):
         """Функция выполняющая обновление контакт листа пользователя."""
 
         contacts_list = self.database.get_contacts()
+
         self.contacts_model = QStandardItemModel()
-        for i in sorted(contacts_list):
-            item = QStandardItem(i)
-            item.setEditable(False)
+        for item in sorted(contacts_list):
+            if item[1] == True:
+                item = QStandardItem(item[0])
+                item.setEditable(False)
+                item.setBackground(QBrush(QColor(29, 237, 33)))
+            else:
+                item = QStandardItem(item[0])
+                item.setEditable(False)
+                item.setBackground(QBrush(QColor(237, 29, 38)))
             self.contacts_model.appendRow(item)
         self.ui.list_contacts.setModel(self.contacts_model)
 
@@ -134,7 +144,7 @@ class ClientMainWindow(QMainWindow):
         """
         Функция - обработчик добавления, сообщает серверу, обновляет таблицу и список контактов.
 
-        :param item:
+        :param item: Объект класса AddContactDialog
         """
 
         new_contact = item.selector.currentText()
@@ -177,7 +187,7 @@ class ClientMainWindow(QMainWindow):
         """
         Функция - обработчик удаления контактаб сообщает на сервер, обновляет таблицу и список контактов.
 
-        :param item:
+        :param item: Объект класса DelContactDialog
         """
 
         selected = item.selector.currentText()
@@ -215,6 +225,8 @@ class ClientMainWindow(QMainWindow):
         except ServerError as err:
             self.messages.critical(self, 'Ошибка сервера.', err.text)
             self.close()
+        except UserNotAvailabel:
+            self.messages.critical(self, 'Не в сети.', 'Пользователь сейчас не в сети повторите попытку позднее.')
         except OSError as err:
             if err.errno:
                 self.messages.critical(self, 'Ошибка.', 'Потеряно соеденение с сервером!')
@@ -264,3 +276,16 @@ class ClientMainWindow(QMainWindow):
 
         self.messages.warning(self, 'Сбой соеденения.', 'Потеряно соеденение с сервером.')
         self.close()
+
+    @pyqtSlot()
+    def user_not_available(self):
+        """
+        Функция для отслеживания отправки сообщения пользователя не в сети.
+        Делает поле ввода текста и кнопки отправки и очистки снова не активными.
+        """
+        self.set_disabled_input()
+
+    def make_connection(self, trans_obj):
+        trans_obj.new_message.connect(self.message)
+        trans_obj.connection_lost.connect(self.connection_lost)
+        trans_obj.user_not_available.connect(self.user_not_available)

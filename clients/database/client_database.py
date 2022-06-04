@@ -1,10 +1,10 @@
 import os
 import sys
-from sqlalchemy import create_engine, Table, Column, Integer, String, Text, MetaData, DateTime
+from sqlalchemy import create_engine, Table, Column, Integer, String, Text, MetaData, DateTime, Boolean
 from sqlalchemy.orm import mapper, sessionmaker
 from datetime import datetime
 
-sys.path.append('../')
+sys.path.append('../../')
 
 
 # Класс - серверная база данных:
@@ -30,9 +30,10 @@ class ClientDatabase:
 
     # Класс - отображение таблицы списка контактов.
     class Contacts:
-        def __init__(self, contact):
+        def __init__(self, contact, active):
             self.id = None
             self.name = contact
+            self.active = active
 
     def __init__(self, name: str):
         path = os.path.dirname(os.path.realpath(__file__))
@@ -59,7 +60,8 @@ class ClientDatabase:
         # Создаём таблицу контактов.
         table_contacts = Table('contacts', self.metadata,
                                Column('id', Integer, primary_key=True),
-                               Column('name', String, unique=True)
+                               Column('name', String, unique=True),
+                               Column('active', Boolean)
                                )
 
         # Создаем таблицы, отображения и связвыем их.
@@ -76,14 +78,14 @@ class ClientDatabase:
         self.session.query(self.Contacts).delete()
         self.session.commit()
 
-    def add_contact(self, contact: str):
+    def add_contact(self, contact: str, active: bool = False):
         """
         Функция добавление контакта в список контактов пользователя в БД.
 
         :param contact: Имя контакта.
         """
         if not self.session.query(self.Contacts).filter_by(name=contact).count():
-            contact_row = self.Contacts(contact)
+            contact_row = self.Contacts(contact, active)
             self.session.add(contact_row)
             self.session.commit()
 
@@ -126,7 +128,7 @@ class ClientDatabase:
 
         :return: list[tuple]: Возращает список кортежей с контактами пользователя.
         """
-        return [contact[0] for contact in self.session.query(self.Contacts.name).all()]
+        return [(contact.name, contact.active) for contact in self.session.query(self.Contacts).all()]
 
     def get_users(self):
         """

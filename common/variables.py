@@ -36,6 +36,7 @@ LIST_INFO = 'data_list'
 REMOVE_CONTACT = 'remove'
 ADD_CONTACT = 'add'
 USERS_REQUEST = 'get_users'
+ACTIVE_USERS = 'action_users'
 
 # Словари - ответы:
 # 200
@@ -48,5 +49,9 @@ RESPONSE_202 = {
 # 400
 RESPONSE_400 = {
     RESPONSE: 400,
+    ERROR: None
+}
+RESPONSE_444 = {
+    RESPONSE: 444,
     ERROR: None
 }

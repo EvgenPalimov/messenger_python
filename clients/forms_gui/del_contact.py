@@ -1,9 +1,10 @@
 import sys
 import logging
+import logs.client_log_config
 from PyQt5.QtWidgets import QDialog, QLabel, QComboBox, QPushButton
 from PyQt5.QtCore import Qt
 
-from clients.client_database import ClientDatabase
+from clients.database.client_database import ClientDatabase
 
 sys.path.append('../../')
 

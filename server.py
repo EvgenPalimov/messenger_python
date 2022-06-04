@@ -101,7 +101,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
                     except OSError:
                         LOGGER.info(f'Клиент - {client_message.getpeername()}, отключился от сервера. ')
                         for name in self.names:
-                            if self.name[name] == client_message:
+                            if self.names[name] == client_message:
                                 self.database.user_logout(name)
                                 del self.names[name]
                                 break
@@ -182,7 +182,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
                 self.database.process_message(message[SENDER], message[DESTINATION])
                 send_message(client, RESPONSE_200)
             else:
-                response = RESPONSE_400
+                response = RESPONSE_444
                 response[ERROR] = 'Пользователь не зарегистрирован на сервере.'
                 send_message(client, response)
             return
@@ -223,6 +223,12 @@ class Server(threading.Thread, metaclass=ServerMaker):
                 and self.names[message[ACCOUNT_NAME]] == client:
             response = RESPONSE_202
             response[LIST_INFO] = [user[0] for user in self.database.users_list()]
+            send_message(client, response)
+
+        # Запрос активных пользователей.
+        elif ACTION in message and message[ACTION] == ACTIVE_USERS:
+            response = RESPONSE_202
+            response[LIST_INFO] = [user for user in self.names]
             send_message(client, response)
 
         # Иначе отдаём Bad request.
