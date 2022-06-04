@@ -240,9 +240,8 @@ def contacts_list_request(sock: socket, name: str):
         USER: name
     }
     LOGGER.debug(f'Сформирован запрос: {req}.')
-    with socket_lock:
-        send_message(sock, req)
-        answer = get_message(sock)
+    send_message(sock, req)
+    answer = get_message(sock)
     LOGGER.debug(f'Получен ответ: {answer}.')
     if RESPONSE in answer and answer[RESPONSE] == 202:
         return answer[LIST_INFO]
@@ -250,7 +249,7 @@ def contacts_list_request(sock: socket, name: str):
         raise ServerError
 
 
-def add_contact(sock: socket, username: str, contact: str):
+def add_contact(sock, username: str, contact: str):
     """
     Функция добавления контакта в контакт список пользователя.
 
@@ -267,10 +266,8 @@ def add_contact(sock: socket, username: str, contact: str):
         ACCOUNT_NAME: contact
     }
     LOGGER.debug(f'Сформирован запрос: {req}.')
-
-    with socket_lock:
-        send_message(sock, req)
-        answer = get_message(sock)
+    send_message(sock, req)
+    answer = get_message(sock)
     LOGGER.debug(f'Получен ответ: {answer}.')
     if RESPONSE in answer and answer[RESPONSE] == 200:
         print('Удачное создание контакта.')
@@ -295,9 +292,8 @@ def remove_contact(sock: socket, username: str, contact: str):
         ACCOUNT_NAME: contact
     }
     LOGGER.debug(f'Сформирован запрос: {req}.')
-    with socket_lock:
-        send_message(sock, req)
-        answer = get_message(sock)
+    send_message(sock, req)
+    answer = get_message(sock)
     LOGGER.debug(f'Получен ответ: {answer}.')
     if RESPONSE in answer and answer[RESPONSE] == 200:
         print('Удачное удаление')
@@ -337,9 +333,8 @@ def user_list_request(sock: socket, username: str):
         ACCOUNT_NAME: username
     }
     LOGGER.debug(f'Сформирован запрос: {req}.')
-    with socket_lock:
-        send_message(sock, req)
-        answer = get_message(sock)
+    send_message(sock, req)
+    answer = get_message(sock)
     LOGGER.debug(f'Получен ответ: {answer}.')
     if RESPONSE in answer and answer[RESPONSE] == 202:
         return answer[LIST_INFO]

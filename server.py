@@ -107,8 +107,8 @@ class Server(threading.Thread, metaclass=ServerMaker):
             try:
                 if self.clients:
                     recv_data, send_data, err_data = select.select(self.clients, self.clients, [], 0)
-            except OSError:
-                pass
+            except OSError as err:
+                    LOGGER.error(f'Ошибка работы с сокетами: {err}')
 
             # Принимает сообщения от клиентов для обработки, а если ошибка, исключаем клиента.
             if recv_data:
@@ -135,7 +135,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
                     del self.names[message[DESTINATION]]
             self.messages.clear()
 
-    def process_message(self, message: dict, listen_socks: list):
+    def process_message(self, message, listen_socks):
         """
         Функция адресной отправки сообщения определеному пользователю.
 
@@ -153,7 +153,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
             LOGGER.error(
                 f'Пользователь {message[DESTINATION]} не зарегистрирован на сервере, отправка сообщения невозможна.')
 
-    def process_clients_message(self, message: dict, client: socket.socket):
+    def process_clients_message(self, message, client):
         """
         Обработчик сообщений от клиентов, принимает словарь - сообщение от клиента,
         проверяет коррестность, возвращает словарь-ответ для клиента.
@@ -225,7 +225,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
 
         # Если это удаление контакта из списка контаков пользователя.
         elif ACTION in message and message[ACTION] == REMOVE_CONTACT and ACCOUNT_NAME in message and USER \
-                in message and self.names[message[USER], message[ACCOUNT_NAME]]:
+                in message and self.names[message[USER]] == client:
             self.database.remove_contact(message[USER], message[ACCOUNT_NAME])
             send_message(client, RESPONSE_200)
 
@@ -234,7 +234,7 @@ class Server(threading.Thread, metaclass=ServerMaker):
                 and self.names[message[ACCOUNT_NAME]] == client:
             response = RESPONSE_202
             response[LIST_INFO] = [user[0] for user in self.database.users_list()]
-
+            send_message(client, response)
         # Иначе отдаём Bad request.
         else:
             response = RESPONSE_400
