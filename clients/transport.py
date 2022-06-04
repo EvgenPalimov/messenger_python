@@ -194,6 +194,7 @@ class ClientTransport(threading.Thread, QObject):
         with socket_lock:
             send_message(self.transport, request)
             self.process_server_answer(get_message(self.transport))
+        self.contacts_list_update()
 
     def remove_contact(self, contact: str):
         """
@@ -211,6 +212,7 @@ class ClientTransport(threading.Thread, QObject):
         with socket_lock:
             send_message(self.transport, request)
             self.process_server_answer(get_message(self.transport))
+        self.contacts_list_update()
 
     def transport_shutdown(self):
         """Функция закрытия соеденения, отправляет сообщение о выходе на сервер."""
