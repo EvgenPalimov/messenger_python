@@ -4,7 +4,7 @@ import socket
 import sys
 import logs.client_log_config
 from PyQt5.QtWidgets import QApplication
-from clients.database.client_database import ClientDatabase
+from clients.database.database import ClientDatabase
 from clients.forms_gui.start_dialog import UserNameDialog
 from clients.main_window import ClientMainWindow
 from clients.transport import ClientTransport

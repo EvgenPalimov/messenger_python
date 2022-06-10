@@ -1,18 +1,19 @@
-import sys
 import logging
 import logs.client_log_config
 from PyQt5.QtWidgets import QDialog, QLabel, QComboBox, QPushButton
 from PyQt5.QtCore import Qt
 
-from clients.database.client_database import ClientDatabase
-
-sys.path.append('../../')
+from clients.database.database import ClientDatabase
 
 LOGGER = logging.getLogger('clients')
 
 
-# Диалог выбора контакта для удаления.
 class DelContactDialog(QDialog):
+    """
+    Диалог удаления контакта. Прделагает текущий список контактов,
+    не имеет обработчиков для действий.
+    """
+
     def __init__(self, database: ClientDatabase):
         super().__init__()
         self.database = database

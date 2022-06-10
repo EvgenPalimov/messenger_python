@@ -4,7 +4,7 @@ import sys
 import os
 import unittest
 from common.variables import *
-from server import Server
+from server_ import Server
 
 sys.path.append(os.path.join(os.getcwd(), '..'))
 

@@ -23,6 +23,8 @@ USER = 'user'
 ACCOUNT_NAME = 'account_name'
 SENDER = 'from'
 DESTINATION = 'to'
+DATA = 'bin'
+PUBLIC_KEY = 'pubkey'
 
 # Прочик ключи, используемые в протоколе
 PRESENCE = 'presence'
@@ -37,21 +39,37 @@ REMOVE_CONTACT = 'remove'
 ADD_CONTACT = 'add'
 USERS_REQUEST = 'get_users'
 ACTIVE_USERS = 'action_users'
+PUBLIC_KEY_REQUEST = 'pubkey_need'
 
 # Словари - ответы:
-# 200
+# 200 - Удачный ответ.
 RESPONSE_200 = {RESPONSE: 200}
+
 # 202
 RESPONSE_202 = {
     RESPONSE: 202,
     LIST_INFO: None
 }
-# 400
+
+# 205
+RESPONSE_205 = {
+    RESPONSE: 205
+}
+
+# 400 - Не удачный ответ.
 RESPONSE_400 = {
     RESPONSE: 400,
     ERROR: None
 }
+
+# 444 - Клиент не в сети.
 RESPONSE_444 = {
     RESPONSE: 444,
     ERROR: None
+}
+
+# 511
+RESPONSE_511 = {
+    RESPONSE: 511,
+    DATA: None
 }

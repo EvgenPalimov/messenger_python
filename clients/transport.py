@@ -3,7 +3,7 @@ import time
 import threading
 from PyQt5.QtCore import pyqtSignal, QObject
 import logs.client_log_config
-from clients.database.client_database import ClientDatabase
+from clients.database.database import ClientDatabase
 from common.utils import *
 from common.variables import *
 from common.errors import ServerError, UserNotAvailabel

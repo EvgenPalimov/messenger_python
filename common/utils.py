@@ -10,8 +10,9 @@ def get_message(client):
     """
     Утилита приёма и декодирования сообщения принимает байты выдает словарь
     если принято, что-то другое отдаёт ошибку значения.
-    :param client: Сокет
-    :return: Возвращает сообщения от сервера
+
+    :param client: сокет для передачи данных,
+    :return: возвращает сообщения от сервера.
     """
 
     encoded_response = client.recv(MAX_PACKAGE_LENGTH)
@@ -27,9 +28,12 @@ def send_message(sock, message):
     """
     Утилита кодирования и отправки сообщения
     принимает словарь и отправляет его.
-    :param sock: Сокет
-    :param message: Словарь, с сообщением от клиента
+
+    :param sock: сокет,
+    :param message: словарь, с сообщением от клиента,
+    :return: ничего не возвращает.
     """
+
     js_message = json.dumps(message)
     encoded_message = js_message.encode(ENCODING)
     sock.send(encoded_message)

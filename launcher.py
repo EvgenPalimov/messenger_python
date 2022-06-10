@@ -13,7 +13,7 @@ while True:
         break
     elif ACTION == 's':
         # Запускаем сервер.
-        PROCESS.append(subprocess.Popen('python server.py',
+        PROCESS.append(subprocess.Popen('python server_.py',
                                         creationflags=subprocess.CREATE_NEW_CONSOLE))
     elif ACTION == 'k':
         clients_count = int(input('Введите количество тестовых клиентов для запуска: '))

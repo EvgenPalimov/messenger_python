@@ -1,28 +1,36 @@
+import base64
+import json
 import logging
 
-from PyQt5 import QtWidgets, QtCore
+from Cryptodome.Cipher import PKCS1_OAEP
+from Cryptodome.PublicKey import RSA
 from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox, QWidget, QShortcut
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor, QKeySequence
 from PyQt5.QtCore import pyqtSlot, Qt
-import sys
-from clients.database.client_database import ClientDatabase
+from clients.database.database import ClientDatabase
 from clients.forms_gui.add_contact import AddContactDialog
 from clients.forms_gui.del_contact import DelContactDialog
 from clients.forms_gui.main_window_conv import Ui_MainClientWindow
 from clients.transport import ClientTransport
 from common.errors import ServerError, UserNotAvailabel
-
-sys.path.append('../')
+import logs.client_log_config
 
 LOGGER = logging.getLogger('clients')
 
 
-# Класс основого окна.
+
 class ClientMainWindow(QMainWindow):
-    def __init__(self, transport: ClientTransport, database: ClientDatabase):
+    """
+    Класс - основное окно пользователя. Содержит всю основную логику работы
+    клиентского модуля. Конфигурация окна создана в QTDesigner и загружается из
+    конвертированого файла main_window_conv.py
+    """
+
+    def __init__(self, transport: ClientTransport, database: ClientDatabase, keys):
         super().__init__()
         self.transport = transport
         self.database = database
+        self.decrypter = PKCS1_OAEP.new(keys)
 
         self.ui = Ui_MainClientWindow()
         self.ui.setupUi(self)
@@ -30,6 +38,7 @@ class ClientMainWindow(QMainWindow):
         # Иницилиализация кнопок.
         self.ui.menu_exit.triggered.connect(qApp.exit)
         self.ui.btn_send.clicked.connect(self.send_message)
+        self.ui.btn_send.setShortcut('Ctrl+Return')
         self.ui.btn_add_contact.clicked.connect(self.add_contact_window)
         self.ui.menu_add_contact.triggered.connect(self.add_contact_window)
         self.ui.btn_remove_contact.clicked.connect(self.delete_contact_window)
@@ -40,6 +49,8 @@ class ClientMainWindow(QMainWindow):
         self.history_model = None
         self.messages = QMessageBox()
         self.current_chat = None
+        self.current_chat_key = None
+        self.encryptor = None
         self.ui.list_messages.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.ui.list_messages.setWordWrap(True)
         self.ui.list_contacts.doubleClicked.connect(self.select_active_user)
@@ -49,7 +60,7 @@ class ClientMainWindow(QMainWindow):
         self.show()
 
     def set_disabled_input(self):
-        """Функция для деактивации поля ввода и кнопки отправки до выбора получателя."""
+        """Метод для деактивации поля ввода и кнопки отправки до выбора получателя."""
 
         self.ui.label_new_message.setText('Для выбора получателя дважды кликните на нём в окне контактов.')
         self.ui.text_message.clear()
@@ -61,9 +72,13 @@ class ClientMainWindow(QMainWindow):
         self.ui.btn_send.setDisabled(True)
         self.ui.text_message.setDisabled(True)
 
+        self.current_chat = None
+        self.current_chat_key = None
+        self.encryptor = None
+
     def history_list_update(self):
         """
-        Функция для заполения историей сообщений.
+        Метод для заполения историей сообщений.
         Выводит историю - по сортируемой дате и по 20 записей за раз.
         """
 
@@ -95,16 +110,32 @@ class ClientMainWindow(QMainWindow):
         self.ui.list_messages.scrollToBottom()
 
     def select_active_user(self):
-        """Функция - обработчик дубликата по контакту."""
+        """Метод - обработчик события двойного клика по списку контактов."""
 
         self.current_chat = self.ui.list_contacts.currentIndex().data()
         self.set_active_user()
 
     def set_active_user(self):
         """
-        Функция устанавливающая активного собеседника, а так же ставит надпись
+        Метод устанавливающая активного собеседника, а так же ставит надпись
         и активирует кнопки и поле общения.
         """
+
+        # Запрашиваем публичный ключ пользователя и создаём объект шифрования.
+        try:
+            self.current_chat_key = self.transport.key_request(self.current_chat)
+            LOGGER.debug(f'Загружен открытый ключ для {self.current_chat}.')
+            if self.current_chat_key:
+                self.encryptor = PKCS1_OAEP.new(RSA.import_key(self.current_chat_key))
+        except (OSError, json.JSONDecodeError):
+            self.current_chat_key = None
+            self.encryptor = None
+            LOGGER.debug(f'Ну удалось получить ключ для {self.current_chat}.')
+
+        # Если ключа нет то ошибка, что не удалось начать чат с пользователем.
+        if not self.current_chat_key:
+            self.messages.warning(self, 'Ошибка', 'Для выбранного пользователя нет ключа шифрования.')
+            return
 
         self.ui.label_new_message.setText(f'Введите сообщенние для {self.current_chat}: ')
         self.ui.btn_clear.setDisabled(False)
@@ -114,7 +145,7 @@ class ClientMainWindow(QMainWindow):
         self.history_list_update()
 
     def clients_list_update(self):
-        """Функция выполняющая обновление контакт листа пользователя."""
+        """Метод выполняющая обновление контакт листа пользователя."""
 
         contacts_list = self.database.get_contacts()
 
@@ -132,7 +163,7 @@ class ClientMainWindow(QMainWindow):
         self.ui.list_contacts.setModel(self.contacts_model)
 
     def add_contact_window(self):
-        """Функция добавления контакта."""
+        """Метод создающий окно - диалог добавления контакта"""
 
         global select_dialog
         select_dialog = AddContactDialog(self.transport, self.database)
@@ -141,9 +172,10 @@ class ClientMainWindow(QMainWindow):
 
     def add_contact_action(self, item):
         """
-        Функция - обработчик добавления, сообщает серверу, обновляет таблицу и список контактов.
+        Метод обработчк нажатия кнопки "Добавить"
 
-        :param item: Объект класса AddContactDialog
+        :param item: объект класса AddContactDialog,
+        :return: ничего не возвращает.
         """
 
         new_contact = item.selector.currentText()
@@ -152,9 +184,11 @@ class ClientMainWindow(QMainWindow):
 
     def add_contact(self, new_contact: str):
         """
-        Функция добавляющая контакт в БД и выводящая информацию об успешной операции или ошибку.
+        Метод добавляющий контакт в серверную и клиентсткую БД>.
+        После обновления баз данных обновляет и содержимое окна.
 
-        :param new_contact: Имя нового контакта
+        :param new_contact: имя нового контакта,
+        :return: ничего не возвращает.
         """
 
         try:
@@ -176,7 +210,7 @@ class ClientMainWindow(QMainWindow):
             self.clients_list_update()
 
     def delete_contact_window(self):
-        """Функция удаления контакта."""
+        """Метод создающий окно удаления контакта."""
 
         global remove_dialog
         remove_dialog = DelContactDialog(self.database)
@@ -185,9 +219,10 @@ class ClientMainWindow(QMainWindow):
 
     def delete_contact(self, item):
         """
-        Функция - обработчик удаления контактаб сообщает на сервер, обновляет таблицу и список контактов.
+        Метод - обработчик удаления контактаб сообщает на сервер, обновляет таблицу и список контактов.
 
-        :param item: Объект класса DelContactDialog
+        :param item: объект класса DelContactDialog,
+        :return: ничего не возвращает.
         """
 
         selected = item.selector.currentText()
@@ -214,14 +249,17 @@ class ClientMainWindow(QMainWindow):
                 self.set_disabled_input()
 
     def send_message(self):
-        """Функция отправки сообщения пользователю. Отправит сообщение или сообщит об ошибке."""
+        """Функция отправки сообщения текущему собеседнику. Реализует шифрование сообщения и его отправку."""
 
         message_text = self.ui.text_message.toPlainText()
         self.ui.text_message.clear()
         if not message_text:
             return
+        # Шифруем сообщение ключом получателя и упаковываем в base64.
+        message_text_encrypted = self.encryptor.encrypt(message_text.encode('utf-8'))
+        message_text_encrypted_base64 = base64.b64encode(message_text_encrypted)
         try:
-            self.transport.send_message(self.current_chat, message_text)
+            self.transport.send_message(self.current_chat, message_text_encrypted_base64.decode('ascii'))
             pass
         except ServerError as err:
             self.messages.critical(self, 'Ошибка сервера.', err.text)
@@ -242,11 +280,11 @@ class ClientMainWindow(QMainWindow):
             self.history_list_update()
 
     @pyqtSlot(str)
-    def message(self, sender: str):
+    def message(self, message: str):
         """
-        Функция для приемки нового сообщения. Уведомляет пользователя о новом сообщении и предлагает открыть чат,
-        если этот пользователь есть в контактах, в противном случае предоагает добавить пользователя в контакт-лист
-        и открыть чат.
+        Слот обработчик поступаемых сообщений, выполняет дешифровку поступаемых сообщений и
+        их сохранение в истории сообщений. Запрашивает пользователя если пришло сообщение
+        не от текущего собеседника. При необходимости меняет собеседника.
 
         :param sender: Имя отправителя сообщения.
         """
