@@ -4,6 +4,9 @@ import re
 import socket
 import sys
 
+import logs.server_log_config
+import logs.client_log_config
+
 sys.path.append('../')
 
 file = sys.argv[0]
@@ -59,4 +62,4 @@ def login_required(func):
                 raise TypeError
         return func(*args, **kwargs)
 
-    return checker()
+    return checker

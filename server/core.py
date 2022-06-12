@@ -148,6 +148,7 @@ class MessageProcessor(threading.Thread):
             LOGGER.error(
                 f'Пользователь {message[DESTINATION]} не зарегистрирован на сервере, отправка сообщения невозможна.')
 
+    @login_required
     def process_clients_message(self, message, client: socket.socket):
         """
         Обработчик сообщений от клиентов, принимает словарь - сообщение от клиента,
