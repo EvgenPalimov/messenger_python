@@ -170,7 +170,7 @@ class ServerStorage:
         self.session.add_all([new_active_user, history])
         self.session.commit()
 
-    def add_user(self, name: str, password_hash: str):
+    def add_user(self, name: str, password_hash):
         """
         Метод - регистрации пользователя.
         Принимает имя и хэш пароля, создаёт запись в таблице статистики.
@@ -181,9 +181,12 @@ class ServerStorage:
         """
 
         user_row = self.AllUsers(name, password_hash)
-        history_row = self.UsersHistory(user_row.id)
-        self.session.add_all([user_row, history_row])
+        self.session.add(user_row)
         self.session.commit()
+        history_row = self.UsersHistory(user_row.id)
+        self.session.add(history_row)
+        self.session.commit()
+
 
     def remove_user(self, name: str):
         """
@@ -198,7 +201,7 @@ class ServerStorage:
         self.session.query(self.ActiveUsers).filter_by(user=user.id).delete()
         self.session.query(self.UsersLoginHistory).filter_by(name=user.id).delete()
         self.session.query(self.UsersContacts).filter_by(user=user.id).delete()
-        self.session.query(self.UsersContacts).filter_by(contact=user.di).delete()
+        self.session.query(self.UsersContacts).filter_by(contact=user.id).delete()
         self.session.query(self.UsersHistory).filter_by(user=user.id).delete()
         self.session.query(self.AllUsers).filter_by(name=name).delete()
         self.session.commit()
@@ -244,10 +247,20 @@ class ServerStorage:
         :return: ничего не возвращает.
         """
 
-        if self.session.query(self.ActiveUsers).filter_by(name=name).count():
+        if self.session.query(self.AllUsers).filter_by(name=name).count():
             return True
         else:
             return False
+
+    def get_user(self, user_id: str):
+        """
+        Метод получающий определеного пользователя по id.
+
+        :param user_id: id пользователя,
+        :return: возвращает объект БД - пользователя.
+        """
+
+        return self.session.query(self.AllUsers).filter_by(id=int(user_id)).first()
 
     def add_contact(self, user: str, contact: str):
         """
@@ -303,12 +316,12 @@ class ServerStorage:
 
         return [contact[1] for contact in query.all()]
 
-    def process_message(self, sender: str, recipient: str):
+    def process_message(self, sender: int, recipient: int):
         """
         Метод фиксирует передачу сообщения и делает соответствующие заметки в БД.
 
-        :param sender: имя отправителя,
-        :param recipient: имя получателя,
+        :param sender: ид отправителя,
+        :param recipient: ид получателя,
         :return: ничего не возвращает.
         """
 

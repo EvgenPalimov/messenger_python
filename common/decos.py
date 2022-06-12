@@ -3,7 +3,8 @@ import logging
 import re
 import socket
 import sys
-import traceback
+
+sys.path.append('../')
 
 file = sys.argv[0]
 if re.search(r'(server)', file):

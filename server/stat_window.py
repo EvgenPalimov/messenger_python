@@ -25,7 +25,7 @@ class StatWindow(QDialog):
 
         self.stat_table = QTableView(self)
         self.stat_table.move(10, 10)
-        self.setFixedSize(580, 620)
+        self.stat_table.setFixedSize(580, 620)
 
         self.create_stat_model()
 

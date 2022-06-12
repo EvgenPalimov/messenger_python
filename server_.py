@@ -35,7 +35,7 @@ def create_arg_parser(default_port: int, default_address: str):
     namespace = parser.parse_args(sys.argv[1:])
     listen_address = namespace.a
     listen_port = namespace.p
-    gui_flag = namespace.no_gui
+    gui_flag = namespace.not_gui
     LOGGER.debug('Аргументы успешно загружены.')
     return listen_address, listen_port, gui_flag
 

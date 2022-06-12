@@ -22,14 +22,14 @@ class ClientDatabase:
 
         def __init__(self, contact, direction, message):
             self.id = None
-            self.from_user = contact
-            self.to_user = direction
+            self.contact = contact
+            self.direction = direction
             self.message = message
             self.date = datetime.now()
 
-        def __repr__(self):
-            return f'Пользователь - {self.from_user} отправил сообщение, контакту - {self.to_user}, ' \
-                   f'текст сообщения - {self.message}'
+        # def __repr__(self):
+        #     return f'Пользователь - {self.from_user} отправил сообщение, контакту - {self.to_user}, ' \
+        #            f'текст сообщения - {self.message}'
 
     class Contacts:
         """Класс - отображение для таблицы контактов."""
@@ -133,8 +133,8 @@ class ClientDatabase:
         """
         Метод сохраняет сообщение пользователя для истории.
 
-        :param contact: имя контакта,
-        :param direction: имя пользователя,
+        :param contact: id контакта,
+        :param direction: напрвление от кого пришло сообщение "in" или "out",
         :param message: тест сообщения,
         :return: ничего не возвращает.
         """

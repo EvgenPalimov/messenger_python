@@ -4,8 +4,8 @@ import logging
 
 from Cryptodome.Cipher import PKCS1_OAEP
 from Cryptodome.PublicKey import RSA
-from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox, QWidget, QShortcut
-from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor, QKeySequence
+from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox
+from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
 from PyQt5.QtCore import pyqtSlot, Qt
 from clients.database.database import ClientDatabase
 from clients.forms_gui.add_contact import AddContactDialog
@@ -14,6 +14,7 @@ from clients.forms_gui.main_window_conv import Ui_MainClientWindow
 from clients.transport import ClientTransport
 from common.errors import ServerError, UserNotAvailabel
 import logs.client_log_config
+from common.variables import MESSAGE_TEXT, SENDER, DESTINATION
 
 LOGGER = logging.getLogger('clients')
 
@@ -207,7 +208,6 @@ class ClientMainWindow(QMainWindow):
             self.contacts_model.appendRow(new_contact)
             LOGGER.info(f'Успешно добавлен контакт - {new_contact}.')
             self.messages.information(self, 'Успех.', 'Контакт успешно добавлен!')
-            self.clients_list_update()
 
     def delete_contact_window(self):
         """Метод создающий окно удаления контакта."""
@@ -279,16 +279,27 @@ class ClientMainWindow(QMainWindow):
             LOGGER.debug(f'Отправлено сообщение для {self.current_chat}: {message_text}.')
             self.history_list_update()
 
-    @pyqtSlot(str)
-    def message(self, message: str):
+    @pyqtSlot(dict)
+    def message(self, message):
         """
         Слот обработчик поступаемых сообщений, выполняет дешифровку поступаемых сообщений и
         их сохранение в истории сообщений. Запрашивает пользователя если пришло сообщение
         не от текущего собеседника. При необходимости меняет собеседника.
 
-        :param sender: Имя отправителя сообщения.
+        :param message: объект сообщения.
         """
 
+        encrypted_message = base64.b64decode(message[MESSAGE_TEXT])
+
+        try:
+            decrypted_message = self.decrypter.decrypt(encrypted_message)
+        except (ValueError, TypeError):
+            self.messages.warning(self, 'Ошибка', 'Не удалось декодировать сообщение.')
+            return
+
+        self.database.save_message(self.current_chat, 'in', decrypted_message.decode('utf-8'))
+
+        sender = message[SENDER]
         if sender == self.current_chat:
             self.history_list_update()
         else:
@@ -297,34 +308,58 @@ class ClientMainWindow(QMainWindow):
                                                                     f'открыть чат с ним?', QMessageBox.Yes,
                                           QMessageBox.No) == QMessageBox.Yes:
                     self.current_chat = sender
+                    self.database.save_message(
+                        self.current_chat, 'in', decrypted_message.decode('utf8'))
                     self.set_active_user()
+                    self.history_list_update()
             else:
-                print('NO')
                 if self.messages.question(self, 'Новое сообщение.', f'Получено новое сообщение от {sender}.\n'
                                                                     f'Данного пользователя нет в ваших контактах.\n'
                                                                     f'Добавить его в ваш контакт-лист и открыть с ним чат?',
                                           QMessageBox.Yes,
                                           QMessageBox.No) == QMessageBox.Yes:
-                    self.add_contact(sender)
                     self.current_chat = sender
+                    # Нужно заново сохранить сообщение, иначе оно будет потеряно,
+                    # т.к. на момент предыдущего вызова контакта не было.
+                    self.database.save_message(
+                        self.current_chat,  'in', decrypted_message.decode('utf8'))
                     self.set_active_user()
+                    self.history_list_update()
+
+
+    @pyqtSlot()
+    def update_contacts_list(self):
+        """Слот-обработчик - запускает обновление списка контактов."""
+        self.clients_list_update()
 
     @pyqtSlot()
     def connection_lost(self):
-        """Функция для отслеживания потери соеденения. Выдает сообщение об ошибке и завршает работу приложения."""
+        """Слот-обработчик отслеживания потери соеденения. Выдает сообщение об ошибке и завршает работу приложения."""
 
         self.messages.warning(self, 'Сбой соеденения.', 'Потеряно соеденение с сервером.')
         self.close()
 
     @pyqtSlot()
-    def user_not_available(self):
+    def sig_205(self):
+        """Слот выполняющий обновление баз данных по команде сервера."""
+        if self.current_chat and not self.database.check_user(self.current_chat):
+            self.messages.warning(self, 'Сочувствую', 'К сожалению собеседник был удалён с сервера.')
+            self.set_disabled_input()
+            self.current_chat = None
+        self.clients_list_update()
+
+    @pyqtSlot(str)
+    def user_not_available(self, error):
         """
         Функция для отслеживания отправки сообщения пользователя не в сети.
         Делает поле ввода текста и кнопки отправки и очистки снова не активными.
         """
+        self.messages.warning(self, 'Не в сети.', error)
         self.set_disabled_input()
 
     def make_connection(self, trans_obj):
         trans_obj.new_message.connect(self.message)
         trans_obj.connection_lost.connect(self.connection_lost)
         trans_obj.user_not_available.connect(self.user_not_available)
+        trans_obj.message_205.connect(self.sig_205)
+        trans_obj.signal_update_cont_list.connect(self.update_contacts_list)

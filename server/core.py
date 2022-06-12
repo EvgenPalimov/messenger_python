@@ -6,7 +6,6 @@ import json
 import hmac
 import binascii
 import os
-from common.metaclasses import ServerMaker
 from common.descryptors import Port, Address
 from common.variables import *
 from common.utils import send_message, get_message
@@ -17,7 +16,7 @@ import logs.server_log_config
 LOGGER = logging.getLogger('server')
 
 
-class MessageProcessor(threading.Thread, metaclass=ServerMaker):
+class MessageProcessor(threading.Thread):
     """
     Основной класс сервера. Принимает содинения, словари - пакеты
     от клиентов, обрабатывает поступающие сообщения.
@@ -93,7 +92,7 @@ class MessageProcessor(threading.Thread, metaclass=ServerMaker):
             # Проверяем на наличие ждущих клиентов.
             try:
                 if self.clients:
-                    recv_data, send_data, err_data = select.select(self.clients, self.clients, [], 0)
+                    recv_data, self.listen_sockets, self.error_sockets = select.select(self.clients, self.clients, [], 0)
             except OSError as err:
                 LOGGER.error(f'Ошибка работы с сокетами: {err.errno}.')
 
@@ -104,6 +103,7 @@ class MessageProcessor(threading.Thread, metaclass=ServerMaker):
                         self.process_clients_message(get_message(client_message), client_message)
                     except (OSError, json.JSONDecodeError, TypeError) as err:
                         LOGGER.debug(f'Получение данных из клиентского исключения.', exc_info=err)
+                        self.remove_client(client_message)
 
     def remove_client(self, client):
         """
@@ -148,8 +148,7 @@ class MessageProcessor(threading.Thread, metaclass=ServerMaker):
             LOGGER.error(
                 f'Пользователь {message[DESTINATION]} не зарегистрирован на сервере, отправка сообщения невозможна.')
 
-    @login_required
-    def process_clients_message(self, message: dict, client: socket.socket):
+    def process_clients_message(self, message, client: socket.socket):
         """
         Обработчик сообщений от клиентов, принимает словарь - сообщение от клиента,
         проверяет коррестность, возвращает словарь-ответ для клиента.
@@ -177,8 +176,8 @@ class MessageProcessor(threading.Thread, metaclass=ServerMaker):
                 except OSError:
                     self.remove_client(client)
             else:
-                response = RESPONSE_400
-                response[ERROR] = 'Пользователь не зарегистрирован на сервере.'
+                response = RESPONSE_444
+                response[ERROR] = f'Пользователь {self.database.get_user(message[DESTINATION]).name} - не в сети.'
                 try:
                     send_message(client, response)
                 except OSError:
@@ -303,8 +302,8 @@ class MessageProcessor(threading.Thread, metaclass=ServerMaker):
             message_auth = RESPONSE_511
             random_str = binascii.hexlify(os.urandom(64))
             message_auth[DATA] = random_str.decode('ascii')
-            hash = hmac.new(self.database.get_hash(message[USER][ACCOUNT_NAME]), random_str, 'MD5')
-            digest = hash.digest()
+            HASH = hmac.new(self.database.get_hash(message[USER][ACCOUNT_NAME]), random_str, 'MD5')
+            digest = HASH.digest()
             LOGGER.debug(f'Сообщение об авторизации - f{message_auth}')
             try:
                 send_message(sock, message_auth)

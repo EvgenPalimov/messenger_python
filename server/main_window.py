@@ -83,7 +83,7 @@ class MainWindow(QMainWindow):
             time = QStandardItem(str(time.replace(microsecond=0)))
             time.setEditable(False)
             list_.appendRow([user, ip_address, port, time])
-        self.active_clients_table.setModel(list)
+        self.active_clients_table.setModel(list_)
         self.active_clients_table.resizeColumnsToContents()
         self.active_clients_table.resizeRowsToContents()
 

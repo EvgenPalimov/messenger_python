@@ -16,7 +16,7 @@ class ConfigWindow(QDialog):
         self.setFixedSize(365, 260)
         self.setWindowTitle('Настройка сервера')
 
-        self.db_path_label = QLabel('путь до файла базы данных: ', self)
+        self.db_path_label = QLabel('Путь до файла базы данных: ', self)
         self.db_path_label.move(10, 10)
         self.db_path_label.setFixedSize(240, 15)
 
@@ -44,7 +44,7 @@ class ConfigWindow(QDialog):
         self.port.move(200, 108)
         self.port.setFixedSize(150, 20)
 
-        self.ip_address_label = QLabel('С какого IP-адреса принимаем соединения:', self)
+        self.ip_address_label = QLabel('IP-адрес сервера подключения:', self)
         self.ip_address_label.move(10, 148)
         self.ip_address_label.setFixedSize(180, 15)
 
