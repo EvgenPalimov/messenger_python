@@ -7,7 +7,7 @@ file = sys.argv[0]
 if re.search(r'(server)', file):
     LOGGER = logging.getLogger('server')
 else:
-    LOGGER = logging.getLogger('clients')
+    LOGGER = logging.getLogger('client')
 
 
 class Port:
@@ -20,9 +20,12 @@ class Port:
     def __set__(self, instance, value):
         if not 1023 < value < 65536:
             LOGGER.critical(
-                f'Не верно указан порт - {value}. Допустимы номера порта с 1024 до 65535.')
+                f'Не верно указан порт - {value}. '
+                f'Допустимы номера порта с 1024 до 65535.'
+            )
             exit(1)
-        # Если порт прошел проверку, добавляем его в список атрибутов экземпляра
+        # Если порт прошел проверку, добавляем его в список атрибутов
+        # экземпляра
         instance.__dict__[self.name] = value
 
     def __set_name__(self, owner, name):
@@ -41,11 +44,13 @@ class Address:
             socket.inet_aton(value)
         except socket.error:
             LOGGER.critical(
-                f'Не верно указан IP-адресом - {value}. Проверьте правильность введенного адреса,'
+                f'Не верно указан IP-адресом - {value}. '
+                f'Проверьте правильность введенного адреса,'
                 f'должен быть в формате ***.***.***.***'
             )
             exit(1)
-        # Если IP-адрес прошел проверку, добавляем его в список атрибутов экземпляра
+        # Если IP-адрес прошел проверку, добавляем его в список атрибутов
+        # экземпляра
         instance.__dict__[self.name] = value
 
     def __set_name__(self, owner, name):
@@ -64,10 +69,12 @@ class ClientName:
             ''.__eq__(value)
         except ValueError:
             LOGGER.critical(
-                'Имя пользователя - должно быть заполнено. Повторите ввод, пожалуйста.'
+                'Имя пользователя - должно быть заполнено. '
+                'Повторите ввод, пожалуйста.'
             )
             exit(1)
-        # Если введеное имя прошло проверку, добавляем его в список атрибутов экземпляра
+        # Если введеное имя прошло проверку, добавляем его в список атрибутов
+        # экземпляра
         instance.__dict__[self.name] = value
 
     def __set_name__(self, owner, name):

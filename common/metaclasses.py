@@ -23,25 +23,31 @@ class ServerMaker(type):
             except TypeError:
                 pass
             else:
-                # Раз функция разбираем код, получая используемые методы и атрибуты.
+                # Раз функция разбираем код, получая используемые методы и
+                # атрибуты.
                 for i in ret:
 
                     if i.opname == 'LOAD_GLOBAL':
                         if i.argval not in methods:
-                            # Заполняем список методами, использующиеся в функция класса.
+                            # Заполняем список методами, использующиеся в
+                            # функция класса.
                             methods.append(i.argval)
                     elif i.opname == 'LOAD_ATTR':
                         if i.argval not in attrs:
-                            # Заполняем список методами, использующиеся в функция класса.
+                            # Заполняем список методами, использующиеся в
+                            # функция класса.
                             attrs.append(i.argval)
 
-        # Если обнаружено использование недопустимого метода connect, бросаем исключение:
+        # Если обнаружено использование недопустимого метода connect, бросаем
+        # исключение:
         if 'connect' in methods:
             raise TypeError('Метод "connect" - недоступен в серверном классе.')
-        # Если сокет не инициализировался константами SOCK_STREAM(TCP) AF_INET(IPv4), тоже исключение.
+        # Если сокет не инициализировался константами SOCK_STREAM(TCP)
+        # AF_INET(IPv4), тоже исключение.
         if not ('SOCK_STREAM' in attrs and 'AF_INET' in attrs):
-            raise TypeError('Некорректная инциализация сокета. Доступны только методы'
-                            'для инициализации SOCK_STREAM и AF_INET')
+            raise TypeError(
+                'Некорректная инциализация сокета. Доступны только методы'
+                'для инициализации SOCK_STREAM и AF_INET')
         super().__init__(clsname, bases, clsdict)
 
 
@@ -68,13 +74,17 @@ class ClientMaker(type):
                     if i.opname == 'LOAD_GLOBAL':
                         if i.argval not in methods:
                             methods.append(i.argval)
-        # Если обнаружено использование недопустимого метода accept, listen, socket бросаем исключение:
+        # Если обнаружено использование недопустимого метода accept, listen,
+        # socket бросаем исключение:
         for command in ('accept', 'listen'):
             if command in methods:
-                raise TypeError('В классе обнаруженно использование запрещенного метода.')
-        # Вызов get_message или send_message из utils считаем корректным использования сокетов
+                raise TypeError(
+                    'В классе обнаруженно использование запрещенного метода.')
+        # Вызов get_message или send_message из utils считаем корректным
+        # использования сокетов
         if 'get_message' in methods or 'send_message' in methods:
             pass
         else:
-            raise TypeError('Отсутствуют вызов функций, работающих с сокетами.')
+            raise TypeError(
+                'Отсутствуют вызов функций, работающих с сокетами.')
         super().__init__(clsname, bases, clsdict)

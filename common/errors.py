@@ -11,7 +11,7 @@ class ServerError(Exception):
         return self.text
 
 
-class UserNotAvailabel(Exception):
+class UserNotAvailable(Exception):
     """Исключение - пользователь не в сети."""
 
     def __init__(self, text):

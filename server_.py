@@ -46,7 +46,8 @@ def config_load():
     config = configparser.ConfigParser()
     dir_path = os.path.dirname(os.path.realpath(__file__))
     config.read(f'{dir_path}/server.ini')
-    # Если конфиг файл загружен правильно, запускаемся, иначе конфиг по умолчанию.
+    # Если конфиг файл загружен правильно, запускаемся,
+    # иначе конфиг по умолчанию.
     if 'SETTINGS' in config:
         return config
     else:
@@ -62,20 +63,24 @@ def config_load():
 def main():
     """Функция инициализации - запуска сервера."""
     config = config_load()
-    # Загрузка параметров командной строки, если нет параметров, то задаём значения по умолчанию.
+    # Загрузка параметров командной строки,
+    # если нет параметров, то задаём значения по умолчанию.
     listen_address, listen_port, gui_flag = create_arg_parser(
-        int(config['SETTINGS']['default_port']), config['SETTINGS']['default_address']
+        int(config['SETTINGS']['default_port']),
+        config['SETTINGS']['default_address']
     )
 
     # Инициализация базы данных.
-    database = ServerStorage(os.path.join(config['SETTINGS']['database_path'], config['SETTINGS']['database_file']))
+    database = ServerStorage(os.path.join(config['SETTINGS']['database_path'],
+                                          config['SETTINGS']['database_file']))
 
     # Создание экземпляра класса - сервера.
     server = MessageProcessor(listen_address, listen_port, database)
     server.daemon = True
     server.start()
 
-    # Если  указан параметр без GUI то запускаем простенький обработчик консольного ввода.
+    # Если  указан параметр без GUI то запускаем простенький
+    # обработчик консольного ввода.
     if gui_flag:
         while True:
             command = input('Введите "exit" для завершения работы сервера.')

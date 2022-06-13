@@ -5048,3 +5048,245 @@ socket.timeout: timed out
 2022-06-12 18:18:31,016 DEBUG transport Ответ сервера - {'response': 400, 'error': 'Имя пользователя уже занято.'}.
 2022-06-12 18:19:14,121 DEBUG client_1 Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
 2022-06-12 18:19:14,122 DEBUG client_1 Аргументы загружены.
+2022-06-13 16:19:29,226 DEBUG client Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-13 16:19:29,228 DEBUG client Аргументы загружены.
+2022-06-13 16:19:34,332 INFO client Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - 1.
+2022-06-13 16:19:38,763 DEBUG client Ключи успешно загруженны.
+2022-06-13 16:19:38,942 INFO transport Попытка подключения №1.
+2022-06-13 16:19:38,943 DEBUG transport Установлено соеденение с сервером.
+2022-06-13 16:19:39,253 DEBUG transport Хэш пароль готов - b'8d1a2e54946dfc79458e2e1e6a6a643428fb133b0e95eebb663a313e838ff0ec6d6669b482441718efe9ab9539a3c7fb2cab605f9ec1fd61805bd27a41c6311e'.
+2022-06-13 16:19:39,257 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655119179.2578723, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpY+vx3s0dRZO6dtuHnR\nJSt9OGRWMZqv1PvfXUa2nFQagInUdjiPGkvH8j+nb8yMoPZm6NkkKXb8IKYfFv6r\ny6e3cBwcfw32yS4nf6R7FcHxTpJcaUOo43pVTSnfTAw6IDet3pIGqi+tM1o9HlB2\nbMnL00Z8QfQ27OiLZShgKsz+zoFem0zZJOggqHBBGReEiZXnqp+Ngl3manJz4kfc\naheije8SJwHQyeetRnUU5NCgHoA1M7wdeggsOLDzJkFhGBMx3QdVxbDHhDWDGIGm\nCd+oUQqU4xQH6V9E3Pn44/TOBY94+LZENxWBtwJtowUKhPxZEw475dGidNGbpLtC\nBQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-13 16:20:02,869 DEBUG transport Ответ сервера - {'response': 511, 'bin': '7ec53eac3ec633cdb7379213910821f902c21ba5d3468e4e1cf1f1b08882409f3549476638e1fda97903270a956ce8fbff21694b04cda90ad20105e02a55211f'}.
+2022-06-13 16:20:02,871 DEBUG transport Потерно соеденение
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\clients\transport.py", line 129, in connection_init
+    self.process_server_answer(get_message(self.transport))
+  File "C:\Users\palim\PycharmProjects\messenger_python\common\utils.py", line 20, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionAbortedError: [WinError 10053] Программа на вашем хост-компьютере разорвала установленное подключение
+2022-06-13 16:20:13,595 DEBUG client Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-13 16:20:13,596 DEBUG client Аргументы загружены.
+2022-06-13 16:20:17,117 INFO client Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - 1.
+2022-06-13 16:20:17,593 DEBUG client Ключи успешно загруженны.
+2022-06-13 16:20:17,736 INFO transport Попытка подключения №1.
+2022-06-13 16:20:17,737 DEBUG transport Установлено соеденение с сервером.
+2022-06-13 16:20:18,038 DEBUG transport Хэш пароль готов - b'8d1a2e54946dfc79458e2e1e6a6a643428fb133b0e95eebb663a313e838ff0ec6d6669b482441718efe9ab9539a3c7fb2cab605f9ec1fd61805bd27a41c6311e'.
+2022-06-13 16:20:18,042 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655119218.0422072, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpY+vx3s0dRZO6dtuHnR\nJSt9OGRWMZqv1PvfXUa2nFQagInUdjiPGkvH8j+nb8yMoPZm6NkkKXb8IKYfFv6r\ny6e3cBwcfw32yS4nf6R7FcHxTpJcaUOo43pVTSnfTAw6IDet3pIGqi+tM1o9HlB2\nbMnL00Z8QfQ27OiLZShgKsz+zoFem0zZJOggqHBBGReEiZXnqp+Ngl3manJz4kfc\naheije8SJwHQyeetRnUU5NCgHoA1M7wdeggsOLDzJkFhGBMx3QdVxbDHhDWDGIGm\nCd+oUQqU4xQH6V9E3Pn44/TOBY94+LZENxWBtwJtowUKhPxZEw475dGidNGbpLtC\nBQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-13 16:20:23,074 DEBUG transport Потерно соеденение
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\clients\transport.py", line 115, in connection_init
+    answer = get_message(self.transport)
+  File "C:\Users\palim\PycharmProjects\messenger_python\common\utils.py", line 20, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+socket.timeout: timed out
+2022-06-13 16:20:42,255 DEBUG client Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-13 16:20:42,255 DEBUG client Аргументы загружены.
+2022-06-13 16:20:48,208 INFO client Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - 1.
+2022-06-13 16:20:48,391 DEBUG client Ключи успешно загруженны.
+2022-06-13 16:20:48,456 INFO transport Попытка подключения №1.
+2022-06-13 16:20:48,457 DEBUG transport Установлено соеденение с сервером.
+2022-06-13 16:20:48,755 DEBUG transport Хэш пароль готов - b'8d1a2e54946dfc79458e2e1e6a6a643428fb133b0e95eebb663a313e838ff0ec6d6669b482441718efe9ab9539a3c7fb2cab605f9ec1fd61805bd27a41c6311e'.
+2022-06-13 16:20:48,756 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655119248.7566593, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpY+vx3s0dRZO6dtuHnR\nJSt9OGRWMZqv1PvfXUa2nFQagInUdjiPGkvH8j+nb8yMoPZm6NkkKXb8IKYfFv6r\ny6e3cBwcfw32yS4nf6R7FcHxTpJcaUOo43pVTSnfTAw6IDet3pIGqi+tM1o9HlB2\nbMnL00Z8QfQ27OiLZShgKsz+zoFem0zZJOggqHBBGReEiZXnqp+Ngl3manJz4kfc\naheije8SJwHQyeetRnUU5NCgHoA1M7wdeggsOLDzJkFhGBMx3QdVxbDHhDWDGIGm\nCd+oUQqU4xQH6V9E3Pn44/TOBY94+LZENxWBtwJtowUKhPxZEw475dGidNGbpLtC\nBQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-13 16:20:53,762 DEBUG transport Потерно соеденение
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\clients\transport.py", line 115, in connection_init
+    answer = get_message(self.transport)
+  File "C:\Users\palim\PycharmProjects\messenger_python\common\utils.py", line 20, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+socket.timeout: timed out
+2022-06-13 16:21:20,411 DEBUG client Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-13 16:21:20,412 DEBUG client Аргументы загружены.
+2022-06-13 16:21:24,166 INFO client Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - 1.
+2022-06-13 16:21:24,626 DEBUG client Ключи успешно загруженны.
+2022-06-13 16:21:24,770 INFO transport Попытка подключения №1.
+2022-06-13 16:21:24,771 DEBUG transport Установлено соеденение с сервером.
+2022-06-13 16:21:25,068 DEBUG transport Хэш пароль готов - b'8d1a2e54946dfc79458e2e1e6a6a643428fb133b0e95eebb663a313e838ff0ec6d6669b482441718efe9ab9539a3c7fb2cab605f9ec1fd61805bd27a41c6311e'.
+2022-06-13 16:21:25,072 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655119285.0727966, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpY+vx3s0dRZO6dtuHnR\nJSt9OGRWMZqv1PvfXUa2nFQagInUdjiPGkvH8j+nb8yMoPZm6NkkKXb8IKYfFv6r\ny6e3cBwcfw32yS4nf6R7FcHxTpJcaUOo43pVTSnfTAw6IDet3pIGqi+tM1o9HlB2\nbMnL00Z8QfQ27OiLZShgKsz+zoFem0zZJOggqHBBGReEiZXnqp+Ngl3manJz4kfc\naheije8SJwHQyeetRnUU5NCgHoA1M7wdeggsOLDzJkFhGBMx3QdVxbDHhDWDGIGm\nCd+oUQqU4xQH6V9E3Pn44/TOBY94+LZENxWBtwJtowUKhPxZEw475dGidNGbpLtC\nBQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-13 16:21:25,300 DEBUG transport Ответ сервера - {'response': 511, 'bin': '28dece8b6cc9e740a7de8ec04cab45fee0f681a815c7192cf69d4691c143ff430a8d33958755d3ece9bc178dbda08def58ac670e1c8aae310662237a65ae32c6'}.
+2022-06-13 16:21:25,305 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-13 16:21:25,305 INFO transport Соеденение с сервером успешно установлено.
+2022-06-13 16:21:25,306 DEBUG transport Запрос списка известных пользователей - 1.
+2022-06-13 16:21:25,860 DEBUG transport Запрос контакт-листа для пользователя Thread-6.
+2022-06-13 16:21:25,861 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655119285.8619874, 'user': '1'}.
+2022-06-13 16:21:26,349 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['2']}.
+2022-06-13 16:21:26,350 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655119286.3500671}.
+2022-06-13 16:21:26,855 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['1']}.
+2022-06-13 16:21:26,900 DEBUG client Transport is ready.
+2022-06-13 16:21:27,079 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2022-06-13 16:21:32,023 DEBUG transport Транспорт завершает работу.
+2022-06-13 16:21:32,661 DEBUG transport Потеряно соединение с сервером!
+2022-06-13 16:22:23,417 DEBUG client Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-13 16:22:23,417 DEBUG client Аргументы загружены.
+2022-06-13 16:22:28,765 INFO client Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - 1.
+2022-06-13 16:22:29,253 DEBUG client Ключи успешно загруженны.
+2022-06-13 16:22:29,392 INFO transport Попытка подключения №1.
+2022-06-13 16:22:29,394 DEBUG transport Установлено соеденение с сервером.
+2022-06-13 16:22:29,780 DEBUG transport Хэш пароль готов - b'8d1a2e54946dfc79458e2e1e6a6a643428fb133b0e95eebb663a313e838ff0ec6d6669b482441718efe9ab9539a3c7fb2cab605f9ec1fd61805bd27a41c6311e'.
+2022-06-13 16:22:29,784 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655119349.7843843, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpY+vx3s0dRZO6dtuHnR\nJSt9OGRWMZqv1PvfXUa2nFQagInUdjiPGkvH8j+nb8yMoPZm6NkkKXb8IKYfFv6r\ny6e3cBwcfw32yS4nf6R7FcHxTpJcaUOo43pVTSnfTAw6IDet3pIGqi+tM1o9HlB2\nbMnL00Z8QfQ27OiLZShgKsz+zoFem0zZJOggqHBBGReEiZXnqp+Ngl3manJz4kfc\naheije8SJwHQyeetRnUU5NCgHoA1M7wdeggsOLDzJkFhGBMx3QdVxbDHhDWDGIGm\nCd+oUQqU4xQH6V9E3Pn44/TOBY94+LZENxWBtwJtowUKhPxZEw475dGidNGbpLtC\nBQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-13 16:22:29,902 DEBUG transport Ответ сервера - {'response': 511, 'bin': '553f4bbe383960f3d5549acec29061e0f6b22e34aaccbe3985fe01dc04fb94afa0ff62ec823fea375ab00a007075470fad4d2584c4c993ea868cfd77d51347e6'}.
+2022-06-13 16:22:29,907 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-13 16:22:29,907 INFO transport Соеденение с сервером успешно установлено.
+2022-06-13 16:22:29,908 DEBUG transport Запрос списка известных пользователей - 1.
+2022-06-13 16:22:30,461 DEBUG transport Запрос контакт-листа для пользователя Thread-6.
+2022-06-13 16:22:30,461 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655119350.461841, 'user': '1'}.
+2022-06-13 16:22:30,945 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['2']}.
+2022-06-13 16:22:30,946 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655119350.9457643}.
+2022-06-13 16:22:31,452 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['1']}.
+2022-06-13 16:22:31,494 DEBUG client Transport is ready.
+2022-06-13 16:22:31,620 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2022-06-13 16:23:00,428 DEBUG transport Транспорт завершает работу.
+2022-06-13 16:23:13,380 DEBUG client Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-13 16:23:13,380 DEBUG client Аргументы загружены.
+2022-06-13 16:23:17,359 INFO client Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - 1.
+2022-06-13 16:23:17,546 DEBUG client Ключи успешно загруженны.
+2022-06-13 16:23:17,612 INFO transport Попытка подключения №1.
+2022-06-13 16:23:17,613 DEBUG transport Установлено соеденение с сервером.
+2022-06-13 16:23:17,939 DEBUG transport Хэш пароль готов - b'8d1a2e54946dfc79458e2e1e6a6a643428fb133b0e95eebb663a313e838ff0ec6d6669b482441718efe9ab9539a3c7fb2cab605f9ec1fd61805bd27a41c6311e'.
+2022-06-13 16:23:17,940 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655119397.9400952, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpY+vx3s0dRZO6dtuHnR\nJSt9OGRWMZqv1PvfXUa2nFQagInUdjiPGkvH8j+nb8yMoPZm6NkkKXb8IKYfFv6r\ny6e3cBwcfw32yS4nf6R7FcHxTpJcaUOo43pVTSnfTAw6IDet3pIGqi+tM1o9HlB2\nbMnL00Z8QfQ27OiLZShgKsz+zoFem0zZJOggqHBBGReEiZXnqp+Ngl3manJz4kfc\naheije8SJwHQyeetRnUU5NCgHoA1M7wdeggsOLDzJkFhGBMx3QdVxbDHhDWDGIGm\nCd+oUQqU4xQH6V9E3Pn44/TOBY94+LZENxWBtwJtowUKhPxZEw475dGidNGbpLtC\nBQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-13 16:23:22,942 DEBUG transport Потерно соеденение
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\clients\transport.py", line 115, in connection_init
+    answer = get_message(self.transport)
+  File "C:\Users\palim\PycharmProjects\messenger_python\common\utils.py", line 20, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+socket.timeout: timed out
+2022-06-13 16:23:53,482 DEBUG client Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-13 16:23:53,483 DEBUG client Аргументы загружены.
+2022-06-13 16:23:58,139 INFO client Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - 1.
+2022-06-13 16:23:58,357 DEBUG client Ключи успешно загруженны.
+2022-06-13 16:23:58,437 INFO transport Попытка подключения №1.
+2022-06-13 16:23:58,438 DEBUG transport Установлено соеденение с сервером.
+2022-06-13 16:23:58,787 DEBUG transport Хэш пароль готов - b'8d1a2e54946dfc79458e2e1e6a6a643428fb133b0e95eebb663a313e838ff0ec6d6669b482441718efe9ab9539a3c7fb2cab605f9ec1fd61805bd27a41c6311e'.
+2022-06-13 16:23:58,789 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655119438.789611, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpY+vx3s0dRZO6dtuHnR\nJSt9OGRWMZqv1PvfXUa2nFQagInUdjiPGkvH8j+nb8yMoPZm6NkkKXb8IKYfFv6r\ny6e3cBwcfw32yS4nf6R7FcHxTpJcaUOo43pVTSnfTAw6IDet3pIGqi+tM1o9HlB2\nbMnL00Z8QfQ27OiLZShgKsz+zoFem0zZJOggqHBBGReEiZXnqp+Ngl3manJz4kfc\naheije8SJwHQyeetRnUU5NCgHoA1M7wdeggsOLDzJkFhGBMx3QdVxbDHhDWDGIGm\nCd+oUQqU4xQH6V9E3Pn44/TOBY94+LZENxWBtwJtowUKhPxZEw475dGidNGbpLtC\nBQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-13 16:23:58,999 DEBUG transport Ответ сервера - {'response': 511, 'bin': '4741a74509a2bd6563c3484841e648fb29e7647646575c2470000b19288fe318bd99a7f7b03a9901f72fbbbba26070d3ad2bc92e92e24d5f8f488667bddffac3'}.
+2022-06-13 16:23:59,000 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-13 16:23:59,000 INFO transport Соеденение с сервером успешно установлено.
+2022-06-13 16:23:59,000 DEBUG transport Запрос списка известных пользователей - 1.
+2022-06-13 16:23:59,574 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-13 16:23:59,574 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655119439.5745769, 'user': '1'}.
+2022-06-13 16:24:00,075 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['2']}.
+2022-06-13 16:24:00,076 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655119440.0763373}.
+2022-06-13 16:24:00,587 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['1']}.
+2022-06-13 16:24:00,608 DEBUG client Transport is ready.
+2022-06-13 16:24:00,609 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2022-06-13 16:24:06,730 DEBUG transport Транспорт завершает работу.
+2022-06-13 17:33:59,431 DEBUG client Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-13 17:33:59,431 DEBUG client Аргументы загружены.
+2022-06-13 17:34:05,891 INFO client Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - 1.
+2022-06-13 17:34:06,078 DEBUG client Ключи успешно загруженны.
+2022-06-13 17:34:06,144 INFO transport Попытка подключения №1.
+2022-06-13 17:34:06,145 DEBUG transport Установлено соеденение с сервером.
+2022-06-13 17:34:06,446 DEBUG transport Хэш пароль готов - b'8d1a2e54946dfc79458e2e1e6a6a643428fb133b0e95eebb663a313e838ff0ec6d6669b482441718efe9ab9539a3c7fb2cab605f9ec1fd61805bd27a41c6311e'.
+2022-06-13 17:34:06,447 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655123646.4471807, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpY+vx3s0dRZO6dtuHnR\nJSt9OGRWMZqv1PvfXUa2nFQagInUdjiPGkvH8j+nb8yMoPZm6NkkKXb8IKYfFv6r\ny6e3cBwcfw32yS4nf6R7FcHxTpJcaUOo43pVTSnfTAw6IDet3pIGqi+tM1o9HlB2\nbMnL00Z8QfQ27OiLZShgKsz+zoFem0zZJOggqHBBGReEiZXnqp+Ngl3manJz4kfc\naheije8SJwHQyeetRnUU5NCgHoA1M7wdeggsOLDzJkFhGBMx3QdVxbDHhDWDGIGm\nCd+oUQqU4xQH6V9E3Pn44/TOBY94+LZENxWBtwJtowUKhPxZEw475dGidNGbpLtC\nBQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-13 17:34:06,681 DEBUG transport Ответ сервера - {'response': 511, 'bin': 'b443cc188a65c88d1c774db33ca49d1d24462a4324e27c1696b976fca122dd1f4cb3f588adc6d8e14498c2d9d0c37e073280708b44af6bcb31cbaee282bed904'}.
+2022-06-13 17:34:06,682 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-13 17:34:06,683 INFO transport Соеденение с сервером успешно установлено.
+2022-06-13 17:34:06,683 DEBUG transport Запрос списка известных пользователей - 1.
+2022-06-13 17:34:07,260 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-13 17:34:07,260 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655123647.2605994, 'user': '1'}.
+2022-06-13 17:34:07,764 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['2']}.
+2022-06-13 17:34:07,764 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655123647.7640102}.
+2022-06-13 17:34:08,266 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['1']}.
+2022-06-13 17:34:08,288 DEBUG client Transport is ready.
+2022-06-13 17:34:08,289 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2022-06-13 17:34:12,538 DEBUG transport Создание контакта - test.
+2022-06-13 17:34:45,680 DEBUG transport Принято сообщение от сервера: {'response': 200}.
+2022-06-13 17:34:45,681 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-13 17:37:50,967 DEBUG transport Создание контакта - test.
+2022-06-13 17:37:51,862 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-13 17:37:51,865 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-13 17:37:51,865 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655123871.8658442, 'user': '1'}.
+2022-06-13 17:37:52,375 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['2', 'test']}.
+2022-06-13 17:37:52,375 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655123872.3750067}.
+2022-06-13 17:37:52,879 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['1']}.
+2022-06-13 17:37:52,908 INFO main_window Успешно добавлен контакт - <PyQt5.QtGui.QStandardItem object at 0x0000025418D18430>.
+2022-06-13 17:37:59,530 DEBUG transport Удаление контакта - test.
+2022-06-13 17:38:31,876 DEBUG transport Принято сообщение от сервера: {'response': 200}.
+2022-06-13 17:38:31,877 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-13 17:38:35,273 DEBUG transport Удаление контакта - test.
+2022-06-13 17:39:01,355 DEBUG client Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-13 17:39:01,355 DEBUG client Аргументы загружены.
+2022-06-13 17:39:04,490 INFO client Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - 1.
+2022-06-13 17:39:04,680 DEBUG client Ключи успешно загруженны.
+2022-06-13 17:39:04,749 INFO transport Попытка подключения №1.
+2022-06-13 17:39:04,750 DEBUG transport Установлено соеденение с сервером.
+2022-06-13 17:39:05,066 DEBUG transport Хэш пароль готов - b'8d1a2e54946dfc79458e2e1e6a6a643428fb133b0e95eebb663a313e838ff0ec6d6669b482441718efe9ab9539a3c7fb2cab605f9ec1fd61805bd27a41c6311e'.
+2022-06-13 17:39:05,067 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655123945.0675468, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpY+vx3s0dRZO6dtuHnR\nJSt9OGRWMZqv1PvfXUa2nFQagInUdjiPGkvH8j+nb8yMoPZm6NkkKXb8IKYfFv6r\ny6e3cBwcfw32yS4nf6R7FcHxTpJcaUOo43pVTSnfTAw6IDet3pIGqi+tM1o9HlB2\nbMnL00Z8QfQ27OiLZShgKsz+zoFem0zZJOggqHBBGReEiZXnqp+Ngl3manJz4kfc\naheije8SJwHQyeetRnUU5NCgHoA1M7wdeggsOLDzJkFhGBMx3QdVxbDHhDWDGIGm\nCd+oUQqU4xQH6V9E3Pn44/TOBY94+LZENxWBtwJtowUKhPxZEw475dGidNGbpLtC\nBQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-13 17:39:05,300 DEBUG transport Ответ сервера - {'response': 511, 'bin': '37824888ee759be1633d023e7ce9120c73e09f9c2e154aa8ed328724aaa608301e88967c7b449d02f68415b3850458ba89e160308dec51c96b7c526ed8dc05e1'}.
+2022-06-13 17:39:05,301 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-13 17:39:05,302 INFO transport Соеденение с сервером успешно установлено.
+2022-06-13 17:39:05,302 DEBUG transport Запрос списка известных пользователей - 1.
+2022-06-13 17:39:05,873 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-13 17:39:05,873 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655123945.8734953, 'user': '1'}.
+2022-06-13 17:39:06,380 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['2']}.
+2022-06-13 17:39:06,380 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655123946.3808508}.
+2022-06-13 17:39:06,890 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['1']}.
+2022-06-13 17:39:06,912 DEBUG client Transport is ready.
+2022-06-13 17:39:06,913 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2022-06-13 17:39:11,397 DEBUG transport Создание контакта - test.
+2022-06-13 17:39:12,030 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-13 17:39:12,033 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-13 17:39:12,033 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655123952.0335603, 'user': '1'}.
+2022-06-13 17:39:12,550 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['2', 'test']}.
+2022-06-13 17:39:12,551 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655123952.5519836}.
+2022-06-13 17:39:13,557 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['1']}.
+2022-06-13 17:39:13,588 INFO main_window Успешно добавлен контакт - <PyQt5.QtGui.QStandardItem object at 0x000002718E7C84C0>.
+2022-06-13 17:39:25,370 DEBUG transport Удаление контакта - test.
+2022-06-13 17:40:00,848 CRITICAL transport Потеряно соеденение с сервером!
+2022-06-13 17:40:22,853 DEBUG client Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-13 17:40:22,854 DEBUG client Аргументы загружены.
+2022-06-13 17:40:25,885 INFO client Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - 1.
+2022-06-13 17:40:26,077 DEBUG client Ключи успешно загруженны.
+2022-06-13 17:40:26,147 INFO transport Попытка подключения №1.
+2022-06-13 17:40:26,149 DEBUG transport Установлено соеденение с сервером.
+2022-06-13 17:40:26,442 DEBUG transport Хэш пароль готов - b'8d1a2e54946dfc79458e2e1e6a6a643428fb133b0e95eebb663a313e838ff0ec6d6669b482441718efe9ab9539a3c7fb2cab605f9ec1fd61805bd27a41c6311e'.
+2022-06-13 17:40:26,443 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655124026.4438057, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpY+vx3s0dRZO6dtuHnR\nJSt9OGRWMZqv1PvfXUa2nFQagInUdjiPGkvH8j+nb8yMoPZm6NkkKXb8IKYfFv6r\ny6e3cBwcfw32yS4nf6R7FcHxTpJcaUOo43pVTSnfTAw6IDet3pIGqi+tM1o9HlB2\nbMnL00Z8QfQ27OiLZShgKsz+zoFem0zZJOggqHBBGReEiZXnqp+Ngl3manJz4kfc\naheije8SJwHQyeetRnUU5NCgHoA1M7wdeggsOLDzJkFhGBMx3QdVxbDHhDWDGIGm\nCd+oUQqU4xQH6V9E3Pn44/TOBY94+LZENxWBtwJtowUKhPxZEw475dGidNGbpLtC\nBQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-13 17:40:26,705 DEBUG transport Ответ сервера - {'response': 511, 'bin': 'ccf799160ac971f1b28b187d349889792dfb1260f9907e7579dbb396e4bc91ee55595df34b4484a0dbecd7bbcae2c304fdfc1f4dd49a79888189a6c38c38a909'}.
+2022-06-13 17:40:26,706 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-13 17:40:26,707 INFO transport Соеденение с сервером успешно установлено.
+2022-06-13 17:40:26,707 DEBUG transport Запрос списка известных пользователей - 1.
+2022-06-13 17:40:27,274 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-13 17:40:27,274 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655124027.274708, 'user': '1'}.
+2022-06-13 17:40:27,778 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['2', 'test']}.
+2022-06-13 17:40:27,778 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655124027.7783566}.
+2022-06-13 17:40:28,293 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['1']}.
+2022-06-13 17:40:28,327 DEBUG client Transport is ready.
+2022-06-13 17:40:28,329 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2022-06-13 17:40:33,945 DEBUG transport Удаление контакта - test.
+2022-06-13 17:40:34,925 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-13 17:40:34,927 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-13 17:40:34,927 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655124034.9276502, 'user': '1'}.
+2022-06-13 17:40:35,442 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['2']}.
+2022-06-13 17:40:35,442 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655124035.4425552}.
+2022-06-13 17:40:36,460 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['1']}.
+2022-06-13 17:40:36,478 INFO main_window Успешно удалён контакт - test.
+2022-06-13 17:43:14,507 DEBUG client Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-13 17:43:14,507 DEBUG client Аргументы загружены.
+2022-06-13 17:43:18,433 INFO client Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - 1.
+2022-06-13 17:43:18,630 DEBUG client Ключи успешно загруженны.
+2022-06-13 17:43:18,697 INFO transport Попытка подключения №1.
+2022-06-13 17:43:18,698 DEBUG transport Установлено соеденение с сервером.
+2022-06-13 17:43:19,005 DEBUG transport Хэш пароль готов - b'8d1a2e54946dfc79458e2e1e6a6a643428fb133b0e95eebb663a313e838ff0ec6d6669b482441718efe9ab9539a3c7fb2cab605f9ec1fd61805bd27a41c6311e'.
+2022-06-13 17:43:19,006 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655124199.0064664, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpY+vx3s0dRZO6dtuHnR\nJSt9OGRWMZqv1PvfXUa2nFQagInUdjiPGkvH8j+nb8yMoPZm6NkkKXb8IKYfFv6r\ny6e3cBwcfw32yS4nf6R7FcHxTpJcaUOo43pVTSnfTAw6IDet3pIGqi+tM1o9HlB2\nbMnL00Z8QfQ27OiLZShgKsz+zoFem0zZJOggqHBBGReEiZXnqp+Ngl3manJz4kfc\naheije8SJwHQyeetRnUU5NCgHoA1M7wdeggsOLDzJkFhGBMx3QdVxbDHhDWDGIGm\nCd+oUQqU4xQH6V9E3Pn44/TOBY94+LZENxWBtwJtowUKhPxZEw475dGidNGbpLtC\nBQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-13 17:43:19,249 DEBUG transport Ответ сервера - {'response': 511, 'bin': 'b6f1ddbffb42606ec3ea64ad7a6b95c7f80c38aff3abd6ac7a774507cbc7ada20d5c9a3e9fae8e47323ebc8bda845651248d43c5411476b58b2278ab5fc72a32'}.
+2022-06-13 17:43:19,250 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-13 17:43:19,250 INFO transport Соеденение с сервером успешно установлено.
+2022-06-13 17:43:19,251 DEBUG transport Запрос списка известных пользователей - 1.
+2022-06-13 17:43:24,260 ERROR transport Тайм-аут соеденения при обновление списков пользователей.
+2022-06-13 17:43:24,260 DEBUG client Transport is ready.
+2022-06-13 17:43:24,261 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2022-06-13 17:52:26,163 DEBUG client Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-13 17:52:26,165 DEBUG client Аргументы загружены.
+2022-06-13 17:52:34,065 INFO client Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - 1.
+2022-06-13 17:52:34,254 DEBUG client Ключи успешно загруженны.
+2022-06-13 17:52:34,320 INFO transport Попытка подключения №1.
+2022-06-13 17:52:34,321 DEBUG transport Установлено соеденение с сервером.
+2022-06-13 17:52:34,623 DEBUG transport Хэш пароль готов - b'8d1a2e54946dfc79458e2e1e6a6a643428fb133b0e95eebb663a313e838ff0ec6d6669b482441718efe9ab9539a3c7fb2cab605f9ec1fd61805bd27a41c6311e'.
+2022-06-13 17:52:34,624 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655124754.6240337, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvpY+vx3s0dRZO6dtuHnR\nJSt9OGRWMZqv1PvfXUa2nFQagInUdjiPGkvH8j+nb8yMoPZm6NkkKXb8IKYfFv6r\ny6e3cBwcfw32yS4nf6R7FcHxTpJcaUOo43pVTSnfTAw6IDet3pIGqi+tM1o9HlB2\nbMnL00Z8QfQ27OiLZShgKsz+zoFem0zZJOggqHBBGReEiZXnqp+Ngl3manJz4kfc\naheije8SJwHQyeetRnUU5NCgHoA1M7wdeggsOLDzJkFhGBMx3QdVxbDHhDWDGIGm\nCd+oUQqU4xQH6V9E3Pn44/TOBY94+LZENxWBtwJtowUKhPxZEw475dGidNGbpLtC\nBQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-13 17:52:39,639 DEBUG transport Потерно соеденение
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\clients\transport.py", line 115, in connection_init
+    answer = get_message(self.transport)
+  File "C:\Users\palim\PycharmProjects\messenger_python\common\utils.py", line 20, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+socket.timeout: timed out

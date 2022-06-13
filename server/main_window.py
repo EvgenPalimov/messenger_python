@@ -3,10 +3,10 @@ from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtCore import QTimer
 
 from server.database import ServerStorage
-from server.stat_window import StatWindow
-from server.config_window import ConfigWindow
-from server.add_user import RegisterUser
-from server.remove_user import DelUserDialog
+from server.forms_gui.stat_window import StatWindow
+from server.forms_gui.config_window import ConfigWindow
+from server.forms_gui.add_user import RegisterUser
+from server.forms_gui.remove_user import DelUserDialog
 
 
 class MainWindow(QMainWindow):
@@ -65,13 +65,17 @@ class MainWindow(QMainWindow):
 
     def create_user_model(self):
         """
-        Функция запрашивает данные из базы данных об активных пользователя и выводит их в окно.
+        Метод создания окна с активными пользователями.
 
-        :return: list: возвращает список с данными об пользователях.
+        Метод ззапрашивает данные из базы данных об активных пользователя
+        и выводит их в окно.
+
+        :return: ничего не возвращает..
         """
         list_users = self.database.active_users_list()
         list_ = QStandardItemModel()
-        list_.setHorizontalHeaderLabels(['Имя Клиента', 'IP-Адресс', 'Порт', 'Время подключения'])
+        list_.setHorizontalHeaderLabels(
+            ['Имя Клиента', 'IP-Адресс', 'Порт', 'Время подключения'])
         for row in list_users:
             user, ip_address, port, time = row
             user = QStandardItem(user)
