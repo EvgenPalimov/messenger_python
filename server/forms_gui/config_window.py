@@ -82,6 +82,7 @@ class ConfigWindow(QDialog):
 
         :return: ничего не возвращает.
         """
+
         global dialog
         dialog = QFileDialog(self)
         path = dialog.getExistingDirectory()
@@ -96,6 +97,7 @@ class ConfigWindow(QDialog):
 
         :return: ничего не возвращает.
         """
+
         global config_window
         message = QMessageBox()
         self.config['SETTINGS']['database_path'] = config_window.db_path.text()

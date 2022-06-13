@@ -65,6 +65,7 @@ class ClientTransport(threading.Thread, QObject):
         :param ip_address: IP-адрес сервера для подключения,
         :param port: порт сервера для подключения.
         """
+
         self.transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.transport.settimeout(5)
 
@@ -144,6 +145,7 @@ class ClientTransport(threading.Thread, QObject):
         :param message: объект сообщения,
         :return: ничего не возвращает.
         """
+
         LOGGER.debug(f'Разбор сообщения от сервера: {message}.')
         if RESPONSE in message:
             if message[RESPONSE] == 200:
@@ -214,6 +216,7 @@ class ClientTransport(threading.Thread, QObject):
         Метод запрашивает список известных пользователей с сервера
         и потом выполняет обновление соответстующей таблицы в БД.
         """
+
         LOGGER.debug(
             f'Запрос списка известных пользователей - {self.username}.')
         request = {
@@ -258,6 +261,7 @@ class ClientTransport(threading.Thread, QObject):
         :param contact: id создаваемого контакта,
         :return: ничего не возвращает.
         """
+
         LOGGER.debug(f'Создание контакта - {contact}.')
         request = {
             ACTION: ADD_CONTACT,
@@ -277,6 +281,7 @@ class ClientTransport(threading.Thread, QObject):
         :param contact: id удаляемого контакта,
         :return: ничего не возвращает.
         """
+
         LOGGER.debug(f'Удаление контакта - {contact}.')
         request = {
             ACTION: REMOVE_CONTACT,
@@ -291,6 +296,7 @@ class ClientTransport(threading.Thread, QObject):
 
     def transport_shutdown(self):
         """Метод уведомляющий сервер о завершении работы клиента."""
+
         self.running = False
         message = {
             ACTION: EXIT,
@@ -313,6 +319,7 @@ class ClientTransport(threading.Thread, QObject):
         :param message: текст сообщения,
         :return: ничего не возвращает.
         """
+
         message_dict = {
             ACTION: MESSAGE,
             SENDER: self.username,
@@ -335,6 +342,7 @@ class ClientTransport(threading.Thread, QObject):
         потерю связи с сервером.
         :return:
         """
+
         LOGGER.debug('Запущен процесс-приёмник сообщений сервера.')
         while self.running:
             time.sleep(1)

@@ -44,6 +44,7 @@ class DelUserDialog(QDialog):
 
         :return: ничего не возвращает.
         """
+
         self.selector.addItems([item[0]
                                 for item in self.database.users_list()])
 

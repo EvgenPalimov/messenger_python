@@ -379,6 +379,7 @@ class ClientMainWindow(QMainWindow):
     @pyqtSlot()
     def update_contacts_list(self):
         """Слот-обработчик - запускает обновление списка контактов."""
+
         self.clients_list_update()
 
     @pyqtSlot()
@@ -396,6 +397,7 @@ class ClientMainWindow(QMainWindow):
     @pyqtSlot()
     def sig_205(self):
         """Слот выполняющий обновление баз данных по команде сервера."""
+
         if self.current_chat and not self.database.check_user(
                 self.current_chat):
             self.messages.warning(
@@ -413,6 +415,7 @@ class ClientMainWindow(QMainWindow):
 
         Делает поле ввода и кнопки отправки и очистки снова не активными.
         """
+
         self.messages.warning(self, 'Не в сети.', error)
         self.set_disabled_input()
 

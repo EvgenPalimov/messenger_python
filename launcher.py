@@ -3,6 +3,8 @@ import subprocess
 
 
 def main():
+    """Консольный вариант запуска мессенджера."""
+
     process = []
 
     while True:

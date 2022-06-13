@@ -26,6 +26,7 @@ def create_arg_parser(default_port: int, default_address: str):
     :param default_address: Передается IP-адрес сервера по умолчанию,
     :return: Возвращается порт и IP-адрес сервера.
     """
+
     LOGGER.debug(
         f'Инициализация парсера аргументов коммандной строки: {sys.argv}.')
     parser = argparse.ArgumentParser()
@@ -43,6 +44,7 @@ def create_arg_parser(default_port: int, default_address: str):
 @log
 def config_load():
     """Парсер конфигурационного ini файла."""
+
     config = configparser.ConfigParser()
     dir_path = os.path.dirname(os.path.realpath(__file__))
     config.read(f'{dir_path}/server.ini')
@@ -62,6 +64,7 @@ def config_load():
 @log
 def main():
     """Функция инициализации - запуска сервера."""
+
     config = config_load()
     # Загрузка параметров командной строки,
     # если нет параметров, то задаём значения по умолчанию.

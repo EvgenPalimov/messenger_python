@@ -72,6 +72,7 @@ class MainWindow(QMainWindow):
 
         :return: ничего не возвращает..
         """
+
         list_users = self.database.active_users_list()
         list_ = QStandardItemModel()
         list_.setHorizontalHeaderLabels(
@@ -100,17 +101,20 @@ class MainWindow(QMainWindow):
 
     def server_config(self):
         """Метод создающий окно с настройками сервера."""
+
         global config_window
         config_window = ConfigWindow(self.config)
 
     def reg_user(self):
         """Метод создающий окно регистрации пользователя."""
+
         global req_window
         req_window = RegisterUser(self.database, self.server_thread)
         req_window.show()
 
     def rem_user(self):
         """Метод создающий окно удаления пользователя."""
+
         global rem_window
         rem_window = DelUserDialog(self.database, self.server_thread)
         rem_window.show()

@@ -60,6 +60,7 @@ class MessageProcessor(threading.Thread):
 
     def init_socket(self):
         """Функция запуска - сокета."""
+
         LOGGER.info(
             f'Сервер успешно запущен, порт для подключения - {self.port},'
             f'адрес для подключения к серверу - {self.addr}.'
@@ -127,6 +128,7 @@ class MessageProcessor(threading.Thread):
         :param client: id клиента,
         :return: ничего не возвращает.
         """
+
         LOGGER.info(
             f'Клиент - {client.getpeername()}, отключился от сервера. ')
         for name in self.names:
@@ -144,6 +146,7 @@ class MessageProcessor(threading.Thread):
         :param message: сообщение пользователя в формате словаря,
         :return: ничего не возвращает.
         """
+
         # message[DESTINATION] - имя
         # names[message[DESTINATION]] получатель
         if message[DESTINATION] in self.names and \

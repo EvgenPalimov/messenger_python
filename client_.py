@@ -29,6 +29,7 @@ def arg_parser():
     :return: str: int: str: str: возвращает IP-адрес и порт
     сервера для подключения, имя пользователя и его пароль.
     """
+
     parser = argparse.ArgumentParser()
     parser.add_argument('addr', default=DEFAULT_IP_ADDRESS, nargs='?')
     parser.add_argument('port', default=DEFAULT_PORT, type=int, nargs='?')

@@ -166,6 +166,7 @@ class ServerStorage:
         :param key: открытый ключ пользователя,
         :return: ничего не возвращает.
         """
+
         result = self.session.query(self.AllUsers).filter_by(name=username)
         # Если имя пользователя уже присутствует в таблице, обновляем время
         # последнего подключения.
@@ -192,6 +193,7 @@ class ServerStorage:
         :param user_id: id пользователя,
         return: ничего не возвращает.
         """
+
         user = self.session.query(self.AllUsers).filter_by(
             name=user_id).first()
         self.session.query(self.ActiveUsers).filter_by(user=user.id).delete()
@@ -207,6 +209,7 @@ class ServerStorage:
         :param password_hash: хэш пороля пользователя,
         :return: ничего не возвращает.
         """
+
         user_row = self.AllUsers(name, password_hash)
         self.session.add(user_row)
         self.session.commit()
@@ -223,6 +226,7 @@ class ServerStorage:
         :param user_id: id пользовтеля,
         :return: ничего не возвращает.
         """
+
         user = self.session.query(self.AllUsers).filter_by(
             name=user_id).first()
         self.session.query(self.ActiveUsers).filter_by(user=user.id).delete()
@@ -334,6 +338,7 @@ class ServerStorage:
         :param username: имя пользователя,
         :return: list: возвращает список контактов пользователя.
         """
+
         user = self.session.query(self.AllUsers).filter_by(
             name=username).first()
         query = self.session.query(self.UsersContacts,
@@ -372,6 +377,7 @@ class ServerStorage:
 
         :return:list[tuple]: возвращает список зарегистрированых пользователей.
         """
+
         query = self.session.query(
             self.AllUsers.name,
             self.AllUsers.last_login
@@ -384,6 +390,7 @@ class ServerStorage:
 
         :return: list[tuple]: Возвращает список активных пользователей.
         """
+
         query = self.session.query(self.AllUsers.name,
                                    self.ActiveUsers.ip_address,
                                    self.ActiveUsers.port,
@@ -399,6 +406,7 @@ class ServerStorage:
         :return: list[tuple]: возвращает историю входа пользователей
         или одно пользователя.
         """
+
         query = self.session.query(self.AllUsers.name,
                                    self.UsersLoginHistory.ip_address,
                                    self.UsersLoginHistory.port,
@@ -414,6 +422,7 @@ class ServerStorage:
 
         :return: list[tuple]: возвращает список кортежей с данными.
         """
+
         query = self.session.query(
             self.AllUsers.name,
             self.AllUsers.last_login,

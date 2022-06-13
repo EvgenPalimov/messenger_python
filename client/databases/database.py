@@ -98,6 +98,7 @@ class ClientDatabase:
         :param contact: имя контакта,
         :return: ничего не возвращает.
         """
+
         if not self.session.query(self.Contacts).filter_by(
                 name=contact).count():
             contact_row = self.Contacts(contact, active)
@@ -111,6 +112,7 @@ class ClientDatabase:
         :param contact: имя контакта,
         :return: ничего не возвращает.
         """
+
         self.session.query(self.Contacts).filter_by(name=contact).delete()
 
     def contacts_clear(self):
@@ -119,6 +121,7 @@ class ClientDatabase:
 
         :return: ничего не возвращает.
         """
+
         self.session.query(self.Contacts).delete()
 
     def add_users(self, users_list: list):
@@ -129,6 +132,7 @@ class ClientDatabase:
         :param users_list: список с известными пользователями,
         :return: ничего не возвращает.
         """
+
         self.session.query(self.KnownUsers).delete()
         for user in users_list:
             user_row = self.KnownUsers(user)
@@ -144,6 +148,7 @@ class ClientDatabase:
         :param message: тест сообщения,
         :return: ничего не возвращает.
         """
+
         message_row = self.MessagesStat(contact, direction, message)
         self.session.add(message_row)
         self.session.commit()
@@ -154,6 +159,7 @@ class ClientDatabase:
 
         :return: list[tuple]: возращает список с контактами пользователя.
         """
+
         return [(contact.name, contact.active) for contact in
                 self.session.query(self.Contacts).all()]
 
@@ -163,6 +169,7 @@ class ClientDatabase:
 
         :return: list[tuple]: возращает список с известными пользователями.
         """
+
         return [user[0] for user in
                 self.session.query(self.KnownUsers.username).all()]
 
@@ -173,6 +180,7 @@ class ClientDatabase:
         :param user: имя пользователя, :return: возвращает True или False,
         в зависимости от результата проверки.
         """
+
         if self.session.query(self.KnownUsers).filter_by(
                 username=user).count():
             return True
@@ -186,6 +194,7 @@ class ClientDatabase:
         :param contact: id контакта,
         :return: возвращает True или False, в зависимости от результата.
         """
+
         if self.session.query(self.Contacts).filter_by(name=contact).count():
             return True
         else:
@@ -198,6 +207,7 @@ class ClientDatabase:
         :param contact: id контакта,
         :return: list[tuple]: возвращает список с историей отправки сообщений.
         """
+
         query = self.session.query(self.MessagesStat).filter_by(
             contact=contact)
         return [(history_row.contact, history_row.direction,

@@ -65,6 +65,7 @@ class RegisterUser(QDialog):
 
         :return: ничего не возвращает.
         """
+
         if not self.client_name.text():
             self.messages.critical(
                 self, 'Ошибка', 'Не указано имя пользователя.'
