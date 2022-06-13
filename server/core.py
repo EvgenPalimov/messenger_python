@@ -1,11 +1,14 @@
-import threading
-import logging
+
 import select
 import socket
 import json
+import os
+
+import threading
+import logging
 import hmac
 import binascii
-import os
+
 from common.descryptors import Port, Address
 from common.variables import *
 from common.utils import send_message, get_message

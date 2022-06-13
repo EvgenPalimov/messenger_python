@@ -1,9 +1,10 @@
-import configparser
 import os
+from datetime import datetime
+
+import configparser
 from sqlalchemy import create_engine, Table, Column, Integer, String, \
     MetaData, ForeignKey, DateTime, Text
 from sqlalchemy.orm import mapper, sessionmaker
-from datetime import datetime
 
 
 class ServerStorage:

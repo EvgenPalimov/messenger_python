@@ -1,10 +1,11 @@
 """Программа-клиент"""
-import argparse
 import os
-import socket
 import sys
 
 from Cryptodome.PublicKey import RSA
+import argparse
+import socket
+
 import logs.client_log_config
 from PyQt5.QtWidgets import QApplication, QMessageBox
 from client.databases.database import ClientDatabase

@@ -1,8 +1,9 @@
 import os
+from datetime import datetime
+
 from sqlalchemy import create_engine, Table, Column, Integer, String, Text, \
     MetaData, DateTime, Boolean
 from sqlalchemy.orm import mapper, sessionmaker
-from datetime import datetime
 
 
 class ClientDatabase:

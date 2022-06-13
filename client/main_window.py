@@ -1,18 +1,20 @@
 import base64
 import json
-import logging
 
+import logging
 from Cryptodome.Cipher import PKCS1_OAEP
 from Cryptodome.PublicKey import RSA
 from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
 from PyQt5.QtCore import pyqtSlot, Qt
+
 from client.databases.database import ClientDatabase
 from client.forms_gui.add_contact import AddContactDialog
 from client.forms_gui.del_contact import DelContactDialog
 from client.forms_gui.main_window_conv import Ui_MainClientWindow
 from client.transport import ClientTransport
 from common.errors import ServerError, UserNotAvailable
+
 import logs.client_log_config
 from common.variables import MESSAGE_TEXT, SENDER
 
@@ -343,11 +345,11 @@ class ClientMainWindow(QMainWindow):
         else:
             if self.database.check_contact(sender):
                 if self.messages.question(
-                    self,
-                    'Новое сообщение.',
-                    f'Получено новое сообщение от {sender}, '
-                    f'открыть чат с ним?',
-                    QMessageBox.Yes,
+                        self,
+                        'Новое сообщение.',
+                        f'Получено новое сообщение от {sender}, '
+                        f'открыть чат с ним?',
+                        QMessageBox.Yes,
                         QMessageBox.No) == QMessageBox.Yes:
                     self.current_chat = sender
                     self.database.save_message(
@@ -357,12 +359,12 @@ class ClientMainWindow(QMainWindow):
                     self.history_list_update()
             else:
                 if self.messages.question(
-                    self,
-                    'Новое сообщение.',
-                    f'Получено новое сообщение от {sender}.\n'
-                    f'Данного пользователя нет в ваших контактах.\n'
-                    f'Добавить его в ваш контакт-лист и открыть с ним чат?',
-                    QMessageBox.Yes,
+                        self,
+                        'Новое сообщение.',
+                        f'Получено новое сообщение от {sender}.\n'
+                        f'Данного пользователя нет в ваших контактах.\n'
+                        f'Добавить его в ваш контакт-лист и открыть с ним чат?',
+                        QMessageBox.Yes,
                         QMessageBox.No) == QMessageBox.Yes:
                     self.current_chat = sender
                     # Нужно заново сохранить сообщение, иначе оно будет

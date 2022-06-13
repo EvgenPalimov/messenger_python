@@ -1,7 +1,9 @@
 """Конфигурация серверного логерра"""
 import os
 import sys
+
 import logging
+
 from common.variables import LOGGING_LEVEL
 
 sys.path.append('../')

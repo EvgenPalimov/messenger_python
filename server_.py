@@ -1,17 +1,17 @@
 """Программа-сервер"""
-import argparse
-import configparser
 import os
 import sys
+
+import argparse
+import configparser
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtCore import Qt
 
 from common.decos import log
 from common.variables import *
 import logs.server_log_config
 from server.core import MessageProcessor
 from server.database import ServerStorage
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtCore import Qt
-
 from server.main_window import MainWindow
 
 LOGGER = logging.getLogger('server')

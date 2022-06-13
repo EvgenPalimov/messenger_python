@@ -1,8 +1,8 @@
-import socket
+import os
 
+import socket
 from PyQt5.QtWidgets import QDialog, QLabel, QLineEdit, QPushButton, \
     QFileDialog, QMessageBox
-import os
 
 
 class ConfigWindow(QDialog):

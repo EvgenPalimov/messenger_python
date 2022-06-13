@@ -1,9 +1,9 @@
 import logging
-import logs.client_log_config
 from PyQt5.QtWidgets import QDialog, QLabel, QComboBox, QPushButton
 from PyQt5.QtCore import Qt
 
 from client.databases.database import ClientDatabase
+import logs.client_log_config
 
 LOGGER = logging.getLogger('client')
 
