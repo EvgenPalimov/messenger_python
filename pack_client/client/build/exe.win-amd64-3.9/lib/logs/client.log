@@ -1,0 +1,137 @@
+2022-06-16 21:54:10,352 DEBUG decos Была вызвана функция arg_parser c параметрами (), {}. Вызов из модуля __main__. Вызов из функции "__main__").Вызов из функции <module>
+2022-06-16 21:54:10,352 DEBUG client_ Аргументы загружены.
+2022-06-16 21:54:19,600 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Николай.
+2022-06-16 21:54:25,110 DEBUG client_ Ключи успешно загруженны.
+2022-06-16 21:54:25,222 INFO transport Попытка подключения №1.
+2022-06-16 21:54:25,224 DEBUG transport Установлено соеденение с сервером.
+2022-06-16 21:54:25,510 DEBUG transport Хэш пароль готов - b'6810e23b00be3465ea54a766204c5e11235095e9ef21537e270c2864eae23aae56c8691fbd0d4d96f5fd22c48995416316250e72bd52f13b00db58c5708dee4e'.
+2022-06-16 21:54:25,511 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655398465.511984, 'user': {'account_name': 'Николай', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzD9dvkM+VQtEWWMey+9m\n96XAzGpg9tgZjoCv/VxqCeDPCt4+l+DY/cIv6R4WqT0p+DLk2I8lBnXqcFt8nXUM\n0T7Ry//I2jEw9BIwUcs+mJxemj+9no0gCEYt2I1ZCZbAR9wY0oV+BGmw1HDPGnQS\nprSvHryk7d+CkDHrBtmSc40yOBO2ZNEapA9Yae/HeJgIcj6wXGHBawemu+HZ7zxM\nxjOQ1T3nbm2NJAYOLSVbZDt44z5L6Qy4VcbvL2ToNwBVrdKcHbO/2zcoqI+dCiSd\neVvLjb1O9Sw4HyT2aIR7UkH4JEWb5BjtQtfWscOKateVuUAcuwbI/CCLdyCB7Ob1\nKQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-16 21:54:25,746 DEBUG transport Ответ сервера - {'response': 511, 'bin': '1419cfc3d24df0f7af56c0b41df60d319577eb8315416f9144d07e8e9bd64aafb26ec0f759c7d56e0c546567fa85e69e97e2d026e0cede567b58b04840ff576a'}.
+2022-06-16 21:54:25,747 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-16 21:54:25,747 INFO transport Соеденение с сервером успешно установлено.
+2022-06-16 21:54:25,747 DEBUG transport Запрос списка известных пользователей - Николай.
+2022-06-16 21:54:26,294 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-16 21:54:26,294 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655398466.2946706, 'user': 'Николай'}.
+2022-06-16 21:54:26,796 DEBUG transport Получен ответ - {'response': 202, 'data_list': []}.
+2022-06-16 21:54:26,797 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655398466.796281}.
+2022-06-16 21:54:27,300 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Николай']}.
+2022-06-16 21:54:27,300 DEBUG client_ Transport is ready.
+2022-06-16 21:54:27,301 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2022-06-16 21:54:31,838 DEBUG decos Была вызвана функция arg_parser c параметрами (), {}. Вызов из модуля __main__. Вызов из функции "__main__").Вызов из функции <module>
+2022-06-16 21:54:31,839 DEBUG client_ Аргументы загружены.
+2022-06-16 21:54:38,993 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Евгений.
+2022-06-16 21:54:46,744 DEBUG client_ Ключи успешно загруженны.
+2022-06-16 21:54:46,843 INFO transport Попытка подключения №1.
+2022-06-16 21:54:46,844 DEBUG transport Установлено соеденение с сервером.
+2022-06-16 21:54:47,195 DEBUG transport Хэш пароль готов - b'0cdcf67b871f645160edea5e68ff4c5f3e454b2233cf7811f88b78ce5a6047b71b2fadcbcbcbe6242d7ae375da76323020ba4349be34ea64c690881d57add725'.
+2022-06-16 21:54:47,197 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1655398487.1973007, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoX29he+6u5f7lPNsSzP/\n9IpQNfAS2VuVI3HgwKttScE3K2NzuNDrnxGezcEXoY6NSzqdr9jGPlO5PEPoR8Vh\nyMD2y0EvOsw+A8skcaYVR1lU5PWD4OnDXjjxfBUrj0dzPwnOshsKag1mx21J9a0a\ncGoxfhmrTc/3FfR7wytDb45Q2V38Ifba5097UAwx0KnzYZ8ydpBwANbd8MCHX1M0\njdswEjfFRxE+4zQiAcfvSnw7PGI19H/mrHaq1SPcJolzG/LdBr7MUA7X0WxTw4lE\nQkdB6evvAlrTIZk8T9DIWebR0Sv2/XHYs2+gSE63qn9cUMrIrraMAe1uVhYDUmfe\n+QIDAQAB\n-----END PUBLIC KEY-----'}}.
+2022-06-16 21:54:47,366 DEBUG transport Ответ сервера - {'response': 511, 'bin': '86b9128f8d3d0fdc6a594be16649ee21ceb81cb4ab8cb107b3efdef64c23d9020169a5968b2e2bae6b37c0a353cfd8731a6a812fd3d93a77937f3b32c76536ac'}.
+2022-06-16 21:54:47,367 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-16 21:54:47,367 INFO transport Соеденение с сервером успешно установлено.
+2022-06-16 21:54:47,367 DEBUG transport Запрос списка известных пользователей - Евгений.
+2022-06-16 21:54:47,917 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-16 21:54:47,917 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655398487.917173, 'user': 'Евгений'}.
+2022-06-16 21:54:48,408 DEBUG transport Получен ответ - {'response': 202, 'data_list': []}.
+2022-06-16 21:54:48,409 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655398488.409824}.
+2022-06-16 21:54:48,923 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Николай', 'Евгений']}.
+2022-06-16 21:54:48,923 DEBUG client_ Transport is ready.
+2022-06-16 21:54:48,924 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2022-06-16 21:55:16,819 DEBUG transport Создание контакта - Евгений.
+2022-06-16 21:55:17,100 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-16 21:55:17,145 INFO main_window Успешно добавлен контакт - <PyQt5.QtGui.QStandardItem object at 0x0000018FCC6B1160>.
+2022-06-16 21:55:19,654 DEBUG transport Запрос публичного ключа для - Евгений.
+2022-06-16 21:55:20,159 DEBUG main_window Загружен открытый ключ для Евгений.
+2022-06-16 21:55:24,941 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Николай', 'to': 'Евгений', 'time': 1655398524.9416196, 'mess_text': 'kzaF3Pvde+dVSIubG7B0HmcB+0TPgiW8c1y02PN/Fa421JpiaFQSVbeQ5Il0UbJFMB9T4rk+ci5cROlahOKt4UCv9AMrw/8KTc/EFhetElGGjPTNatLOYzi4rRJD+p23jd4V+aXsV4y1gUbwgvGQYnnAJkLlhJ+e/r+tiotYcvI4wBIOysaqwI1q7N/dt0Vovl3XWOcfDhCDHT6J+YlnSjRJ4ZsE8p0IvQhS3X/tbjd3QBlQM978H575rHafpjWqjWxuWf5V7MEMGAibVvSpNNtu1jB0h9dlQTigRx5TbmRS3QcfdtovNAYlRL3EQhK68b9aLV1o9m0wHd2CRFR7ow=='}.
+2022-06-16 21:55:25,341 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+e', 'from': 'Николай', 'to': 'Евгений', 'time': 1655398524.9416196, 'mess_text': 'kzaF3Pvde+dVSIubG7B0HmcB+0TPgiW8c1y02PN/Fa421JpiaFQSVbeQ5Il0UbJFMB9T4rk+ci5cROlahOKt4UCv9AMrw/8KTc/EFhetElGGjPTNatLOYzi4rRJD+p23jd4V+aXsV4y1gUbwgvGQYnnAJkLlhJ+e/r+tiotYcvI4wBIOysaqwI1q7N/dt0Vovl3XWOcfDhCDHT6J+YlnSjRJ4ZsE8p0IvQhS3X/tbjd3QBlQM978H575rHafpjWqjWxuWf5V7MEMGAibVvSpNNtu1jB0h9dlQTigRx5TbmRS3QcfdtovNAYlRL3EQhK68b9aLV1o9m0wHd2CRFR7ow=='}.
+2022-06-16 21:55:25,342 DEBUG transport Разбор сообщения от сервера: {'action': 'message', 'from': 'Николай', 'to': 'Евгений', 'time': 1655398524.9416196, 'mess_text': 'kzaF3Pvde+dVSIubG7B0HmcB+0TPgiW8c1y02PN/Fa421JpiaFQSVbeQ5Il0UbJFMB9T4rk+ci5cROlahOKt4UCv9AMrw/8KTc/EFhetElGGjPTNatLOYzi4rRJD+p23jd4V+aXsV4y1gUbwgvGQYnnAJkLlhJ+e/r+tiotYcvI4wBIOysaqwI1q7N/dt0Vovl3XWOcfDhCDHT6J+YlnSjRJ4ZsE8p0IvQhS3X/tbjd3QBlQM978H575rHafpjWqjWxuWf5V7MEMGAibVvSpNNtu1jB0h9dlQTigRx5TbmRS3QcfdtovNAYlRL3EQhK68b9aLV1o9m0wHd2CRFR7ow=='}.
+2022-06-16 21:55:25,342 INFO transport Отправлено сообщение для пользователя - Евгений.
+2022-06-16 21:55:25,342 DEBUG transport Получено сообщение от пользователя Николай:kzaF3Pvde+dVSIubG7B0HmcB+0TPgiW8c1y02PN/Fa421JpiaFQSVbeQ5Il0UbJFMB9T4rk+ci5cROlahOKt4UCv9AMrw/8KTc/EFhetElGGjPTNatLOYzi4rRJD+p23jd4V+aXsV4y1gUbwgvGQYnnAJkLlhJ+e/r+tiotYcvI4wBIOysaqwI1q7N/dt0Vovl3XWOcfDhCDHT6J+YlnSjRJ4ZsE8p0IvQhS3X/tbjd3QBlQM978H575rHafpjWqjWxuWf5V7MEMGAibVvSpNNtu1jB0h9dlQTigRx5TbmRS3QcfdtovNAYlRL3EQhK68b9aLV1o9m0wHd2CRFR7ow==.
+2022-06-16 21:55:25,346 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-16 21:55:25,347 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655398525.3479161, 'user': 'Евгений'}.
+2022-06-16 21:55:25,354 DEBUG main_window Отправлено сообщение для Евгений: Привет.
+2022-06-16 21:55:25,855 DEBUG transport Получен ответ - {'response': 202, 'data_list': []}.
+2022-06-16 21:55:25,856 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655398525.8567863}.
+2022-06-16 21:55:26,362 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Николай', 'Евгений']}.
+2022-06-16 21:55:27,439 DEBUG transport Создание контакта - Николай.
+2022-06-16 21:55:28,416 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-16 21:55:28,432 INFO main_window Успешно добавлен контакт - <PyQt5.QtGui.QStandardItem object at 0x0000025C3E2C1160>.
+2022-06-16 21:55:29,584 DEBUG transport Запрос публичного ключа для - Николай.
+2022-06-16 21:55:29,935 DEBUG main_window Загружен открытый ключ для Николай.
+2022-06-16 21:55:42,293 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Николай', 'time': 1655398542.292269, 'mess_text': 'T/+3RrO6NTvd3BEp3NA1uaN31EiRutFi0QYkMVBCU+qvFkZ+28/Gxidnp/5yBZpBqe1/d5a+yqcMmqhvmf8eD+myO8wQGpewfYIHqDKqC6FI6331+38K0/V/ne4LClirmGxIQhmhcvBqMVqTQkIrYrEiY7ZhSXB3II3Udz4cxqIzFQ0dd8j7lsmfKWMu7Ek2Mi5Oo8e4vwvigVYpwACLy5Io5g0ACExOyIu33sFc7NqCrsU23crc1+6zdIA9G5jiYC6m6qRjofdFFqLtVttoRDuIxFF0IDY0uDo41MB27tPXHFpFvKr93N+imjBKvPTPTQJwxog57Jhxy8mANrE9lA=='}.
+2022-06-16 21:55:42,722 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-16 21:55:42,722 INFO transport Отправлено сообщение для пользователя - Николай.
+2022-06-16 21:55:42,731 DEBUG main_window Отправлено сообщение для Николай: Привет
+.
+2022-06-16 21:55:42,953 DEBUG transport Принято сообщение от сервера: {'action': 'message', 'from': 'Евгений', 'to': 'Николай', 'time': 1655398542.292269, 'mess_text': 'T/+3RrO6NTvd3BEp3NA1uaN31EiRutFi0QYkMVBCU+qvFkZ+28/Gxidnp/5yBZpBqe1/d5a+yqcMmqhvmf8eD+myO8wQGpewfYIHqDKqC6FI6331+38K0/V/ne4LClirmGxIQhmhcvBqMVqTQkIrYrEiY7ZhSXB3II3Udz4cxqIzFQ0dd8j7lsmfKWMu7Ek2Mi5Oo8e4vwvigVYpwACLy5Io5g0ACExOyIu33sFc7NqCrsU23crc1+6zdIA9G5jiYC6m6qRjofdFFqLtVttoRDuIxFF0IDY0uDo41MB27tPXHFpFvKr93N+imjBKvPTPTQJwxog57Jhxy8mANrE9lA=='}.
+2022-06-16 21:55:42,954 DEBUG transport Разбор сообщения от сервера: {'action': 'message', 'from': 'Евгений', 'to': 'Николай', 'time': 1655398542.292269, 'mess_text': 'T/+3RrO6NTvd3BEp3NA1uaN31EiRutFi0QYkMVBCU+qvFkZ+28/Gxidnp/5yBZpBqe1/d5a+yqcMmqhvmf8eD+myO8wQGpewfYIHqDKqC6FI6331+38K0/V/ne4LClirmGxIQhmhcvBqMVqTQkIrYrEiY7ZhSXB3II3Udz4cxqIzFQ0dd8j7lsmfKWMu7Ek2Mi5Oo8e4vwvigVYpwACLy5Io5g0ACExOyIu33sFc7NqCrsU23crc1+6zdIA9G5jiYC6m6qRjofdFFqLtVttoRDuIxFF0IDY0uDo41MB27tPXHFpFvKr93N+imjBKvPTPTQJwxog57Jhxy8mANrE9lA=='}.
+2022-06-16 21:55:42,954 DEBUG transport Получено сообщение от пользователя Евгений:T/+3RrO6NTvd3BEp3NA1uaN31EiRutFi0QYkMVBCU+qvFkZ+28/Gxidnp/5yBZpBqe1/d5a+yqcMmqhvmf8eD+myO8wQGpewfYIHqDKqC6FI6331+38K0/V/ne4LClirmGxIQhmhcvBqMVqTQkIrYrEiY7ZhSXB3II3Udz4cxqIzFQ0dd8j7lsmfKWMu7Ek2Mi5Oo8e4vwvigVYpwACLy5Io5g0ACExOyIu33sFc7NqCrsU23crc1+6zdIA9G5jiYC6m6qRjofdFFqLtVttoRDuIxFF0IDY0uDo41MB27tPXHFpFvKr93N+imjBKvPTPTQJwxog57Jhxy8mANrE9lA==.
+2022-06-16 21:55:42,961 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-16 21:55:42,962 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655398542.9625905, 'user': 'Николай'}.
+2022-06-16 21:55:43,239 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2022-06-16 21:55:43,239 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655398543.239133}.
+2022-06-16 21:55:43,744 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Николай', 'Евгений']}.
+2022-06-16 21:55:53,728 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Николай', 'to': 'Евгений', 'time': 1655398553.7283041, 'mess_text': 'E8N7WrN31QGv1TvEUOsaGLPsHdtKUxpBUt5K0ibNo5mq+xTJCnkhSqhl3IA12B0j6FO8qnpL/1qMIPTjt7MpFmyoiuHmqzTXGdXvSU9fVmFY8jMfANhwWnQDJaNBpBjYBNlfxWVG1flk3bfxQmAqMff/PVEjATVbOmxTfC3LBi8ZWAqTzOplri25f2lp6E3ghRwpQL3W/mkqAOtAhcNsgdn8+E06mR5LuxA4+r/XmBDUX0X1rjWvfAMp39us5ru7Of2aXHUt45UV2UrbAldnsM3BB0lhG+Whfhs6jxDVTRrMhVuP33ktT9t2F3gvOt7LqV6McyCRcULc53BOy+ezOg=='}.
+2022-06-16 21:55:53,970 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-16 21:55:53,970 INFO transport Отправлено сообщение для пользователя - Евгений.
+2022-06-16 21:55:53,979 DEBUG main_window Отправлено сообщение для Евгений: Как дела?.
+2022-06-16 21:55:54,885 DEBUG transport Принято сообщение от сервера: {'action': 'message', 'from': 'Николай', 'to': 'Евгений', 'time': 1655398553.7283041, 'mess_text': 'E8N7WrN31QGv1TvEUOsaGLPsHdtKUxpBUt5K0ibNo5mq+xTJCnkhSqhl3IA12B0j6FO8qnpL/1qMIPTjt7MpFmyoiuHmqzTXGdXvSU9fVmFY8jMfANhwWnQDJaNBpBjYBNlfxWVG1flk3bfxQmAqMff/PVEjATVbOmxTfC3LBi8ZWAqTzOplri25f2lp6E3ghRwpQL3W/mkqAOtAhcNsgdn8+E06mR5LuxA4+r/XmBDUX0X1rjWvfAMp39us5ru7Of2aXHUt45UV2UrbAldnsM3BB0lhG+Whfhs6jxDVTRrMhVuP33ktT9t2F3gvOt7LqV6McyCRcULc53BOy+ezOg=='}.
+2022-06-16 21:55:54,886 DEBUG transport Разбор сообщения от сервера: {'action': 'message', 'from': 'Николай', 'to': 'Евгений', 'time': 1655398553.7283041, 'mess_text': 'E8N7WrN31QGv1TvEUOsaGLPsHdtKUxpBUt5K0ibNo5mq+xTJCnkhSqhl3IA12B0j6FO8qnpL/1qMIPTjt7MpFmyoiuHmqzTXGdXvSU9fVmFY8jMfANhwWnQDJaNBpBjYBNlfxWVG1flk3bfxQmAqMff/PVEjATVbOmxTfC3LBi8ZWAqTzOplri25f2lp6E3ghRwpQL3W/mkqAOtAhcNsgdn8+E06mR5LuxA4+r/XmBDUX0X1rjWvfAMp39us5ru7Of2aXHUt45UV2UrbAldnsM3BB0lhG+Whfhs6jxDVTRrMhVuP33ktT9t2F3gvOt7LqV6McyCRcULc53BOy+ezOg=='}.
+2022-06-16 21:55:54,886 DEBUG transport Получено сообщение от пользователя Николай:E8N7WrN31QGv1TvEUOsaGLPsHdtKUxpBUt5K0ibNo5mq+xTJCnkhSqhl3IA12B0j6FO8qnpL/1qMIPTjt7MpFmyoiuHmqzTXGdXvSU9fVmFY8jMfANhwWnQDJaNBpBjYBNlfxWVG1flk3bfxQmAqMff/PVEjATVbOmxTfC3LBi8ZWAqTzOplri25f2lp6E3ghRwpQL3W/mkqAOtAhcNsgdn8+E06mR5LuxA4+r/XmBDUX0X1rjWvfAMp39us5ru7Of2aXHUt45UV2UrbAldnsM3BB0lhG+Whfhs6jxDVTRrMhVuP33ktT9t2F3gvOt7LqV6McyCRcULc53BOy+ezOg==.
+2022-06-16 21:55:54,893 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-16 21:55:54,894 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655398554.8945692, 'user': 'Евгений'}.
+2022-06-16 21:55:55,001 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Николай']}.
+2022-06-16 21:55:55,002 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655398555.0024137}.
+2022-06-16 21:55:55,510 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Николай', 'Евгений']}.
+2022-06-16 21:56:44,883 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Николай', 'time': 1655398604.8829463, 'mess_text': 'Gthns12X03ZhCUzHx4kQ2HSgcVMHj9ERP2KGW4l79V/ResS1ITh6H7O08rem47Bqgxv1NaCi70K55r6Zv3zBgJN3UN6bIXSxR0kdBsJr2xRy962D+8PIQe/WFWhHX+eMKSh+3EbleKhN1BErApUco/YH4eJXQMzw/g2+34B+8ngmIKSzdwtwdnvxroawQrTBiLhuTwpsYKfZP9Y/JS+k2tZ22qf9tEmWdSH15u2VScm8MVwd4qVecDJpGtNSJUyonwVE06STy7Lf0G1arZA+Pyej79dc5o04SJm8/ySeDsGS5iG1T1UUmsa9Fs0cgFbuyR4NoC2c/iN31W6uybBs3Q=='}.
+2022-06-16 21:56:45,142 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-16 21:56:45,143 INFO transport Отправлено сообщение для пользователя - Николай.
+2022-06-16 21:56:45,151 DEBUG main_window Отправлено сообщение для Николай: Всё отлично, закончил курс PyQT
+.
+2022-06-16 21:56:45,620 DEBUG transport Принято сообщение от сервера: {'action': 'message', 'from': 'Евгений', 'to': 'Николай', 'time': 1655398604.8829463, 'mess_text': 'Gthns12X03ZhCUzHx4kQ2HSgcVMHj9ERP2KGW4l79V/ResS1ITh6H7O08rem47Bqgxv1NaCi70K55r6Zv3zBgJN3UN6bIXSxR0kdBsJr2xRy962D+8PIQe/WFWhHX+eMKSh+3EbleKhN1BErApUco/YH4eJXQMzw/g2+34B+8ngmIKSzdwtwdnvxroawQrTBiLhuTwpsYKfZP9Y/JS+k2tZ22qf9tEmWdSH15u2VScm8MVwd4qVecDJpGtNSJUyonwVE06STy7Lf0G1arZA+Pyej79dc5o04SJm8/ySeDsGS5iG1T1UUmsa9Fs0cgFbuyR4NoC2c/iN31W6uybBs3Q=='}.
+2022-06-16 21:56:45,621 DEBUG transport Разбор сообщения от сервера: {'action': 'message', 'from': 'Евгений', 'to': 'Николай', 'time': 1655398604.8829463, 'mess_text': 'Gthns12X03ZhCUzHx4kQ2HSgcVMHj9ERP2KGW4l79V/ResS1ITh6H7O08rem47Bqgxv1NaCi70K55r6Zv3zBgJN3UN6bIXSxR0kdBsJr2xRy962D+8PIQe/WFWhHX+eMKSh+3EbleKhN1BErApUco/YH4eJXQMzw/g2+34B+8ngmIKSzdwtwdnvxroawQrTBiLhuTwpsYKfZP9Y/JS+k2tZ22qf9tEmWdSH15u2VScm8MVwd4qVecDJpGtNSJUyonwVE06STy7Lf0G1arZA+Pyej79dc5o04SJm8/ySeDsGS5iG1T1UUmsa9Fs0cgFbuyR4NoC2c/iN31W6uybBs3Q=='}.
+2022-06-16 21:56:45,621 DEBUG transport Получено сообщение от пользователя Евгений:Gthns12X03ZhCUzHx4kQ2HSgcVMHj9ERP2KGW4l79V/ResS1ITh6H7O08rem47Bqgxv1NaCi70K55r6Zv3zBgJN3UN6bIXSxR0kdBsJr2xRy962D+8PIQe/WFWhHX+eMKSh+3EbleKhN1BErApUco/YH4eJXQMzw/g2+34B+8ngmIKSzdwtwdnvxroawQrTBiLhuTwpsYKfZP9Y/JS+k2tZ22qf9tEmWdSH15u2VScm8MVwd4qVecDJpGtNSJUyonwVE06STy7Lf0G1arZA+Pyej79dc5o04SJm8/ySeDsGS5iG1T1UUmsa9Fs0cgFbuyR4NoC2c/iN31W6uybBs3Q==.
+2022-06-16 21:56:45,627 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-16 21:56:45,627 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655398605.627997, 'user': 'Николай'}.
+2022-06-16 21:56:45,657 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2022-06-16 21:56:45,657 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655398605.657728}.
+2022-06-16 21:56:46,167 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Николай', 'Евгений']}.
+2022-06-16 21:56:56,782 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Николай', 'to': 'Евгений', 'time': 1655398616.782055, 'mess_text': 'mQxRhC/Vnfnfn8HZvbqgFg8eNiPCxzdVP/UT1arcJ6Iiio23YgCfUSxB3mESVcq46VVTOkjGSl5uYSTmwZ0W89NcLzrtT1fVKDZMwTbbxVTaA6pLxlEtjZq6k+yybG05+h7uGXMEBlaYwLDybL8XzPPEI9w9mFcUJDBkbMrv5VA06Bzv+u3BHUoBgn1qwMZK0dcWcJUm6aB4Af7d7Jnl3T2CB2iXxlB5VVqUERmldqVfFNoMt+l5tjk7y7et9oNWn7gVMXkLYeAghHIdTH8qSFM0D3kO1Cr7u58bPrqp7SpDD4Er5uRmygrl8Wb8o1BTov3bUeT3HgUkcws6JkkUVg=='}.
+2022-06-16 21:56:56,898 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-16 21:56:56,898 INFO transport Отправлено сообщение для пользователя - Евгений.
+2022-06-16 21:56:56,907 DEBUG main_window Отправлено сообщение для Евгений: Поздравляю!!!
+.
+2022-06-16 21:56:57,285 DEBUG transport Принято сообщение от сервера: {'action': 'message', 'from': 'Николай', 'to': 'Евгений', 'time': 1655398616.782055, 'mess_text': 'mQxRhC/Vnfnfn8HZvbqgFg8eNiPCxzdVP/UT1arcJ6Iiio23YgCfUSxB3mESVcq46VVTOkjGSl5uYSTmwZ0W89NcLzrtT1fVKDZMwTbbxVTaA6pLxlEtjZq6k+yybG05+h7uGXMEBlaYwLDybL8XzPPEI9w9mFcUJDBkbMrv5VA06Bzv+u3BHUoBgn1qwMZK0dcWcJUm6aB4Af7d7Jnl3T2CB2iXxlB5VVqUERmldqVfFNoMt+l5tjk7y7et9oNWn7gVMXkLYeAghHIdTH8qSFM0D3kO1Cr7u58bPrqp7SpDD4Er5uRmygrl8Wb8o1BTov3bUeT3HgUkcws6JkkUVg=='}.
+2022-06-16 21:56:57,286 DEBUG transport Разбор сообщения от сервера: {'action': 'message', 'from': 'Николай', 'to': 'Евгений', 'time': 1655398616.782055, 'mess_text': 'mQxRhC/Vnfnfn8HZvbqgFg8eNiPCxzdVP/UT1arcJ6Iiio23YgCfUSxB3mESVcq46VVTOkjGSl5uYSTmwZ0W89NcLzrtT1fVKDZMwTbbxVTaA6pLxlEtjZq6k+yybG05+h7uGXMEBlaYwLDybL8XzPPEI9w9mFcUJDBkbMrv5VA06Bzv+u3BHUoBgn1qwMZK0dcWcJUm6aB4Af7d7Jnl3T2CB2iXxlB5VVqUERmldqVfFNoMt+l5tjk7y7et9oNWn7gVMXkLYeAghHIdTH8qSFM0D3kO1Cr7u58bPrqp7SpDD4Er5uRmygrl8Wb8o1BTov3bUeT3HgUkcws6JkkUVg=='}.
+2022-06-16 21:56:57,286 DEBUG transport Получено сообщение от пользователя Николай:mQxRhC/Vnfnfn8HZvbqgFg8eNiPCxzdVP/UT1arcJ6Iiio23YgCfUSxB3mESVcq46VVTOkjGSl5uYSTmwZ0W89NcLzrtT1fVKDZMwTbbxVTaA6pLxlEtjZq6k+yybG05+h7uGXMEBlaYwLDybL8XzPPEI9w9mFcUJDBkbMrv5VA06Bzv+u3BHUoBgn1qwMZK0dcWcJUm6aB4Af7d7Jnl3T2CB2iXxlB5VVqUERmldqVfFNoMt+l5tjk7y7et9oNWn7gVMXkLYeAghHIdTH8qSFM0D3kO1Cr7u58bPrqp7SpDD4Er5uRmygrl8Wb8o1BTov3bUeT3HgUkcws6JkkUVg==.
+2022-06-16 21:56:57,292 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-16 21:56:57,292 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655398617.2920046, 'user': 'Евгений'}.
+2022-06-16 21:56:57,413 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Николай']}.
+2022-06-16 21:56:57,413 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655398617.4132755}.
+2022-06-16 21:56:57,919 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Николай', 'Евгений']}.
+2022-06-16 21:57:42,955 DEBUG transport Принято сообщение от сервера: {'response': 205}.
+2022-06-16 21:57:42,956 DEBUG transport Разбор сообщения от сервера: {'response': 205}.
+2022-06-16 21:57:43,314 DEBUG transport Принято сообщение от сервера: {'response': 205}.
+2022-06-16 21:57:43,315 DEBUG transport Разбор сообщения от сервера: {'response': 205}.
+2022-06-16 21:57:49,005 DEBUG transport Запрос списка известных пользователей - Евгений.
+2022-06-16 21:57:49,469 DEBUG add_contact Обновление списка пользователей с сервера - выполено успешно.
+2022-06-16 21:57:50,016 DEBUG transport Запрос списка известных пользователей - Евгений.
+2022-06-16 21:57:50,496 DEBUG add_contact Обновление списка пользователей с сервера - выполено успешно.
+2022-06-16 21:57:52,495 DEBUG transport Создание контакта - Петр.
+2022-06-16 21:57:52,538 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2022-06-16 21:57:52,550 INFO main_window Успешно добавлен контакт - <PyQt5.QtGui.QStandardItem object at 0x0000025C3BFCB430>.
+2022-06-16 21:58:02,308 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Николай', 'to': 'Евгений', 'time': 1655398682.3085184, 'mess_text': 'jVVSQFhnGcmUSh6SBs4jGL/Zeivb+Adk+j36qIipJ76NdhNQ5Wh7jeRZmHxkXDsiHyUXaQmDYr4dk1zWlSX6jVO3zJECe20uk/QOP83jIdEkqiDyRK9WOcSywwkuassMNFGgcwCipgkhdYTtX/80c622L+kTFSMJexIKQSamrS6gbEXkLsiTv7peWJnc9re1HWy7Tt5HXye0oY3iTRp3Ld4XJIB41b8JdUzcWoUrkZ38OZZjCC8o3tYZumfM7uidUT6kUZdz9HE0FXKqf6HRHh6h/sgHlUecfctxxl/X7X6xuhbjTGZwNSdjR9ZAyCb7TvqzAXlz3kfkph7e/nyEjg=='}.
+2022-06-16 21:58:02,752 DEBUG transport Принято сообщение от сервера: {'action': 'message', 'from': 'Николай', 'to': 'Евгений', 'time': 1655398682.3085184, 'mess_text': 'jVVSQFhnGcmUSh6SBs4jGL/Zeivb+Adk+j36qIipJ76NdhNQ5Wh7jeRZmHxkXDsiHyUXaQmDYr4dk1zWlSX6jVO3zJECe20uk/QOP83jIdEkqiDyRK9WOcSywwkuassMNFGgcwCipgkhdYTtX/80c622L+kTFSMJexIKQSamrS6gbEXkLsiTv7peWJnc9re1HWy7Tt5HXye0oY3iTRp3Ld4XJIB41b8JdUzcWoUrkZ38OZZjCC8o3tYZumfM7uidUT6kUZdz9HE0FXKqf6HRHh6h/sgHlUecfctxxl/X7X6xuhbjTGZwNSdjR9ZAyCb7TvqzAXlz3kfkph7e/nyEjg=='}.
+2022-06-16 21:58:02,752 INFO transport Отправлено сообщение для пользователя - Евгений.
+2022-06-16 21:58:02,752 DEBUG transport Разбор сообщения от сервера: {'action': 'message', 'from': 'Николай', 'to': 'Евгений', 'time': 1655398682.3085184, 'mess_text': 'jVVSQFhnGcmUSh6SBs4jGL/Zeivb+Adk+j36qIipJ76NdhNQ5Wh7jeRZmHxkXDsiHyUXaQmDYr4dk1zWlSX6jVO3zJECe20uk/QOP83jIdEkqiDyRK9WOcSywwkuassMNFGgcwCipgkhdYTtX/80c622L+kTFSMJexIKQSamrS6gbEXkLsiTv7peWJnc9re1HWy7Tt5HXye0oY3iTRp3Ld4XJIB41b8JdUzcWoUrkZ38OZZjCC8o3tYZumfM7uidUT6kUZdz9HE0FXKqf6HRHh6h/sgHlUecfctxxl/X7X6xuhbjTGZwNSdjR9ZAyCb7TvqzAXlz3kfkph7e/nyEjg=='}.
+2022-06-16 21:58:02,753 DEBUG transport Получено сообщение от пользователя Николай:jVVSQFhnGcmUSh6SBs4jGL/Zeivb+Adk+j36qIipJ76NdhNQ5Wh7jeRZmHxkXDsiHyUXaQmDYr4dk1zWlSX6jVO3zJECe20uk/QOP83jIdEkqiDyRK9WOcSywwkuassMNFGgcwCipgkhdYTtX/80c622L+kTFSMJexIKQSamrS6gbEXkLsiTv7peWJnc9re1HWy7Tt5HXye0oY3iTRp3Ld4XJIB41b8JdUzcWoUrkZ38OZZjCC8o3tYZumfM7uidUT6kUZdz9HE0FXKqf6HRHh6h/sgHlUecfctxxl/X7X6xuhbjTGZwNSdjR9ZAyCb7TvqzAXlz3kfkph7e/nyEjg==.
+2022-06-16 21:58:02,760 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2022-06-16 21:58:02,761 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1655398682.7617793, 'user': 'Евгений'}.
+2022-06-16 21:58:02,761 DEBUG main_window Отправлено сообщение для Евгений: Пока.
+2022-06-16 21:58:03,269 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Николай', 'Петр']}.
+2022-06-16 21:58:03,270 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1655398683.2702467}.
+2022-06-16 21:58:03,776 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Николай', 'Евгений']}.
+2022-06-16 21:58:40,615 DEBUG transport Транспорт завершает работу.
+2022-06-16 21:58:41,049 DEBUG transport Потеряно соединение с сервером!
+2022-06-16 22:03:12,429 DEBUG transport Транспорт завершает работу.
+2022-06-16 22:03:12,925 DEBUG transport Потеряно соединение с сервером!
