@@ -5290,3 +5290,5 @@ Traceback (most recent call last):
   File "C:\Users\palim\PycharmProjects\messenger_python\common\utils.py", line 20, in get_message
     encoded_response = client.recv(MAX_PACKAGE_LENGTH)
 socket.timeout: timed out
+2022-06-22 17:19:25,242 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2022-06-22 17:19:25,243 DEBUG client_ Аргументы загружены.
