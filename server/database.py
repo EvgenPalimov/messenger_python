@@ -276,16 +276,16 @@ class ServerStorage:
         else:
             return False
 
-    def get_user(self, user_id: str):
+    def get_user(self, user_name: str):
         """
-        Метод получающий определеного пользователя по id.
+        Метод получающий определенного пользователя по id.
 
-        :param user_id: id пользователя,
+        :param user_name: имя пользователя,
         :return: возвращает объект БД - пользователя.
         """
 
         return self.session.query(self.AllUsers).filter_by(
-            id=int(user_id)).first()
+            name=user_name).first()
 
     def add_contact(self, user: str, contact: str):
         """

@@ -189,7 +189,7 @@ class ClientMainWindow(QMainWindow):
 
     def add_contact_action(self, item):
         """
-        Метод обработчк нажатия кнопки "Добавить"
+        Метод обработчик нажатия кнопки "Добавить"
 
         :param item: объект класса AddContactDialog,
         :return: ничего не возвращает.
@@ -201,10 +201,10 @@ class ClientMainWindow(QMainWindow):
 
     def add_contact(self, new_contact: str):
         """
-        Метод добавляющий контакт в серверную и клиентсткую БД.
+        Метод добавляющий контакт в серверную и клиентскую БД.
         После обновления баз данных обновляет и содержимое окна.
 
-        :param new_contact: имя нового контакта,
+        :param new_contact: Имя нового контакта,
         :return: ничего не возвращает.
         """
 
@@ -220,9 +220,9 @@ class ClientMainWindow(QMainWindow):
             self.messages.critical(self, 'Ошибка.', 'Таймаут соединения!')
         else:
             self.database.add_contact(new_contact)
-            new_contact = QStandardItem(new_contact)
-            new_contact.setEditable(False)
-            self.contacts_model.appendRow(new_contact)
+            # new_contact = QStandardItem(new_contact)
+            # new_contact.setEditable(False)
+            # self.contacts_model.appendRow(new_contact)
             LOGGER.info(f'Успешно добавлен контакт - {new_contact}.')
             self.messages.information(self, 'Успех.',
                                       'Контакт успешно добавлен!')
@@ -241,7 +241,7 @@ class ClientMainWindow(QMainWindow):
         Метод - обработчик удаления контакта, сообщает на сервер,
         обновляет таблицу и список контактов.
 
-        :param item: объект класса DelContactDialog,
+        :param item: Объект класса DelContactDialog,
         :return: ничего не возвращает.
         """
 
@@ -323,7 +323,7 @@ class ClientMainWindow(QMainWindow):
         в истории сообщений. Запрашивает пользователя если пришло сообщение
         не от текущего собеседника. При необходимости меняет собеседника.
 
-        :param message: объект сообщения,
+        :param message: Объект сообщения,
         :return: ничего не возвращает.
         """
 

@@ -5604,3 +5604,557 @@ socket.timeout: timed out
 2023-02-14 23:02:57,312 DEBUG transport Разбор сообщения от сервера: {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676397775.9790494, 'mess_text': 'mKGO+lNW3t6d3IzOipePQc2mioNd9c49JotuSp5ggwjDryhmt7APKTBj1+GclhIcF4v7aBdIYlaDh+QSMU6wItEN4q4hCPYSQ5TZH6Mt0K6IFThi2mF/frDTaB49qeSer2lcr7kPTrIswMVJuNpQb8KrpepG8Fewa/oMsn5HP2X3k9vA1w499m/LiIMHHanspnpDE/q+qwGzSrfdAPBzWrPzxP+8y0WfqlglCoA6BMuJLefz+VQhNeIUfPOVNqm6Ym9zwknD8YOqmStzrXrAx1xXjil4R0rGHyoThGhQLL911apQQUOtJmegVP9v2N5iIqeJyUUVf0dGTvV9ALt+3g=='}.
 2023-02-14 23:02:57,312 DEBUG transport Получено сообщение от пользователя Анна:mKGO+lNW3t6d3IzOipePQc2mioNd9c49JotuSp5ggwjDryhmt7APKTBj1+GclhIcF4v7aBdIYlaDh+QSMU6wItEN4q4hCPYSQ5TZH6Mt0K6IFThi2mF/frDTaB49qeSer2lcr7kPTrIswMVJuNpQb8KrpepG8Fewa/oMsn5HP2X3k9vA1w499m/LiIMHHanspnpDE/q+qwGzSrfdAPBzWrPzxP+8y0WfqlglCoA6BMuJLefz+VQhNeIUfPOVNqm6Ym9zwknD8YOqmStzrXrAx1xXjil4R0rGHyoThGhQLL911apQQUOtJmegVP9v2N5iIqeJyUUVf0dGTvV9ALt+3g==.
 2023-02-14 23:03:04,952 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:02:39,777 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:02:39,777 DEBUG client_ Аргументы загружены.
+2023-02-18 21:02:46,820 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Евгений.
+2023-02-18 21:02:46,851 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:02:46,864 INFO transport Попытка подключения №1.
+2023-02-18 21:02:46,864 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:02:46,908 DEBUG transport Хэш пароль готов - b'0cdcf67b871f645160edea5e68ff4c5f3e454b2233cf7811f88b78ce5a6047b71b2fadcbcbcbe6242d7ae375da76323020ba4349be34ea64c690881d57add725'.
+2023-02-18 21:02:46,908 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676736166.908743, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu2l+bkGsH3+wtvzLRrkO\nlCTs4GlZiAgFCi6G0PQwicAubjkkhFSugbSMXF+Lb8tVYq4Kl9rO5xvPVSQzqiL+\nTuTw+nfIMa9ZvRX0dkpjKPDFVdslKk0oESgVCNQTqGO/av1IaNjLOs0rNUmqa+f/\n9C5dYxl3H1GEP7jdr5JTWJQzC+fk9XmCMMNM8mWui7+nu2KQXOABbOz8FONMGK5N\nWxL8eLkLdBwQjAbTqJz7prDkrlQl4OC6EdyyFU9GYbORoaOlg0sxYZFk113i+314\n2Lhss+EAelueWrR31au/JSjxqtJq3BxK63TbE9kLTLyH8kvqjJ2zFhHlsDyoj7Ys\nQwIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:02:47,375 DEBUG transport Ответ сервера - {'response': 511, 'bin': '2365ab24c73f2ce925b0b212ef5b0c2da51aa5db72d58a52e6448a401d5bf4af5f5648772ec6cd47111fbcb03f3f5567c758c465af8e9991b112b7cabdc3f96c'}.
+2023-02-18 21:02:47,376 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:02:47,376 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:02:47,376 DEBUG transport Запрос списка известных пользователей - Евгений.
+2023-02-18 21:02:47,891 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:02:47,891 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676736167.891896, 'user': 'Евгений'}.
+2023-02-18 21:02:48,400 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:02:48,400 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676736168.400966}.
+2023-02-18 21:02:48,911 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:02:48,917 DEBUG client_ Transport is ready.
+2023-02-18 21:02:48,917 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:02:51,966 DEBUG transport Запрос публичного ключа для - Анна.
+2023-02-18 21:02:52,462 DEBUG main_window Загружен открытый ключ для Анна.
+2023-02-18 21:02:54,265 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676736174.2656174, 'mess_text': 'g1AvvUxhHHrnEVzzQ1sdMH5j9MrATP22Ue+YuWr+IPChl1nUXExH8JqR+P2DTpMG8anyiPi3Kt27WdTMtjUbMT9EcsavsR1A6vOzPy+OXBdHCBQzJNaPpAkDi3OQdLE7xVrhbz1CojmiUpEshAH/kZPFxLiwKjS143Hbolc3SyiyPQwQomhaoRC8kHQxRtpEFb7HpROX23jY0yW4FdZVEXbh1JVeaxs9w/tX2wW6jqfsIK1QMOjmOAjjXXP2J0QbO88GV9+5h16gMEkKU2JdsnoNIv62M77TFtTjM1pQpdE4lXMoigPH4GwMgHecQ4Y9rFO9VbTvqyEou+DuQK47aA=='}.
+2023-02-18 21:03:39,189 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676736219.1894841, 'mess_text': 'bq38c/TvQi5MoBIpTdg51CYCBR/bzQG5QlhRCiPySQ1/HgJUZU7wr7Qw5rf1N8TfVdH9lpLXXbcWI/wtiUWTaFduTtuk5wkDy2x8eg56BghBZsE5gQh/TBM0y395rvVa/7/bKh1vrzqxxSDATj5TYV6STWK4GcZoMW/27ZLGZ83OeDUBPIKUljY8ktuFGQnNcu78/eRi/QI2GC1+F4X6RKtqLGuoQAptLqPG8cu9N9u6tONn80/4bcaBkFjRYhN7gc+o31X1ZCApKe4952+rQdH/BG4GFrPBZWr0DJXKGaL+VvTeGipKggJqSp2q40pQIljFH1oe183pH3TLopEpvg=='}.
+2023-02-18 21:05:45,262 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:06:10,330 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:06:10,330 DEBUG client_ Аргументы загружены.
+2023-02-18 21:06:17,164 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Евгений.
+2023-02-18 21:06:17,221 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:06:17,242 INFO transport Попытка подключения №1.
+2023-02-18 21:06:17,252 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:06:17,297 DEBUG transport Хэш пароль готов - b'0cdcf67b871f645160edea5e68ff4c5f3e454b2233cf7811f88b78ce5a6047b71b2fadcbcbcbe6242d7ae375da76323020ba4349be34ea64c690881d57add725'.
+2023-02-18 21:06:17,298 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676736377.2980402, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu2l+bkGsH3+wtvzLRrkO\nlCTs4GlZiAgFCi6G0PQwicAubjkkhFSugbSMXF+Lb8tVYq4Kl9rO5xvPVSQzqiL+\nTuTw+nfIMa9ZvRX0dkpjKPDFVdslKk0oESgVCNQTqGO/av1IaNjLOs0rNUmqa+f/\n9C5dYxl3H1GEP7jdr5JTWJQzC+fk9XmCMMNM8mWui7+nu2KQXOABbOz8FONMGK5N\nWxL8eLkLdBwQjAbTqJz7prDkrlQl4OC6EdyyFU9GYbORoaOlg0sxYZFk113i+314\n2Lhss+EAelueWrR31au/JSjxqtJq3BxK63TbE9kLTLyH8kvqjJ2zFhHlsDyoj7Ys\nQwIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:06:17,754 DEBUG transport Ответ сервера - {'response': 511, 'bin': '66d3f03f02c91cb19e44a363ef867e8ea1eb1949062a6ff68273460a21dafb62f1705e863ef88e795db9c4f612040b4305bc42e5b30894ebc7a1240db8b5c43d'}.
+2023-02-18 21:06:17,754 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:06:17,754 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:06:17,754 DEBUG transport Запрос списка известных пользователей - Евгений.
+2023-02-18 21:06:18,270 DEBUG transport Запрос контакт-листа для пользователя Thread-5.
+2023-02-18 21:06:18,270 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676736378.2703168, 'user': 'Евгений'}.
+2023-02-18 21:06:18,766 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:06:18,766 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676736378.7665253}.
+2023-02-18 21:06:19,275 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:06:19,283 DEBUG client_ Transport is ready.
+2023-02-18 21:06:19,298 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:06:21,168 DEBUG transport Запрос публичного ключа для - Анна.
+2023-02-18 21:06:21,311 DEBUG main_window Загружен открытый ключ для Анна.
+2023-02-18 21:06:49,138 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676736409.1389053, 'mess_text': 'Bu4FK3ZHM80rIT9M/hKRwJWXUs3yoyfbMJzHBzJJMHufAofrFc71+UzYx0l7GfBZzK80mid6jDIzvcbi3BPCA5EQkeSKU3kSg19bnm96IjZ6fwOKkpJevEvSJWsn64ds4lErURSZmOIpr4tH6b6+actC2kf2DE5jS952oviXbrp4MSlJbjoKNNYF65akXdYrBoD72y3E/O5yCjBdm7v1QHQMpJEKeu25jG87wsiyyXmdOxECbLdplGpuE1gpjDL+JkTkwtC2k7cW1EBLSJEsj4jJ9KV3EF/P+LpCnTAIEl9G2qYCJLDTpdR5vu4Z642xn/wmoXfpzAkCLEOPpqiLtg=='}.
+2023-02-18 21:08:21,372 DEBUG transport Потеряно соединение с сервером!
+2023-02-18 21:08:23,012 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:08:44,826 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:08:44,826 DEBUG client_ Аргументы загружены.
+2023-02-18 21:09:10,969 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Евгений.
+2023-02-18 21:09:11,000 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:09:11,008 INFO transport Попытка подключения №1.
+2023-02-18 21:09:11,008 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:09:11,058 DEBUG transport Хэш пароль готов - b'0cdcf67b871f645160edea5e68ff4c5f3e454b2233cf7811f88b78ce5a6047b71b2fadcbcbcbe6242d7ae375da76323020ba4349be34ea64c690881d57add725'.
+2023-02-18 21:09:11,058 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676736551.0581067, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu2l+bkGsH3+wtvzLRrkO\nlCTs4GlZiAgFCi6G0PQwicAubjkkhFSugbSMXF+Lb8tVYq4Kl9rO5xvPVSQzqiL+\nTuTw+nfIMa9ZvRX0dkpjKPDFVdslKk0oESgVCNQTqGO/av1IaNjLOs0rNUmqa+f/\n9C5dYxl3H1GEP7jdr5JTWJQzC+fk9XmCMMNM8mWui7+nu2KQXOABbOz8FONMGK5N\nWxL8eLkLdBwQjAbTqJz7prDkrlQl4OC6EdyyFU9GYbORoaOlg0sxYZFk113i+314\n2Lhss+EAelueWrR31au/JSjxqtJq3BxK63TbE9kLTLyH8kvqjJ2zFhHlsDyoj7Ys\nQwIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:09:11,531 DEBUG transport Ответ сервера - {'response': 511, 'bin': 'bb327c77e579de67686b12e7983fd28eb78b4088357b8c38b1c5d18fc4545dbf87981aaa57ccab4477dffa5740ac62ddfc97709116d3432e0dd96e191958d450'}.
+2023-02-18 21:09:11,531 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:09:11,531 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:09:11,531 DEBUG transport Запрос списка известных пользователей - Евгений.
+2023-02-18 21:09:12,045 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:09:12,045 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676736552.0452032, 'user': 'Евгений'}.
+2023-02-18 21:09:12,554 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:09:12,554 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676736552.5542858}.
+2023-02-18 21:09:13,062 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:09:13,067 DEBUG client_ Transport is ready.
+2023-02-18 21:09:13,067 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:09:15,036 DEBUG transport Запрос публичного ключа для - Анна.
+2023-02-18 21:09:15,091 DEBUG main_window Загружен открытый ключ для Анна.
+2023-02-18 21:09:53,140 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676736593.1407788, 'mess_text': '01lAwWCuXmcsRQ6b7vdsFTUeDsRO7o4nd6mBZqbCzdRqKKf/AaSO2usakyaIo2jfdCqSoo3ea4xpELtm7rf+iRk3VP2LdM1l8xhT3ZCtabmkQPaDzmun97seEdf8r/2HZ9IqS2LuDRMcQn0YFpE6B1twh17HuQQGwauLDzg0PnN+TmaR671Zuv8Oyrdkar1G8GkGtJFrtYlXEv7/R59NbfjIOXMQa5rPUjkXRYOOJLnAYbnus1fkNhIo42+l1oRVpWTX81PHoKqdQbuzkUeOKkVKHadTytmKjuCVenR7Y8DPvzPN8NenE484g2iNEt7sHh39qwSTqXTZyrtoI6O1zg=='}.
+2023-02-18 21:12:36,481 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676736756.4819438, 'mess_text': 'Teln9GaPgL7jdyusDCh+o+9DmN0SvywY2NDFZAbmAY0bdIgrm2+qD53OOzp5Xmj4HLgUzqKB77tkhTuBfKQym1Rk0mq76LgKBSf2grPXKVZ05jo2Ye023vzbrDO6sIs8S+y0RGoh3GGwxNktTqWKCXp7QD/BNVTQsBhUNV0ckcZQ4R/e/EbpY2epYJCvhg6o8P4fw9C+ERC7mEn2RQmniKdkdxRQu/REj2xrwYuvKt+eLFHdWNl8VNjii6VMSVWBxBXb9kVne5KzuLRipyuLnMnNhQCr67RXj4qH6OgyTs0ee/p6M0Ee7vPNqaWof9gcxaxrQ/uOZuDRFddr7KY4Iw=='}.
+2023-02-18 21:12:58,177 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676736778.1772268, 'mess_text': 'R8UAEmfNFGDAPjvKcyjJEIGiqwSANHVu0fBeSgMOWqzNdFOEOLnYEXdFYwowHGjsAP6EZJeCR54+MnvpO8hqbgfDhVthaheO7fcVrn1IeOvCBn0IHo48+j4LYrEmI/W3LdVvKPDKt7U8crgMoYUFW0PqAqasZ7RVRbKzcs0Iy3jEHpLoy7kE06qA3DZ4eTh9+1l6evwJsO3TnvIXlPMEmPEBuu1fZHxP1I1/uER2fFg9VMTNgCtnWzugl0A9JtqinZH9juIK7PtjswcsyQmTHBoV15/2llQDQ6GepSeGx15qaqoIFgBJUbJqI4d43+zMkqA5bllRgobdUTQpO6N8Mg=='}.
+2023-02-18 21:13:06,684 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:13:09,521 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:13:09,521 DEBUG client_ Аргументы загружены.
+2023-02-18 21:13:15,116 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Евгений.
+2023-02-18 21:13:15,146 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:13:15,159 INFO transport Попытка подключения №1.
+2023-02-18 21:13:15,159 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:13:15,203 DEBUG transport Хэш пароль готов - b'0cdcf67b871f645160edea5e68ff4c5f3e454b2233cf7811f88b78ce5a6047b71b2fadcbcbcbe6242d7ae375da76323020ba4349be34ea64c690881d57add725'.
+2023-02-18 21:13:15,204 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676736795.2043355, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu2l+bkGsH3+wtvzLRrkO\nlCTs4GlZiAgFCi6G0PQwicAubjkkhFSugbSMXF+Lb8tVYq4Kl9rO5xvPVSQzqiL+\nTuTw+nfIMa9ZvRX0dkpjKPDFVdslKk0oESgVCNQTqGO/av1IaNjLOs0rNUmqa+f/\n9C5dYxl3H1GEP7jdr5JTWJQzC+fk9XmCMMNM8mWui7+nu2KQXOABbOz8FONMGK5N\nWxL8eLkLdBwQjAbTqJz7prDkrlQl4OC6EdyyFU9GYbORoaOlg0sxYZFk113i+314\n2Lhss+EAelueWrR31au/JSjxqtJq3BxK63TbE9kLTLyH8kvqjJ2zFhHlsDyoj7Ys\nQwIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:13:20,204 DEBUG transport Потерно соеденение
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\client\transport.py", line 118, in connection_init
+    answer = get_message(self.transport)
+  File "C:\Users\palim\PycharmProjects\messenger_python\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+socket.timeout: timed out
+2023-02-18 21:13:50,190 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:13:50,190 DEBUG client_ Аргументы загружены.
+2023-02-18 21:13:53,868 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Евгений.
+2023-02-18 21:13:53,897 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:13:53,911 INFO transport Попытка подключения №1.
+2023-02-18 21:13:53,911 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:13:53,954 DEBUG transport Хэш пароль готов - b'0cdcf67b871f645160edea5e68ff4c5f3e454b2233cf7811f88b78ce5a6047b71b2fadcbcbcbe6242d7ae375da76323020ba4349be34ea64c690881d57add725'.
+2023-02-18 21:13:53,954 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676736833.9542935, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu2l+bkGsH3+wtvzLRrkO\nlCTs4GlZiAgFCi6G0PQwicAubjkkhFSugbSMXF+Lb8tVYq4Kl9rO5xvPVSQzqiL+\nTuTw+nfIMa9ZvRX0dkpjKPDFVdslKk0oESgVCNQTqGO/av1IaNjLOs0rNUmqa+f/\n9C5dYxl3H1GEP7jdr5JTWJQzC+fk9XmCMMNM8mWui7+nu2KQXOABbOz8FONMGK5N\nWxL8eLkLdBwQjAbTqJz7prDkrlQl4OC6EdyyFU9GYbORoaOlg0sxYZFk113i+314\n2Lhss+EAelueWrR31au/JSjxqtJq3BxK63TbE9kLTLyH8kvqjJ2zFhHlsDyoj7Ys\nQwIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:13:58,531 DEBUG transport Ответ сервера - {'response': 511, 'bin': '5eb72922a1567d9165715c2e7af2272354008229e122d62dfae5dec6f8bb28ff4293a6ed71910d3244863c9ea0b8a724e2167d9937d276522c60902ac2a3c665'}.
+2023-02-18 21:13:58,532 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:13:58,532 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:13:58,532 DEBUG transport Запрос списка известных пользователей - Евгений.
+2023-02-18 21:13:59,056 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:13:59,056 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676736839.056752, 'user': 'Евгений'}.
+2023-02-18 21:13:59,570 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:13:59,570 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676736839.5701866}.
+2023-02-18 21:14:00,079 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:14:00,084 DEBUG client_ Transport is ready.
+2023-02-18 21:14:00,084 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:14:02,480 DEBUG transport Запрос публичного ключа для - Анна.
+2023-02-18 21:14:02,632 DEBUG main_window Загружен открытый ключ для Анна.
+2023-02-18 21:14:04,601 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676736844.6012998, 'mess_text': 'QvV/qGcLW91W7hxOblzv4EW4Ix8O2X7qK0UxgLXvlu3B3/Q8aChmkQkTkCKRsJU/l9nPWwQEhMouneM+KHPNRRn6O2L8gDlncqVZgbL110pV+j36zY138Esq2w9TwqAsivVxvDvu/yMj0RXsLwNiG9Hp1xcgwvPf7R7xGv0U4pM7VMKwy6R8qdmIN7HJI2+zMB+AMIO0vnxlO8aqCWZAW5PEQBQe+CmN5Vt0unuynoHM8BfOv0QAStE/B7R3t6CEAGyqLS6jJRxHb/EXM6Qj3r4J436xR5aHJgILIlL1xLXlU84Ebj5QSg5UUkye/3ZCpfRZ4qr+f91TjAxaE+QjTg=='}.
+2023-02-18 21:14:42,303 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:14:51,064 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:14:51,064 DEBUG client_ Аргументы загружены.
+2023-02-18 21:14:55,389 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Евгений.
+2023-02-18 21:14:55,419 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:14:55,431 INFO transport Попытка подключения №1.
+2023-02-18 21:14:55,431 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:14:55,474 DEBUG transport Хэш пароль готов - b'0cdcf67b871f645160edea5e68ff4c5f3e454b2233cf7811f88b78ce5a6047b71b2fadcbcbcbe6242d7ae375da76323020ba4349be34ea64c690881d57add725'.
+2023-02-18 21:14:55,474 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676736895.4749691, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu2l+bkGsH3+wtvzLRrkO\nlCTs4GlZiAgFCi6G0PQwicAubjkkhFSugbSMXF+Lb8tVYq4Kl9rO5xvPVSQzqiL+\nTuTw+nfIMa9ZvRX0dkpjKPDFVdslKk0oESgVCNQTqGO/av1IaNjLOs0rNUmqa+f/\n9C5dYxl3H1GEP7jdr5JTWJQzC+fk9XmCMMNM8mWui7+nu2KQXOABbOz8FONMGK5N\nWxL8eLkLdBwQjAbTqJz7prDkrlQl4OC6EdyyFU9GYbORoaOlg0sxYZFk113i+314\n2Lhss+EAelueWrR31au/JSjxqtJq3BxK63TbE9kLTLyH8kvqjJ2zFhHlsDyoj7Ys\nQwIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:15:00,369 DEBUG transport Ответ сервера - {'response': 511, 'bin': '2b194f97748fefb589c27f61a2f59d05f87f881b830621d2b289b169ae0256c51f116c0dd2efc04517d2273a137cb037a415f00e838f19e467a8f08df89d5629'}.
+2023-02-18 21:15:00,370 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:15:00,370 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:15:00,370 DEBUG transport Запрос списка известных пользователей - Евгений.
+2023-02-18 21:15:00,899 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:15:00,900 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676736900.9006605, 'user': 'Евгений'}.
+2023-02-18 21:15:01,410 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:15:01,410 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676736901.4109898}.
+2023-02-18 21:15:01,918 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:15:01,924 DEBUG client_ Transport is ready.
+2023-02-18 21:15:01,925 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:15:05,197 DEBUG transport Запрос публичного ключа для - Анна.
+2023-02-18 21:15:05,506 DEBUG main_window Загружен открытый ключ для Анна.
+2023-02-18 21:15:08,313 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676736908.313171, 'mess_text': 'Wrl3rE9i275pbuv5hz6fQ+8Ia5GYIi4eUbMuPmHVG2ziKPlVbanZdHy5PzkJbnxcWb6lgsz7MbXTHVqdPoM09NUyU3TtLhOFXVkoiaJG+NNZsw8wuUHeJdnaxMAnpRMrsOq87uhLylzDC7KTlRMCzC5gIZQewbpnN+XaN2NqTsOSNUx8xZUA29hFHo7GHoug3UEmZ9TyRqIopxnA+P84P9AX3khp93vuZDuVm1OPvvPQ2bioWJdYML2wPO8Oy1FxIXBKVYuSbRYhXgM+NxZOv0knGXlzxcEqEwuSs0igEgHOwGUfdfIJsoBY81FS6ipbc31Vr4V2+pE91xuNSbD3ug=='}.
+2023-02-18 21:18:43,691 CRITICAL transport Потеряно соеденение с сервером!
+2023-02-18 21:18:45,507 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:18:51,959 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:18:51,959 DEBUG client_ Аргументы загружены.
+2023-02-18 21:18:56,237 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Евгений.
+2023-02-18 21:18:56,265 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:18:56,282 INFO transport Попытка подключения №1.
+2023-02-18 21:18:56,282 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:18:56,327 DEBUG transport Хэш пароль готов - b'0cdcf67b871f645160edea5e68ff4c5f3e454b2233cf7811f88b78ce5a6047b71b2fadcbcbcbe6242d7ae375da76323020ba4349be34ea64c690881d57add725'.
+2023-02-18 21:18:56,327 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676737136.3272076, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu2l+bkGsH3+wtvzLRrkO\nlCTs4GlZiAgFCi6G0PQwicAubjkkhFSugbSMXF+Lb8tVYq4Kl9rO5xvPVSQzqiL+\nTuTw+nfIMa9ZvRX0dkpjKPDFVdslKk0oESgVCNQTqGO/av1IaNjLOs0rNUmqa+f/\n9C5dYxl3H1GEP7jdr5JTWJQzC+fk9XmCMMNM8mWui7+nu2KQXOABbOz8FONMGK5N\nWxL8eLkLdBwQjAbTqJz7prDkrlQl4OC6EdyyFU9GYbORoaOlg0sxYZFk113i+314\n2Lhss+EAelueWrR31au/JSjxqtJq3BxK63TbE9kLTLyH8kvqjJ2zFhHlsDyoj7Ys\nQwIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:18:56,797 DEBUG transport Ответ сервера - {'response': 511, 'bin': '26f0239dea1b25c3bdab63807fbc0ad26702ef8a9cbe2be5521e40399a59e72e474d2b25ff27b6cc144aa41515852f304f796766349ed98761fb49582c9900ab'}.
+2023-02-18 21:18:56,798 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:18:56,798 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:18:56,798 DEBUG transport Запрос списка известных пользователей - Евгений.
+2023-02-18 21:18:57,317 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:18:57,317 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737137.31751, 'user': 'Евгений'}.
+2023-02-18 21:18:57,826 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:18:57,826 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737137.8266652}.
+2023-02-18 21:18:58,338 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:18:58,343 DEBUG client_ Transport is ready.
+2023-02-18 21:18:58,343 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:18:59,788 DEBUG transport Запрос публичного ключа для - Анна.
+2023-02-18 21:19:00,371 DEBUG main_window Загружен открытый ключ для Анна.
+2023-02-18 21:19:03,279 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676737143.2791312, 'mess_text': 'VXksBGI/08yzlZG2UmCkOLYrV9uVievch/rYt6PlXl7Tu09M79seDINzviJiC89R83maP25gHkRsUjzXB2V8dXw5spHDwbIp53jSfp07SNwwLBmbV1DGV7F8iEXRuhj83fPO+fuYKdncYgd0+LTtrBGlLqlth4CNCB/QhOJo8xYzZqES/QqhxYWEz/5PJATLwvj2KmkQp/Ey8JuWn+pcYlcx06n9CP0QTNVxCXmPuzL2s55Qt42IQbZvwqumEc3DkyGpQIMewEE6jkvyWgsQVvBRaJv1WmHnrZUung0oNFcuUFD5UFkKZju4jCk6r5O7NG87ywAVcF45rVFShnR+KQ=='}.
+2023-02-18 21:19:37,173 CRITICAL transport Потеряно соеденение с сервером!
+2023-02-18 21:19:37,858 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:19:41,630 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:19:41,630 DEBUG client_ Аргументы загружены.
+2023-02-18 21:19:46,261 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Евгений.
+2023-02-18 21:19:46,289 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:19:46,302 INFO transport Попытка подключения №1.
+2023-02-18 21:19:46,302 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:19:46,346 DEBUG transport Хэш пароль готов - b'0cdcf67b871f645160edea5e68ff4c5f3e454b2233cf7811f88b78ce5a6047b71b2fadcbcbcbe6242d7ae375da76323020ba4349be34ea64c690881d57add725'.
+2023-02-18 21:19:46,346 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676737186.3465066, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu2l+bkGsH3+wtvzLRrkO\nlCTs4GlZiAgFCi6G0PQwicAubjkkhFSugbSMXF+Lb8tVYq4Kl9rO5xvPVSQzqiL+\nTuTw+nfIMa9ZvRX0dkpjKPDFVdslKk0oESgVCNQTqGO/av1IaNjLOs0rNUmqa+f/\n9C5dYxl3H1GEP7jdr5JTWJQzC+fk9XmCMMNM8mWui7+nu2KQXOABbOz8FONMGK5N\nWxL8eLkLdBwQjAbTqJz7prDkrlQl4OC6EdyyFU9GYbORoaOlg0sxYZFk113i+314\n2Lhss+EAelueWrR31au/JSjxqtJq3BxK63TbE9kLTLyH8kvqjJ2zFhHlsDyoj7Ys\nQwIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:19:46,812 DEBUG transport Ответ сервера - {'response': 511, 'bin': '3c34008dbb3a77f530272703b601c9113485e545d2daef37ae0572b4f28bb0a5ac0f7632fdf3ef30218cae00f50942bf670f4c2eb01d3fefc7265649a312bea7'}.
+2023-02-18 21:19:46,814 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:19:46,814 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:19:46,814 DEBUG transport Запрос списка известных пользователей - Евгений.
+2023-02-18 21:19:47,344 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:19:47,344 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737187.3445807, 'user': 'Евгений'}.
+2023-02-18 21:19:47,854 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:19:47,854 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737187.854269}.
+2023-02-18 21:19:48,365 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:19:48,370 DEBUG client_ Transport is ready.
+2023-02-18 21:19:48,371 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:19:50,180 DEBUG transport Запрос публичного ключа для - Анна.
+2023-02-18 21:19:50,413 DEBUG main_window Загружен открытый ключ для Анна.
+2023-02-18 21:19:53,973 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676737193.973305, 'mess_text': '1XkbvIDaA252gwIjK9vBm7H8ENSG39ePV4TspnWXpJNgtD8Y/Yi1HZJ9P/I860RueM2JAbkKv83Ze5/FT6zzHTxxp/Su5mL8DLBcBc3jB41cu8BcMQsvMqwj4QDbd51paEgFHzSyYTnru6sfPDW5/f4pnu3nVPS4Z+fZhTP+MRmHc4TsJ6YluoEgUqK8gXY0sA7cRtMB1PkW8tK0GNSV6mlUl6vRySUifKVA4C/PCQK+enEyKXhMfDzRhQYRgIKwTV9o68WRMG9c1CdGV7IkdbBRoLsJc5/pxLXMb5Xd1sAqCILtKYxUGFWI7l6bs90vsDelNdF3SMSXjcmO872qcQ=='}.
+2023-02-18 21:20:17,743 DEBUG transport Принято сообщение от сервера: {'response': 444, 'error': 'Пользователь Анна - не в сети.'}.
+2023-02-18 21:20:17,743 DEBUG transport Разбор сообщения от сервера: {'response': 444, 'error': 'Пользователь Анна - не в сети.'}.
+2023-02-18 21:20:26,851 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:20:29,958 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:20:29,958 DEBUG client_ Аргументы загружены.
+2023-02-18 21:20:34,811 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Евгений.
+2023-02-18 21:20:34,841 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:20:34,853 INFO transport Попытка подключения №1.
+2023-02-18 21:20:34,854 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:20:34,898 DEBUG transport Хэш пароль готов - b'0cdcf67b871f645160edea5e68ff4c5f3e454b2233cf7811f88b78ce5a6047b71b2fadcbcbcbe6242d7ae375da76323020ba4349be34ea64c690881d57add725'.
+2023-02-18 21:20:34,899 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676737234.8996916, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu2l+bkGsH3+wtvzLRrkO\nlCTs4GlZiAgFCi6G0PQwicAubjkkhFSugbSMXF+Lb8tVYq4Kl9rO5xvPVSQzqiL+\nTuTw+nfIMa9ZvRX0dkpjKPDFVdslKk0oESgVCNQTqGO/av1IaNjLOs0rNUmqa+f/\n9C5dYxl3H1GEP7jdr5JTWJQzC+fk9XmCMMNM8mWui7+nu2KQXOABbOz8FONMGK5N\nWxL8eLkLdBwQjAbTqJz7prDkrlQl4OC6EdyyFU9GYbORoaOlg0sxYZFk113i+314\n2Lhss+EAelueWrR31au/JSjxqtJq3BxK63TbE9kLTLyH8kvqjJ2zFhHlsDyoj7Ys\nQwIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:20:35,364 DEBUG transport Ответ сервера - {'response': 511, 'bin': '8f7b9b5d1ae481d1645a2b8889969d1dfbb538b213f3ed160d9d6176d02dce60914aef841f27e5f3595122c558b7b7b598937ce45ad81f8856cda31081a7b064'}.
+2023-02-18 21:20:35,364 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:20:35,364 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:20:35,364 DEBUG transport Запрос списка известных пользователей - Евгений.
+2023-02-18 21:20:35,880 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:20:35,880 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737235.8804083, 'user': 'Евгений'}.
+2023-02-18 21:20:36,376 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:20:36,377 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737236.3779209}.
+2023-02-18 21:20:36,885 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:20:36,890 DEBUG client_ Transport is ready.
+2023-02-18 21:20:36,890 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:20:40,916 DEBUG transport Запрос публичного ключа для - Анна.
+2023-02-18 21:20:40,977 DEBUG main_window Загружен открытый ключ для Анна.
+2023-02-18 21:20:42,752 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676737242.75284, 'mess_text': 'tltw8sCIzO6qPowf2lRTzGL5sqmFm+7CITBIwpli9+bQSg41x+NMlENgrRwm1z715vDwjKFCDH+6eUgFnOexAvXnh4UW2O1GM9DKsmAQ8nrcVlfl1ikQv0bfe2yfsMfOwzWg+YZcNTrrOaP93w2lPRCL/77XSfhu0WnnML0s2CWVgjgzNYku7DnwxnGXPIyUQMEXBjOR30zRNTI2hICKykgpa3SOlwWosASpgGTJqnXvgIuygoUI6oOWJQq+OlgDZ0gq4imnyAqrwmIXlP9/wgAinxHdJv97OMwp7Uob7NdlBoV9pgFSlC4351T0KlJCW1VbdWpqUYO+bvVHS3S+uQ=='}.
+2023-02-18 21:20:43,014 DEBUG transport Разбор сообщения от сервера: {'response': 444, 'error': 'Пользователь Анна - не в сети.'}.
+2023-02-18 21:20:44,215 INFO transport Отправлено сообщение для пользователя - Анна.
+2023-02-18 21:20:44,219 DEBUG main_window Отправлено сообщение для None: фывфывф.
+2023-02-18 21:20:50,500 DEBUG transport Запрос публичного ключа для - Анна.
+2023-02-18 21:20:51,207 DEBUG main_window Загружен открытый ключ для Анна.
+2023-02-18 21:20:53,664 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676737253.6646872, 'mess_text': 'rbzS9zjUf+gMuJCmOzs0aHKXFZ9wr3GNGiIGvvBjPrQF4kztGw5HlLR46Ot3K6kz1BB1kvkgT4O3kd5p2pjtoSuPgaqMYcdZmXJFdfKxA66/KVtRU7/Lhsku915+wV/by4NRM7qk5OBf/LqcCuNK63d8J3jhKFDTXF5FYYY+UQihfkiqJ84tiRsIi+MHU5X3FQlo3y9gJPNOETLjgOptsg0E6X+LcJRzoXc6p+4KfW9x5vvyntVinVCnW6K4hKfpl+M32qV12z7jjapw+hzeCsdwwYW+XIs8nYqNMqDCJb9ihJ0TuhQDQdWpSX8s36/AMGsYv4hxTZN8lMap5vcfvw=='}.
+2023-02-18 21:20:54,260 DEBUG transport Разбор сообщения от сервера: {'response': 444, 'error': 'Пользователь Анна - не в сети.'}.
+2023-02-18 21:20:55,401 INFO transport Отправлено сообщение для пользователя - Анна.
+2023-02-18 21:20:55,404 DEBUG main_window Отправлено сообщение для None: ыфвфывф.
+2023-02-18 21:21:20,502 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:21:20,502 DEBUG client_ Аргументы загружены.
+2023-02-18 21:21:25,692 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Анна.
+2023-02-18 21:21:25,722 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:21:25,734 INFO transport Попытка подключения №1.
+2023-02-18 21:21:25,734 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:21:25,778 DEBUG transport Хэш пароль готов - b'146ab1c69d5b8010c4725b4051cc734887509ef4fedb7531445dc66f71cabbc07109467e8f3383dbed7e0e59b2ceecbba9c4da5a8f47fc7f7f79c945d1b5c298'.
+2023-02-18 21:21:25,778 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676737285.7787478, 'user': {'account_name': 'Анна', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA17NFYSHWr6t5ve+RUYyC\nRICurAhwf4bL8GYJbAcRkLoPrAi08DTGxeIDQU6b5/jMX4vSJlTcW5A9EFUaOEP7\nfkmlfblB1K8U91D2voaIu/mEHuH0wUdkuiDFIYwnkrtGEpq9AhnEnMuq+GxWi/HJ\nhvebOtCcowm12L315HIvj9VqC5RCfZhFfTG/u0ZYL8rBN0riUDX5kyPGTGpk2VgD\nfE63EUOpxwLLr1l83HiromGyMPB9rwdUTqxy1iOuYwQV8i6eeCjoegwWIaEKRtie\nzWgLrOYvppsX2cPSlAvpext9JVWvced1rS1qp2z0+7swYqtz8PCDD9Oc+VU3Ynnu\nZQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:21:26,244 DEBUG transport Ответ сервера - {'response': 511, 'bin': '05a2f49fd99a9ffebc408646b04088f5c3e2ee956efe45c7769c81f26636af641d5691393e92fa13086a3e6e816412e007cc3557211740e26475cc7de14550f4'}.
+2023-02-18 21:21:26,244 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:21:26,244 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:21:26,244 DEBUG transport Запрос списка известных пользователей - Анна.
+2023-02-18 21:21:26,764 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:21:26,764 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737286.7649503, 'user': 'Анна'}.
+2023-02-18 21:21:27,273 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:21:27,273 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737287.2737122}.
+2023-02-18 21:21:27,773 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений', 'Анна']}.
+2023-02-18 21:21:27,778 DEBUG client_ Transport is ready.
+2023-02-18 21:21:27,779 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:21:30,300 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:21:30,331 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:21:32,352 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676737292.3529115, 'mess_text': 'HxIOb3WWCe7Z3WEcMH/gGjXeuFTGF2qT6nG7uJqnPxtYgMQlKxgMjXpYkWz/Vwv2xEm2p0Xpw8FjerhGZ7PlPZqR+rZB/9WA4w4woNrQKx/adBBDu7nfaTYWALzpBbiEYOei11hmYqtg8+arhkEcwn6xdpm6fqErwIpsBCvLXX1tkCbE3lDQAUf2BQKO7JcjFCewrwgMp1mvoQmRBTs6T5ELXZza1V0X6sE/3Zu4yV+mDhCyHT6UDiNGevJihpj3ptqDWTtgCIfUVLS2VR45NQjm17ce+VS9R7X2NQPxJuW1P9BS0jhauqLBfBXlRbYeoi0W1c68vWjeo42hVKL10Q=='}.
+2023-02-18 21:21:35,039 DEBUG transport Принято сообщение от сервера: {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676737292.3529115, 'mess_text': 'HxIOb3WWCe7Z3WEcMH/gGjXeuFTGF2qT6nG7uJqnPxtYgMQlKxgMjXpYkWz/Vwv2xEm2p0Xpw8FjerhGZ7PlPZqR+rZB/9WA4w4woNrQKx/adBBDu7nfaTYWALzpBbiEYOei11hmYqtg8+arhkEcwn6xdpm6fqErwIpsBCvLXX1tkCbE3lDQAUf2BQKO7JcjFCewrwgMp1mvoQmRBTs6T5ELXZza1V0X6sE/3Zu4yV+mDhCyHT6UDiNGevJihpj3ptqDWTtgCIfUVLS2VR45NQjm17ce+VS9R7X2NQPxJuW1P9BS0jhauqLBfBXlRbYeoi0W1c68vWjeo42hVKL10Q=='}.
+2023-02-18 21:21:35,039 DEBUG transport Разбор сообщения от сервера: {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676737292.3529115, 'mess_text': 'HxIOb3WWCe7Z3WEcMH/gGjXeuFTGF2qT6nG7uJqnPxtYgMQlKxgMjXpYkWz/Vwv2xEm2p0Xpw8FjerhGZ7PlPZqR+rZB/9WA4w4woNrQKx/adBBDu7nfaTYWALzpBbiEYOei11hmYqtg8+arhkEcwn6xdpm6fqErwIpsBCvLXX1tkCbE3lDQAUf2BQKO7JcjFCewrwgMp1mvoQmRBTs6T5ELXZza1V0X6sE/3Zu4yV+mDhCyHT6UDiNGevJihpj3ptqDWTtgCIfUVLS2VR45NQjm17ce+VS9R7X2NQPxJuW1P9BS0jhauqLBfBXlRbYeoi0W1c68vWjeo42hVKL10Q=='}.
+2023-02-18 21:21:35,039 DEBUG transport Получено сообщение от пользователя Анна:HxIOb3WWCe7Z3WEcMH/gGjXeuFTGF2qT6nG7uJqnPxtYgMQlKxgMjXpYkWz/Vwv2xEm2p0Xpw8FjerhGZ7PlPZqR+rZB/9WA4w4woNrQKx/adBBDu7nfaTYWALzpBbiEYOei11hmYqtg8+arhkEcwn6xdpm6fqErwIpsBCvLXX1tkCbE3lDQAUf2BQKO7JcjFCewrwgMp1mvoQmRBTs6T5ELXZza1V0X6sE/3Zu4yV+mDhCyHT6UDiNGevJihpj3ptqDWTtgCIfUVLS2VR45NQjm17ce+VS9R7X2NQPxJuW1P9BS0jhauqLBfBXlRbYeoi0W1c68vWjeo42hVKL10Q==.
+2023-02-18 21:21:35,039 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:21:35,039 INFO transport Отправлено сообщение для пользователя - Евгений.
+2023-02-18 21:21:35,041 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:21:35,041 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737295.0416062, 'user': 'Евгений'}.
+2023-02-18 21:21:35,043 DEBUG main_window Отправлено сообщение для Евгений: ыфвфывф.
+2023-02-18 21:21:35,553 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:21:35,553 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737295.5531974}.
+2023-02-18 21:21:36,064 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений', 'Анна']}.
+2023-02-18 21:21:48,997 DEBUG transport Запрос публичного ключа для - Анна.
+2023-02-18 21:21:49,326 DEBUG main_window Загружен открытый ключ для Анна.
+2023-02-18 21:21:52,396 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676737312.3968265, 'mess_text': 'qIWcEKy39Es/Ew+w18N8wzEixIBkIHPacyVCKYP6NtiFhyfffxpCXIn8/NRoXF+MKPqOwUxvKp/KSApaWeYhivIgzClQm+R5P68N2BDldgR3MzIcKSrudfsV+qUG8y1Ni01ZITmTEuwXuViTVvLKTxbcpAgQKYj7OV2CIRkNnm9EhqZGwcRIsv9+XQXiNWr1yjzzkp+bGWHdPgTqNrw5ru74+Cfj4lFuKMU7yZieHhwNxajsFJrvuVDTICipQHiWJnGRhWaGOy4NmAqfYeWEI7rxZM0By0YH+cGVR2oXTwZiOhy8Tbnvu2AQgtH3iotLoIbEV9ZOAaNVPQBkA53HjA=='}.
+2023-02-18 21:21:52,898 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:21:52,898 INFO transport Отправлено сообщение для пользователя - Анна.
+2023-02-18 21:21:52,901 DEBUG main_window Отправлено сообщение для Анна: фывфывф.
+2023-02-18 21:21:53,343 DEBUG transport Принято сообщение от сервера: {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676737312.3968265, 'mess_text': 'qIWcEKy39Es/Ew+w18N8wzEixIBkIHPacyVCKYP6NtiFhyfffxpCXIn8/NRoXF+MKPqOwUxvKp/KSApaWeYhivIgzClQm+R5P68N2BDldgR3MzIcKSrudfsV+qUG8y1Ni01ZITmTEuwXuViTVvLKTxbcpAgQKYj7OV2CIRkNnm9EhqZGwcRIsv9+XQXiNWr1yjzzkp+bGWHdPgTqNrw5ru74+Cfj4lFuKMU7yZieHhwNxajsFJrvuVDTICipQHiWJnGRhWaGOy4NmAqfYeWEI7rxZM0By0YH+cGVR2oXTwZiOhy8Tbnvu2AQgtH3iotLoIbEV9ZOAaNVPQBkA53HjA=='}.
+2023-02-18 21:21:53,343 DEBUG transport Разбор сообщения от сервера: {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676737312.3968265, 'mess_text': 'qIWcEKy39Es/Ew+w18N8wzEixIBkIHPacyVCKYP6NtiFhyfffxpCXIn8/NRoXF+MKPqOwUxvKp/KSApaWeYhivIgzClQm+R5P68N2BDldgR3MzIcKSrudfsV+qUG8y1Ni01ZITmTEuwXuViTVvLKTxbcpAgQKYj7OV2CIRkNnm9EhqZGwcRIsv9+XQXiNWr1yjzzkp+bGWHdPgTqNrw5ru74+Cfj4lFuKMU7yZieHhwNxajsFJrvuVDTICipQHiWJnGRhWaGOy4NmAqfYeWEI7rxZM0By0YH+cGVR2oXTwZiOhy8Tbnvu2AQgtH3iotLoIbEV9ZOAaNVPQBkA53HjA=='}.
+2023-02-18 21:21:53,343 DEBUG transport Получено сообщение от пользователя Евгений:qIWcEKy39Es/Ew+w18N8wzEixIBkIHPacyVCKYP6NtiFhyfffxpCXIn8/NRoXF+MKPqOwUxvKp/KSApaWeYhivIgzClQm+R5P68N2BDldgR3MzIcKSrudfsV+qUG8y1Ni01ZITmTEuwXuViTVvLKTxbcpAgQKYj7OV2CIRkNnm9EhqZGwcRIsv9+XQXiNWr1yjzzkp+bGWHdPgTqNrw5ru74+Cfj4lFuKMU7yZieHhwNxajsFJrvuVDTICipQHiWJnGRhWaGOy4NmAqfYeWEI7rxZM0By0YH+cGVR2oXTwZiOhy8Tbnvu2AQgtH3iotLoIbEV9ZOAaNVPQBkA53HjA==.
+2023-02-18 21:21:56,641 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676737316.641925, 'mess_text': 'Oqi2eYc3BV9Bs9TC4KwKrcnMENTDADurJJLN9b/BPltaDzWPZ/vzc0049mSJ5FaCWb1kwwFFjVhUGtPCmqT3hcV+U4vVJrrbLj2m6/+0bev4f95Ru0fRVolpUAwSNdInfW51NL6hBShBVGQXfTj8Hu4wpvG0L9LFQlk2LsKiz+ZXFwJgzKFLGhZcwTBfY/X7HoEyHOliJROqfQXMxS3AkiAwLgYnw0jMxnYVS8bHDlkb/QsZyv8VG+6Bi/F6LOYlRFsm7sD0epzPfy94d9+i63cEPQ8F6pm8kXMGokC+TLN21yS1ud6AfcYMp7gyyWUXdQc/aFytMwAhS1DTYNmI7w=='}.
+2023-02-18 21:21:56,997 DEBUG transport Принято сообщение от сервера: {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676737316.641925, 'mess_text': 'Oqi2eYc3BV9Bs9TC4KwKrcnMENTDADurJJLN9b/BPltaDzWPZ/vzc0049mSJ5FaCWb1kwwFFjVhUGtPCmqT3hcV+U4vVJrrbLj2m6/+0bev4f95Ru0fRVolpUAwSNdInfW51NL6hBShBVGQXfTj8Hu4wpvG0L9LFQlk2LsKiz+ZXFwJgzKFLGhZcwTBfY/X7HoEyHOliJROqfQXMxS3AkiAwLgYnw0jMxnYVS8bHDlkb/QsZyv8VG+6Bi/F6LOYlRFsm7sD0epzPfy94d9+i63cEPQ8F6pm8kXMGokC+TLN21yS1ud6AfcYMp7gyyWUXdQc/aFytMwAhS1DTYNmI7w=='}.
+2023-02-18 21:21:56,997 DEBUG transport Разбор сообщения от сервера: {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676737316.641925, 'mess_text': 'Oqi2eYc3BV9Bs9TC4KwKrcnMENTDADurJJLN9b/BPltaDzWPZ/vzc0049mSJ5FaCWb1kwwFFjVhUGtPCmqT3hcV+U4vVJrrbLj2m6/+0bev4f95Ru0fRVolpUAwSNdInfW51NL6hBShBVGQXfTj8Hu4wpvG0L9LFQlk2LsKiz+ZXFwJgzKFLGhZcwTBfY/X7HoEyHOliJROqfQXMxS3AkiAwLgYnw0jMxnYVS8bHDlkb/QsZyv8VG+6Bi/F6LOYlRFsm7sD0epzPfy94d9+i63cEPQ8F6pm8kXMGokC+TLN21yS1ud6AfcYMp7gyyWUXdQc/aFytMwAhS1DTYNmI7w=='}.
+2023-02-18 21:21:56,997 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:21:56,997 DEBUG transport Получено сообщение от пользователя Анна:Oqi2eYc3BV9Bs9TC4KwKrcnMENTDADurJJLN9b/BPltaDzWPZ/vzc0049mSJ5FaCWb1kwwFFjVhUGtPCmqT3hcV+U4vVJrrbLj2m6/+0bev4f95Ru0fRVolpUAwSNdInfW51NL6hBShBVGQXfTj8Hu4wpvG0L9LFQlk2LsKiz+ZXFwJgzKFLGhZcwTBfY/X7HoEyHOliJROqfQXMxS3AkiAwLgYnw0jMxnYVS8bHDlkb/QsZyv8VG+6Bi/F6LOYlRFsm7sD0epzPfy94d9+i63cEPQ8F6pm8kXMGokC+TLN21yS1ud6AfcYMp7gyyWUXdQc/aFytMwAhS1DTYNmI7w==.
+2023-02-18 21:21:56,997 INFO transport Отправлено сообщение для пользователя - Евгений.
+2023-02-18 21:21:56,998 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:21:56,998 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737316.9989073, 'user': 'Евгений'}.
+2023-02-18 21:21:56,999 DEBUG main_window Отправлено сообщение для Евгений: фывфыф.
+2023-02-18 21:21:57,507 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:21:57,507 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737317.5076182}.
+2023-02-18 21:21:58,015 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений', 'Анна']}.
+2023-02-18 21:24:50,442 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:24:50,974 DEBUG transport Потеряно соединение с сервером!
+2023-02-18 21:25:18,686 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:25:18,686 DEBUG client_ Аргументы загружены.
+2023-02-18 21:25:23,524 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Евгений.
+2023-02-18 21:25:23,552 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:25:23,567 INFO transport Попытка подключения №1.
+2023-02-18 21:25:23,567 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:25:23,610 DEBUG transport Хэш пароль готов - b'0cdcf67b871f645160edea5e68ff4c5f3e454b2233cf7811f88b78ce5a6047b71b2fadcbcbcbe6242d7ae375da76323020ba4349be34ea64c690881d57add725'.
+2023-02-18 21:25:23,610 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676737523.6106272, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu2l+bkGsH3+wtvzLRrkO\nlCTs4GlZiAgFCi6G0PQwicAubjkkhFSugbSMXF+Lb8tVYq4Kl9rO5xvPVSQzqiL+\nTuTw+nfIMa9ZvRX0dkpjKPDFVdslKk0oESgVCNQTqGO/av1IaNjLOs0rNUmqa+f/\n9C5dYxl3H1GEP7jdr5JTWJQzC+fk9XmCMMNM8mWui7+nu2KQXOABbOz8FONMGK5N\nWxL8eLkLdBwQjAbTqJz7prDkrlQl4OC6EdyyFU9GYbORoaOlg0sxYZFk113i+314\n2Lhss+EAelueWrR31au/JSjxqtJq3BxK63TbE9kLTLyH8kvqjJ2zFhHlsDyoj7Ys\nQwIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:25:24,078 DEBUG transport Ответ сервера - {'response': 511, 'bin': '0ce54ca9f72b690f15180fb056dfd6fa2a68626592a0ce4a08cb8b7f38cd809bf48a08e39d6f3927d830e71b0730fbc0da8c9e28b994f10610ed4e1e27c5cc57'}.
+2023-02-18 21:25:24,078 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:25:24,078 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:25:24,078 DEBUG transport Запрос списка известных пользователей - Евгений.
+2023-02-18 21:25:24,599 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:25:24,599 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737524.5990381, 'user': 'Евгений'}.
+2023-02-18 21:25:25,108 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:25:25,108 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737525.1086817}.
+2023-02-18 21:25:25,621 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна', 'Евгений']}.
+2023-02-18 21:25:25,626 DEBUG client_ Transport is ready.
+2023-02-18 21:25:25,626 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:25:27,410 DEBUG transport Запрос публичного ключа для - Анна.
+2023-02-18 21:25:27,638 DEBUG main_window Загружен открытый ключ для Анна.
+2023-02-18 21:25:29,751 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676737529.7513738, 'mess_text': 'f1HEWlMOO/aswrE25SdPt7vE6keKL5B34qagkulQNVkLCZ7HEr2EVV8tv0i7idC/MGpOq/TOrDEQDWrWp1UQPQdZb4oe7PxGUnL9w93dtww0saT0R9DjIS0F9zC+wi3IhLJ6mab5xQjOmRKcXMxVDpMTZBREnujsp9k1l/5Oawh8OcivfD2AJwCfWfzI7sDcwcU9uM8H0bUge3066zFgfYnHckWUvSpiYQ+C6CdIiOXjraLDl6/YDfoLKv7tyDKoENU+QkHjy/xpwMkZNnAAsiuxlJzJvkYKV+05nfYXTd0afzP6YHkSb+93EwzcSK87Lo0ArlRYa+arWvAw3s1CwA=='}.
+2023-02-18 21:25:30,202 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:25:30,202 INFO transport Отправлено сообщение для пользователя - Анна.
+2023-02-18 21:25:30,206 DEBUG main_window Отправлено сообщение для Анна: фывфывф.
+2023-02-18 21:25:37,234 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:25:37,339 DEBUG transport Потеряно соединение с сервером!
+2023-02-18 21:25:37,803 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:25:40,487 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:25:40,487 DEBUG client_ Аргументы загружены.
+2023-02-18 21:25:44,427 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Евгений.
+2023-02-18 21:25:44,457 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:25:44,470 INFO transport Попытка подключения №1.
+2023-02-18 21:25:44,470 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:25:44,514 DEBUG transport Хэш пароль готов - b'0cdcf67b871f645160edea5e68ff4c5f3e454b2233cf7811f88b78ce5a6047b71b2fadcbcbcbe6242d7ae375da76323020ba4349be34ea64c690881d57add725'.
+2023-02-18 21:25:44,514 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676737544.5149596, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu2l+bkGsH3+wtvzLRrkO\nlCTs4GlZiAgFCi6G0PQwicAubjkkhFSugbSMXF+Lb8tVYq4Kl9rO5xvPVSQzqiL+\nTuTw+nfIMa9ZvRX0dkpjKPDFVdslKk0oESgVCNQTqGO/av1IaNjLOs0rNUmqa+f/\n9C5dYxl3H1GEP7jdr5JTWJQzC+fk9XmCMMNM8mWui7+nu2KQXOABbOz8FONMGK5N\nWxL8eLkLdBwQjAbTqJz7prDkrlQl4OC6EdyyFU9GYbORoaOlg0sxYZFk113i+314\n2Lhss+EAelueWrR31au/JSjxqtJq3BxK63TbE9kLTLyH8kvqjJ2zFhHlsDyoj7Ys\nQwIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:25:44,986 DEBUG transport Ответ сервера - {'response': 511, 'bin': 'baf7bc9c3f15ed5e2afd2bec3e5301e903df32e61c2b0207e24f77d845869535266619115c2e48a2640c6fa30e4ca5166a954d90b9fef03021c8b768b63249b9'}.
+2023-02-18 21:25:44,986 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:25:44,986 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:25:44,986 DEBUG transport Запрос списка известных пользователей - Евгений.
+2023-02-18 21:25:45,504 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:25:45,504 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737545.504511, 'user': 'Евгений'}.
+2023-02-18 21:25:46,013 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:25:46,013 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737546.0139496}.
+2023-02-18 21:25:46,527 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:25:46,532 DEBUG client_ Transport is ready.
+2023-02-18 21:25:46,533 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:26:02,376 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:26:02,376 DEBUG client_ Аргументы загружены.
+2023-02-18 21:26:05,892 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Анна.
+2023-02-18 21:26:05,921 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:26:05,934 INFO transport Попытка подключения №1.
+2023-02-18 21:26:05,934 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:26:05,978 DEBUG transport Хэш пароль готов - b'146ab1c69d5b8010c4725b4051cc734887509ef4fedb7531445dc66f71cabbc07109467e8f3383dbed7e0e59b2ceecbba9c4da5a8f47fc7f7f79c945d1b5c298'.
+2023-02-18 21:26:05,978 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676737565.978726, 'user': {'account_name': 'Анна', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA17NFYSHWr6t5ve+RUYyC\nRICurAhwf4bL8GYJbAcRkLoPrAi08DTGxeIDQU6b5/jMX4vSJlTcW5A9EFUaOEP7\nfkmlfblB1K8U91D2voaIu/mEHuH0wUdkuiDFIYwnkrtGEpq9AhnEnMuq+GxWi/HJ\nhvebOtCcowm12L315HIvj9VqC5RCfZhFfTG/u0ZYL8rBN0riUDX5kyPGTGpk2VgD\nfE63EUOpxwLLr1l83HiromGyMPB9rwdUTqxy1iOuYwQV8i6eeCjoegwWIaEKRtie\nzWgLrOYvppsX2cPSlAvpext9JVWvced1rS1qp2z0+7swYqtz8PCDD9Oc+VU3Ynnu\nZQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:26:06,441 DEBUG transport Ответ сервера - {'response': 511, 'bin': '5f686f6de71f6af260cfafed1daa8983f0502e2aeac4f7ac98a868e942a946bd2fc2fee650af7e3e8f44eef4300efd54de4823306e1479347314f612f76fc580'}.
+2023-02-18 21:26:06,441 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:26:06,441 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:26:06,441 DEBUG transport Запрос списка известных пользователей - Анна.
+2023-02-18 21:26:06,958 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:26:06,958 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737566.9586403, 'user': 'Анна'}.
+2023-02-18 21:26:07,468 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:26:07,468 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737567.4680612}.
+2023-02-18 21:26:07,982 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений', 'Анна']}.
+2023-02-18 21:26:07,988 DEBUG client_ Transport is ready.
+2023-02-18 21:26:07,988 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:26:10,050 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:26:10,538 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:26:12,059 DEBUG transport Сформирован словарь сообщения - {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676737572.0591486, 'mess_text': 'ROJumqkPcQDHFJ9pFyhj3quAD0jcRZVuwK7aWuWO0XJXFAb4pzsz+vDq/Ih1bFubT30qRhCEtNq35taE9fiwf8W11m9YkdfY+L2EJ9Cufkx7X+xUXZM0TZQhhELe/eQYfnHHnPnpQHL5+DU/xBBcc9z2pWLY9LXHYXeqcRX3DB6DnTK5+k2jE1R5LbmtF7Bu3/Ctx0IvthB2Vr9VSQjRPWAcA2QSWFmoQuLrC/yP3yuiSdCVsEPFU8uFCYzOMrgQenDqVezHzm+gy9T+CRMGws6uvpFxaCmyq8/VW+w7T+/9zex3OVLM3rZz+/G53K/dhtgP7VT7uCyd8IkjiUGjcA=='}.
+2023-02-18 21:26:12,604 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:26:12,604 INFO transport Отправлено сообщение для пользователя - Евгений.
+2023-02-18 21:26:12,607 DEBUG main_window Отправлено сообщение для Евгений: фывфыфв.
+2023-02-18 21:26:13,454 DEBUG transport Принято сообщение от сервера: {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676737572.0591486, 'mess_text': 'ROJumqkPcQDHFJ9pFyhj3quAD0jcRZVuwK7aWuWO0XJXFAb4pzsz+vDq/Ih1bFubT30qRhCEtNq35taE9fiwf8W11m9YkdfY+L2EJ9Cufkx7X+xUXZM0TZQhhELe/eQYfnHHnPnpQHL5+DU/xBBcc9z2pWLY9LXHYXeqcRX3DB6DnTK5+k2jE1R5LbmtF7Bu3/Ctx0IvthB2Vr9VSQjRPWAcA2QSWFmoQuLrC/yP3yuiSdCVsEPFU8uFCYzOMrgQenDqVezHzm+gy9T+CRMGws6uvpFxaCmyq8/VW+w7T+/9zex3OVLM3rZz+/G53K/dhtgP7VT7uCyd8IkjiUGjcA=='}.
+2023-02-18 21:26:13,454 DEBUG transport Разбор сообщения от сервера: {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676737572.0591486, 'mess_text': 'ROJumqkPcQDHFJ9pFyhj3quAD0jcRZVuwK7aWuWO0XJXFAb4pzsz+vDq/Ih1bFubT30qRhCEtNq35taE9fiwf8W11m9YkdfY+L2EJ9Cufkx7X+xUXZM0TZQhhELe/eQYfnHHnPnpQHL5+DU/xBBcc9z2pWLY9LXHYXeqcRX3DB6DnTK5+k2jE1R5LbmtF7Bu3/Ctx0IvthB2Vr9VSQjRPWAcA2QSWFmoQuLrC/yP3yuiSdCVsEPFU8uFCYzOMrgQenDqVezHzm+gy9T+CRMGws6uvpFxaCmyq8/VW+w7T+/9zex3OVLM3rZz+/G53K/dhtgP7VT7uCyd8IkjiUGjcA=='}.
+2023-02-18 21:26:13,454 DEBUG transport Получено сообщение от пользователя Анна:ROJumqkPcQDHFJ9pFyhj3quAD0jcRZVuwK7aWuWO0XJXFAb4pzsz+vDq/Ih1bFubT30qRhCEtNq35taE9fiwf8W11m9YkdfY+L2EJ9Cufkx7X+xUXZM0TZQhhELe/eQYfnHHnPnpQHL5+DU/xBBcc9z2pWLY9LXHYXeqcRX3DB6DnTK5+k2jE1R5LbmtF7Bu3/Ctx0IvthB2Vr9VSQjRPWAcA2QSWFmoQuLrC/yP3yuiSdCVsEPFU8uFCYzOMrgQenDqVezHzm+gy9T+CRMGws6uvpFxaCmyq8/VW+w7T+/9zex3OVLM3rZz+/G53K/dhtgP7VT7uCyd8IkjiUGjcA==.
+2023-02-18 21:26:20,785 DEBUG transport Запрос публичного ключа для - Анна.
+2023-02-18 21:26:21,260 DEBUG main_window Загружен открытый ключ для Анна.
+2023-02-18 21:26:53,624 DEBUG transport Удаление контакта - Евгений.
+2023-02-18 21:26:53,885 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:26:53,886 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:26:53,886 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737613.8866007, 'user': 'Анна'}.
+2023-02-18 21:26:54,391 DEBUG transport Получен ответ - {'response': 202, 'data_list': []}.
+2023-02-18 21:26:54,391 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737614.3911443}.
+2023-02-18 21:26:54,904 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений', 'Анна']}.
+2023-02-18 21:26:54,905 INFO main_window Успешно удалён контакт - Евгений.
+2023-02-18 21:26:59,088 DEBUG transport Создание контакта - Евгений.
+2023-02-18 21:26:59,537 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:26:59,538 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:26:59,538 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737619.5386968, 'user': 'Анна'}.
+2023-02-18 21:27:00,048 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:27:00,048 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737620.0485642}.
+2023-02-18 21:27:00,562 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений', 'Анна']}.
+2023-02-18 21:27:00,566 INFO main_window Успешно добавлен контакт - <PyQt5.QtGui.QStandardItem object at 0x000001CD228C1F70>.
+2023-02-18 21:27:07,713 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:27:08,224 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:27:09,122 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:27:09,251 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:27:09,935 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:27:10,278 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:27:11,785 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:27:11,810 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:27:15,381 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:27:19,880 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:27:19,881 DEBUG client_ Аргументы загружены.
+2023-02-18 21:27:22,924 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Анна.
+2023-02-18 21:27:22,954 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:27:22,967 INFO transport Попытка подключения №1.
+2023-02-18 21:27:22,967 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:27:23,012 DEBUG transport Хэш пароль готов - b'146ab1c69d5b8010c4725b4051cc734887509ef4fedb7531445dc66f71cabbc07109467e8f3383dbed7e0e59b2ceecbba9c4da5a8f47fc7f7f79c945d1b5c298'.
+2023-02-18 21:27:23,012 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676737643.0129647, 'user': {'account_name': 'Анна', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA17NFYSHWr6t5ve+RUYyC\nRICurAhwf4bL8GYJbAcRkLoPrAi08DTGxeIDQU6b5/jMX4vSJlTcW5A9EFUaOEP7\nfkmlfblB1K8U91D2voaIu/mEHuH0wUdkuiDFIYwnkrtGEpq9AhnEnMuq+GxWi/HJ\nhvebOtCcowm12L315HIvj9VqC5RCfZhFfTG/u0ZYL8rBN0riUDX5kyPGTGpk2VgD\nfE63EUOpxwLLr1l83HiromGyMPB9rwdUTqxy1iOuYwQV8i6eeCjoegwWIaEKRtie\nzWgLrOYvppsX2cPSlAvpext9JVWvced1rS1qp2z0+7swYqtz8PCDD9Oc+VU3Ynnu\nZQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:27:23,475 DEBUG transport Ответ сервера - {'response': 511, 'bin': '3da2d6d567c3a6a980ba7a64b4a45c4fa034dbf7505aabe6e301df17146e81af484bb831f3c64b561749d2ca1eb3383128f7db7d4ccce5612a4fc60831f094f9'}.
+2023-02-18 21:27:23,475 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:27:23,475 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:27:23,475 DEBUG transport Запрос списка известных пользователей - Анна.
+2023-02-18 21:27:23,994 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:27:23,994 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737643.9943905, 'user': 'Анна'}.
+2023-02-18 21:27:24,503 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:27:24,503 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737644.503745}.
+2023-02-18 21:27:25,015 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений', 'Анна']}.
+2023-02-18 21:27:25,021 DEBUG client_ Transport is ready.
+2023-02-18 21:27:25,021 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:27:26,928 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:27:27,075 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:27:30,526 DEBUG transport Удаление контакта - Евгений.
+2023-02-18 21:27:30,672 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:27:30,673 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:27:30,673 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737650.6736739, 'user': 'Анна'}.
+2023-02-18 21:27:31,183 DEBUG transport Получен ответ - {'response': 202, 'data_list': []}.
+2023-02-18 21:27:31,183 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737651.1837595}.
+2023-02-18 21:27:31,692 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений', 'Анна']}.
+2023-02-18 21:27:31,693 INFO main_window Успешно удалён контакт - Евгений.
+2023-02-18 21:27:36,230 DEBUG transport Запрос списка известных пользователей - Анна.
+2023-02-18 21:27:36,306 DEBUG add_contact Обновление списка пользователей с сервера - выполено успешно.
+2023-02-18 21:27:36,915 DEBUG transport Создание контакта - Евгений.
+2023-02-18 21:27:37,333 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:27:37,334 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:27:37,334 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737657.334969, 'user': 'Анна'}.
+2023-02-18 21:27:37,846 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:27:37,846 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737657.8463018}.
+2023-02-18 21:27:38,357 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений', 'Анна']}.
+2023-02-18 21:27:38,362 INFO main_window Успешно добавлен контакт - <PyQt5.QtGui.QStandardItem object at 0x000001D199139AF0>.
+2023-02-18 21:27:51,881 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:27:52,149 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:27:52,574 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:27:52,661 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:27:53,754 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:27:54,200 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:27:54,565 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:27:54,714 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:27:54,914 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:27:55,229 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:27:55,294 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:27:56,253 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:27:57,858 DEBUG transport Удаление контакта - Евгений.
+2023-02-18 21:27:58,297 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:27:58,297 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:27:58,298 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737678.2983394, 'user': 'Анна'}.
+2023-02-18 21:27:58,811 DEBUG transport Получен ответ - {'response': 202, 'data_list': []}.
+2023-02-18 21:27:58,811 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737678.8111591}.
+2023-02-18 21:27:59,321 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений', 'Анна']}.
+2023-02-18 21:27:59,322 INFO main_window Успешно удалён контакт - Евгений.
+2023-02-18 21:28:02,864 DEBUG transport Создание контакта - Евгений.
+2023-02-18 21:28:03,396 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:28:03,396 DEBUG transport Запрос контакт-листа для пользователя Thread-1.
+2023-02-18 21:28:03,396 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737683.3966043, 'user': 'Анна'}.
+2023-02-18 21:28:03,907 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:28:03,907 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737683.9078507}.
+2023-02-18 21:28:04,419 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений', 'Анна']}.
+2023-02-18 21:28:04,423 INFO main_window Успешно добавлен контакт - <PyQt5.QtGui.QStandardItem object at 0x000001D199139670>.
+2023-02-18 21:28:09,941 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:28:10,472 DEBUG transport Потеряно соединение с сервером!
+2023-02-18 21:28:11,540 DEBUG transport Транспорт завершает работу.
+2023-02-18 21:28:24,390 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:28:24,390 DEBUG client_ Аргументы загружены.
+2023-02-18 21:28:28,467 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Анна.
+2023-02-18 21:28:28,526 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:28:28,549 INFO transport Попытка подключения №1.
+2023-02-18 21:28:28,549 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:28:28,595 DEBUG transport Хэш пароль готов - b'146ab1c69d5b8010c4725b4051cc734887509ef4fedb7531445dc66f71cabbc07109467e8f3383dbed7e0e59b2ceecbba9c4da5a8f47fc7f7f79c945d1b5c298'.
+2023-02-18 21:28:28,596 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676737708.5964572, 'user': {'account_name': 'Анна', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA17NFYSHWr6t5ve+RUYyC\nRICurAhwf4bL8GYJbAcRkLoPrAi08DTGxeIDQU6b5/jMX4vSJlTcW5A9EFUaOEP7\nfkmlfblB1K8U91D2voaIu/mEHuH0wUdkuiDFIYwnkrtGEpq9AhnEnMuq+GxWi/HJ\nhvebOtCcowm12L315HIvj9VqC5RCfZhFfTG/u0ZYL8rBN0riUDX5kyPGTGpk2VgD\nfE63EUOpxwLLr1l83HiromGyMPB9rwdUTqxy1iOuYwQV8i6eeCjoegwWIaEKRtie\nzWgLrOYvppsX2cPSlAvpext9JVWvced1rS1qp2z0+7swYqtz8PCDD9Oc+VU3Ynnu\nZQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:28:29,061 DEBUG transport Ответ сервера - {'response': 511, 'bin': '5159ba1bc5ee19acbcb1e23ba87643e92b83da035bbf82196cfa27dc928b5b3ecc209d6929dbf6a4bb0c49a653ccad48fdd02f317bac05ca8c553b23ed06f267'}.
+2023-02-18 21:28:29,061 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:28:29,061 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:28:29,061 DEBUG transport Запрос списка известных пользователей - Анна.
+2023-02-18 21:28:29,580 DEBUG transport Запрос контакт-листа для пользователя Thread-5.
+2023-02-18 21:28:29,580 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737709.580167, 'user': 'Анна'}.
+2023-02-18 21:28:30,086 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:28:30,086 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737710.0866578}.
+2023-02-18 21:28:30,596 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:28:30,603 DEBUG client_ Transport is ready.
+2023-02-18 21:28:30,618 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:28:37,923 DEBUG transport Удаление контакта - Евгений.
+2023-02-18 21:28:38,298 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:28:38,299 DEBUG transport Запрос контакт-листа для пользователя Thread-5.
+2023-02-18 21:28:38,299 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737718.2997568, 'user': 'Анна'}.
+2023-02-18 21:28:38,809 DEBUG transport Получен ответ - {'response': 202, 'data_list': []}.
+2023-02-18 21:28:38,809 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737718.8093283}.
+2023-02-18 21:28:39,322 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:28:39,324 INFO main_window Успешно удалён контакт - Евгений.
+2023-02-18 21:30:20,308 DEBUG transport Создание контакта - Евгений.
+2023-02-18 21:30:20,728 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:30:20,729 DEBUG transport Запрос контакт-листа для пользователя Thread-5.
+2023-02-18 21:30:20,729 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676737820.729333, 'user': 'Анна'}.
+2023-02-18 21:30:21,238 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:30:21,238 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676737821.2381542}.
+2023-02-18 21:30:22,263 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:32:35,731 INFO main_window Успешно добавлен контакт - <PyQt5.QtGui.QStandardItem object at 0x000001F59BDCB670>.
+2023-02-18 21:34:42,178 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:34:42,178 DEBUG client_ Аргументы загружены.
+2023-02-18 21:34:54,030 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Анна.
+2023-02-18 21:34:54,086 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:34:54,107 INFO transport Попытка подключения №1.
+2023-02-18 21:34:54,107 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:34:54,150 DEBUG transport Хэш пароль готов - b'146ab1c69d5b8010c4725b4051cc734887509ef4fedb7531445dc66f71cabbc07109467e8f3383dbed7e0e59b2ceecbba9c4da5a8f47fc7f7f79c945d1b5c298'.
+2023-02-18 21:34:54,150 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676738094.1508098, 'user': {'account_name': 'Анна', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA17NFYSHWr6t5ve+RUYyC\nRICurAhwf4bL8GYJbAcRkLoPrAi08DTGxeIDQU6b5/jMX4vSJlTcW5A9EFUaOEP7\nfkmlfblB1K8U91D2voaIu/mEHuH0wUdkuiDFIYwnkrtGEpq9AhnEnMuq+GxWi/HJ\nhvebOtCcowm12L315HIvj9VqC5RCfZhFfTG/u0ZYL8rBN0riUDX5kyPGTGpk2VgD\nfE63EUOpxwLLr1l83HiromGyMPB9rwdUTqxy1iOuYwQV8i6eeCjoegwWIaEKRtie\nzWgLrOYvppsX2cPSlAvpext9JVWvced1rS1qp2z0+7swYqtz8PCDD9Oc+VU3Ynnu\nZQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:34:54,617 DEBUG transport Ответ сервера - {'response': 511, 'bin': '36cd9e27fa7bb586228304b0a3f95bd9904e6878b65c7a007db63d61cbbff0a5291898623b205bc93e2fd3f7a1a107400517f5065cdc6b028b47d629dbf67dea'}.
+2023-02-18 21:34:54,617 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:34:54,617 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:34:54,618 DEBUG transport Запрос списка известных пользователей - Анна.
+2023-02-18 21:34:55,135 DEBUG transport Запрос контакт-листа для пользователя Thread-5.
+2023-02-18 21:34:55,135 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676738095.1351402, 'user': 'Анна'}.
+2023-02-18 21:34:55,641 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:34:55,641 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676738095.6418335}.
+2023-02-18 21:34:56,153 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:34:56,160 DEBUG client_ Transport is ready.
+2023-02-18 21:34:56,171 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:34:59,861 DEBUG transport Удаление контакта - Евгений.
+2023-02-18 21:35:00,240 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:35:00,241 DEBUG transport Запрос контакт-листа для пользователя Thread-5.
+2023-02-18 21:35:00,241 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676738100.241814, 'user': 'Анна'}.
+2023-02-18 21:35:00,751 DEBUG transport Получен ответ - {'response': 202, 'data_list': []}.
+2023-02-18 21:35:00,751 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676738100.7510242}.
+2023-02-18 21:35:01,264 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:35:01,266 INFO main_window Успешно удалён контакт - Евгений.
+2023-02-18 21:35:04,442 DEBUG transport Создание контакта - Евгений.
+2023-02-18 21:35:04,851 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:35:04,851 DEBUG transport Запрос контакт-листа для пользователя Thread-5.
+2023-02-18 21:35:04,852 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676738104.8525405, 'user': 'Анна'}.
+2023-02-18 21:35:05,364 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:35:05,364 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676738105.3649251}.
+2023-02-18 21:35:05,878 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:35:05,884 INFO main_window Успешно добавлен контакт - <PyQt5.QtGui.QStandardItem object at 0x0000022A2AC088B0>.
+2023-02-18 21:35:08,484 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:35:08,944 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:35:40,578 DEBUG client_ Была вызвана функция arg_parser с параметрами (), {}.Вызов функции осуществлялся из модуля __main__.Вызов из функции <module>
+2023-02-18 21:35:40,578 DEBUG client_ Аргументы загружены.
+2023-02-18 21:35:46,126 INFO client_ Запущен клиент с параметрами: адрес сервера - 127.0.0.1, порт - 7777, имя пользователя - Анна.
+2023-02-18 21:35:46,180 DEBUG client_ Ключи успешно загруженны.
+2023-02-18 21:35:46,201 INFO transport Попытка подключения №1.
+2023-02-18 21:35:46,201 DEBUG transport Установлено соеденение с сервером.
+2023-02-18 21:35:46,244 DEBUG transport Хэш пароль готов - b'146ab1c69d5b8010c4725b4051cc734887509ef4fedb7531445dc66f71cabbc07109467e8f3383dbed7e0e59b2ceecbba9c4da5a8f47fc7f7f79c945d1b5c298'.
+2023-02-18 21:35:46,245 DEBUG transport Приветсвенное сообщение - {'action': 'presence', 'time': 1676738146.2459161, 'user': {'account_name': 'Анна', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA17NFYSHWr6t5ve+RUYyC\nRICurAhwf4bL8GYJbAcRkLoPrAi08DTGxeIDQU6b5/jMX4vSJlTcW5A9EFUaOEP7\nfkmlfblB1K8U91D2voaIu/mEHuH0wUdkuiDFIYwnkrtGEpq9AhnEnMuq+GxWi/HJ\nhvebOtCcowm12L315HIvj9VqC5RCfZhFfTG/u0ZYL8rBN0riUDX5kyPGTGpk2VgD\nfE63EUOpxwLLr1l83HiromGyMPB9rwdUTqxy1iOuYwQV8i6eeCjoegwWIaEKRtie\nzWgLrOYvppsX2cPSlAvpext9JVWvced1rS1qp2z0+7swYqtz8PCDD9Oc+VU3Ynnu\nZQIDAQAB\n-----END PUBLIC KEY-----'}}.
+2023-02-18 21:35:46,715 DEBUG transport Ответ сервера - {'response': 511, 'bin': 'c0046727eb6097d5ee1ad4567dff651dcf39ed1b9892f4715576027cc6853a50bdc69effb211d8b1ff4e0449be1278f38227d819e7500b2215ae8f780bfbc411'}.
+2023-02-18 21:35:46,716 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:35:46,716 INFO transport Соеденение с сервером успешно установлено.
+2023-02-18 21:35:46,716 DEBUG transport Запрос списка известных пользователей - Анна.
+2023-02-18 21:35:47,236 DEBUG transport Запрос контакт-листа для пользователя Thread-5.
+2023-02-18 21:35:47,236 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676738147.2364001, 'user': 'Анна'}.
+2023-02-18 21:35:47,744 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:35:47,744 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676738147.7443004}.
+2023-02-18 21:35:48,258 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:35:48,264 DEBUG client_ Transport is ready.
+2023-02-18 21:35:48,281 DEBUG transport Запущен процесс-приёмник сообщений сервера.
+2023-02-18 21:35:50,082 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:35:50,276 DEBUG main_window Загружен открытый ключ для Евгений.
+2023-02-18 21:35:52,942 DEBUG transport Удаление контакта - Евгений.
+2023-02-18 21:35:53,336 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:35:53,337 DEBUG transport Запрос контакт-листа для пользователя Thread-5.
+2023-02-18 21:35:53,337 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676738153.337159, 'user': 'Анна'}.
+2023-02-18 21:35:53,850 DEBUG transport Получен ответ - {'response': 202, 'data_list': []}.
+2023-02-18 21:35:53,850 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676738153.8501382}.
+2023-02-18 21:35:54,363 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:35:54,365 INFO main_window Успешно удалён контакт - Евгений.
+2023-02-18 21:35:57,853 DEBUG transport Создание контакта - Евгений.
+2023-02-18 21:35:57,951 DEBUG transport Разбор сообщения от сервера: {'response': 200}.
+2023-02-18 21:35:57,952 DEBUG transport Запрос контакт-листа для пользователя Thread-5.
+2023-02-18 21:35:57,952 DEBUG transport Сформирован запрос - {'action': 'get_contacts', 'time': 1676738157.9526296, 'user': 'Анна'}.
+2023-02-18 21:35:58,467 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Евгений']}.
+2023-02-18 21:35:58,467 DEBUG transport Сформирован запрос - {'action': 'action_users', 'time': 1676738158.467199}.
+2023-02-18 21:35:58,968 DEBUG transport Получен ответ - {'response': 202, 'data_list': ['Анна']}.
+2023-02-18 21:35:58,973 INFO main_window Успешно добавлен контакт - Евгений.
+2023-02-18 21:36:00,938 DEBUG transport Запрос публичного ключа для - Евгений.
+2023-02-18 21:36:01,012 DEBUG main_window Загружен открытый ключ для Евгений.
