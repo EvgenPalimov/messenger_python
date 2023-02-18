@@ -25,7 +25,7 @@ class ClientMainWindow(QMainWindow):
     """
     Класс - основное окно пользователя. Содержит всю основную логику работы
     клиентского модуля. Конфигурация окна создана в QTDesigner и загружается из
-    конвертированого файла main_window_conv.py
+    конвертированного файла main_window_conv.py
     """
 
     def __init__(self, transport: ClientTransport, database: ClientDatabase,
@@ -38,7 +38,7 @@ class ClientMainWindow(QMainWindow):
         self.ui = Ui_MainClientWindow()
         self.ui.setupUi(self)
 
-        # Иницилиализация кнопок.
+        # Инициализация кнопок.
         self.ui.menu_exit.triggered.connect(qApp.exit)
         self.ui.btn_send.clicked.connect(self.send_message)
         self.ui.btn_send.setShortcut('Ctrl+Return')
@@ -83,7 +83,7 @@ class ClientMainWindow(QMainWindow):
 
     def history_list_update(self):
         """
-        Метод для заполения историей сообщений.
+        Метод для заполнения историей сообщений.
         Выводит историю - по сортируемой дате и по 20 записей за раз.
         """
 
@@ -144,7 +144,7 @@ class ClientMainWindow(QMainWindow):
             self.encryptor = None
             LOGGER.debug(f'Ну удалось получить ключ для {self.current_chat}.')
 
-        # Если ключа нет то ошибка, что не удалось начать чат с пользователем.
+        # Если ключа нет – то ошибка, что не удалось начать чат с пользователем.
         if not self.current_chat_key:
             self.messages.warning(
                 self,
@@ -153,7 +153,7 @@ class ClientMainWindow(QMainWindow):
             return
 
         self.ui.label_new_message.setText(
-            f'Введите сообщенние для {self.current_chat}: ')
+            f'Введите сообщение для {self.current_chat}: ')
         self.ui.btn_clear.setDisabled(False)
         self.ui.btn_send.setDisabled(False)
         self.ui.text_message.setDisabled(False)
@@ -254,14 +254,14 @@ class ClientMainWindow(QMainWindow):
         except OSError as err:
             if err.errno:
                 self.messages.critical(self, 'Ошибка.',
-                                       'Потеряно соеденение с сервером!')
+                                       'Потеряно соединение с сервером!')
                 self.close()
-            self.messages.critical(self, 'Ошибка.', 'Таймаут соеденения!')
+            self.messages.critical(self, 'Ошибка.', 'Таймаут соединения!')
         else:
             self.database.del_contact(selected)
             self.clients_list_update()
             LOGGER.info(f'Успешно удалён контакт - {selected}.')
-            self.messages.information(self, 'Успех.', 'Контакт упешно удалён!')
+            self.messages.information(self, 'Успех.', 'Контакт успешно удалён!')
             self.clients_list_update()
             item.close()
             # Если удалён активный пользователь, то деактивируем поля ввода.
@@ -300,12 +300,12 @@ class ClientMainWindow(QMainWindow):
         except OSError as err:
             if err.errno:
                 self.messages.critical(self, 'Ошибка.',
-                                       'Потеряно соеденение с сервером!')
+                                       'Потеряно соединение с сервером!')
                 self.close()
-            self.messages.critical(self, 'Ошибка.', 'Таймаут соеденения!')
+            self.messages.critical(self, 'Ошибка.', 'Таймаут соединения!')
         except (ConnectionResetError, ConnectionAbortedError):
             self.messages.critical(self, 'Ошибка.',
-                                   'Потеряно соеденение с сервером!')
+                                   'Потеряно соединение с сервером!')
             self.close()
         else:
             self.database.save_message(self.current_chat, 'out', message_text)
@@ -385,13 +385,13 @@ class ClientMainWindow(QMainWindow):
     @pyqtSlot()
     def connection_lost(self):
         """
-        Слот-обработчик отслеживания потери соеденения.
+        Слот-обработчик отслеживания потери соединения.
 
-        Выдает сообщение об ошибке и завршает работу приложения.
+        Выдает сообщение об ошибке и завершает работу приложения.
         """
 
-        self.messages.warning(self, 'Сбой соеденения.',
-                              'Потеряно соеденение с сервером.')
+        self.messages.warning(self, 'Сбой соединения.',
+                              'Потеряно соединение с сервером.')
         self.close()
 
     @pyqtSlot()

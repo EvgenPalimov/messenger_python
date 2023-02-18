@@ -58,7 +58,7 @@ class ServerStorage:
         def __repr__(self):
             return f'Пользователь - {self.name}, производил подключения ' \
                    f'с IP-адреса и порта: {self.ip_address} ' \
-                   f'/ {self.port}, время соеденения - {datetime}.'
+                   f'/ {self.port}, время соединения - {datetime}.'
 
     class UsersContacts:
         """Класс - отображение таблицы контактов пользователей."""
@@ -83,7 +83,7 @@ class ServerStorage:
                    f'столько {self.accepted} шт.'
 
     def __init__(self, path: str):
-        # Создаём движок базы данны.
+        # Создаём движок базы данных.
         self.database_engine = create_engine(
             f'sqlite:///{path}',
             echo=False,
@@ -136,7 +136,7 @@ class ServerStorage:
                                     Column('accepted', Integer)
                                     )
 
-        # Создаем таблицы, отображения и связвыем их.
+        # Создаем таблицы, отображения и связываем их.
         self.metadata.create_all(self.database_engine)
         mapper(self.AllUsers, table_users)
         mapper(self.ActiveUsers, table_active_users)
@@ -155,7 +155,7 @@ class ServerStorage:
 
     def user_login(self, username: str, ip_address: str, port: int, key: str):
         """
-        Метод выполняющяяся при входе пользователя.
+        Метод выполняющаяся при входе пользователя.
 
         Записывает в базу факт подключения пользователя.
         Обновляет открытый ключ пользователя при его изменении.
@@ -206,7 +206,7 @@ class ServerStorage:
         Принимает имя и хэш пароля, создаёт запись в таблице статистики.
 
         :param name: имя нового пользователя,
-        :param password_hash: хэш пороля пользователя,
+        :param password_hash: хэш пароля пользователя,
         :return: ничего не возвращает.
         """
 
@@ -223,7 +223,7 @@ class ServerStorage:
 
         Принимает имя и хэш пароля, создаёт запись в таблице статистики.
 
-        :param user_id: id пользовтеля,
+        :param user_id: id пользователя,
         :return: ничего не возвращает.
         """
 
@@ -312,7 +312,7 @@ class ServerStorage:
 
     def remove_contact(self, user: str, contact: str):
         """
-        Метод удалает контакт из списка контактов пользователя.
+        Метод удаляет контакт из списка контактов пользователя.
 
         :param user: id пользователя,
         :param contact: имя контакта,
@@ -373,9 +373,9 @@ class ServerStorage:
 
     def users_list(self):
         """
-        Метод возвращающий список зарегистрированых пользователей.
+        Метод возвращающий список зарегистрированных пользователей.
 
-        :return:list[tuple]: возвращает список зарегистрированых пользователей.
+        :return:list[tuple]: возвращает список зарегистрированных пользователей.
         """
 
         query = self.session.query(
@@ -447,7 +447,7 @@ if __name__ == '__main__':
     test_db.user_login('client_2', '192.168.1.5', 8081, 'key')
     # выводим список кортежей - активных пользователей
     print(test_db.active_users_list())
-    # выполянем 'отключение' пользователя
+    # выполняем 'отключение' пользователя
     test_db.user_logout('client_1')
     # выводим список активных пользователей
     print(test_db.active_users_list())

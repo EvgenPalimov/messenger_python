@@ -89,7 +89,7 @@ class RegisterUser(QDialog):
             self.database.add_user(self.client_name.text(),
                                    binascii.hexlify(password_hash))
             self.messages.information(self, 'Успех',
-                                      'Пользователь успешно зарегистрирорван.')
+                                      'Пользователь успешно зарегистрирован.')
             self.server.service_update_lists()
             self.close()
 

@@ -46,20 +46,20 @@ class ClientTransport(threading.Thread, QObject):
             self.contacts_list_update()
         except OSError as err:
             if err.errno:
-                LOGGER.critical('Потеряно соеденение с сервером!')
-                raise ServerError('Потеряно соеденение с сервером!')
+                LOGGER.critical('Потеряно соединение с сервером!')
+                raise ServerError('Потеряно соединение с сервером!')
             LOGGER.error(
-                'Тайм-аут соеденения при обновление списков пользователей.')
+                'Тайм-аут соединения при обновление списков пользователей.')
         except json.JSONDecoder:
-            LOGGER.critical('Потеряно соеденение с сервером!')
-            raise ServerError('Потеряно соеденение с сервером!')
+            LOGGER.critical('Потеряно соединение с сервером!')
+            raise ServerError('Потеряно соединение с сервером!')
         self.running = True
 
     def connection_init(self, ip_address: str, port: int):
         """
-        Метод инициализаци соедение сервером.
+        Метод инициализации соединение сервером.
 
-        Результат успшеное установление соедение с сервером или
+        Результат успешное установление соединение с сервером или
         исключение ServerError.
 
         :param ip_address: IP-адрес сервера для подключения,
@@ -85,10 +85,10 @@ class ClientTransport(threading.Thread, QObject):
 
         # Если соединится не удалось - исключение.
         if not connected:
-            LOGGER.critical('Не удалось установить соеденение с сервером.')
-            raise ServerError('Не удалось установить соеденение с сервером.')
+            LOGGER.critical('Не удалось установить соединение с сервером.')
+            raise ServerError('Не удалось установить соединение с сервером.')
 
-        LOGGER.debug('Установлено соеденение с сервером.')
+        LOGGER.debug('Установлено соединение с сервером.')
 
         # Запускаем процедуру авторизации.
         password_bytes = self.password.encode('utf-8')
@@ -101,7 +101,7 @@ class ClientTransport(threading.Thread, QObject):
         # Получаем публичный ключ и декодируем его из байтов.
         pubkey = self.keys.publickey().export_key().decode('ascii')
 
-        # Авторизируемся на сервере.
+        # Авторизуемся на сервере.
         with socket_lock:
             presence = {
                 ACTION: PRESENCE,
@@ -111,7 +111,7 @@ class ClientTransport(threading.Thread, QObject):
                     PUBLIC_KEY: pubkey
                 }
             }
-        LOGGER.debug(f'Приветсвенное сообщение - {presence}.')
+        LOGGER.debug(f'Приветственное сообщение - {presence}.')
 
         try:
             send_message(self.transport, presence)
@@ -131,10 +131,10 @@ class ClientTransport(threading.Thread, QObject):
                     send_message(self.transport, my_answer)
                     self.process_server_answer(get_message(self.transport))
         except (OSError, json.JSONDecodeError) as err:
-            LOGGER.debug('Потерно соеденение', exc_info=err)
+            LOGGER.debug('Потеряно соединение', exc_info=err)
             raise ServerError('Сбой соединения в процессе авторизации.')
 
-        LOGGER.info('Соеденение с сервером успешно установлено.')
+        LOGGER.info('Соединение с сервером успешно установлено.')
 
     def process_server_answer(self, message):
         """
@@ -159,7 +159,7 @@ class ClientTransport(threading.Thread, QObject):
                 self.message_205.emit()
             else:
                 LOGGER.debug(
-                    f'Принят неизвестный код потверждения - '
+                    f'Принят неизвестный код подтверждения - '
                     f'{message[RESPONSE]}.'
                 )
 
@@ -276,7 +276,7 @@ class ClientTransport(threading.Thread, QObject):
 
     def remove_contact(self, contact: str):
         """
-        Метод отправляющий на сервер сведения о удалении контакта.
+        Метод отправляющий на сервер сведения об удалении контакта.
 
         :param contact: id удаляемого контакта,
         :return: ничего не возвращает.
@@ -336,7 +336,7 @@ class ClientTransport(threading.Thread, QObject):
 
     def run(self):
         """
-        Основной метод рааботы клиентского приложения.
+        Основной метод работы клиентского приложения.
 
         Запускает процесс-приёмник сообщений с сервера. Так же отслеживает
         потерю связи с сервером.
@@ -353,7 +353,7 @@ class ClientTransport(threading.Thread, QObject):
                     message = get_message(self.transport)
                 except OSError as err:
                     if err.errno:
-                        LOGGER.critical(f'Потеряно соеденение с сервером!')
+                        LOGGER.critical(f'Потеряно соединение с сервером!')
                         self.running = False
                         self.connection_lost.emit()
                 except (ConnectionError, ConnectionAbortedError,
