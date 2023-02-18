@@ -220,8 +220,8 @@ class ClientMainWindow(QMainWindow):
             self.messages.critical(self, 'Ошибка.', 'Таймаут соединения!')
         else:
             self.database.add_contact(new_contact)
-            # new_contact = QStandardItem(new_contact)
-            # new_contact.setEditable(False)
+            new_contact = QStandardItem(new_contact)
+            new_contact.setEditable(False)
             # self.contacts_model.appendRow(new_contact)
             LOGGER.info(f'Успешно добавлен контакт - {new_contact}.')
             self.messages.information(self, 'Успех.',
