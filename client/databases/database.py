@@ -4,6 +4,7 @@ from datetime import datetime
 from sqlalchemy import create_engine, Table, Column, Integer, String, Text, \
     MetaData, DateTime, Boolean
 from sqlalchemy.orm import mapper, sessionmaker
+from sqlalchemy.sql import default_comparator
 
 
 class ClientDatabase:
@@ -123,6 +124,12 @@ class ClientDatabase:
         """
 
         self.session.query(self.Contacts).delete()
+
+    def contact_active(self, contact: str):
+        contact_item = self.session.query(self.Contacts).\
+            filter_by(name=contact).first()
+        contact_item.active = True
+        self.session.commit()
 
     def add_users(self, users_list: list):
         """

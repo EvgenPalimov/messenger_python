@@ -7,8 +7,7 @@ import time
 import threading
 from PyQt5.QtCore import pyqtSignal, QObject
 
-import logs.client_log_config
-from client.databases.database import ClientDatabase
+from databases.database import ClientDatabase
 from common.utils import *
 from common.variables import *
 from common.errors import ServerError
@@ -176,7 +175,6 @@ class ClientTransport(threading.Thread, QObject):
     def contacts_list_update(self):
         """Метод обновляющий контакт-лист пользователя с сервера."""
 
-        self.database.contacts_clear()
         LOGGER.debug(f'Запрос контакт-листа для пользователя {self.name}.')
         request_contacts = {
             ACTION: GET_CONTACTS,

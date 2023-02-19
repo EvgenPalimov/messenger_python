@@ -8,14 +8,13 @@ from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
 from PyQt5.QtCore import pyqtSlot, Qt
 
-from client.databases.database import ClientDatabase
-from client.forms_gui.add_contact import AddContactDialog
-from client.forms_gui.del_contact import DelContactDialog
-from client.forms_gui.main_window_conv import Ui_MainClientWindow
+from databases.database import ClientDatabase
+from forms_gui.add_contact import AddContactDialog
+from forms_gui.del_contact import DelContactDialog
+from forms_gui.main_window_conv import Ui_MainClientWindow
 from client.transport import ClientTransport
 from common.errors import ServerError, UserNotAvailable
 
-import logs.client_log_config
 from common.variables import MESSAGE_TEXT, SENDER
 
 LOGGER = logging.getLogger('client')
@@ -259,11 +258,10 @@ class ClientMainWindow(QMainWindow):
             self.messages.critical(self, 'Ошибка.', 'Таймаут соединения!')
         else:
             self.database.del_contact(selected)
-            self.clients_list_update()
             LOGGER.info(f'Успешно удалён контакт - {selected}.')
             self.messages.information(self, 'Успех.', 'Контакт успешно удалён!')
-            self.clients_list_update()
             item.close()
+            self.clients_list_update()
             # Если удалён активный пользователь, то деактивируем поля ввода.
             if selected == self.current_chat:
                 self.current_chat = None
@@ -370,6 +368,7 @@ class ClientMainWindow(QMainWindow):
                     # Нужно заново сохранить сообщение, иначе оно будет
                     # потеряно, т.к. на момент предыдущего вызова
                     # контакта не было.
+                    self.add_contact(self.current_chat)
                     self.database.save_message(
                         self.current_chat, 'in',
                         decrypted_message.decode('utf8'))
