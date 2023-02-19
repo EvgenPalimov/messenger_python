@@ -23,7 +23,7 @@ class MessageProcessor(threading.Thread):
     """
     Основной класс сервера.
 
-    Принимает содинения, словари - пакеты
+    Принимает соединения, словари - пакеты
     от клиентов, обрабатывает поступающие сообщения.
     Работает в качестве отдельного потока.
     """
@@ -89,7 +89,7 @@ class MessageProcessor(threading.Thread):
                 pass
             else:
                 LOGGER.info(
-                    f'Установлено соедение, '
+                    f'Установлено соединение, '
                     f'IP-адрес подключения {client_address}.')
                 client.settimeout(5)
                 self.clients.append(client)
@@ -141,7 +141,7 @@ class MessageProcessor(threading.Thread):
 
     def process_message(self, message: dict):
         """
-        Функция адресной отправки сообщения определеному пользователю.
+        Функция адресной отправки сообщения определенному пользователю.
 
         :param message: сообщение пользователя в формате словаря,
         :return: ничего не возвращает.
@@ -175,11 +175,11 @@ class MessageProcessor(threading.Thread):
         Обработчик сообщений от клиентов.
 
         Принимает словарь - сообщение от клиента,
-        проверяет коррестность, возвращает словарь-ответ для клиента.
+        проверяет корректность, возвращает словарь-ответ для клиента.
 
         :param message: сообщение клиента,
         :param client: объект сокета пользователя,
-        :return: dict: если есть неообходимость в ответе.
+        :return: dict: если есть необходимость в ответе.
         """
 
         global new_connection
@@ -187,7 +187,7 @@ class MessageProcessor(threading.Thread):
         # Если это сообщение о присутствии, принимаем и отвечаем
         if ACTION in message and message[ACTION] == PRESENCE \
                 and TIME in message and USER in message:
-            # Если сообщение о присутствии то вызываем функцию авторизации.
+            # Если сообщение о присутствии – то вызываем функцию авторизации.
             self.user_authorization(message, client)
 
         # Если это сообщение, то отправляем его получателю.
@@ -230,7 +230,7 @@ class MessageProcessor(threading.Thread):
             except OSError:
                 self.remove_client(client)
 
-        # Если это добавление контакта в список контаков пользователя.
+        # Если это добавление контакта в список контактов пользователя.
         elif ACTION in message and message[
             ACTION] == ADD_CONTACT and ACCOUNT_NAME in message and USER \
                 in message and self.names[message[USER]] == client:
@@ -240,7 +240,7 @@ class MessageProcessor(threading.Thread):
             except OSError:
                 self.remove_client(client)
 
-        # Если это удаление контакта из списка контаков пользователя.
+        # Если это удаление контакта из списка контактов пользователя.
         elif ACTION in message and message[
             ACTION] == REMOVE_CONTACT and ACCOUNT_NAME in message and USER \
                 in message and self.names[message[USER]] == client:
@@ -267,7 +267,7 @@ class MessageProcessor(threading.Thread):
                 and ACCOUNT_NAME in message:
             response = RESPONSE_511
             response[DATA] = self.database.get_pubkey(message[ACCOUNT_NAME])
-            # Может быть, что ключа ещё нет (пользователь никогда не логинился,
+            # Может быть, что ключа ещё нет (пользователь никогда не входил,
             # то тогда шлём ошибку - 400)
             if response[DATA]:
                 try:
@@ -303,14 +303,14 @@ class MessageProcessor(threading.Thread):
 
     def user_authorization(self, message: dict, sock: socket.socket):
         """
-        Метод реализующий авторизцию пользователей.
+        Метод реализующий авторизацию пользователей.
 
         :param message: запрос от клиента,
         :param sock: объект сокета пользователя,
         :return: dict: возвращаем словарь с ответом.
         """
 
-        # Если имя пользователя уже занято то возвращаем - 400 ошибку.
+        # Если имя пользователя уже занято – то возвращаем - 400 ошибку.
         LOGGER.debug(
             f'Запущен процесс авторизации пользователя - {message[USER]}.')
         if message[USER][ACCOUNT_NAME] in self.names.keys():
@@ -331,7 +331,7 @@ class MessageProcessor(threading.Thread):
             response[ERROR] = 'Пользователь не зарегистрирован.'
             try:
                 LOGGER.debug(
-                    f'Неисзвестнный пользователь, отправитель - {response}.')
+                    f'Неизвестный пользователь, отправитель - {response}.')
                 send_message(sock, response)
             except OSError:
                 pass

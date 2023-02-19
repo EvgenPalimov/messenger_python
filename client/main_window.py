@@ -8,14 +8,13 @@ from PyQt5.QtWidgets import QMainWindow, qApp, QMessageBox
 from PyQt5.QtGui import QStandardItemModel, QStandardItem, QBrush, QColor
 from PyQt5.QtCore import pyqtSlot, Qt
 
-from client.databases.database import ClientDatabase
-from client.forms_gui.add_contact import AddContactDialog
-from client.forms_gui.del_contact import DelContactDialog
-from client.forms_gui.main_window_conv import Ui_MainClientWindow
+from databases.database import ClientDatabase
+from forms_gui.add_contact import AddContactDialog
+from forms_gui.del_contact import DelContactDialog
+from forms_gui.main_window_conv import Ui_MainClientWindow
 from client.transport import ClientTransport
 from common.errors import ServerError, UserNotAvailable
 
-import logs.client_log_config
 from common.variables import MESSAGE_TEXT, SENDER
 
 LOGGER = logging.getLogger('client')
@@ -25,7 +24,7 @@ class ClientMainWindow(QMainWindow):
     """
     Класс - основное окно пользователя. Содержит всю основную логику работы
     клиентского модуля. Конфигурация окна создана в QTDesigner и загружается из
-    конвертированого файла main_window_conv.py
+    конвертированного файла main_window_conv.py
     """
 
     def __init__(self, transport: ClientTransport, database: ClientDatabase,
@@ -38,7 +37,7 @@ class ClientMainWindow(QMainWindow):
         self.ui = Ui_MainClientWindow()
         self.ui.setupUi(self)
 
-        # Иницилиализация кнопок.
+        # Инициализация кнопок.
         self.ui.menu_exit.triggered.connect(qApp.exit)
         self.ui.btn_send.clicked.connect(self.send_message)
         self.ui.btn_send.setShortcut('Ctrl+Return')
@@ -83,7 +82,7 @@ class ClientMainWindow(QMainWindow):
 
     def history_list_update(self):
         """
-        Метод для заполения историей сообщений.
+        Метод для заполнения историей сообщений.
         Выводит историю - по сортируемой дате и по 20 записей за раз.
         """
 
@@ -144,7 +143,7 @@ class ClientMainWindow(QMainWindow):
             self.encryptor = None
             LOGGER.debug(f'Ну удалось получить ключ для {self.current_chat}.')
 
-        # Если ключа нет то ошибка, что не удалось начать чат с пользователем.
+        # Если ключа нет – то ошибка, что не удалось начать чат с пользователем.
         if not self.current_chat_key:
             self.messages.warning(
                 self,
@@ -153,7 +152,7 @@ class ClientMainWindow(QMainWindow):
             return
 
         self.ui.label_new_message.setText(
-            f'Введите сообщенние для {self.current_chat}: ')
+            f'Введите сообщение для {self.current_chat}: ')
         self.ui.btn_clear.setDisabled(False)
         self.ui.btn_send.setDisabled(False)
         self.ui.text_message.setDisabled(False)
@@ -189,7 +188,7 @@ class ClientMainWindow(QMainWindow):
 
     def add_contact_action(self, item):
         """
-        Метод обработчк нажатия кнопки "Добавить"
+        Метод обработчик нажатия кнопки "Добавить"
 
         :param item: объект класса AddContactDialog,
         :return: ничего не возвращает.
@@ -201,10 +200,10 @@ class ClientMainWindow(QMainWindow):
 
     def add_contact(self, new_contact: str):
         """
-        Метод добавляющий контакт в серверную и клиентсткую БД.
+        Метод добавляющий контакт в серверную и клиентскую БД.
         После обновления баз данных обновляет и содержимое окна.
 
-        :param new_contact: имя нового контакта,
+        :param new_contact: Имя нового контакта,
         :return: ничего не возвращает.
         """
 
@@ -222,7 +221,7 @@ class ClientMainWindow(QMainWindow):
             self.database.add_contact(new_contact)
             new_contact = QStandardItem(new_contact)
             new_contact.setEditable(False)
-            self.contacts_model.appendRow(new_contact)
+            # self.contacts_model.appendRow(new_contact)
             LOGGER.info(f'Успешно добавлен контакт - {new_contact}.')
             self.messages.information(self, 'Успех.',
                                       'Контакт успешно добавлен!')
@@ -241,7 +240,7 @@ class ClientMainWindow(QMainWindow):
         Метод - обработчик удаления контакта, сообщает на сервер,
         обновляет таблицу и список контактов.
 
-        :param item: объект класса DelContactDialog,
+        :param item: Объект класса DelContactDialog,
         :return: ничего не возвращает.
         """
 
@@ -254,16 +253,15 @@ class ClientMainWindow(QMainWindow):
         except OSError as err:
             if err.errno:
                 self.messages.critical(self, 'Ошибка.',
-                                       'Потеряно соеденение с сервером!')
+                                       'Потеряно соединение с сервером!')
                 self.close()
-            self.messages.critical(self, 'Ошибка.', 'Таймаут соеденения!')
+            self.messages.critical(self, 'Ошибка.', 'Таймаут соединения!')
         else:
             self.database.del_contact(selected)
-            self.clients_list_update()
             LOGGER.info(f'Успешно удалён контакт - {selected}.')
-            self.messages.information(self, 'Успех.', 'Контакт упешно удалён!')
-            self.clients_list_update()
+            self.messages.information(self, 'Успех.', 'Контакт успешно удалён!')
             item.close()
+            self.clients_list_update()
             # Если удалён активный пользователь, то деактивируем поля ввода.
             if selected == self.current_chat:
                 self.current_chat = None
@@ -300,12 +298,12 @@ class ClientMainWindow(QMainWindow):
         except OSError as err:
             if err.errno:
                 self.messages.critical(self, 'Ошибка.',
-                                       'Потеряно соеденение с сервером!')
+                                       'Потеряно соединение с сервером!')
                 self.close()
-            self.messages.critical(self, 'Ошибка.', 'Таймаут соеденения!')
+            self.messages.critical(self, 'Ошибка.', 'Таймаут соединения!')
         except (ConnectionResetError, ConnectionAbortedError):
             self.messages.critical(self, 'Ошибка.',
-                                   'Потеряно соеденение с сервером!')
+                                   'Потеряно соединение с сервером!')
             self.close()
         else:
             self.database.save_message(self.current_chat, 'out', message_text)
@@ -323,7 +321,7 @@ class ClientMainWindow(QMainWindow):
         в истории сообщений. Запрашивает пользователя если пришло сообщение
         не от текущего собеседника. При необходимости меняет собеседника.
 
-        :param message: объект сообщения,
+        :param message: Объект сообщения,
         :return: ничего не возвращает.
         """
 
@@ -370,6 +368,7 @@ class ClientMainWindow(QMainWindow):
                     # Нужно заново сохранить сообщение, иначе оно будет
                     # потеряно, т.к. на момент предыдущего вызова
                     # контакта не было.
+                    self.add_contact(self.current_chat)
                     self.database.save_message(
                         self.current_chat, 'in',
                         decrypted_message.decode('utf8'))
@@ -385,13 +384,13 @@ class ClientMainWindow(QMainWindow):
     @pyqtSlot()
     def connection_lost(self):
         """
-        Слот-обработчик отслеживания потери соеденения.
+        Слот-обработчик отслеживания потери соединения.
 
-        Выдает сообщение об ошибке и завршает работу приложения.
+        Выдает сообщение об ошибке и завершает работу приложения.
         """
 
-        self.messages.warning(self, 'Сбой соеденения.',
-                              'Потеряно соеденение с сервером.')
+        self.messages.warning(self, 'Сбой соединения.',
+                              'Потеряно соединение с сервером.')
         self.close()
 
     @pyqtSlot()

@@ -20,7 +20,7 @@ LOGGER = logging.getLogger('server')
 @log
 def create_arg_parser(default_port: int, default_address: str):
     """
-    Создаём парсер аргументов коммандной строки.
+    Создаём parser аргументов командной строки.
 
     :param default_port: Передается порт сервера по умолчанию,
     :param default_address: Передается IP-адрес сервера по умолчанию,
@@ -28,7 +28,7 @@ def create_arg_parser(default_port: int, default_address: str):
     """
 
     LOGGER.debug(
-        f'Инициализация парсера аргументов коммандной строки: {sys.argv}.')
+        f'Инициализация parser аргументов командной строки: {sys.argv}.')
     parser = argparse.ArgumentParser()
     parser.add_argument('-a', default=default_address, nargs='?')
     parser.add_argument('-p', default=default_port, type=int, nargs='?')
@@ -43,7 +43,7 @@ def create_arg_parser(default_port: int, default_address: str):
 
 @log
 def config_load():
-    """Парсер конфигурационного ini файла."""
+    """Parser конфигурационного ini файла."""
 
     config = configparser.ConfigParser()
     dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -82,13 +82,13 @@ def main():
     server.daemon = True
     server.start()
 
-    # Если  указан параметр без GUI то запускаем простенький
+    # Если указан параметр без GUI – то запускаем простенький
     # обработчик консольного ввода.
     if gui_flag:
         while True:
             command = input('Введите "exit" для завершения работы сервера.')
             if command == 'exit':
-                # Если выход, то завршаем основной цикл сервера.
+                # Если выход, то завершаем основной цикл сервера.
                 server.running = False
                 server.join()
                 break

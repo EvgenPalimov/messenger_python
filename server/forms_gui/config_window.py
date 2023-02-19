@@ -108,7 +108,7 @@ class ConfigWindow(QDialog):
             int(port)
             socket.inet_aton(ip_address)
         except ValueError:
-            message.warning(self, 'Ошибка', 'Порт долже быть числом.')
+            message.warning(self, 'Ошибка', 'Порт должен быть числом.')
         except socket.error:
             message.warning(
                 self,

@@ -31,7 +31,7 @@ class MainWindow(QMainWindow):
         self.statusBar()
         self.statusBar().showMessage('Сервер работает.')
 
-        # Тулбар.
+        # Тул-бар.
         self.toolbar = self.addToolBar('MainBar')
         self.toolbar.addAction(self.exitAction)
         self.toolbar.addAction(self.refresh_button)
@@ -67,7 +67,7 @@ class MainWindow(QMainWindow):
         """
         Метод создания окна с активными пользователями.
 
-        Метод ззапрашивает данные из базы данных об активных пользователя
+        Метод запрашивает данные из базы данных об активных пользователя
         и выводит их в окно.
 
         :return: ничего не возвращает..
@@ -76,7 +76,7 @@ class MainWindow(QMainWindow):
         list_users = self.database.active_users_list()
         list_ = QStandardItemModel()
         list_.setHorizontalHeaderLabels(
-            ['Имя Клиента', 'IP-Адресс', 'Порт', 'Время подключения'])
+            ['Имя Клиента', 'IP-Адрес', 'Порт', 'Время подключения'])
         for row in list_users:
             user, ip_address, port, time = row
             user = QStandardItem(user)

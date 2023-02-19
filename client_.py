@@ -22,7 +22,7 @@ LOGGER = logging.getLogger('client')
 @log
 def arg_parser():
     """
-    Парсер аргументов командной строки, возвращает кортеж из 4 элементов
+    Parser аргументов командной строки, возвращает кортеж из 4 элементов
     адрес сервера, порт, имя пользователя, пароль.
     Выполняет проверку на корректность вводимых данных.
 
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     LOGGER.debug('Аргументы загружены.')
     client_app = QApplication(sys.argv)
 
-    # Если имя пользователя не было указано в командной строке то запросим его.
+    # Если имя пользователя не было указано в командной строке – то запросим его.
     start_dialog = UserNameDialog()
 
     if not client_name or not client_password:
@@ -102,7 +102,7 @@ if __name__ == '__main__':
         with open(key_file, 'rb') as key:
             keys = RSA.import_key(key.read())
 
-    LOGGER.debug('Ключи успешно загруженны.')
+    LOGGER.debug('Ключи успешно загружены.')
     database = ClientDatabase(client_name)
 
     # Создаём объект - транспорт и запускаем транспортный поток.

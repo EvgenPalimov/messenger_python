@@ -4,6 +4,7 @@ from datetime import datetime
 from sqlalchemy import create_engine, Table, Column, Integer, String, Text, \
     MetaData, DateTime, Boolean
 from sqlalchemy.orm import mapper, sessionmaker
+from sqlalchemy.sql import default_comparator
 
 
 class ClientDatabase:
@@ -75,7 +76,7 @@ class ClientDatabase:
                                Column('active', Boolean)
                                )
 
-        # Создаем таблицы, отображения и связвыем их.
+        # Создаем таблицы, отображения и связевым их.
         self.metadata.create_all(self.database_engine)
         mapper(self.KnownUsers, table_users)
         mapper(self.MessagesStat, table_messages_stat)
@@ -107,9 +108,9 @@ class ClientDatabase:
 
     def del_contact(self, contact: str):
         """
-        Метод удалаения контакта из списка контактов пользователя в БД.
+        Метод удаления контакта из списка контактов пользователя в БД.
 
-        :param contact: имя контакта,
+        :param contact: Имя контакта,
         :return: ничего не возвращает.
         """
 
@@ -123,6 +124,12 @@ class ClientDatabase:
         """
 
         self.session.query(self.Contacts).delete()
+
+    def contact_active(self, contact: str):
+        contact_item = self.session.query(self.Contacts).\
+            filter_by(name=contact).first()
+        contact_item.active = True
+        self.session.commit()
 
     def add_users(self, users_list: list):
         """
@@ -144,7 +151,7 @@ class ClientDatabase:
         Метод сохраняет сообщение пользователя для истории.
 
         :param contact: id контакта,
-        :param direction: напрвление от кого пришло сообщение "in" или "out",
+        :param direction: направление от кого пришло сообщение "in" или "out",
         :param message: тест сообщения,
         :return: ничего не возвращает.
         """
@@ -155,9 +162,9 @@ class ClientDatabase:
 
     def get_contacts(self):
         """
-        Метод запрашивает данные в БД и возвразает список контактов.
+        Метод запрашивает данные в БД и возвращает список контактов.
 
-        :return: list[tuple]: возращает список с контактами пользователя.
+        :return: list[tuple]: возвращает список с контактами пользователя.
         """
 
         return [(contact.name, contact.active) for contact in
@@ -167,7 +174,7 @@ class ClientDatabase:
         """
         Метод запрашивает данные в БД и возвращает известных пользователей.
 
-        :return: list[tuple]: возращает список с известными пользователями.
+        :return: list[tuple]: возвращает список с известными пользователями.
         """
 
         return [user[0] for user in

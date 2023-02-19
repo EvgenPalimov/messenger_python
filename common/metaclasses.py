@@ -3,7 +3,7 @@ import dis
 
 class ServerMaker(type):
     """
-    Метакласс, проверяющий что в результирующем классе нет клиентских
+    Мета класс, проверяющий, что в результирующем классе нет клиентских
     вызовов таких как: connect. Также проверяется, что серверный
     сокет является TCP и работает по IPv4 протоколу.
     """
@@ -17,7 +17,7 @@ class ServerMaker(type):
         for func in clsdict:
             try:
                 # Возвращает итератор по инструкциям в предоставленной функции,
-                # методеб строке исходного кода или объекте кода.
+                # методе строке исходного кода или объекте кода.
                 ret = dis.get_instructions(clsdict[func])
                 # Если не функция, а порт - например, то ловим исключение
             except TypeError:
@@ -30,12 +30,12 @@ class ServerMaker(type):
                     if i.opname == 'LOAD_GLOBAL':
                         if i.argval not in methods:
                             # Заполняем список методами, использующиеся в
-                            # функция класса.
+                            # функции класса.
                             methods.append(i.argval)
                     elif i.opname == 'LOAD_ATTR':
                         if i.argval not in attrs:
                             # Заполняем список методами, использующиеся в
-                            # функция класса.
+                            # функции класса.
                             attrs.append(i.argval)
 
         # Если обнаружено использование недопустимого метода connect, бросаем
@@ -46,14 +46,14 @@ class ServerMaker(type):
         # AF_INET(IPv4), тоже исключение.
         if not ('SOCK_STREAM' in attrs and 'AF_INET' in attrs):
             raise TypeError(
-                'Некорректная инциализация сокета. Доступны только методы'
+                'Некорректная инициализация сокета. Доступны только методы'
                 'для инициализации SOCK_STREAM и AF_INET')
         super().__init__(clsname, bases, clsdict)
 
 
 class ClientMaker(type):
     """
-    Метакласс, проверяющий что в результирующем классе нет серверных
+    Мета класс, проверяющий, что в результирующем классе нет серверных
     вызовов таких как: accept, listen. Также проверяется, что сокет не
     создаётся внутри конструктора класса.
     """
@@ -65,7 +65,7 @@ class ClientMaker(type):
         for func in clsdict:
             try:
                 ret = dis.get_instructions(clsdict[func])
-            # Если не функция то ловим исключение
+            # Если не функция – то ловим исключение
             except TypeError:
                 pass
             else:
@@ -79,7 +79,7 @@ class ClientMaker(type):
         for command in ('accept', 'listen'):
             if command in methods:
                 raise TypeError(
-                    'В классе обнаруженно использование запрещенного метода.')
+                    'В классе обнаружено использование запрещенного метода.')
         # Вызов get_message или send_message из utils считаем корректным
         # использования сокетов
         if 'get_message' in methods or 'send_message' in methods:
