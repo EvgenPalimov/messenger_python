@@ -125,6 +125,12 @@ class ClientDatabase:
 
         self.session.query(self.Contacts).delete()
 
+    def contact_active(self, contact: str):
+        object = self.session.query(self.Contacts).\
+            filter_by(name=contact).first()
+        object.active = True
+        self.session.commit()
+
     def add_users(self, users_list: list):
         """
         Метод добавления известных пользователей.

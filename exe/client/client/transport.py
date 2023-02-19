@@ -175,7 +175,6 @@ class ClientTransport(threading.Thread, QObject):
     def contacts_list_update(self):
         """Метод обновляющий контакт-лист пользователя с сервера."""
 
-        self.database.contacts_clear()
         LOGGER.debug(f'Запрос контакт-листа для пользователя {self.name}.')
         request_contacts = {
             ACTION: GET_CONTACTS,

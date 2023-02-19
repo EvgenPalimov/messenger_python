@@ -263,3 +263,492 @@ Traceback (most recent call last):
     encoded_response = client.recv(MAX_PACKAGE_LENGTH)
 ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
 2023-02-19 01:55:13,153 INFO core Клиент - ('127.0.0.1', 57469), отключился от сервера. 
+2023-02-19 09:52:57,873 DEBUG server_ Инициализация парсера аргументов коммандной строки: ['.\\server_.py'].
+2023-02-19 09:52:57,873 DEBUG server_ Аргументы успешно загружены.
+2023-02-19 09:52:57,904 INFO core Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2023-02-19 09:54:32,609 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50095).
+2023-02-19 09:54:33,113 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676782472.6520631, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnzbfAhPwWJXxK1JqD1Z/\nFBA0qddJtSXiOMoWtV+UUufT+TJMpmtfTScNrtTQEX6IUSCCayuHfeF8TAwgEK2/\nxnlmYce7tkU16a1qznpv1tatIhyBRiJ5PpK6hILHVmplNeLOYH3ZyYoWyGNpESzG\noOI+z1Ub+celN7zvCt5f5rp0f31Yb4aWG0rgPSH4y/wcJ/6ftxIWiAalK0vAlD4Z\nST1Gtk+iyVXJ1JnInvw832G++PLuqcMwuCAfv5JimnfS5OumyS+MFz6hxDu/kj1E\nqaW+znGALKJ55UqWdqYsUZDabsKdv62LQsXq+Wp3/L88BKZCJTbo4DUQa1N2zGy2\niwIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 09:54:33,113 DEBUG core Запущен процесс авторизации пользователя - {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnzbfAhPwWJXxK1JqD1Z/\nFBA0qddJtSXiOMoWtV+UUufT+TJMpmtfTScNrtTQEX6IUSCCayuHfeF8TAwgEK2/\nxnlmYce7tkU16a1qznpv1tatIhyBRiJ5PpK6hILHVmplNeLOYH3ZyYoWyGNpESzG\noOI+z1Ub+celN7zvCt5f5rp0f31Yb4aWG0rgPSH4y/wcJ/6ftxIWiAalK0vAlD4Z\nST1Gtk+iyVXJ1JnInvw832G++PLuqcMwuCAfv5JimnfS5OumyS+MFz6hxDu/kj1E\nqaW+znGALKJ55UqWdqYsUZDabsKdv62LQsXq+Wp3/L88BKZCJTbo4DUQa1N2zGy2\niwIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 09:54:33,117 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 09:54:33,118 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': 'b34f24162d2a29be2b457a362db96bfa1750bf9f4d91081df39a4af7dc17bbd2d78c82c5c6912cc64e18502e6d636c5dd0be88ad07a5b6508f2ed880548f1093'}
+2023-02-19 09:54:33,634 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676782473.1192777, 'account_name': 'Евгений'}
+2023-02-19 09:54:34,142 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782473.640916, 'user': 'Евгений'}
+2023-02-19 09:54:34,656 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782474.1446242}
+2023-02-19 09:54:52,392 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50097).
+2023-02-19 09:54:52,904 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676782492.4350946, 'user': {'account_name': 'Анна', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArPKK+jGj1fz47gxvc65k\nP14YSAeOKuilOG7Fy+mgci+37KRwOekeYQxYKEDPRrlioO1keHsUf00tvm/cv083\nVV0S9mignWcZzlqVwHpJBKp9gi6aW79Js0yW1Cq+t6EONnq3/jBMzksN09YTOd37\nbX2zWeSXeC+GFTRHRXLGIrC38VlPNMwaYfjZXA7IN+oIo7Q6Zprv+NHBtaml9cRb\nTA0SKHpxUi1+wCK9y2O+6wJG40UsvhjTt+h9T/XnocNmLDxfcrE9ykTUWuXg1/cN\nsVnVdr4CUayYbXlJSVYMYlTY8rC6+6CK5BLa5kGJQbAnaLmaAxkN3EL85BdP0fAo\nWwIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 09:54:52,904 DEBUG core Запущен процесс авторизации пользователя - {'account_name': 'Анна', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArPKK+jGj1fz47gxvc65k\nP14YSAeOKuilOG7Fy+mgci+37KRwOekeYQxYKEDPRrlioO1keHsUf00tvm/cv083\nVV0S9mignWcZzlqVwHpJBKp9gi6aW79Js0yW1Cq+t6EONnq3/jBMzksN09YTOd37\nbX2zWeSXeC+GFTRHRXLGIrC38VlPNMwaYfjZXA7IN+oIo7Q6Zprv+NHBtaml9cRb\nTA0SKHpxUi1+wCK9y2O+6wJG40UsvhjTt+h9T/XnocNmLDxfcrE9ykTUWuXg1/cN\nsVnVdr4CUayYbXlJSVYMYlTY8rC6+6CK5BLa5kGJQbAnaLmaAxkN3EL85BdP0fAo\nWwIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 09:54:52,904 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 09:54:52,905 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': 'b9c391085180e6f843d8de793b7239a6b69b0c9837c9f1b0c00323ce3982471e27d0a390765b29443778ecbce2e5389c66990aef1298acd71de8fae21047ac0e'}
+2023-02-19 09:54:53,426 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676782492.9068713, 'account_name': 'Анна'}
+2023-02-19 09:54:53,928 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782493.4326038, 'user': 'Анна'}
+2023-02-19 09:54:54,443 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782493.9296968}
+2023-02-19 09:55:05,108 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676782504.5912604, 'account_name': 'Евгений'}
+2023-02-19 09:55:09,688 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676782509.3825788, 'mess_text': 'OJmMudd4rzZsEEozsw5n26rEEdc6nCokI36VSGSjbTOGhkaNbzzwwIYFt+hf3QL82AZk+VulfwbYB4UnQTGcoczRPv7s5+bEGsQRiabd1qR0qZDeRg5pgsEIo1yJTXLYY/ULOTCxZp5N/u3V8cFFENeBIB93ky38nT8mwfbt1YWR33QfrHcnid8Mfiz8Uo9zAKuvnWimqPYzx2lBNXg9w+dTuz4PYQaXfntRCq9E0dKS1EufZDnJttNiGAWlDWxcGuXcwuNUKITQKHFGF//qVrE6sETgJq3ZKdJH+H1J7f4KyAubR5WFKGuwErXuk8cxDnToNMOILMaZ7qCRmlx0bQ=='}
+2023-02-19 09:55:09,696 INFO core Отправлено сообщение пользователю Евгений от пользователя Анна.
+2023-02-19 09:55:10,711 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782510.510454, 'user': 'Евгений'}
+2023-02-19 09:55:11,227 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782510.7124677}
+2023-02-19 09:55:12,768 DEBUG core Разбор сообщения от клиента : {'action': 'add', 'time': 1676782512.4485886, 'user': 'Евгений', 'account_name': 'Анна'}
+2023-02-19 09:55:13,273 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782512.7713757, 'user': 'Евгений'}
+2023-02-19 09:55:13,779 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782513.2742221}
+2023-02-19 09:55:16,332 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676782515.9098861, 'account_name': 'Анна'}
+2023-02-19 09:55:44,671 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': 'Евгений', 'to': 'Анна', 'time': 1676782544.6211667, 'mess_text': 'RvUl6R5/N6BebdGxvCSXT75I9oFJPUa8j87mpN28DYBHJL1NUpLqWyQVTN5+51Jtpfib3G8nnWduciLPuPi0cfuMKfI3/nS8EmbOoUyzqsZs1lpQVrIR+SNkKMvwDonY9ySDNKdAFahgi+635gZs1pcv2Eib1YPK7Fp4KF1+i73P0F76HWDNAP6EWtHWU/PHOHRd6OUXNeLV+SQeE3MwQRAatJb74oFSGVR0h1GYQiF2K3FaY84t3TM2zm65dVe/t6+9x+KH+Vny/hum+C6EfZf8dhWmsSoUzKE9X942t6PZSzP0ZOCwxU35V7sqHx+1RV8rAU1RAYwPSDRWgZyNQQ=='}
+2023-02-19 09:55:44,677 INFO core Отправлено сообщение пользователю Анна от пользователя Евгений.
+2023-02-19 09:55:48,215 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2023-02-19 09:55:48,215 INFO core Клиент - ('127.0.0.1', 50097), отключился от сервера. 
+2023-02-19 09:56:12,520 DEBUG core Разбор сообщения от клиента : {'action': 'exit', 'time': 1676782572.0660527, 'account_name': 'Евгений'}
+2023-02-19 09:56:12,520 INFO core Клиент - ('127.0.0.1', 50095), отключился от сервера. 
+2023-02-19 09:56:27,158 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50109).
+2023-02-19 09:56:27,668 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676782587.1897078, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnzbfAhPwWJXxK1JqD1Z/\nFBA0qddJtSXiOMoWtV+UUufT+TJMpmtfTScNrtTQEX6IUSCCayuHfeF8TAwgEK2/\nxnlmYce7tkU16a1qznpv1tatIhyBRiJ5PpK6hILHVmplNeLOYH3ZyYoWyGNpESzG\noOI+z1Ub+celN7zvCt5f5rp0f31Yb4aWG0rgPSH4y/wcJ/6ftxIWiAalK0vAlD4Z\nST1Gtk+iyVXJ1JnInvw832G++PLuqcMwuCAfv5JimnfS5OumyS+MFz6hxDu/kj1E\nqaW+znGALKJ55UqWdqYsUZDabsKdv62LQsXq+Wp3/L88BKZCJTbo4DUQa1N2zGy2\niwIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 09:56:27,668 DEBUG core Запущен процесс авторизации пользователя - {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnzbfAhPwWJXxK1JqD1Z/\nFBA0qddJtSXiOMoWtV+UUufT+TJMpmtfTScNrtTQEX6IUSCCayuHfeF8TAwgEK2/\nxnlmYce7tkU16a1qznpv1tatIhyBRiJ5PpK6hILHVmplNeLOYH3ZyYoWyGNpESzG\noOI+z1Ub+celN7zvCt5f5rp0f31Yb4aWG0rgPSH4y/wcJ/6ftxIWiAalK0vAlD4Z\nST1Gtk+iyVXJ1JnInvw832G++PLuqcMwuCAfv5JimnfS5OumyS+MFz6hxDu/kj1E\nqaW+znGALKJ55UqWdqYsUZDabsKdv62LQsXq+Wp3/L88BKZCJTbo4DUQa1N2zGy2\niwIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 09:56:27,668 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 09:56:27,668 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': 'ea21f4ea98ce83a1cdf895ab25f1feae28c7144d1c7433cab446c7582646f876b1f602ffbceec11c8294368ca9cae4599d84d92528089c0033d029e05701c40e'}
+2023-02-19 09:56:28,179 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676782587.668131, 'account_name': 'Евгений'}
+2023-02-19 09:56:28,692 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782588.180234, 'user': 'Евгений'}
+2023-02-19 09:56:29,206 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782588.6920254}
+2023-02-19 09:56:42,836 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50111).
+2023-02-19 09:56:43,346 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676782602.880201, 'user': {'account_name': 'Анна', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArPKK+jGj1fz47gxvc65k\nP14YSAeOKuilOG7Fy+mgci+37KRwOekeYQxYKEDPRrlioO1keHsUf00tvm/cv083\nVV0S9mignWcZzlqVwHpJBKp9gi6aW79Js0yW1Cq+t6EONnq3/jBMzksN09YTOd37\nbX2zWeSXeC+GFTRHRXLGIrC38VlPNMwaYfjZXA7IN+oIo7Q6Zprv+NHBtaml9cRb\nTA0SKHpxUi1+wCK9y2O+6wJG40UsvhjTt+h9T/XnocNmLDxfcrE9ykTUWuXg1/cN\nsVnVdr4CUayYbXlJSVYMYlTY8rC6+6CK5BLa5kGJQbAnaLmaAxkN3EL85BdP0fAo\nWwIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 09:56:43,346 DEBUG core Запущен процесс авторизации пользователя - {'account_name': 'Анна', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArPKK+jGj1fz47gxvc65k\nP14YSAeOKuilOG7Fy+mgci+37KRwOekeYQxYKEDPRrlioO1keHsUf00tvm/cv083\nVV0S9mignWcZzlqVwHpJBKp9gi6aW79Js0yW1Cq+t6EONnq3/jBMzksN09YTOd37\nbX2zWeSXeC+GFTRHRXLGIrC38VlPNMwaYfjZXA7IN+oIo7Q6Zprv+NHBtaml9cRb\nTA0SKHpxUi1+wCK9y2O+6wJG40UsvhjTt+h9T/XnocNmLDxfcrE9ykTUWuXg1/cN\nsVnVdr4CUayYbXlJSVYMYlTY8rC6+6CK5BLa5kGJQbAnaLmaAxkN3EL85BdP0fAo\nWwIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 09:56:43,347 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 09:56:43,347 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': '55b8db847541dea1b4f845f5c5fc7bcbdd9b0d5bbe69efef9177f058d53833b83488aee4976e56c2836624e6792241e31f715b966f85590ef9842d016e609369'}
+2023-02-19 09:56:43,854 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676782603.3482902, 'account_name': 'Анна'}
+2023-02-19 09:56:44,370 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782603.8601348, 'user': 'Анна'}
+2023-02-19 09:56:44,876 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782604.3712583}
+2023-02-19 09:56:48,402 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676782608.1528413, 'account_name': 'Евгений'}
+2023-02-19 09:59:05,372 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676782745.0975394, 'mess_text': 'W4O+Yuctbf2GSYROuWl2jxjtZBJi+aeSmK8b378ia4r83XBqW/4FmW9W3CoAeggBa666PYaH5R+CYR3+gc+l8i41X8kvhbf6zgVKPTc6NGuWuXyPeiRkc6wcbf/0MUSoIL4QpCHTACIB0fYTLFlQJV7FbYMhSv4cLeN5ncPGUEtDuCXoFKk9imQsUQnIwYE2DYDzNXItnjzTLrHANWe2C3YJ6yK5csUhY1HHrQezFFvn9yWuplSVlhhea4FUx5hTx/4ve7Q/GSf/IYYMxugyMZWsvVwjJMCHj1PSEMCVe1lOuccqbGkVSf+bTtQ1aK7yYh2ugzFWAgMUG5e/NHKLig=='}
+2023-02-19 09:59:05,372 INFO core Отправлено сообщение пользователю Евгений от пользователя Анна.
+2023-02-19 09:59:08,409 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2023-02-19 09:59:08,409 INFO core Клиент - ('127.0.0.1', 50109), отключился от сервера. 
+2023-02-19 09:59:21,525 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50121).
+2023-02-19 09:59:22,033 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676782761.5696054, 'user': {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnzbfAhPwWJXxK1JqD1Z/\nFBA0qddJtSXiOMoWtV+UUufT+TJMpmtfTScNrtTQEX6IUSCCayuHfeF8TAwgEK2/\nxnlmYce7tkU16a1qznpv1tatIhyBRiJ5PpK6hILHVmplNeLOYH3ZyYoWyGNpESzG\noOI+z1Ub+celN7zvCt5f5rp0f31Yb4aWG0rgPSH4y/wcJ/6ftxIWiAalK0vAlD4Z\nST1Gtk+iyVXJ1JnInvw832G++PLuqcMwuCAfv5JimnfS5OumyS+MFz6hxDu/kj1E\nqaW+znGALKJ55UqWdqYsUZDabsKdv62LQsXq+Wp3/L88BKZCJTbo4DUQa1N2zGy2\niwIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 09:59:22,033 DEBUG core Запущен процесс авторизации пользователя - {'account_name': 'Евгений', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnzbfAhPwWJXxK1JqD1Z/\nFBA0qddJtSXiOMoWtV+UUufT+TJMpmtfTScNrtTQEX6IUSCCayuHfeF8TAwgEK2/\nxnlmYce7tkU16a1qznpv1tatIhyBRiJ5PpK6hILHVmplNeLOYH3ZyYoWyGNpESzG\noOI+z1Ub+celN7zvCt5f5rp0f31Yb4aWG0rgPSH4y/wcJ/6ftxIWiAalK0vAlD4Z\nST1Gtk+iyVXJ1JnInvw832G++PLuqcMwuCAfv5JimnfS5OumyS+MFz6hxDu/kj1E\nqaW+znGALKJ55UqWdqYsUZDabsKdv62LQsXq+Wp3/L88BKZCJTbo4DUQa1N2zGy2\niwIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 09:59:22,033 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 09:59:22,034 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': 'a7a8c996d6bca6c489325ca540e1d9a882c196cbb7aef3e52d5fd73e9cb71d54211f0b60a6b29d7f6b90dff7d91ffd5adead5c886a343853049f3e3aa8ddce34'}
+2023-02-19 09:59:22,552 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676782762.0348642, 'account_name': 'Евгений'}
+2023-02-19 09:59:23,057 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782762.5613015, 'user': 'Евгений'}
+2023-02-19 09:59:23,560 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782763.0584714}
+2023-02-19 09:59:33,208 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': 'Анна', 'to': 'Евгений', 'time': 1676782772.817891, 'mess_text': 'kYAJouFLQasl1ZZeBj5dfwJIhC01draNY8t7tBs4R1aZ5f1lTaCgAP101zgb/k8F8UwZRy3CuaQv7pYWvit1FoRdtjtWb3hhizGFrgP+LBjXxDyEtMeJ4uRsgYKUGUEgPnwryC/tJ/pK3xl7scSyJbX9MuHs/DCyvdfkBOn5gd1ILJcKvBv1sGxfyAl047wUP3qmaqVKaT4i93LixR1hHoQiTdMO7V315Sq/gIAX49QWgo2SSna+Yh6saMBHcRjLAbJXgDJTC5BgSTxgr27XPv/peaGNGqEne9HykGMvQDMPpYvCq1bj9TUgrQV2b5bBHogydO3JWYT/neqcrmf/bQ=='}
+2023-02-19 09:59:33,211 INFO core Отправлено сообщение пользователю Евгений от пользователя Анна.
+2023-02-19 09:59:33,712 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782773.6812665, 'user': 'Евгений'}
+2023-02-19 09:59:34,224 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782773.713401}
+2023-02-19 09:59:46,877 DEBUG core Разбор сообщения от клиента : {'action': 'add', 'time': 1676782786.4430294, 'user': 'Евгений', 'account_name': 'Анна'}
+2023-02-19 09:59:47,393 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782786.87967, 'user': 'Евгений'}
+2023-02-19 09:59:47,895 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782787.3942192}
+2023-02-19 09:59:49,435 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676782788.9661045, 'account_name': 'Анна'}
+2023-02-19 10:00:10,246 DEBUG core Разбор сообщения от клиента : {'action': 'exit', 'time': 1676782809.8894377, 'account_name': 'Анна'}
+2023-02-19 10:00:10,246 INFO core Клиент - ('127.0.0.1', 50111), отключился от сервера. 
+2023-02-19 10:00:10,747 DEBUG core Разбор сообщения от клиента : {'action': 'exit', 'time': 1676782810.458536, 'account_name': 'Евгений'}
+2023-02-19 10:00:10,747 INFO core Клиент - ('127.0.0.1', 50121), отключился от сервера. 
+2023-02-19 10:00:26,131 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50145).
+2023-02-19 10:00:26,635 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676782826.1767683, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:00:26,635 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:00:26,635 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 10:00:26,636 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': 'b610d8e16725c16a0d82b3ee463b85e443c55b9e9197dfa7f5fecf9e7300fd41fced94abba244669994a2c60299f4e065ec777c7048d0545999ee1c0cc55c143'}
+2023-02-19 10:00:27,145 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676782826.6363757, 'account_name': '1'}
+2023-02-19 10:00:27,655 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782827.1529794, 'user': '1'}
+2023-02-19 10:00:28,164 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782827.6563845}
+2023-02-19 10:00:32,407 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50148).
+2023-02-19 10:00:32,908 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676782832.451482, 'user': {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:00:32,908 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:00:32,908 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 10:00:32,909 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': '050490e6dee5022743cc11e62b769e38e5d387c1f19287b8ae87c8e353d7ae8f03074591ed5da98f7663129ceb5c52c04b9f82fea93ed577db563d75198a3669'}
+2023-02-19 10:00:33,418 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676782832.9098806, 'account_name': '2'}
+2023-02-19 10:00:33,927 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782833.423984, 'user': '2'}
+2023-02-19 10:00:34,432 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782833.9281654}
+2023-02-19 10:00:40,525 DEBUG core Разбор сообщения от клиента : {'action': 'add', 'time': 1676782840.1277122, 'user': '2', 'account_name': '1'}
+2023-02-19 10:00:41,030 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782840.5305016, 'user': '2'}
+2023-02-19 10:00:41,536 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782841.0315118}
+2023-02-19 10:00:44,070 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676782843.930261, 'account_name': '1'}
+2023-02-19 10:00:48,124 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676782847.6231256, 'mess_text': 'm+Bz5u6uPXAoWQGZ+3oX7vTBYi8W4q38vQ7+XqHAQzy5meo88Rxi8/pBQW4YD/XUtUD15nr08lx4st2dUdMk4M8c3dNF33sHrvLD5mEUcbzPlSEPXvmVVRnDgVn5Koq4s1D7H6ZPjXAYfoDilYF+8wYy2pWemp0RGEovAe3SY4Q7hD1b+uZVnj6GkNkqSzMIsm7eGECQFrHfCUeGPNFsxy0tEezM4xszFK4CUENQNEy7g/+WGQVlaukTY8Q9ottQlIcyLjloeXnrtU9UOPcBC/7zLTVnBUWHRGy7s+Kp6T7zh7W2J4dkJe75cFmb+0LXTB4/XyuNP8Rc3ZaZ1ite6w=='}
+2023-02-19 10:00:48,128 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:00:49,154 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782848.9567, 'user': '1'}
+2023-02-19 10:00:49,663 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782849.1549637}
+2023-02-19 10:02:19,555 DEBUG core Разбор сообщения от клиента : {'action': 'add', 'time': 1676782938.7034216, 'user': '1', 'account_name': '2'}
+2023-02-19 10:02:20,063 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782939.555424, 'user': '1'}
+2023-02-19 10:02:20,572 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782940.0631857}
+2023-02-19 10:02:35,845 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676782955.6175995, 'account_name': '2'}
+2023-02-19 10:02:46,505 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676782966.0835824, 'mess_text': 'wzWbkEwS2/bf0cGzm/5cs9iUv+ES1ZptCKAyg5ZlTEu1JNtLawrkm3ER5X5ff7xL0/tDvejXRIA3rIBEYjAI78Xf9m8elUh2ON9x6oxQrFfaHD95KgRo7aAPJtpdB31p9OJudDOLwZFpgRnye+pCRcWhHsQqTA3OPHaL9zTAe18kamsraNyJ7LCc+CzI4eiobyBpAMn/D3wxeTtU5kQkSYGVY0TmrHxyq0kDd/M2KyWwqbtQZtcsTo4oFbXamLaBHdGYg5lAxCXTa0up0c5fHM9CEEpw3vwn1q0dsGwmLI3gGhUUMKI8pFFhyRh1tzxrrh4oHZKhXW9lTiY8Ut7TBw=='}
+2023-02-19 10:02:46,505 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:02:47,010 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782966.5053632, 'user': '1'}
+2023-02-19 10:02:47,524 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782967.0106795}
+2023-02-19 10:03:04,230 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676782983.820941, 'mess_text': 'Xar0ykm9kFqeAZehBYr9uOhNORWADbw6AEOSfo3PSGhtftB2YCHfHDHDUZgt/1lDxNtbSL+n7bvW6XeYGVZ0z2eOtS4PgomDCUuP5pSy8EVCR02tMEoyuk1l48sjxeUpnhU5G68Aco5h7M25+PBuOY6n4AYqvfWShsJ4AafvgFXU2jw/36eJMHbM+t8PmkTOFSV0urKZIg9OMg2sphwWK++1fElEal4sw3oO1pTMB0dTY8wS46G6uJfH0g3euWVbCrJg9QzgzP9rm2S2E6DXUDlguEZGXkXn22tUgfjHLfYLf9pHDUXAyJFDrvjcwWRHvld+jC9FAxNDGNMCk/8CrA=='}
+2023-02-19 10:03:04,230 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:03:05,243 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676782985.153326, 'user': '1'}
+2023-02-19 10:03:05,752 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676782985.2433927}
+2023-02-19 10:03:15,871 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676782995.6638317, 'mess_text': 'AfbtYaFRLvh77Txc+CfCJGhU2WKkdQXLRrtaZg/X1791SM6bOK/5qH71Xz7vBX5/mjNjMwq68lXFITzXrGoJiAx8Jilt2tDChrCRwamj4ZpojCpklvVDYdb9I7fhEHFuzLjpSVZ856/FvvCi3JXY3QaSryl+KAqSZoF5I0wBB0mCq4TdPqB3ZM46A8M2ZZagX238DQl2pJAZHVRFLT2Xt2kpqALqF1+u3iPx4dwgnlF5SXeMBKjmA2i/bA3xC+yACoB/nJllGZABnpjvnJUfy+hzny4HtJy8e6gsrXhrykQoGsDgHGaCGQQLVtsfg32J7eTCsCX29wSFUp1w0PnRTw=='}
+2023-02-19 10:03:15,876 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 10:03:18,388 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2023-02-19 10:03:18,388 INFO core Клиент - ('127.0.0.1', 50148), отключился от сервера. 
+2023-02-19 10:03:30,499 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676783010.4938242, 'mess_text': 'Aiawv9KYb0zq1XXf1xwF3NrgxGHqLgpCh+D0A87A40Ip/MkqUCPAXbdqQbNnSno8KHeeWRSL83VrCcfS84kIBbddyL4YTQ4JRU3DmKRuZsTq7s24wDQzQy5sROIQdk4QBenu1GWma+Gm2RuRREc3zkwJoxVK7JdvO47j0a5WaqLuV0wtZ0/4LDFcB4xzH+9Jfar1UVO8dC3yBngA9Qi/Bbf+Q8VpBvHtf7nzk7bop7oC58U0YK0O4IzUeQbK9Fxejs8U0VoP40H30NJfj3fRinrLu/twfM2MFGCVLBhkVKJA1gr6O7qIRPeLUMp4nAWrIjEahWN1bSkboo1e6K9d9Q=='}
+2023-02-19 10:03:44,957 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50166).
+2023-02-19 10:03:45,463 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676783025.000759, 'user': {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:03:45,463 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:03:45,463 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 10:03:45,464 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': 'fc201fd2f0961fa9ad2ce41cd15879811a97bbfc5107cf41321cb270b94559a114ae4ec2445ed6aca724c8cfea564356178d0451fa7c717d78ebf22b17adc725'}
+2023-02-19 10:03:45,971 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676783025.4642296, 'account_name': '2'}
+2023-02-19 10:03:46,477 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676783025.9775825, 'user': '2'}
+2023-02-19 10:03:46,983 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676783026.4784718}
+2023-02-19 10:03:49,015 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676783028.4394076, 'account_name': '1'}
+2023-02-19 10:03:52,559 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676783032.2912629, 'mess_text': 'Zf87lCVReTOW+MM0XKGwleiYKZxZEu7wxeDU8EgrWRxoJ6PIttNgjMntRSEy65+79Q5q1WqsMYE6bmeYOqQgxTIY/tkngfpjztLqTslZF1XpRGUGYTBgI46x+0/y6jVCLwowmHuCHpWAPqZ7JFfa6R1LQqKI0Bx5HxmrxvGfZyJL3fsJFPX9X1GcVh4RVnU5m7RDC4/Izyx9fmWszVuEOxajTjqXUyccZvBOQDc2EFE0yRGPBs2ZBy1KZATW8iBH3vCXxK5WgSS/cBhD2+yjunoDXyekd61V+n9WF1kQ8bUCwWw4R/Lz1imTB9+c6xYHHTQhJxD6y78aPRKtIC2NvA=='}
+2023-02-19 10:03:52,563 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:03:53,079 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676783032.940214, 'user': '1'}
+2023-02-19 10:03:53,588 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676783033.0814385}
+2023-02-19 10:04:35,281 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676783074.7893136, 'account_name': '2'}
+2023-02-19 10:06:12,182 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676783171.692982, 'mess_text': 'GS/ayi7PeUj/ELrL21jJuq+Z68QmAL2oCGiLFhhzGsIXURk5Y5NeFLg8UB68xo40V7wn/5VVSZD4iWxv8SFJYxHTK22AKi4xMM+w1TerNbeahgchj3hEkNuZg2spDctrbVnyjKmRyXNh7YJGBdOYWaae5lmRkbp5tbWgCRo3RtOmpKbLQpK0vzJIsInF7mYI0X51q8dzBoeDYkQDDJnRjwXrXcXanzokEWUi/ok13v6M5ShObO/ZEpbK9tOFxGe80Rz9GwFOROvI4i/nSBqFy4xLgAzh15nL73vmTzRdWquOs3jkVVd0Aoqmu8Dntaq94xYPzuqfBtGYzjLd98TIeA=='}
+2023-02-19 10:06:12,182 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:06:12,684 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676783172.436298, 'user': '1'}
+2023-02-19 10:06:13,184 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676783172.6846592}
+2023-02-19 10:06:22,823 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676783182.745785, 'mess_text': 'PFiSt+Som6xywQQq3Hba2925YIwejjjH8ItSTqIc1S/yzK/FG5lM9mq2DqPvOsoknCeh5crmjHZTCjCvYkOCSy+kAeqT/Pi3FRsNOGKcNCLvj4HwOfwhCK0b+2vqBD9cNLxwAR6EyK7DoMJlAXHKHSO+BIlYIH3CEVb7EPTycePFO1XvgIA9b1jKkqfVqwMWb00YAeQI0ss4ZwooA8+O2wo3AE/zMaAqbLcmw2XEerX8yB1rai7CsyIsXHcQtM49VEWygauX5GpUuJffkoPuKMNYsJ3lOz0kXq4RVWkaMkrytVGcSkTV1ujp9sEL4N0NHYcgbfIfZu7yWd/VTo1kBA=='}
+2023-02-19 10:06:22,823 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:06:25,339 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2023-02-19 10:06:25,339 INFO core Клиент - ('127.0.0.1', 50145), отключился от сервера. 
+2023-02-19 10:09:19,339 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50486).
+2023-02-19 10:09:19,842 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676783359.39266, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:09:19,842 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:09:19,843 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 10:09:19,843 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': 'c2ed17db285e4e33a14631da63188a4c93daa06452bd9ed15a6186ebce99861ffde6174a1f88486eda2097defd842c5eaa7b1e6b4a8cdc2069d590cfb01da210'}
+2023-02-19 10:09:20,364 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676783359.8449755, 'account_name': '1'}
+2023-02-19 10:09:20,879 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676783360.3724039, 'user': '1'}
+2023-02-19 10:09:21,380 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676783360.8808873}
+2023-02-19 10:09:51,868 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676783391.2990565, 'account_name': '2'}
+2023-02-19 10:09:53,901 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676783393.6080046, 'mess_text': 'LFjcjGP3/bUtmN7In86sBDKVqN1dSaE4QMxCWDCaXry+oxcx1RLdTMocPzrQMyX2zLabu0czcKtIuucUOMX4LZY+PqqjYkRVGfCyvI9hawsy6jitNua/QBA21lFff5buliAX7nV8dK8CgAJBRc7nYNqMpFjUWFrOJYif0asdrV91yRs6OsLoN19CcrxpOmlnmNhdjw5Zqs0g4EUIBJm1pMuPl5D3kcE1xZ4CwFHt/7FJKoZb/Nd/kHsvlV8HiBaroGdO7F2bEU8/Dom+CC06U9ubTavj18X3FckQ7D8EdXXYusOFPQ/+3Ld14zFqXBqceO5zHKQxTEKYx2YsjepsGg=='}
+2023-02-19 10:09:53,901 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 10:09:54,411 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676783393.9011, 'user': '2'}
+2023-02-19 10:09:54,916 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676783394.4111335}
+2023-02-19 10:10:01,042 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676783400.9782944, 'mess_text': 'xI2+SWe37tT7MpIY+8X3QeBsfcCkXJLG+BSND0zOBVleTCLaljIK8AFmL9rIFF/auFVdUlfsltR1Ya+GbhPVHJDdmxkCC6kjE3KYXAxBb8idIqFBqQFaTatHKyf0Fysm8kz+DS+3Wb4YANIll6Eiz0bHnBaJLY2TcExwY39Vv0jxKsJWLhNk2AAn6tzVtB2ylbuhFhqArhgv7it3nPeb00kYwcph/44Bi+9pqh42MhUzvsp8CRju3OpRpUlkEaKnM4VOnEkw5B2aJ1w1Dj7uOvPC5eM3OSKCQJ/i4cKdRtZxXR15BONXnQ+/4RLXfCZcg1ts37f4m8o+zDWfNHDq5g=='}
+2023-02-19 10:10:01,042 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:10:02,059 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676783401.8339124, 'user': '1'}
+2023-02-19 10:10:02,561 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676783402.0601375}
+2023-02-19 10:10:57,600 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676783457.008616, 'mess_text': 'XBZ0T/H2GjT9IdcU/d6yjj1+TophgKgusqXppe7HpKTBZhQJNCDiKqcDr1VWeEZhJQtVcWt+quX2gVbjPZTGrXsbYvIqb/EHxRo2I9pRI8mHtHZp27FzVrcYky9She5aM66+ZHAVI4c5S0cPWqIPQJTaPBM0vr3yPnOiUJpYfrEUtFDJ+pbf5l7LJKwPeL+Ul4Yev4HA+knaavTz21aUe9fDGVq7ejPakmN+onieRGg2cxo8yVVeC8VUNJkmHQxE9mX37lLdmzsY2v53HG8PL6lmGcRMaxHQcr6SO28ki6JMYlcx0YKrsTXsqkbE7ir30bBqjI5KgSM3N1ZSpvrzZg=='}
+2023-02-19 10:10:57,605 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:10:58,624 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676783458.190718, 'user': '1'}
+2023-02-19 10:10:59,132 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676783458.624497}
+2023-02-19 10:17:24,978 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676783844.5182076, 'mess_text': 'Up8idssfMDGW323CcC5tF9x+PSpGbTuLs18jDbtGVrpWMMNk+pt/xNLoY4WrYvgBh/L2ZX33CA6W0jHjF6fo5+Idrma/oK2ckU6WmcinLjPG6oIUv2EIdgn+T8KdRR72R5GaTjgSej3wSCBEUXC7T6uweytrlyPJqpybqpiROzIDVwEwiqoDFEkmKPv4kmAWjmvJR0cH5QNFw/Oq4lzIpEG8JPL80xz01gAQ9c0gJv3j+z3qyj1K4k4xciao0Qxo1BjcWtY8rBlx1ZfVOuQI4oAA1tga+UTOo0+bbOCxOi+D+5qFuJyJtMaeV7qZY3JII06qXDPTkj/2rOmXQOyRkA=='}
+2023-02-19 10:17:24,985 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 10:17:25,496 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676783845.2101824, 'user': '2'}
+2023-02-19 10:17:26,011 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676783845.496448}
+2023-02-19 10:17:28,562 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676783848.284059, 'mess_text': 'Sy6w0NcyuXPlla9kfib8Gkzhpati/sGEhNkGZ2ciSWs6yOTe55ME+PNouXF3e/Ea2xhgcFkAnzxGmCuvURJHLkZCHX4Wz9XUISOzKpaEFGhhMXYZ1PfTTyBQNBYQRyIOhzyzOOrRk+EtiFTO6lwuMpGY2O1hNEmraJeGB/rU5i7IoUdFjj+Svwfhosto+KBTpt1gu0S1ymk1APz335I9IedcVphrAWSiS4VhuvAkbdaTSnHl9hOE7CNqhcGy09d7uAl31DaiVpX8kHRTKEjU9v9q9OQEix7L331aWlTCF6STEL9mymEkzZKgw38BwcLBE/rbwdgH+eH/VNuyl2/dPw=='}
+2023-02-19 10:17:28,568 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:17:29,074 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676783848.7197285, 'user': '1'}
+2023-02-19 10:17:29,582 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676783849.0752985}
+2023-02-19 10:17:46,359 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676783866.1491523, 'mess_text': 'aJvODUl7lLgnCiCSDVKJEl+P2Bq3va5hKpIikTwCZptZ6FcF+KEJv6Hc1Qo2HSu367L8gqSMRLB0i/hzdGTydO1VIFod3a1NwkbnUdfWAJMFbYE+KvT5us+AeusouyxcNChUn7Q3sH9OJz9HBrwE7JdWHUyWJ/p8MLNukTHNaBh2HqYdmjSsQA4F1LegAqf35voVXLea4POAO3E7LOjQFVFLfqSnQSQcuVejfZET3bqt7YaEn9UHocT8T/q+1mLMpXNp7OScyjoxEB5b/Y9EGrRcu8SEkFc2wWSSiI/UDN3dDJ+TTWfRwdcrr7YprKIpThjK9IV7sDwxHVipohtZ8g=='}
+2023-02-19 10:17:46,361 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:17:49,935 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2023-02-19 10:17:49,935 INFO core Клиент - ('127.0.0.1', 50486), отключился от сервера. 
+2023-02-19 10:18:48,285 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50634).
+2023-02-19 10:18:48,794 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676783928.328692, 'user': {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:18:48,794 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:18:48,794 DEBUG core Имя пользователя занято, отправитель - {'response': 400, 'error': 'Имя пользователя уже занято.'}.
+2023-02-19 10:18:53,811 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50635).
+2023-02-19 10:18:54,321 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676783933.8550436, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:18:54,321 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:18:54,321 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 10:18:54,322 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': '6f1d857a3e75fbb7c668c563f828f347359bbff1fbd3a5212c3454b2b805eb3302f0647f47ebd887ecfe81d3c29bf2d19ecdffc7201e5a2d2de72d74644a0452'}
+2023-02-19 10:18:54,839 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676783934.3222854, 'account_name': '1'}
+2023-02-19 10:18:55,354 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676783934.8464465, 'user': '1'}
+2023-02-19 10:18:55,857 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676783935.355826}
+2023-02-19 10:18:57,377 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676783937.2823925, 'account_name': '2'}
+2023-02-19 10:18:59,406 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676783938.8039024, 'mess_text': 'idTCvft9/uNpf2DFvprQ1JsiVCAGo0oGy6mPf29BzEOM8cJ/k956NLkJ3vQ9ZL8StJ4QpGdfCagdI62HYA4TwWLBFCstcn1gPyLIfwc5BWBfcHqyQnfMxHrfTxT3yzvq0SNXBZJsG0MwQZu4etnnaOdHlgoUsVQFblmMQq4LeM40TwJsVmkOGXN7d6CYFpB2N+CeQIZIy3nOSgQkI77pwhzxg6Ntm5RWkpRbHaNL0inhhtD5wPIU6+kq+dx1PVwtzcRnqWzhqJYT3vVC8HG9wIGe1USBGdVVrdFs/cz7vGoszeR8v6QXfxRLlWLekJuSOnGRtK2c9WSvcAynGfetgw=='}
+2023-02-19 10:18:59,412 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 10:19:07,033 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676783946.7527523, 'mess_text': 'FuYVxvO1Z7jmi/f2v3mABnBXkRhHSsHjrRgup14yh/e0LYL3RSkaainDWeoRPkNR/Ibx+JsckD5wgM+b78mOcyT/28eK9IBcUFTGmtoL70MfjQ3eXLyN11avMkweiU5w5UXo9VX3clYscI9lt8uBvVX85nzZxr3nVAi4OXu2JI4Xv0z5DV48Bix3lUbZRG7JJxLjckSWlTgcWnsxBguq9oMUnt2wi4FNxXjvuYr6oNdFx6NjV37scOaZWeiEpNdWQmPYyC95PpRkSUwoRMW0zN6RVOWPmHA2ffjbIK5kkud6qJHfNXycok1oI++zYxEa/7E8j2Z94ux6dbYSgyISRg=='}
+2023-02-19 10:19:07,037 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 10:19:11,112 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676783951.011909, 'mess_text': '2gSS2KuEWlG/SYjo3uqrRlUNhOktaXYU0yUr/19YpVZ7w1A+CtsqijFX097qtVDHze9tAJW7BvFCqTKYcXaneO7AdL2eQ7BXZyYtV4OKh3Z1j2NhwA3APX6G8dpxVosd2WzqW4vz61MNoTZ4JngISPap4+9Nv9a1en3qjvBwa2oBgdPLzIsPu1RiuooRGjXVlirbGlprvRpGWnnmJ7DREUi75bbsyENaCTwbsQEUpFQRtWEVI1O0py6t+ZtYucOmzUwTFWDahEWFTPyB9WMrLreeiZtMzcUDF3iRobUbsenqMtuwtdgaIz2UEQAXUQ6rMBXPwfSxNi2um1eyGnM8BQ=='}
+2023-02-19 10:19:11,116 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:19:14,165 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2023-02-19 10:19:14,165 INFO core Клиент - ('127.0.0.1', 50635), отключился от сервера. 
+2023-02-19 10:23:37,870 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2023-02-19 10:23:37,870 INFO core Клиент - ('127.0.0.1', 50166), отключился от сервера. 
+2023-02-19 10:23:51,534 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50676).
+2023-02-19 10:23:52,038 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676784231.5761588, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:23:52,038 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:23:52,039 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 10:23:52,039 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': '825650470fbaee950fee63f77b110062ab5ef316585025905f37d2df27164c810fdd0ef265a2292de1bb5749e80f82b83c8c9ef4898c27e70303c46beb5341ef'}
+2023-02-19 10:23:52,557 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676784232.039354, 'account_name': '1'}
+2023-02-19 10:23:53,062 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676784232.5631418, 'user': '1'}
+2023-02-19 10:23:53,577 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676784233.0631027}
+2023-02-19 10:23:58,753 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50681).
+2023-02-19 10:23:59,262 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676784238.7944052, 'user': {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:23:59,262 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:23:59,263 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 10:23:59,263 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': '61059819613378e7ff7ea6b7bd787b4f66061c7a07cfe3f00ea550081359fa9959c82f4d5f730bb727cbe9cd1b01280e2f66482dd495e22d71c92a678f9f86d4'}
+2023-02-19 10:24:02,324 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676784241.8765008, 'account_name': '2'}
+2023-02-19 10:24:03,854 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676784243.8224835, 'user': '2'}
+2023-02-19 10:24:04,368 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676784243.8549938}
+2023-02-19 10:24:13,021 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676784252.744787, 'account_name': '2'}
+2023-02-19 10:24:16,579 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676784256.1589544, 'mess_text': 'A49r2NTkhAoKRNPAUGnddotkBk6evtSz5popObCa63rWxkHoLZnN+tfZxaRQBK5+uwpc6eaYzQDi/xhErkbfcrl2/tWndKquuQHlkvba5mu8fCy4Qiw+VBcUXrAwwSPEzKK9xpfz27ndMw/7NTygfIiT84Xj6yBFfgwDZWieZaMz0JiKMEbDuldlV5f4EpzNCgnxrbHiKDpX3ch/2EUHjdCwDfkh0C7zahVDX8EeuzLijDfKJ0/jdKSXSud6XB/plXUHUanmdYmtPsHUzXl8gPHG5Namt80NNqDW0OV65qn9MdaKtuonGo0xwvpTi94/MglxEASKqnxHJBH5Afe6Ng=='}
+2023-02-19 10:24:16,584 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 10:25:12,507 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676784312.0253022, 'account_name': '1'}
+2023-02-19 10:26:38,031 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676784397.9294503, 'mess_text': 'OHSiZyUX3najurmZW5EopC1fS3s80A5kFA+19/Y0jJH4+qSC/xrely94xXSE0vOdBF2SKW0WJDa+a7LzQozd3f4UbUDdGghGFUoBI/+Fet1cl4k7kZUqKlh4DQV3KtOu6pNJBZZCCtg8mj0nhc8L5V+od2nOh72kfqbRoD/autO8+yVRzR4iz1tA3Ycf4WRVkyJ6moxgcV3oDLwy9ICkEaKVubvY1Z3IYsgQFWkOgBfWH0hb0ra4xcPxamv0hrDAccudYTuUW0LHhLuHxRuodNmuJ0MSn6JTOsWqp9W3/6L3IqhWnfl2EWP1b+3UgYi+liKroJs9uBTPrXC3noHruw=='}
+2023-02-19 10:26:38,037 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 10:26:45,691 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676784405.3972805, 'mess_text': 'Zyx+Kj7ViHQp3hnZVBHHhwxCkXT+8ZVnpdZwBIBMxyZ/eUqlwjs1q4qh+igC15ht3PYTyUe457Cn6lFa3OHd6SZCL7gzxVjympSpzIAbUslrejw+okCCr9cLRywF6hXGd0NTAEKLe/myDWmsZvALzzzYC3HGyzsKAp8G3zNaR8aSy5wo6Ez4qI/KQO397F97OkkrHpL4bNnAOVeT/o4GvLK9A6NJ3qZpmhfRyMTd11L00kg0LzfSL4TYCRCQmGSz5Fk2JwUi91HgUdILT6hrCJK1Nkr7RaJkvppofaDKP8QxL7LU59qon8kSr6W5SNPfRg3ixLzI2qNOKSM0mEgyuA=='}
+2023-02-19 10:26:45,697 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:26:46,208 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676784406.16201, 'user': '1'}
+2023-02-19 10:26:46,723 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676784406.2100093}
+2023-02-19 10:28:04,682 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2023-02-19 10:28:04,682 INFO core Клиент - ('127.0.0.1', 50681), отключился от сервера. 
+2023-02-19 10:28:19,083 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50698).
+2023-02-19 10:28:19,587 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676784499.131178, 'user': {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:28:19,587 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:28:19,587 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 10:28:19,587 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': '6520a80b44a3363977988cd9752e38f94e1d9339eff81a59bf5ea07d5f215fd9d664f155432543bc25554be4cc9e6669247f5cfad965c3366ec86071a438fe6a'}
+2023-02-19 10:28:20,096 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676784499.589046, 'account_name': '2'}
+2023-02-19 10:28:27,234 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676784500.1086972, 'user': '2'}
+2023-02-19 10:28:55,258 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676784523.6748738}
+2023-02-19 10:34:57,678 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2023-02-19 10:34:57,678 INFO core Клиент - ('127.0.0.1', 50698), отключился от сервера. 
+2023-02-19 10:35:04,366 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50725).
+2023-02-19 10:35:04,867 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676784904.4103892, 'user': {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:35:04,867 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:35:04,868 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 10:35:04,868 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': '9858252b628479797a6f45a5f095e6bb20b932e28b859729caaea497941126feba5ebaa795f4553b1a8f84840a46c3fd86295ce0fbb6e87bed1079eeb8bfe7c1'}
+2023-02-19 10:35:05,379 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676784904.869874, 'account_name': '2'}
+2023-02-19 10:35:08,442 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676784908.261551, 'mess_text': 'TFSp7/WJirRJuIy4aGcM2H5BLqQFnLr47EBrhpZLY/9o3IADichaYT+KARsnx7VSjGkZ+x08G7Tt7IYVxqbLvCBUG315L9P8sd1BdT5cJ+2hnJ8a9Ka09Kq0UUHeaa6erpmqtk4WPirxZeTHRs2MCi3IEheSQgkNW+VYoj8SQ9Nf4NUi3OZPEzaKzvqIrj7qpHFUEs6CusO44qCALUhwqkBM5mDcenHZAg4OFJyUFUA10cAx63lXvTEEbA5U3sL0kFxe8Ysi0ecnYos+mJOvuIJv2OJ0z6VAVx/yWynwh8raksdO9z5eUuwdZ1hn2qwSQvE61yZyymZCvT3MCgxWpQ=='}
+2023-02-19 10:35:08,448 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 10:35:26,831 DEBUG core Разбор сообщения от клиента : {'action': 'add', 'time': 1676784926.448019, 'user': '2', 'account_name': '1'}
+2023-02-19 10:36:21,912 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2023-02-19 10:36:21,912 INFO core Клиент - ('127.0.0.1', 50725), отключился от сервера. 
+2023-02-19 10:36:24,958 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50730).
+2023-02-19 10:36:25,471 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676784984.9998791, 'user': {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:36:25,471 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:36:25,471 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 10:36:25,472 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': 'f176ad40726d248f3fa2ac80222e3c2a14e3a12feaaf3ff0372c7034b689842e9817b05aeba912516096bf8109d49beda117c03b411495039a2a84d5f6c9a373'}
+2023-02-19 10:36:25,985 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676784985.4732642, 'account_name': '2'}
+2023-02-19 10:36:48,369 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2023-02-19 10:36:48,369 INFO core Клиент - ('127.0.0.1', 50730), отключился от сервера. 
+2023-02-19 10:36:50,758 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50735).
+2023-02-19 10:36:51,265 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676785010.8017912, 'user': {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:36:51,265 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:36:51,266 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 10:36:51,266 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': '9c55e9e53524a7e6e3d46754ff91bd9642011df51381226ce7aac600738d5a9ff7685c5dbe34909a298df640c0ea4635de2673857b0c073455eebba9d3feaad9'}
+2023-02-19 10:36:51,779 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676785011.2678862, 'account_name': '2'}
+2023-02-19 10:46:04,283 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676785011.7861977, 'user': '2'}
+2023-02-19 10:46:04,794 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676785564.2855797}
+2023-02-19 10:46:13,961 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676785573.4852102, 'account_name': '1'}
+2023-02-19 10:46:20,595 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676785580.101449, 'mess_text': 'zBkNbcTciJQJ/wLMQQY33YzqVvQg6PRUhnYwRU5i6GjhCBl5QdID+rI0Auv5GEwcS0so2H5qS6EOnbsrB1AJbbqtQLLtAyMjs+jMvGkw1jsISxq3BQeW82fLU5hxiiwHJJ8wPU14iyN5TkeYG2mTuhWUk0XcsOXf5MkYN/AVnYIuNIJ8bNfOFW7gLEWPZlvpDHYVEWYQo2LCpmrGHmwlnIrj2WKRqhzl3PbCLv4jEyT6WDehUMysr7iQYwReGunua5mTXrkoOk744M6Ismzr4Kuczmn/QeqMHjrz/DK4rQrq6PMvdFwczvb/inhRDSJRiVEN3hWGhA4EDZgR7Fngag=='}
+2023-02-19 10:46:20,600 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:46:21,605 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676785581.5000596, 'user': '1'}
+2023-02-19 10:46:22,120 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676785581.6063066}
+2023-02-19 10:46:25,180 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676785585.145186, 'mess_text': 'BaqKJsaE2ZyLI/MrHevaQc5CbrC0tDN5gg/030WrbeFYeJjmXbiCIRl+t8DSbgrbku/SeVJWivYXsDtsD4zp3E0jOSaSipVfZrZtyHqM7CfX3lMe/vcC/OdJ9+h8rrrG3pfa+k2sqnntmZeslbblmCfgX6c4D46Rn4j9zV8eP/oNdBdnofOPl+Y66nMRaGmhMe6p2INKYxJkOLOzUljvTDhMhetgtFdEp5FpIYcvnDFuqad+0k23X4tL5oywrW7F82g7HexLzXP3qoIjEWKMi8T2JSengvTqnuba+NNluh8VdOAH4h9YZvkaXW0UHtz8wq/acnYMYyNw95MkGS8+Cg=='}
+2023-02-19 10:46:25,184 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 10:52:56,955 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676785585.5578873, 'user': '2'}
+2023-02-19 10:53:01,537 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676785978.0937765}
+2023-02-19 10:53:40,742 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676786020.5236323, 'mess_text': 'wJEoKQUDSXupLT1Rpt8gmW88Z/XdiYR0cfrGLz6reK3a/4i8CKF8EmuvaeJh+WrwIGLeT6goKcL8UHXF9gqlbgAKCMYKH/OHqCjgfTyH5Ikpi8NUl1inMX0UF+1hu+CUtGalaYAordIfu/qG5fkkwR15tHOts6mF3PEmbdiPNzcIk/b0gajJP/AUfuGEtgKEMtsDk0VyQjO2hk7C5v/QqLrars+r8B8AMVUCgHYXejLRYcAwlF3qAf1MXwdShChkBOfr5mmxEtNZJyoLAY1iodKZTDl4n4Y2eApUOBEFgpRClzfgtvxqBLQDGRLXGVGwdjxHl+mWWwhCtx8/kvJzZQ=='}
+2023-02-19 10:53:40,746 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 10:53:43,297 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 21, in get_message
+    encoded_response = client.recv(MAX_PACKAGE_LENGTH)
+ConnectionResetError: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2023-02-19 10:53:43,297 INFO core Клиент - ('127.0.0.1', 50676), отключился от сервера. 
+2023-02-19 10:54:01,983 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 50876).
+2023-02-19 10:54:02,489 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676786042.0267637, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 10:54:02,489 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 10:54:02,489 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 10:54:02,491 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': 'eaa25fe28c9ef30718427110ec7791e28c7563ae37f11f407ef562ec359e5f36546537111ae746fc9722c635cfa02e9227eff869b686782fba0e8b864208ae5d'}
+2023-02-19 10:54:03,001 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676786042.4915822, 'account_name': '1'}
+2023-02-19 10:54:03,514 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676786043.0071352, 'user': '1'}
+2023-02-19 10:54:04,016 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676786043.5159187}
+2023-02-19 10:54:06,045 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676786045.7619724, 'account_name': '2'}
+2023-02-19 10:54:09,612 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676786049.127418, 'mess_text': 'K4eUfcn6vCQPXR27DmqqVk+qM6pE+UtX+pj4XxFASvn8DYNVMYB+IeIKa79UVeA/l+90MTkkXi44MRJRzlad0tw4fUptszRJsS9ncyaGvj6+qqA4G5EVInpaIvOHim3WSLZFQlAiR20pUnztDrVk2Wxr1lSXFA83SedGiSq+s9PgYxN5V81O1TBU5SRLoGw99r7d2/6dI89de/FOSLHQURR/y8vzswK9yhJq4cCZ2IcIn9YShTalN8DCEIocUm2tulRhXRKUJeDkHDKFHpDxkLR8LfXlEtZ2w7i+1Zv/8p533zntwxSbocwM0L11OScB0Wk0gx3RNTdLHCAy1GhpeA=='}
+2023-02-19 10:54:09,618 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 10:54:15,242 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676786049.6183484, 'user': '2'}
+2023-02-19 10:54:18,831 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676786056.1599395}
+2023-02-19 11:06:32,736 DEBUG core Разбор сообщения от клиента : {'action': 'exit', 'time': 1676786792.418678, 'account_name': '2'}
+2023-02-19 11:06:32,736 INFO core Клиент - ('127.0.0.1', 50735), отключился от сервера. 
+2023-02-19 11:06:33,757 DEBUG core Разбор сообщения от клиента : {'action': 'exit', 'time': 1676786793.712221, 'account_name': '1'}
+2023-02-19 11:06:33,757 INFO core Клиент - ('127.0.0.1', 50876), отключился от сервера. 
+2023-02-19 11:06:40,667 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 51005).
+2023-02-19 11:06:41,174 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676786800.7123969, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 11:06:41,174 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 11:06:41,175 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 11:06:41,175 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': '6b3c61655969218307441b4f539fc2414c5514a8a1477360e3860c8ed3e752f83cae929a53de2a591ae813638159bca56fc6c5925d56cc83d6e0eb6d493b7c6c'}
+2023-02-19 11:06:41,694 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676786801.1760542, 'account_name': '1'}
+2023-02-19 11:06:42,202 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676786801.6996975, 'user': '1'}
+2023-02-19 11:06:42,712 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676786802.2038047}
+2023-02-19 11:06:50,954 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 51008).
+2023-02-19 11:06:51,460 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676786810.9990108, 'user': {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 11:06:51,460 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 11:06:51,460 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 11:06:51,461 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': '7cb42124a4d4e2080b1d8e03eb3d01a6d4fe0595b320ee2aee956b4483dd18263d3ac883341ed87cc1ecb4de60a79d3b5538e8b5c6499bd0c6549840e265e832'}
+2023-02-19 11:06:51,975 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676786811.4624083, 'account_name': '2'}
+2023-02-19 11:06:54,491 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676786811.981412, 'user': '2'}
+2023-02-19 11:06:55,006 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676786814.492843}
+2023-02-19 11:07:07,731 DEBUG core Получение данных из клиентского исключения.
+Traceback (most recent call last):
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\server_files\core.py", line 114, in run
+    get_message(client_message), client_message)
+  File "C:\Users\palim\PycharmProjects\messenger_python\exe\server\common\utils.py", line 23, in get_message
+    response = json.loads(json_response)
+  File "C:\Program Files\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Program Files\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Program Files\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2023-02-19 11:07:07,741 INFO core Клиент - ('127.0.0.1', 51008), отключился от сервера. 
+2023-02-19 11:07:48,490 DEBUG core Разбор сообщения от клиента : {'action': 'exit', 'time': 1676786868.1649978, 'account_name': '1'}
+2023-02-19 11:07:48,490 INFO core Клиент - ('127.0.0.1', 51005), отключился от сервера. 
+2023-02-19 11:08:35,544 DEBUG server_ Инициализация парсера аргументов коммандной строки: ['.\\server_.py'].
+2023-02-19 11:08:35,546 DEBUG server_ Аргументы успешно загружены.
+2023-02-19 11:08:35,560 INFO core Сервер успешно запущен, порт для подключения - 7777,адрес для подключения к серверу - 127.0.0.1.
+2023-02-19 11:08:40,848 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 51027).
+2023-02-19 11:08:41,357 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676786920.8930278, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 11:08:41,357 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 11:08:41,361 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 11:08:41,362 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': 'd7c1073cab53f3c6752d19e4e0d44741f4792cf7bd511630252fa140762838856bee31edbde95062c942955139eb26f117d1e3903f7329a46cd9741e1b83067d'}
+2023-02-19 11:08:41,870 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676786921.3630362, 'account_name': '1'}
+2023-02-19 11:08:44,411 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676786921.8776832, 'user': '1'}
+2023-02-19 11:08:44,927 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676786924.4138107}
+2023-02-19 11:09:26,590 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 51031).
+2023-02-19 11:09:27,101 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676786966.6339853, 'user': {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 11:09:27,101 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '1', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5qLjxXLuIdhSGTi5RrH8\ntYENr78wJzumjHwA9SQPuKkNFrlUer+LlwgQNgA1P0SI0hmOlqbnyf6sQKoGWy/4\nXEbSEC/08/rbpuH0vUXS+suyLDzBQLOvQt8CZidVNeB5ebwQ2cJOTANNOVWYSvmU\nJIAbZllfaeYQXuP/hsbe2NFjcwzB3p00RSr8ogbpJTr9NSPrmoPaT132QjX5eRsG\n6pTevS68JXb+ikQxu5fDiqCvM0paU86gVY0jrdWMXGPUgcdy/zNYFdqiwo1otHO2\ny6WWWfQUZdw79bHz31gMVG9h9z3qKLDD+tevKz5QAbpQIqd3lQAaH07vPT8RFrko\nHQIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 11:09:27,101 DEBUG core Имя пользователя занято, отправитель - {'response': 400, 'error': 'Имя пользователя уже занято.'}.
+2023-02-19 11:09:31,607 INFO core Установлено соединение, IP-адрес подключения ('127.0.0.1', 51034).
+2023-02-19 11:09:32,110 DEBUG core Разбор сообщения от клиента : {'action': 'presence', 'time': 1676786971.6501346, 'user': {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}}
+2023-02-19 11:09:32,110 DEBUG core Запущен процесс авторизации пользователя - {'account_name': '2', 'pubkey': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuY0UglZaxDSKKI/uT0iW\ndE7J8UdjRYm5S9L/lR811OL9gA4Ouh/gZlqZt9mZquiyVfIIxd/D4Ht7KN2VmAOT\n02aZNtnaSttO9LhLTKHz9hannL1q2vOLYtIlAYDud3/94z1b8MX0m3kR3iBno+Ay\nNGgAHhJNNEurMkf/FebBpREyEnu4IzY5KbPh6o0ha1THny31bVFZjirMmweByJ9F\n1FA3sKx4+4NvUIai+dINVkXj2NFL5w/zv83EcL8MEpEkvd6y9s9lxJVT/2qoWOla\n6NClnqrPEziTh8/7QrRPH4WhoWc0jgkm0V8aNod4NHPXYALRDLUaW67WcHi5Msmk\n9QIDAQAB\n-----END PUBLIC KEY-----'}.
+2023-02-19 11:09:32,111 DEBUG core Имя пользователя корректное, проверка пароля.
+2023-02-19 11:09:32,111 DEBUG core Сообщение об авторизации - f{'response': 511, 'bin': '1ac79ec4b7a39e9cf0869477d9dccc11c83bb524cac66460415864cff4409a055fd7492893187a0a6b3320fe2872a0d9254cd977c524ccb44513e4e9d36f4864'}
+2023-02-19 11:09:32,618 DEBUG core Разбор сообщения от клиента : {'action': 'get_users', 'time': 1676786972.1114929, 'account_name': '2'}
+2023-02-19 11:09:33,131 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676786972.6235766, 'user': '2'}
+2023-02-19 11:09:33,646 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676786973.1322842}
+2023-02-19 11:09:36,721 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676786976.6932194, 'account_name': '1'}
+2023-02-19 11:09:39,761 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676786979.3361092, 'mess_text': 'FNTP6YlPR+N3XfdfiHcugu9EyhQuAXxhEYu5na1lzSxSABCge2UIWsegQWeVL7eUiozwtfuavCTkk2h2SW2lIaV8pR72p4BCioqbBmZlouHbYw8BPoGa1Mk8uQPiyMa8onU/B9H26vpfadJn7J+pm1k4+e/7A9+wxdq1RGeze98cGm18q09WMrZbGkRsPlu6koJj6nviKIXvAyaFgMQVlQB4GoVWM9pnv0b6wkdjJW6hICt42mmmkqhTQnylMlctQC4TnrULrI4tLZwNat6hBGtC4D6OkprUZbSqiKpuQ6+on31umOvaCyFuqD4wFD6gsgGTEKQaW4OQqywsKFd92Q=='}
+2023-02-19 11:09:39,766 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 11:09:43,791 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676786980.6475353, 'user': '1'}
+2023-02-19 11:09:44,295 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676786983.7920206}
+2023-02-19 11:09:46,821 DEBUG core Разбор сообщения от клиента : {'action': 'add', 'time': 1676786986.542516, 'user': '1', 'account_name': '2'}
+2023-02-19 11:09:47,333 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676786986.8231966, 'user': '1'}
+2023-02-19 11:09:47,847 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676786987.334473}
+2023-02-19 11:09:48,861 DEBUG core Разбор сообщения от клиента : {'action': 'pubkey_need', 'time': 1676786988.8127775, 'account_name': '2'}
+2023-02-19 11:09:50,892 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676786990.8773313, 'mess_text': 'ItaiYsF9SaL3ygD6wOwjETsYAkNX25FrxrrbDUzLPEHfgoEKjXOcw4riayBd0b2D0OCKJpI4FhE4PgeMMKN/KIbyjRggmx2XNCnDfUDkZH0g+NkU/YZ9JSRnpR7QQNOlwhwAKdVhms3GO6QWYEYUjt8OLs3bouP0E13hg/w3BOza6WrxdZg7FJXt1Eftj29M4xuHp3fh0UAKPNdBJ4/d1R5xaMA2X4ewwPszt79TaXRODlPa4Myhk+wBqG0BnqDdXKgHxXfMlqdSifP366cjm/KwOIjHggGKpvaPb6EEjOaTqsCN8tUBnI++h3+ynKnBthcptdd7DRhXO5yqciOY/Q=='}
+2023-02-19 11:09:50,897 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 11:09:51,406 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676786991.3174307, 'user': '2'}
+2023-02-19 11:09:51,921 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676786991.4077773}
+2023-02-19 11:09:53,948 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676786993.9061608, 'mess_text': 'PGjUfzInp/KIaL0HSHAnFWc74D/zfjezCtgzDxpVxT3xFtxPk5/1xb0O57UosPzLLAG8bTI9czrHpdneNPtzr/KoBTVMwZExlvyzCJV56qbOBYy7NNsDzuM6acH1oeypBsvprE4ViPbyO9z4OoKCEendDk/R4xD2CoOA6UqQ4YfbWEfT1OzmofOTDLrF1H+zZKTEecwdOJgGfQJkU7UEtOcJ5PxTuNiBKowgZe0pCP87XYQLPtRcfjWrLpcHqi3yCgWCB0cfuZQIx8NoapxJYDYYSYWQS6mdPWT3QmNHWpM61LtXYlm0gYyJ1wccqrI5IZcEC7+87iU/bHwtm+vosA=='}
+2023-02-19 11:09:53,955 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 11:09:54,462 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676786994.3598094, 'user': '1'}
+2023-02-19 11:09:54,965 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676786994.463426}
+2023-02-19 11:09:57,488 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676786996.9984393, 'mess_text': 'oLbBirZzmqt8FrQTJc2gTqjWonhzxVqSwGjYtq81wfS45G8V5SgjFApjam0KrLZiMXdk+l84bvW9FbpMdVPQAK2z7IOhgHFzbZFYjL+U7y81+Ei4zgdNz+H2cklvbadv4dD65o10zEB28z2FocFGDP+su8xNv0Iz1BF/50AXoRGjqlINl8YPMNe7nDiaut6uop30N56nAQ3YoqB3AdzGSP81tPkcfkwgDF4Glu1YBL9jddTHK32Z1MjI1TmDOVYUoPLAcgcPa8ndCsGffmOevImCk0BHpsvgsBGD+tKo95/vPbBuAHlwaaUPkCReg3vRKn9tn3DJAb+lG33O2WTA8g=='}
+2023-02-19 11:09:57,492 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 11:09:58,005 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676786997.492232, 'user': '2'}
+2023-02-19 11:09:58,518 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676786998.0069282}
+2023-02-19 11:10:00,557 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676787000.1540382, 'mess_text': 'kXLJlGigLa8tE/8hUQDewrkSZk9CVzCsP/kqDQnDdQRzMRD4/Mfncxf/SBf21gQFphChKtwUkI8qmXhff1vHdBIrjIcAOSuGnRWQx3aHNr1b5EsW6o/pjQMQxI5uD5RYWjqi/9HCvO0Wis9EdREOkOXhuZijvskwPMewyQrZRzVaXDTZ9IEnXW5tj66RhhvUaPHqcfl5r7YF0Gt55qXsT9vRpvBdo0uPNXQmIv8+w4kwm4UIY0QHBjshI8eKd5nUkuzUquvj3X9CI4u+k66jMi18h0xQHd7jS1+WUE/suyGsb2Ch9BJjj/UzkZYeZfTcbAsWWeuu08PHmVRYH5JbeQ=='}
+2023-02-19 11:10:00,561 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 11:10:01,070 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676787000.5618567, 'user': '1'}
+2023-02-19 11:10:01,583 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676787001.0712624}
+2023-02-19 11:10:02,096 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676787001.7215948, 'mess_text': 'YoMm4ypAhXXOO+HaX00UuWlYr4sxMSwaW/E6FekcxW5XxURXZoAxaypgxApbNH2kzEtMBgxky843AuPoffTWoEfFv387mGT31CgbNRjBmT7bjgm5bLlNpDqOdLRIL6vwxl3Ma6jKShpGqOTqBXxVXKEqi5bFRF4XA1KhCq2Pqwsu7wW/66ePqqUPNA7NKJlASG4Ae9ZtAGYEPdcj/6gLtKaN6VYnq1J9CTauwoM5TnV/4GMCZFZ67F8GDtHmdgjKUmbthaNPbWAjnMQaZJg6fFZgd6CvKeulGxZtbKAvKY/ZlMGxuSjIxaFZpM7isFRKUA7IAHQiLVU8Fs/xych1eg=='}
+2023-02-19 11:10:02,100 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 11:10:02,611 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676787002.5960557, 'user': '1'}
+2023-02-19 11:10:03,119 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676787002.6125}
+2023-02-19 11:10:03,631 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676787003.5254405, 'mess_text': '456PgMfNT07gsQZw5GLGnCcue7xwRSlRXXMST/pY0UyxS3jPovdDlbq3Bh+lfTIbFI47mqj3VUecvE3Pv6OCuH++ytrh9UbcXQLV6LG2aM4LEy5vSebpp/YcPazAV22Po2PdPpj0GUoVCwnAxe7W32pQIVXz7+/Tmk5L7pPLmaMa+5bRYtngkFiCmIvclCOr0Y2HiTgyQYK5ZUn5Z7ZEBBJlFdGeZ8h/5aRRDfyp+4LJlImYWeP0f0YhC5KKqEqDmumkrIRP2IeoAIYQqAoTNEFUzUxENkalmxq0JIXM1kAg/fzuldC5QvXDnbNkQVUPzCbPTvZlkQpl3ntGUXyg2g=='}
+2023-02-19 11:10:03,635 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 11:10:04,143 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676787004.1270447, 'user': '1'}
+2023-02-19 11:10:04,659 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676787004.144017}
+2023-02-19 11:10:06,717 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676787006.276206, 'mess_text': 'ss2S0MajT1vCl2DMDspEdA7Ffhxfv8pKfT01xBQMikjmnJjCwQcXrKBYlrOhAc1LShF6XhX488MFtpTPIHZ29sCFY9aDasp6nRxYfpzCYUCnHXlGG5EHE+oFqK426dAFsQZLVbswrL5C1QnQ9eW1l6EW8GeWrAp+CuPUeVeiYFDTI5Q4MBJrRQCf4WUKXI14UCC6IiNxKM4QRcJZVIFz1nR/yuxy/2Ii+soGjp1S7sMHfEGm+5BnvkLfPzYHi6sGUeJJpVnGbACquXJSmoV5QBdTMHZ9vczkW0LNN/2YNrINrbkdkOkijNT8f8w34J2YaQqD2hjS/0ojhL09Ec9M8A=='}
+2023-02-19 11:10:06,722 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 11:10:07,232 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676787007.0943818, 'user': '2'}
+2023-02-19 11:10:07,743 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676787007.2341666}
+2023-02-19 11:10:08,255 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676787008.118159, 'mess_text': 'IbJrPJiOn/AFnGEzNlLxDXy5twCIvPFnCihfMssSL0hG5yRpoH/iLjWfDoYsjfxzDo5/tLXtT5lx4bOULd1zPQhijIrhQCQKZMXAEvhky/n4SwxI/qkBBmCIf7t/tXCnec1liiIaEwghn4pbXxMDf+gH4FY0hWBO8rcKffKEcx8tz6S1Sp0J98db2tH6n+xHCIhKQfTJybplgmS/C+UC536fRarJYddFFgKJCmN3Y2a3rrO0IBFTb3GBbKBU4qv4ww05Oam1Q8K8Oq4fNMJWVlF0HOOoX1kuW02XWAKD0cST7hcXPNoqnM0gV65SGBIo+YHvnlOTotw9KFoh2O4bzg=='}
+2023-02-19 11:10:08,259 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 11:10:08,765 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676787008.7501683, 'user': '2'}
+2023-02-19 11:10:09,278 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676787008.7663715}
+2023-02-19 11:10:09,790 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676787009.6033864, 'mess_text': 'E3jaFmJwwPjA7MzE9tzJN3CU6pFaP9UaGb0Sd3z7t2O2am93Tzcp/zP2hL/r5YQAFYecdulaYeVKHxKbm3M93wWv4acAdTaccBWOEOGpghBCiN4jffaSYZJdMhpdqmlFrqI7Thc88+ijazKdSMIrDYkFqvOyEg8CmqpTRZpUkYnYu+sRrjOduUbSViEAIUA2fViqDZBMETxCKVwaMKl8fGXtT1x7c6koL7vHp4H0hmWy7t6vcIG9ecl69btCzYUgtfE9fbNZmW/4OnarsIUJvn+cvUIjnG+ESpO1W4WG5M7E0FqZPGlJyUcra8B//aYFhGhb52KOpACl5AdfnVSbEQ=='}
+2023-02-19 11:10:09,794 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 11:10:10,301 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676787010.2868555, 'user': '2'}
+2023-02-19 11:10:10,816 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676787010.3034184}
+2023-02-19 11:10:11,330 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676787011.2726433, 'mess_text': 'rzzc+3EznnmNmqsVqGVs80GCIHXYiJt3du+CXjwXjZ33tG15TDfd604/tymkzaNKAhraxrNe/GDM46PiCaLTovcJl8jfGQy8Z8Ax9oTvPh5GbRlDKG7YN20k2MdqLeBL8GqhYulbY8Xlss2Kyocsp09syuETYiJItna1swmMQewreZEdyozGeNI0yLUf++2UFVGh6p0CS+y8l1E/ReakKBK4PAoVALqis4EzJFfoKe5npNuX8yMW3PXvTW+Fn9PxCf9bBD4j4ECt7Wu2eejvpaFvFbAGh6iSVRnKKJK/8Ht9CQrKc3xa4xErSVIuhrW8WWfhPIyugCPsfizcJKYNJg=='}
+2023-02-19 11:10:11,334 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 11:10:11,844 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676787011.8288748, 'user': '2'}
+2023-02-19 11:10:12,352 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676787011.8459082}
+2023-02-19 11:10:13,376 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676787012.8975902, 'mess_text': 'N8Ul8zuCPQIaKyQVVGgK3mXkc3KJwBI7dehg/XN6Lv4RigLfXQCr+P3RfbLYjyfKFgI9egMmJQCmszat1+uC6POi/QUM4ej7CqQJmSolfOG4QWiW7RQjhtouid6cKuX1LVj8HLiv2fy6ZAlXIlEEDabWyJ52qkD19y7vO7g47vdclWCkQ4rh7w+tw8hOY3tme0YjC8qM2iiQTUNyzUPdLh/ICIiCMG9vCJahbFANrFvxRf385MyHLXnKB6ZcwdPmahrdd09eM85+e1uEFXSj7FN3BQAXgdjyZfT4m7y5wkuUsrDbjbP5e32FKsbHUDLv4QvlbA98hd4zh2bQN/EW5Q=='}
+2023-02-19 11:10:13,381 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 11:10:13,890 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676787013.382852, 'user': '2'}
+2023-02-19 11:10:14,404 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676787013.8910732}
+2023-02-19 11:10:15,428 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676787015.344211, 'mess_text': 'ReVVDKbNI8tDa+RuNiX8rbQMv9Btf9SmJ+XXJki8SOXJG79n73Uk1EL1GEY6fLGGjohV+BmPvLajcTBDG6IfE+jJyT4N6ugSp6F/zTLKRPzTP+vwGQ09/OcTfDrM0C+wBhaoOrzsbj+aX7eA6oMZVdU5j3vnQ5GbfliFP5ODzalyDPZDE4pf43kQ1ezBYiP9xa7HRUTXa3YwPJEUjcE0MD00xS4is7dZTM7j526eunLQQuy1VHsRIpJsRfwag+sRIILNCnYSGBV6iPY5TRb4FOc1buMZYOmK6TQrLWGFsWRs171EQKpLuhLRwHNlmsVgg7YFMtpRUlZJ20CcfBby+g=='}
+2023-02-19 11:10:15,433 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 11:10:15,943 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676787015.4348114, 'user': '2'}
+2023-02-19 11:10:16,452 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676787015.9445684}
+2023-02-19 11:10:17,469 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '1', 'to': '2', 'time': 1676787017.2091281, 'mess_text': 'N+zs5Bo4igB5qbRkpQVvvRhkz9TPrh//q2XRPr7npXYiwxn9vzGl6VL50+8DvIKUWbRbsKYytOCk/NC+C0O02qkkBIBAhqMeNsHv9brWBEgbNHeduUOMC962Y9a/1Emx7vTSf4GqyZ2H1L8Ntus+w1ih6GHGqoYQgYJPfRDnXYqP3El/0Wk4bGeug5Z4IJkARl3r5rXHtVAMVa+gtuiMGZG6lnLmyBS0sOb70fkzB6urHwZo/UNP9yXDrro7xLekDB2Lft4krWo/vbEFz+DzMUo6ewC8/UM7GnxrQIdfXXAepvkNXwBFUJ17DqzWwOgqZ2x/tWKHINhH7ERX0bCh7Q=='}
+2023-02-19 11:10:17,473 INFO core Отправлено сообщение пользователю 2 от пользователя 1.
+2023-02-19 11:10:17,979 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676787017.4743655, 'user': '2'}
+2023-02-19 11:10:18,494 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676787017.9807215}
+2023-02-19 11:10:21,023 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676787020.5658462, 'mess_text': 'Zi37DOcvXMsG8XKky0NqEBWNp9EYgh6v0CGrXFc2ZhbXG/ZYUOuPs9OfVJURO0hfJIG2nev+xOBhexULEjyDd7i9ZKBT/P7ZLVKrokei5/SUN17Dv9oe0fiMgs/UNC/1Ai9hMWvsukQ2gqDYaMWAKw6fhh8aCHS6fMFJYn6hdhb8Q64OjyH8Ag1tVZpOtt9FlPZERzdTdyTxGl6fwLnJ1/hhubSjxjJpK4NHaZGt46nA47LjElji+XqtboVQJaX9Qw59tGD49KhnSM/VEYSmH+V1XwL+B79v+EZ3o5tX1XPEjC3zlghs3COT1jYcFr3djaByUtYcs+Pb20r+IHdlmw=='}
+2023-02-19 11:10:21,028 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 11:10:21,539 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676787021.0300338, 'user': '1'}
+2023-02-19 11:10:22,052 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676787021.5411959}
+2023-02-19 11:10:22,052 DEBUG core Разбор сообщения от клиента : {'action': 'message', 'from': '2', 'to': '1', 'time': 1676787022.0418458, 'mess_text': 'XXW/MjBuOnwiW9KPozbUxG503l/LAT54DH+/tGKrucxcIq/pyvk+ekZml3VySeCJmITdGI6yuSEiSR3aHBYckjVTBaIZTxjkjbL2WfmAAQPCcO6q9daRkapQIIGirXgKrKYWHch83NmDsibz/G2J6b/U7EJV7ArhKYrUO+LDRAxie/Eb5SL1qBqvxw3D55gzrXrQadvAGGAXaG/KaiBzV5v/ME27Ax+E0aAH7165VHIxCEynv9tw6ms5gHhjS+xfJy8Vjno1cG+8VwYwYMgYZ1Kn8/1uN/EsReRw8lKARIVIvsz5cdBnlvzWKVmbOiTjJpb4SuHubnDZLLm5WI6sTA=='}
+2023-02-19 11:10:22,059 INFO core Отправлено сообщение пользователю 1 от пользователя 2.
+2023-02-19 11:10:23,079 DEBUG core Разбор сообщения от клиента : {'action': 'get_contacts', 'time': 1676787023.0637963, 'user': '1'}
+2023-02-19 11:10:23,582 DEBUG core Разбор сообщения от клиента : {'action': 'action_users', 'time': 1676787023.0806754}
+2023-02-19 11:18:37,427 DEBUG core Разбор сообщения от клиента : {'action': 'exit', 'time': 1676787517.1074696, 'account_name': '1'}
+2023-02-19 11:18:37,427 INFO core Клиент - ('127.0.0.1', 51027), отключился от сервера. 
+2023-02-19 11:18:45,057 DEBUG core Разбор сообщения от клиента : {'action': 'exit', 'time': 1676787524.8382566, 'account_name': '2'}
+2023-02-19 11:18:45,057 INFO core Клиент - ('127.0.0.1', 51034), отключился от сервера. 

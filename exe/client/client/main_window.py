@@ -258,11 +258,10 @@ class ClientMainWindow(QMainWindow):
             self.messages.critical(self, 'Ошибка.', 'Таймаут соединения!')
         else:
             self.database.del_contact(selected)
-            self.clients_list_update()
             LOGGER.info(f'Успешно удалён контакт - {selected}.')
             self.messages.information(self, 'Успех.', 'Контакт успешно удалён!')
-            self.clients_list_update()
             item.close()
+            self.clients_list_update()
             # Если удалён активный пользователь, то деактивируем поля ввода.
             if selected == self.current_chat:
                 self.current_chat = None
